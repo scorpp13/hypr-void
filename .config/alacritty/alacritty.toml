@@ -1,0 +1,40 @@
+import = [
+	"~/.config/alacritty/theme/taerminal.toml",
+#	"~/.config/alacritty/theme/dracula.toml",
+]
+
+[shell]
+program = "/bin/fish"
+#args = ["-l"]
+
+[env]
+TERM = "xterm-256color"
+
+[window]
+decorations = "Full" # None | Transparent | Buttonless
+decorations_theme_variant = "Dark" # Light | None
+padding = { x = 10, y = 10 }
+dynamic_padding = false
+opacity = 1.0
+startup_mode = "Windowed" # Maximized | FullScreen
+dimensions = { columns = 80, lines = 24 }
+
+[scrolling]
+history = 20000 # default 10000
+multiplier = 3
+
+[selection]
+save_to_clipboard = true # default false
+
+[cursor]
+style = { shape = "Block", blinking = "On" }
+blink_timeout = 0
+
+[[mouse.bindings]]
+mouse = "Left"
+mods = "Control"
+action = "Paste"
+
+[font]
+normal = { family = "Firacode", style = "retina" }
+#size = 11

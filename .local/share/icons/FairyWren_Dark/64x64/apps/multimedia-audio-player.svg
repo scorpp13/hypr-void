@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="64"
+   height="64"
+   version="1"
+   id="svg5"
+   sodipodi:docname="x-content-audio-dvd.svg"
+   inkscape:version="1.3.2 (091e20ef0f, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs5">
+    <linearGradient
+       id="linearGradient5"
+       inkscape:collect="always">
+      <stop
+         style="stop-color:#ff5b47;stop-opacity:1;"
+         offset="0"
+         id="stop5" />
+      <stop
+         style="stop-color:#ff43cf;stop-opacity:1;"
+         offset="1"
+         id="stop6" />
+    </linearGradient>
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5"
+       id="radialGradient6"
+       cx="6.6072063"
+       cy="31.336765"
+       fx="6.6072063"
+       fy="31.336765"
+       r="28"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.8415485,1.4431276,-2.0661387,1.2048525,72.823589,-23.254659)" />
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter1"
+       x="-0.038868491"
+       y="-0.038868405"
+       width="1.077737"
+       height="1.0777368">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.291514"
+         id="feGaussianBlur1" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter2"
+       x="-0.024116434"
+       y="-0.046295087"
+       width="1.0482329"
+       height="1.0925902">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.56271676"
+         id="feGaussianBlur2" />
+    </filter>
+  </defs>
+  <sodipodi:namedview
+     id="namedview5"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="12.640625"
+     inkscape:cx="32.118665"
+     inkscape:cy="26.501854"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg5" />
+  <path
+     style="opacity:0.56902701;filter:url(#filter2)"
+     d="M 59.958,31.328 A 28,28 0 0 1 32,58.5 28,28 0 0 1 4.044,31.672 28,28 0 0 0 4,32.5 a 28,28 0 0 0 28,28 28,28 0 0 0 28,-28 28,28 0 0 0 -0.042,-1.172 z"
+     id="path1" />
+  <circle
+     style="fill:url(#radialGradient6)"
+     cx="32"
+     cy="32"
+     r="28"
+     id="circle1" />
+  <g
+     style="opacity:0.569027;filter:url(#filter1);enable-background:new"
+     transform="matrix(1.930325,0,0,1.930325,-918.88764,-327.04261)"
+     id="g2">
+    <path
+       transform="matrix(2,0,0,2,269,-837)"
+       d="m 110,507 v 0.5 l -1e-5,4.7695 c -0.30389,-0.17609 -0.64878,-0.26905 -1,-0.26953 -1.1046,0 -2,0.89543 -2,2 0,1.10457 0.89543,2 2,2 1.10457,0 2,-0.89543 2,-2 l 1e-5,-5 h 4 l -1e-5,3.2695 c -0.30389,-0.17609 -0.64878,-0.26905 -1,-0.26953 -1.1046,0 -2,0.89543 -2,2 0,1.10457 0.89543,2 2,2 1.10457,0 2,-0.89543 2,-2 l 1e-5,-7 h -0.5 z"
+       id="path2" />
+  </g>
+  <g
+     style="fill:#ffffff;enable-background:new"
+     transform="translate(-461,-154.99994)"
+     id="g3">
+    <path
+       style="fill:#ffffff;stroke-width:3.86065"
+       d="m 486.04127,169.39453 v 1.93032 l -3e-5,18.41337 c -1.17322,-0.67982 -2.50472,-1.03871 -3.86065,-1.04056 -4.26448,0 -7.7213,3.45694 -7.7213,7.7213 0,4.26436 3.45694,7.7213 7.7213,7.7213 4.26435,0 7.7213,-3.45694 7.7213,-7.7213 l 3e-5,-19.30325 h 15.4426 l -3e-5,12.6224 c -1.17322,-0.67983 -2.50472,-1.03871 -3.86065,-1.04057 -4.26448,0 -7.7213,3.45695 -7.7213,7.7213 0,4.26436 3.45694,7.7213 7.7213,7.7213 4.26435,0 7.7213,-3.45694 7.7213,-7.7213 l 3e-5,-27.02455 h -1.93032 z"
+       id="path3" />
+  </g>
+</svg>

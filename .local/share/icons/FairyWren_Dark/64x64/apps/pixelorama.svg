@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="64"
+   height="64"
+   version="1.1"
+   id="svg13"
+   sodipodi:docname="pixelorama.svg"
+   inkscape:version="1.3.2 (091e20ef0f, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs13">
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter13"
+       x="-0.045440326"
+       y="-0.045440326"
+       width="1.0908807"
+       height="1.0908807">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.79520569"
+         id="feGaussianBlur13" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter14"
+       x="-0.034080245"
+       y="-0.034080245"
+       width="1.0681605"
+       height="1.0681605">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.79520569"
+         id="feGaussianBlur14" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter15"
+       x="-0.056132168"
+       y="-0.056132168"
+       width="1.1122643"
+       height="1.1122643">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.79520569"
+         id="feGaussianBlur15" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter16"
+       x="-0.030047304"
+       y="-0.030047304"
+       width="1.0600946"
+       height="1.0600946">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.26291392"
+         id="feGaussianBlur16" />
+    </filter>
+  </defs>
+  <sodipodi:namedview
+     id="namedview13"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="12.6875"
+     inkscape:cx="31.960591"
+     inkscape:cy="32"
+     inkscape:window-width="1920"
+     inkscape:window-height="1020"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg13" />
+  <path
+     d="m18 5v3h-7v4h-4v7h-3v28h3v7h4v4h7v3h28v-3h8v-4h3v-7h3v-28h-3v-7h-3v-4h-8v-3z"
+     style="opacity:0.6501726;filter:url(#filter14)"
+     id="path1" />
+  <path
+     d="m18 4v3h-7v4h-4v7h-3v28h3v7h4v4h7v3h28v-3h8v-4h3v-7h3v-28h-3v-7h-3v-4h-8v-3z"
+     style="fill:#3f3f3f"
+     id="path2" />
+  <path
+     d="m18 8v4h-7v7h-4v28h4v7h7v4h28v-4h8v-7h3v-28h-3v-7h-8v-4z"
+     style="opacity:.2"
+     id="path3" />
+  <path
+     d="m18 7v4h-7v7h-4v28h4v7h7v4h28v-4h8v-7h3v-28h-3v-7h-8v-4h-28z"
+     style="fill:#e4e4e4"
+     id="path4" />
+  <path
+     d="m18 12v4h-3v3h-4v28h4v3h3v4h28v-4h3v-3h4v-28h-4v-3h-3v-4h-24z"
+     style="opacity:0.6501726;filter:url(#filter13)"
+     id="path5" />
+  <rect
+     x="22"
+     y="11"
+     width="20"
+     height="42"
+     style="fill:#30f693;fill-opacity:1"
+     id="rect5" />
+  <path
+     d="m18 53h4v-42h-4v4h-3v3h-4v28h4v3h3z"
+     style="fill:#00baff;fill-opacity:1"
+     id="path6" />
+  <path
+     d="m46 53h-4v-42h4v4h3v3h4v28h-4v3h-3z"
+     style="fill:#f6303b;fill-opacity:1"
+     id="path7" />
+  <path
+     d="m22 16v3h-4v3h-3v22h3v3h4v3h20v-3h4v-3h3v-22h-3v-3h-4v-3z"
+     style="opacity:0.6501726;filter:url(#filter15)"
+     id="path8" />
+  <path
+     d="m22 15v3h-4v3h-3v22h3v3h4v3h20v-3h4v-3h3v-22h-3v-3h-4v-3h-20z"
+     style="fill:#3f3f3f"
+     id="path9" />
+  <path
+     d="m25 23v3h-3v7h3v3h7v-3h3v-7h-3v-3zm14 17v4h4v-4z"
+     style="opacity:0.36477167;filter:url(#filter16)"
+     id="path10" />
+  <path
+     d="m25 22v3h-3v7h3v3h7v-3h3v-7h-3v-3h-7zm14 17v4h4v-4h-4z"
+     style="fill:#ffffff"
+     id="path11" />
+  <path
+     d="m18 7v1h28v-1h-28zm-7 4v1h7v-1h-7zm35 0v1h8v-1h-8zm-39 7v1h4v-1h-4zm47 0v1h3v-1h-3z"
+     style="fill:#ffffff;opacity:.2"
+     id="path13" />
+</svg>

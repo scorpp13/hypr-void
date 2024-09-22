@@ -1,0 +1,7 @@
+[stream-properties]
+Audio/Sink:application.id:com.github.wwmm.easyeffects={"channelMap":["FL", "FR"], "mute":false, "volume":1.000000, "channelVolumes":[1.000000, 1.000000]}
+Audio/Sink:node.name:auto_null={"channelVolumes":[1.000000, 1.000000], "volume":1.000000, "mute":false, "channelMap":["FL", "FR"]}
+Audio/Source/Virtual:application.id:com.github.wwmm.easyeffects={"channelMap":["FL", "FR"], "mute":false, "volume":1.000000, "channelVolumes":[1.000000, 1.000000]}
+Input/Audio:application.id:org.PulseAudio.pavucontrol={"channelMap":["MONO"], "mute":false, "volume":1.000000, "channelVolumes":[1.000000]}
+Output/Audio:media.role:Movie={"volume":1.000000, "channelMap":["FL", "FR"], "mute":false, "channelVolumes":[1.000000, 1.000000]}
+Output/Audio:media.role:Music={"volume":1.000000, "channelMap":["FL", "FR"], "mute":false, "channelVolumes":[1.000000, 1.000000]}

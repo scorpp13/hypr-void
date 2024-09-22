@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="64"
+   height="64"
+   version="1.1"
+   id="svg10"
+   sodipodi:docname="application-loc+xml.svg"
+   inkscape:version="1.3.2 (091e20ef0f, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs10">
+    <linearGradient
+       id="linearGradient12"
+       inkscape:collect="always">
+      <stop
+         style="stop-color:#f37835;stop-opacity:1;"
+         offset="0"
+         id="stop12" />
+      <stop
+         style="stop-color:#f33539;stop-opacity:1;"
+         offset="1"
+         id="stop13" />
+    </linearGradient>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter10"
+       x="-0.15757252"
+       y="-0.1575725"
+       width="1.315145"
+       height="1.315145">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="1.0471778"
+         id="feGaussianBlur10" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter11"
+       x="-0.030393155"
+       y="-0.022103867"
+       width="1.0607863"
+       height="1.0442077">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.53862385"
+         id="feGaussianBlur11" />
+    </filter>
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient12"
+       id="radialGradient13"
+       cx="31.756563"
+       cy="52.612095"
+       fx="31.756563"
+       fy="52.612095"
+       r="21.266257"
+       gradientTransform="matrix(1.9368495,-2.1697306,2.4088497,2.1503035,-156.46702,14.126459)"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <sodipodi:namedview
+     id="namedview10"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="9.8111066"
+     inkscape:cx="22.321641"
+     inkscape:cy="35.062304"
+     inkscape:window-width="1920"
+     inkscape:window-height="1018"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg10" />
+  <path
+     style="opacity:0.743009;stroke-width:1.32914;filter:url(#filter11)"
+     d="m 32.000211,3.4231388 c -11.745058,0 -21.26647,9.3491542 -21.26647,20.8815512 0,0.720658 0.0604,1.386024 0.132702,2.088075 0.05827,0.698595 0.152266,1.404101 0.265828,2.088076 2.434926,14.677402 12.361246,25.07179 20.867994,33.425155 8.50648,-8.352568 18.432481,-18.746956 20.86746,-33.425155 0.113562,-0.683975 0.207559,-1.389481 0.265828,-2.088076 0.07273,-0.702051 0.132702,-1.367417 0.132702,-2.088075 0,-11.531599 -9.521942,-20.8807537 -21.266203,-20.8807537 z"
+     id="path7"
+     transform="matrix(1.0352015,0,0,1.0352015,-1.1264481,-1.849842)" />
+  <path
+     style="fill:url(#radialGradient13);stroke:#ffffff;stroke-width:4.554;stroke-dasharray:none;stroke-opacity:1"
+     d="m 32.000195,4.358167 c -10.841531,0 -19.630477,8.629941 -19.630477,19.275168 0,0.665221 0.05575,1.279401 0.122493,1.927444 0.05379,0.644853 0.140553,1.296086 0.245378,1.927443 2.247612,13.548295 11.410317,23.143061 19.262655,30.853815 7.852092,-7.710017 17.014502,-17.304785 19.262163,-30.853815 0.104825,-0.631357 0.191591,-1.28259 0.245378,-1.927443 0.06714,-0.648043 0.122493,-1.262223 0.122493,-1.927444 0,-10.644492 -8.789435,-19.2744319 -19.63023,-19.2744319 z"
+     id="path8" />
+  <path
+     style="opacity:0.439193;stroke-width:1.32914;filter:url(#filter10)"
+     d="m 32.000211,14.05624 c 4.40423,0 7.974825,3.570597 7.974825,7.974827 0,4.404497 -3.570329,7.974826 -7.974825,7.974826 -4.404497,0 -7.974826,-3.570329 -7.974826,-7.974826 0,-4.40423 3.570329,-7.974827 7.974826,-7.974827 z"
+     id="path9"
+     transform="matrix(1.3153993,0,0,1.3153993,-10.093054,-4.8981959)" />
+  <path
+     style="fill:#ffffff;stroke-width:1.74835"
+     d="m 32,11.84303 c 5.793323,0 10.49008,4.696758 10.49008,10.49008 0,5.793672 -4.696409,10.490081 -10.49008,10.490081 -5.793672,0 -10.490081,-4.696409 -10.490081,-10.490081 0,-5.793322 4.696409,-10.49008 10.490081,-10.49008 z"
+     id="path10" />
+</svg>

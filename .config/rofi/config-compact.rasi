@@ -1,0 +1,121 @@
+/* ---- Configuration ---- */
+configuration {
+    font:                       "Fira Sans Retina Medium 11";
+    show-icons:                 false;
+	hover-select:               false;
+}
+
+/* ---- Pywal colors ---- */
+@import "~/.cache/wal/colors-rofi-pywal"
+
+/* ---- Window ---- */
+window {
+    width:                      1500px;
+    x-offset:                   0px;
+    y-offset:                   10px;
+    spacing:                    0px;
+    padding:                    0px;
+    margin:                     0px; 
+    border:                     0px;
+    cursor:                     "default";
+    transparency:               "real";
+    location:                   north;
+    anchor:                     center;
+    fullscreen:                 false;
+    enabled:                    true;
+    border-radius:              20px;
+    background-color:           transparent;
+}
+
+/* ---- Mainbox ---- */
+mainbox {
+    enabled:                    true;
+    orientation:                horizontal;
+    spacing:                    0px;
+    margin:                     0px;
+    background-color:           @color8;
+    children:                   ["listbox"];
+}
+
+/* ---- Listbox ---- */
+listbox {
+    spacing:                    20px;
+    background-color:           transparent;
+    orientation:                vertical;
+    children:                   [ "listview" ];
+}
+
+/* ---- Listview ---- */
+listview {
+    enabled:                    true;
+    columns:                    4;
+    lines:                      12;
+    cycle:                      true;
+    dynamic:                    true;
+    scrollbar:                  false;
+    layout:                     vertical;
+    reverse:                    false;
+    fixed-height:               true;
+    fixed-columns:              true;
+    spacing:                    0px;
+    padding:                    10px;
+    margin:                     5px;
+    background-color:           @color8;
+    border:						0px;
+}
+
+/* ---- Element ---- */
+element {
+    enabled:                    true;
+    padding:                    15px;
+    margin:                     5px;
+    cursor:                     pointer;
+    background-color:           @color8;
+    border-radius:              20px;
+    border:                     0px;
+}
+
+element normal.normal {
+    background-color:           inherit;
+    text-color:                 @foreground;
+}
+
+element normal.urgent {
+    background-color:           inherit;
+    text-color:                 @foreground;
+}
+
+element normal.active {
+    background-color:           inherit;
+    text-color:                 @foreground;
+}
+
+element selected.normal {
+    background-color:           @color6;
+    text-color:                 @foreground;
+}
+
+element selected.urgent {
+    background-color:           inherit;
+    text-color:                 @foreground;
+}
+
+element selected.active {
+    background-color:           inherit;
+    text-color:                 @foreground;
+}
+
+element alternate.normal {
+    background-color:           inherit;
+    text-color:                 @foreground;
+}
+
+element alternate.urgent {
+    background-color:           inherit;
+    text-color:                 @foreground;
+}
+
+element alternate.active {
+    background-color:           inherit;
+    text-color:                 @foreground;
+}

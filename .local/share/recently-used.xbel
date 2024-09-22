@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xbel version="1.0"
+      xmlns:bookmark="http://www.freedesktop.org/standards/desktop-bookmarks"
+      xmlns:mime="http://www.freedesktop.org/standards/shared-mime-info"
+>
+  <bookmark href="file:///home/as/.config/wallpapers/1.png" added="2024-09-22T05:09:39.615683Z" modified="2024-09-22T05:09:39.615689Z" visited="2024-09-22T05:09:39.615684Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:applications>
+          <bookmark:application name="vivaldi-stable" exec="&apos;vivaldi-stable %u&apos;" modified="2024-09-22T05:09:39.615686Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/as/.config/wallpapers/10.png" added="2024-09-22T05:09:51.265777Z" modified="2024-09-22T05:09:51.265785Z" visited="2024-09-22T05:09:51.265778Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:applications>
+          <bookmark:application name="vivaldi-stable" exec="&apos;vivaldi-stable %u&apos;" modified="2024-09-22T05:09:51.265781Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/as/.config/wallpapers/11.png" added="2024-09-22T05:09:58.848061Z" modified="2024-09-22T05:09:58.848070Z" visited="2024-09-22T05:09:58.848062Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:applications>
+          <bookmark:application name="vivaldi-stable" exec="&apos;vivaldi-stable %u&apos;" modified="2024-09-22T05:09:58.848066Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/as/.config/wallpapers/12.jpg" added="2024-09-22T05:10:06.511300Z" modified="2024-09-22T05:10:06.511307Z" visited="2024-09-22T05:10:06.511301Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="vivaldi-stable" exec="&apos;vivaldi-stable %u&apos;" modified="2024-09-22T05:10:06.511304Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/as/.config/wallpapers/13.png" added="2024-09-22T05:10:14.304054Z" modified="2024-09-22T05:10:14.304063Z" visited="2024-09-22T05:10:14.304055Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:applications>
+          <bookmark:application name="vivaldi-stable" exec="&apos;vivaldi-stable %u&apos;" modified="2024-09-22T05:10:14.304059Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/as/.config/wallpapers/2.png" added="2024-09-22T05:10:26.143420Z" modified="2024-09-22T05:10:26.143428Z" visited="2024-09-22T05:10:26.143422Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:applications>
+          <bookmark:application name="vivaldi-stable" exec="&apos;vivaldi-stable %u&apos;" modified="2024-09-22T05:10:26.143424Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/as/.config/wallpapers/3.png" added="2024-09-22T05:10:36.819153Z" modified="2024-09-22T05:10:36.819162Z" visited="2024-09-22T05:10:36.819155Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:applications>
+          <bookmark:application name="vivaldi-stable" exec="&apos;vivaldi-stable %u&apos;" modified="2024-09-22T05:10:36.819158Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/as/.config/wallpapers/4.png" added="2024-09-22T05:10:44.751735Z" modified="2024-09-22T05:10:44.751744Z" visited="2024-09-22T05:10:44.751736Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:applications>
+          <bookmark:application name="vivaldi-stable" exec="&apos;vivaldi-stable %u&apos;" modified="2024-09-22T05:10:44.751739Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/as/.config/wallpapers/5.png" added="2024-09-22T05:10:53.777953Z" modified="2024-09-22T05:10:53.777960Z" visited="2024-09-22T05:10:53.777954Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:applications>
+          <bookmark:application name="vivaldi-stable" exec="&apos;vivaldi-stable %u&apos;" modified="2024-09-22T05:10:53.777957Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/as/.config/wallpapers/6.png" added="2024-09-22T05:11:04.367922Z" modified="2024-09-22T05:11:04.367931Z" visited="2024-09-22T05:11:04.367923Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:applications>
+          <bookmark:application name="vivaldi-stable" exec="&apos;vivaldi-stable %u&apos;" modified="2024-09-22T05:11:04.367927Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/as/.config/wallpapers/7.png" added="2024-09-22T05:11:12.768102Z" modified="2024-09-22T05:11:12.768111Z" visited="2024-09-22T05:11:12.768103Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:applications>
+          <bookmark:application name="vivaldi-stable" exec="&apos;vivaldi-stable %u&apos;" modified="2024-09-22T05:11:12.768106Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/as/.config/wallpapers/8.png" added="2024-09-22T05:11:21.256212Z" modified="2024-09-22T05:11:21.256221Z" visited="2024-09-22T05:11:21.256213Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:applications>
+          <bookmark:application name="vivaldi-stable" exec="&apos;vivaldi-stable %u&apos;" modified="2024-09-22T05:11:21.256216Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/as/.config/wallpapers/9.png" added="2024-09-22T05:11:35.736390Z" modified="2024-09-22T05:11:35.736398Z" visited="2024-09-22T05:11:35.736391Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:applications>
+          <bookmark:application name="vivaldi-stable" exec="&apos;vivaldi-stable %u&apos;" modified="2024-09-22T05:11:35.736394Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/as/.config/wallpapers/logo.svg" added="2024-09-22T05:11:47.088565Z" modified="2024-09-22T05:11:47.088573Z" visited="2024-09-22T05:11:47.088566Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/svg+xml"/>
+        <bookmark:applications>
+          <bookmark:application name="vivaldi-stable" exec="&apos;vivaldi-stable %u&apos;" modified="2024-09-22T05:11:47.088569Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+</xbel>

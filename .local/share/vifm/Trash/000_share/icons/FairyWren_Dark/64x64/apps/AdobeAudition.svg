@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   height="64"
+   width="64"
+   version="1.1"
+   id="svg5"
+   sodipodi:docname="AdobeAudition.svg"
+   inkscape:version="1.3.2 (091e20ef0f, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs5">
+    <rect
+       x="10.084149"
+       y="16.356342"
+       width="47.7108"
+       height="32.505421"
+       id="rect6" />
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter6"
+       x="-0.069486645"
+       y="-0.069486645"
+       width="1.1389733"
+       height="1.1389733">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="1.5588551"
+         id="feGaussianBlur6" />
+    </filter>
+  </defs>
+  <sodipodi:namedview
+     id="namedview5"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="8.9714173"
+     inkscape:cx="22.348754"
+     inkscape:cy="37.563741"
+     inkscape:window-width="1920"
+     inkscape:window-height="1012"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg5" />
+  <rect
+     x="4"
+     y="4"
+     width="56"
+     height="56"
+     rx="16.964949"
+     ry="16.964949"
+     style="fill:#2e8e8e;fill-opacity:1"
+     id="rect1" />
+  <rect
+     x="3.9999983"
+     y="3.9999983"
+     width="56"
+     height="56"
+     rx="16.964949"
+     ry="16.964949"
+     style="fill:none;stroke:#000000;stroke-width:0.3;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter6)"
+     id="rect1-1" />
+  <path
+     style="font-weight:bold;font-family:'Myriad Pro';-inkscape-font-specification:'Myriad Pro Bold';white-space:pre;fill:#a3ffef;stroke-width:0.200021"
+     d="m 15.075984,24.779469 0.624,2.076 h 1.98 l -2.52,-8.088 h -2.4 l -2.46,8.088 h 1.884 l 0.576,-2.076 z m -2.052,-1.368 0.48,-1.716 c 0.132,-0.468 0.252,-1.08 0.372,-1.56 h 0.024 c 0.12,0.48 0.264,1.08 0.408,1.56 l 0.504,1.716 z m 11.016009,-2.424 h -1.824 v 3.492 c 0,0.156 -0.024,0.288 -0.072,0.396 -0.108,0.288 -0.408,0.636 -0.912,0.636 -0.648,0 -0.924,-0.516 -0.924,-1.368 v -3.156 h -1.824 v 3.444 c 0,1.812 0.864,2.556 2.064,2.556 1.056,0 1.608,-0.6 1.836,-0.96 h 0.036 l 0.084,0.828 h 1.584 c -0.024,-0.492 -0.048,-1.116 -0.048,-1.884 z"
+     id="text6"
+     transform="matrix(3.2237257,0,0,3.2237257,-23.428704,-41.731342)"
+     aria-label="Au" />
+</svg>

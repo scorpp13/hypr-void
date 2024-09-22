@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="64"
+   height="64"
+   version="1"
+   id="svg5"
+   sodipodi:docname="org.fontforge.FontForge.svg"
+   inkscape:version="1.3.2 (091e20ef0f, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs5">
+    <linearGradient
+       id="linearGradient5"
+       inkscape:collect="always">
+      <stop
+         style="stop-color:#e4e4e4;stop-opacity:1;"
+         offset="0"
+         id="stop5" />
+      <stop
+         style="stop-color:#a4a4a4;stop-opacity:1;"
+         offset="1"
+         id="stop6" />
+    </linearGradient>
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5"
+       id="radialGradient6"
+       cx="12.971833"
+       cy="52.468597"
+       fx="12.971833"
+       fy="52.468597"
+       r="28"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.1625101,0,0,2.1625101,-16.789194,-59.192502)" />
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter6"
+       x="-0.019502149"
+       y="-0.019502149"
+       width="1.0390043"
+       height="1.0390043">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.45505014"
+         id="feGaussianBlur6" />
+    </filter>
+  </defs>
+  <sodipodi:namedview
+     id="namedview5"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="13.875"
+     inkscape:cx="32"
+     inkscape:cy="32"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg5" />
+  <path
+     style="opacity:0.820098;filter:url(#filter6)"
+     d="m 32,4.4 c -15.512,0 -28,12.488 -28,28 0,15.512 12.488,28 28,28 15.512,0 28,-12.488 28,-28 0,-15.512 -12.488,-28 -28,-28 z"
+     id="path1"
+     transform="matrix(1.0898304,0,0,1.0898304,-2.8745719,-2.9105041)" />
+  <path
+     style="fill:url(#radialGradient6);stroke-width:1.08983"
+     d="m 32,1.4488174 c -16.905449,0 -30.5152505,13.6098016 -30.5152505,30.5152506 0,16.905448 13.6098015,30.51525 30.5152505,30.51525 16.905449,0 30.51525,-13.609802 30.51525,-30.51525 C 62.51525,15.058619 48.905449,1.4488174 32,1.4488174 Z"
+     id="path2" />
+  <path
+     style="fill:#404040;stroke-width:1.2736"
+     d="m 34.21388,14.133633 c -4.711503,0 -7.574927,5.270216 -9.377894,9.954995 l -2.26363,6.880438 -2.88053,9.223668 c -0.894053,2.595381 -1.523893,6.721422 -4.248659,7.054563 -1.191887,0.145726 -1.140422,-2.547204 -2.547205,-2.547204 -1.406781,0 -2.547205,1.140421 -2.547205,2.547204 0,1.406784 1.140424,2.547205 2.547205,2.547205 h 1.606929 c 5.448216,0 8.555378,-6.854039 10.890296,-14.397678 l 1.308428,-4.258609 2.089503,-6.721238 c 1.078428,-2.778359 1.527365,-7.349422 4.482485,-7.736139 1.190611,-0.155807 1.140421,2.547205 2.547205,2.547205 1.406782,0 2.547205,-1.140421 2.547205,-2.547205 0,-1.406781 -1.140423,-2.547205 -2.547205,-2.547205 z"
+     id="path3" />
+  <rect
+     style="fill:#404040;stroke-width:1.2736"
+     width="20.37764"
+     height="2.547205"
+     x="15.443169"
+     y="26.869658"
+     id="rect3" />
+  <path
+     style="fill:#404040;stroke-width:1.2736"
+     d="m 49.49711,14.133633 c -4.711504,0 -7.574927,5.270216 -9.377895,9.954995 l -2.26363,6.880438 -2.880529,9.223668 c -0.894053,2.595381 -1.523894,6.721422 -4.248659,7.054563 -1.191888,0.145726 -1.140423,-2.547204 -2.547205,-2.547204 -1.406781,0 -2.547205,1.140421 -2.547205,2.547204 0,1.406784 1.140424,2.547205 2.547205,2.547205 h 1.606929 c 5.448215,0 8.555377,-6.854039 10.890295,-14.397678 l 1.308429,-4.258609 2.089502,-6.721238 c 1.078429,-2.778359 1.527366,-7.349422 4.482486,-7.736139 1.190611,-0.155807 1.140421,2.547205 2.547205,2.547205 1.406782,0 2.547205,-1.140421 2.547205,-2.547205 0,-1.406781 -1.140423,-2.547205 -2.547205,-2.547205 z"
+     id="path4" />
+  <rect
+     style="fill:#404040;stroke-width:1.2736"
+     width="20.37764"
+     height="2.547205"
+     x="30.726397"
+     y="26.869658"
+     id="rect4" />
+</svg>
