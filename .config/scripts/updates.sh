@@ -10,15 +10,8 @@ threshhold_green=0
 threshhold_yellow=20
 threshhold_red=100
 
-# Requires pacman-contrib & trizen
 # Calculate available updates
-#if ! updates_arch=$(checkupdates 2> /dev/null | wc -l ); then
-#    updates_arch=0
-#fi
-#if ! updates_aur=$(trizen -Su --aur --quiet | wc -l); then
-#    updates_aur=0
-#fi
-updates=xbps-install --memory-sync --dry-run --update | grep -Fe update -e install | wc -l
+updates=$(xbps-install --memory-sync --dry-run --update | grep -Fe update -e install | wc -l)
 
 # Output .json format for Waybar Module custom-updates
 css_class="zero"

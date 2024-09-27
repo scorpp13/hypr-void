@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 DIR=$(gum file --directory $HOME)
 INPUT=$(ls $DIR | gum choose --limit 1)

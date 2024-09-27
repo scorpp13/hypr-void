@@ -20,7 +20,6 @@ if gum confirm "Start update right now?" ;then
     echo -e "${GREEN}"
     echo "Update started..."
     echo -e "${NONE}"
-	# start update with yay
     sudo xbps-install -Su
     sleep 1
 elif [ $? -eq 130 ]; then

@@ -6,14 +6,14 @@
 #          |_|                 
 
 case $1 in
-    d) cliphist list | rofi -dmenu -replace -config ~/.config/rofi/config-cliphist.rasi | cliphist delete
+    d) cliphist list | fuzzel -d| cliphist delete
        ;;
 
-    w) if [ `echo -e "Clear\nCancel" | rofi -dmenu -config ~/.config/rofi/config-short.rasi` == "Clear" ] ; then
+    w) if [ `echo -e "Clear\nCancel" | fuzzel -d` == "Clear" ] ; then
             cliphist wipe
        fi
        ;;
 
-    *) cliphist list | rofi -dmenu -replace -config ~/.config/rofi/config-cliphist.rasi | cliphist decode | wl-copy
+    *) cliphist list | fuzzel -d| cliphist decode | wl-copy
        ;;
 esac

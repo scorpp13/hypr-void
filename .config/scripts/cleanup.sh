@@ -20,9 +20,6 @@ if gum confirm "Start CleanUp right now?" ;then
     echo "System CleanUp started..."
     echo -e "${NONE}"
     sudo xbps-remove -Oo
-    echo ""
-    sudo journalctl --vacuum-size=20M --vacuum-time=5days
-    echo ""
     sleep 1
 elif [ $? -eq 130 ]; then
         exit 130

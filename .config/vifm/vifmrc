@@ -142,11 +142,7 @@ command! mount bashmount
 " :filetype pattern1,pattern2 defaultprogram,program2
 " :fileviewer pattern1,pattern2 consoleviewer
 
-fileviewer <image/gif>
-	\ #ueberzug#image_no_cache %px %py %pw %ph
-	\ %pc
-	\ #ueberzug#clear
-fileviewer <video/*>
+fileviewer <video/*>,<image/gif>
 	\ #ueberzug#video %px %py %pw %ph
 	\ %pc
 	\ #ueberzug#clear

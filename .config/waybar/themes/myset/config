@@ -28,6 +28,7 @@
         "custom/waybarthemes",
         "custom/wallpaper",
         "custom/cliphist",
+        "custom/script",
         "wlr/taskbar",
         "group/quicklinks",
         "hyprland/window",

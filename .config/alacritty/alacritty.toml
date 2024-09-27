@@ -17,7 +17,7 @@ padding = { x = 10, y = 10 }
 dynamic_padding = false
 opacity = 1.0
 startup_mode = "Windowed" # Maximized | FullScreen
-dimensions = { columns = 80, lines = 24 }
+#dimensions = { columns = 80, lines = 24 }
 
 [scrolling]
 history = 20000 # default 10000

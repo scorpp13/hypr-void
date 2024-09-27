@@ -143,6 +143,7 @@ window#waybar.empty #window {
  * Custom Quicklinks
  * ----------------------------------------------------- */
 
+#custom-script,
 #custom-browser,
 #custom-filemanager,
 #custom-player,
