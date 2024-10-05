@@ -15,15 +15,14 @@ cat <<"EOF"
 ┗┛┗┛┗┛┛┗┛┗
 EOF
 
-if gum confirm "Start CleanUp right now?" ;then
-    echo -e "${GREEN}"
-    echo "System CleanUp started..."
-    echo -e "${NONE}"
+if gum confirm "Start CleanUp right now?"; then
+    gum spin --title "Cleaning..." -- sleep 0.5
     sudo xbps-remove -Oo
-    sleep 1
 elif [ $? -eq 130 ]; then
-        exit 130
+	notify-send "Canceled by user"
+	exit 130
 else
-    exit;
+	notify-send "CleanUp interrupted"
+	exit;
 fi
 notify-send "CleanUp finished"

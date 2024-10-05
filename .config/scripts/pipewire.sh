@@ -5,7 +5,7 @@ check_and_start() {
         echo "Starting $1..."
         sleep 1 && $2 &
     else
-        echo "$1 is already running."
+        echo "$1 is already running"
     fi
 }
 

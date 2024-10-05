@@ -8,6 +8,14 @@ BASENAME=$(basename "$INPUT")
 EXTENSION="${BASENAME##*.}"
 OUTPUT=merge_"$(date '+%d%m%y_%H%M%S')"
 FORMAT=$(gum input --prompt "Merging format: " --placeholder "columns X lines")
-gum confirm "Merge selected images?" && \
-gum spin --title "Merging..." -- sleep 1 && cd $DIR && \
-montage $INPUT -tile $FORMAT -geometry +0+0 $OUTPUT.$EXTENSION
+if gum confirm "Merge selected images?"; then
+	cd $DIR && gum spin --title "Merging..." -- \
+	montage $INPUT -tile $FORMAT -geometry +0+0 $OUTPUT.$EXTENSION
+	elif [ $? -eq 130 ]; then
+		notify-send "Canceled by user"
+		exit 130
+	else
+		notify-send "Merging interrupted"
+		exit;
+fi
+notify-send "Merging finished"

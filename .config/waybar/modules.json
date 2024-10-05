@@ -57,7 +57,7 @@
  
     // Cliphist
     "custom/cliphist": {
-        "format": "",
+        "format": "",
         "on-click": "sleep 0.1 && ~/.config/scripts/cliphist.sh",
         "on-click-right": "sleep 0.1 && ~/.config/scripts/cliphist.sh d",
         "on-click-middle": "sleep 0.1 && ~/.config/scripts/cliphist.sh w",
@@ -79,7 +79,7 @@
     
     // Wallpapers
     "custom/wallpaper": {
-        "format": "",
+        "format": "",
         "on-click": "~/.config/scripts/wallpaper.sh select",
         "on-click-right": "~/.config/scripts/wallpaper.sh",
         "tooltip-format": "Wallpapers"
@@ -109,7 +109,7 @@
     // Web Browser
     "custom/browser": {
         "format": "",
-        "on-click": "vivaldi-stable",
+        "on-click": "vivaldi-stable --proxy-server='http://127.0.0.1:8080'",
         "tooltip": false
     },    
 
@@ -122,7 +122,7 @@
     
     // Scripts
     "custom/script": {
-        "format": "",
+        "format": "",
         "on-click": "~/.local/bin/script.sh",
         "tooltip": false
     },
@@ -224,20 +224,20 @@
     // Pulseaudio
     "pulseaudio": {
         "format": "{icon} {volume}%",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": "",
+//        "format-bluetooth": "{volume}% {icon} {format_source}",
+//        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": "",
         "format-source": " {volume}%",
         "format-source-muted": "",
         "tooltip-format": "middle-click to un/mute",
         "tooltip": true,
         "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
+//            "headphone": "",
+//            "hands-free": "",
+//            "headset": "",
+//            "phone": "",
+//            "portable": "",
+//            "car": "",
             "default": [" ", " ", "󰕾 ", " "]
         },
         "on-click": "pavucontrol",

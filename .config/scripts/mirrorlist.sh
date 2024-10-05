@@ -16,13 +16,13 @@ cat <<"EOF"
 EOF
 
 if gum confirm "Change an existing xbps mirror?" ;then
-    echo -e "${GREEN}"
-    echo "xmirror started..."
-    echo -e "${NONE}"
+    gum spin --title "xmirror starting..." -- sleep 0.5
     sudo xmirror
-        elif [ $? -eq 130 ]; then
-            exit 130
-        else
-            exit;
+elif [ $? -eq 130 ]; then
+	notify-send "Canceled by user"
+	exit 130
+else
+	notify-send "xmirror interrupted"
+	exit;
 fi
-notify-send "Changing xbps mirror has finished"
+notify-send "Changing mirror has finished"

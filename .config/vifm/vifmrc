@@ -106,7 +106,7 @@ mark v ~/Videos/
 mark d ~/Downloads/
 mark R /
 mark M /run/media/as/
-mark P /etc/portage/
+mark P ~/.config/wallpapers/
 
 " ------------------------------------------------------------------------------
 " Commands
@@ -142,51 +142,10 @@ command! mount bashmount
 " :filetype pattern1,pattern2 defaultprogram,program2
 " :fileviewer pattern1,pattern2 consoleviewer
 
-fileviewer <video/*>,<image/gif>
-	\ #ueberzug#video %px %py %pw %ph
-	\ %pc
-	\ #ueberzug#clear
-fileviewer <image/*>
-	\ #ueberzug#image %px %py %pw %ph
-	" or \ #ueberzug#image_no_cache %px %py %pw %ph
-	\ %pc
-	\ #ueberzug#clear
-fileviewer <audio/*>
-	\ #ueberzug#audio %px %py %pw %ph
-	\ %pc
-	\ #ueberzug#clear
-fileviewer <font/*>
-	\ #ueberzug#djvu %px %py %pw %ph
-	\ %pc
-	\ #ueberzug#clear
-fileviewer *.pdf
-	\ #ueberzug#pdf %px %py %pw %ph
-	\ %pc
-	\ #ueberzug#clear
-fileviewer *.epub
-	\ #ueberzug#epub %px %py %pw %ph
-	\ %pc
-	\ #ueberzug#clear
-fileviewer *.djvu
-	\ #ueberzug#djvu %px %py %pw %ph
-	\ %pc
-	\ #ueberzug#clear
-fileviewer *.cbz
-	\ #ueberzug#cbz %px %py %pw %ph
-	\ %pc
-	\ #ueberzug#clear
-fileviewer *.cbt
-	\ #ueberzug#cbt %px %py %pw %ph %c
-	\ %pc
-	\ #ueberzug#clear
-fileviewer *.cbr
-	\ #ueberzug#cbr %px %py %pw %ph %c
-	\ %pc
-	\ #ueberzug#clear
-fileviewer *.cb7
-	\ #ueberzug#cb7 %px %py %pw %ph %c
-	\ %pc
-	\ #ueberzug#clear
+fileviewer {*.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm,*.svg,*.ttf}
+    \ kitten icat --silent --transfer-mode=file --place=%pwx%ph@%pxx%py %c >/dev/tty </dev/tty %N
+    \ %pc
+    \ kitten icat --clear --silent >/dev/tty </dev/tty %N
 
 " Audio
 filetype {*.wav,*.mp3,*.flac,*.m4a,*.wma,*.ape,*.ac3,*.og[agx],*.spx,*.opus,
@@ -314,9 +273,9 @@ fileviewer {*.docx},
 	\ docx2txt.pl %f -
 
 " Directories
-filextype */
-	\ {View in thunar}
-	\ Thunar %f &
+"filextype */
+"	\ {View in thunar}
+"	\ Thunar %f &
 
 " Syntax highlighting in preview
 "
@@ -346,6 +305,9 @@ fileviewer *[^/] pygmentize -O style=monokai -f console256 -g
 " ------------------------------------------------------------------------------
 " Sample keyboard mappings
 " ------------------------------------------------------------------------------
+
+" Clear image preview in single-pane mode
+nnoremap <silent> <C-o> :!kitten icat --clear --silent<cr>:wincmd o<cr>
 
 " Start shell in current directory
 "nnoremap s :shell<cr>
@@ -445,5 +407,5 @@ nnoremap <c-u> <c-w>x
 " ------------------------------------------------------------------------------
 
 " Add additional place to look for executables
-" let $PATH = $HOME.'/.vifm/scripts:'.$PATH
+"let $PATH = $HOME.'/.vifm/scripts:'.$PATH
 
