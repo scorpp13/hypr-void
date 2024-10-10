@@ -80,7 +80,8 @@
     // Wallpapers
     "custom/wallpaper": {
         "format": "",
-        "on-click": "~/.config/scripts/wallpaper.sh select",
+//        "on-click": "~/.config/scripts/wallpaper.sh select",
+        "on-click": "waypaper",
         "on-click-right": "~/.config/scripts/wallpaper.sh",
         "tooltip-format": "Wallpapers"
     },

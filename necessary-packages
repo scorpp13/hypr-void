@@ -14,6 +14,7 @@
 "fonts-roboto-ttf"
 "fontmanager"
 "fuzzel"
+"fuzzypkg"
 "git"
 "grim"
 "gtk+"
@@ -32,24 +33,27 @@
 "pipewire" | mkdir -p /etc/pipewire/pipewire.conf.d
 	ln -s /usr/share/examples/wireplumber/10-wireplumber.conf /etc/pipewire/pipewire.conf.d/
 	ln -s /usr/share/examples/pipewire/20-pipewire-pulse.conf /etc/pipewire/pipewire.conf.d/
+"pipx"
 "polkit"
+"polkit-kde-agent"
 "pywal"
 "qt5-wayland"
-"rofi"
 "seatd" | ln -s /etc/sv/seatd /var/service | usermod -aG _seatd as |
 "slurp"
 "swappy"
-"swww"
-"ueberzug"
 "vifm"
 "vim"
 "vivaldi"
 "Waybar"
+"waypaper" | pipx install waypaper
 "wlogout"
 "wlr-randr"
 "xdg-desktop-portal"
+"xdg-desktop-portal-gnome"
 "xdg-desktop-portal-gtk"
 "xdg-desktop-portal-hyprland"
+"xdg-desktop-portal-kde"
+"xdg-desktop-portal-lxqt"
 "xdg-desktop-portal-wlr"
 "xdg-user-dirs"
 "xdg-utils"
