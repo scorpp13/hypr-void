@@ -26,6 +26,7 @@
 "mesa-dri"
 "meson"
 "micro"
+"mpv"
 "nerd-fonts-symbols-ttf"
 "NetworkManager"
 "network-manager-applet"
@@ -38,6 +39,7 @@
 "polkit-kde-agent"
 "pywal"
 "qt5-wayland"
+"qt6ct"
 "seatd" | ln -s /etc/sv/seatd /var/service | usermod -aG _seatd as |
 "slurp"
 "swappy"

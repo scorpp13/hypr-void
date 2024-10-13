@@ -6,7 +6,7 @@
         "commenttype": "//%s"
     },
     "clipboard": "terminal",
-    "colorscheme": "material-tc",
+    "colorscheme": "solarized",
     "initlua": true,
     "mkparents": true
 }

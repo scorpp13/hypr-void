@@ -115,22 +115,22 @@ entry selection, label selection, textview text selection:focus, textview text s
 }
 
 .gtkstyle-fallback {
-  background-color: #212121;
+  background-color: #2C2C2C;
   color: white;
 }
 
 .gtkstyle-fallback:hover {
-  background-color: #141414;
+  background-color: #1f1f1f;
   color: white;
 }
 
 .gtkstyle-fallback:active {
-  background-color: #080808;
+  background-color: #131313;
   color: white;
 }
 
 .gtkstyle-fallback:disabled {
-  background-color: #212121;
+  background-color: #3C3C3C;
   color: rgba(255, 255, 255, 0.5);
 }
 
@@ -610,7 +610,6 @@ actionbar > revealer > box .linked > button:checked:hover:not(.suggested-action)
 }
 
 actionbar > revealer > box .linked > button:checked:disabled:not(.suggested-action):not(.destructive-action), button:checked:disabled {
-  box-shadow: inset 0 0 0 9999px alpha(currentColor, 0.1);
   background-color: alpha(currentColor, 0.05);
   color: rgba(255, 255, 255, 0.5);
 }
@@ -1981,10 +1980,14 @@ popover.background > toolbar {
   background-color: transparent;
 }
 
-popover.background list,
-popover.background .view:not(:selected),
-popover.background toolbar {
-  background-color: #3C3C3C;
+popover.background > list > row:first-child {
+  border-top-left-radius: 11px;
+  border-top-right-radius: 11px;
+}
+
+popover.background > list > row:last-child {
+  border-bottom-left-radius: 11px;
+  border-bottom-right-radius: 11px;
 }
 
 popover.background button, popover.background entry, popover.background spinbutton {
@@ -6592,6 +6595,10 @@ stack > scrolledwindow > viewport > box #c_box notebook {
 
 #workspaces button {
   min-width: 20px;
+}
+
+window.background:not(.csd):not(.solid-csd) > button:not(:hover):not(:active):not(:checked):not(:disabled):not(.flat) {
+  background-color: #242424;
 }
 
 /*********

@@ -1,3 +1,15 @@
+" {{{ Vim-Plug
+call plug#begin()
+
+" List your plugins here
+Plug 'vim-airline/vim-airline'
+Plug 'junegunn/fzf.vim'
+
+call plug#end()
+" }}}
+
+
+" {{{ Main
 augroup filetype_vim
 	autocmd!
 	autocmd FileType vim setlocal foldmethod=marker
@@ -11,8 +23,9 @@ map Q gq
 if 1
 	let g:skip_defaults_vim = 1
 endif
-" Safe file with sudo
+" Save file with sudo
 command W :execute ':silent w !sudo tee % > /dev/null' | :edit!
+" }}}
 
 
 " {{{ General settings
@@ -130,18 +143,6 @@ endif
 " {{{ Autocommands
 if has("autocmd")
 
-augroup gentoo
-  au!
-
-  " Gentoo-specific settings for ebuilds.  These are the federally-mandated
-  " required tab settings.  See the following for more information:
-  " http://www.gentoo.org/proj/en/devrel/handbook/handbook.xml
-  " Note that the rules below are very minimal and don't cover everything.
-  " Better to emerge app-vim/gentoo-syntax, which provides full syntax,
-  " filetype and indent settings for all things Gentoo.
-  au BufRead,BufNewFile *.e{build,class} let is_bash=1|setfiletype sh
-  au BufRead,BufNewFile *.e{build,class} set ts=4 sw=4 noexpandtab
-
   " In text files, limit the width of text to 78 characters, but be careful
   " that we don't override the user's setting.
   autocmd BufNewFile,BufRead *.txt
@@ -170,8 +171,6 @@ augroup gentoo
         \    ! &bomb && search('[\x80-\xFF]','nw') == 0 && &modifiable |
         \       set fileencoding= |
         \ endif
-
-augroup END
 
 endif " has("autocmd")
 " }}}

@@ -86,10 +86,12 @@ endif
 " Set custom status line look
 set statusline="  Hint: %z%= %A %10u:%-7g %15s %20d  "
 
-colorscheme papercolor-dark
+" colorscheme papercolor-dark
+colorscheme papercolor-light
 " colorscheme gruvbox
 " colorscheme dracula
 " colorscheme Default
+" colorscheme material
 
 set mouse=a
 

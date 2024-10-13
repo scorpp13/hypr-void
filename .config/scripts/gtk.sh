@@ -25,7 +25,7 @@ gsettings set "$gnome_schema" gtk-theme "$gtk_theme"
 gsettings set "$gnome_schema" icon-theme "$icon_theme"
 gsettings set "$gnome_schema" cursor-theme "$cursor_theme"
 gsettings set "$gnome_schema" font-name "$font_name"
-gsettings set "$gnome_schema" color-scheme "prefer-dark"
+gsettings set "$gnome_schema" color-scheme "default" # "preffer-dark" "preffer-light"
 
 if [ -f ~/.config/hypr/conf/cursor.conf ] ;then
     echo "exec-once = hyprctl setcursor $cursor_theme $cursor_size" > ~/.config/hypr/conf/cursor.conf
