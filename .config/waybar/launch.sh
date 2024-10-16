@@ -1,9 +1,4 @@
 #!/bin/bash
-# __      __         _              
-# \ \    / /_ _ _  _| |__  __ _ _ _ 
-#  \ \/\/ / _` | || | '_ \/ _` | '_|
-#   \_/\_/\__,_|\_, |_.__/\__,_|_|  
-#               |__/                
 
 # Check if waybar-disabled file exists
 if [ -f $HOME/.cache/waybar-disabled ] ;then 
