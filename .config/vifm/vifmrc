@@ -91,8 +91,8 @@ set statusline="  Hint: %z%= %A %10u:%-7g %15s %20d  "
 " colorscheme gruvbox
 " colorscheme dracula
 " colorscheme Default
-" colorscheme dwmlight
-colorscheme material
+" colorscheme material
+colorscheme luke
 
 set mouse=a
 
