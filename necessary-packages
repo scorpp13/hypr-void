@@ -18,6 +18,7 @@
 "git"
 "grim"
 "gtk+"
+"gvfs-mtp"
 "gum"
 "hyprland" set from repo
 	repository=https://raw.githubusercontent.com/Makrennel/hyprland-void/repository-x86_64-glibc
@@ -51,6 +52,7 @@
 "waypaper" | pipx install waypaper
 "wlogout"
 "wlr-randr"
+"udiskie"
 "xdg-desktop-portal"
 "xdg-desktop-portal-gnome"
 "xdg-desktop-portal-gtk"
