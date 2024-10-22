@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="64"
+   height="64"
+   version="1"
+   id="svg5"
+   sodipodi:docname="element4l.svg"
+   inkscape:version="1.3.2 (091e20ef0f, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs5">
+    <linearGradient
+       id="linearGradient5"
+       inkscape:collect="always">
+      <stop
+         style="stop-color:#81dbf9;stop-opacity:1;"
+         offset="0"
+         id="stop5" />
+      <stop
+         style="stop-color:#81acf9;stop-opacity:1;"
+         offset="1"
+         id="stop6" />
+    </linearGradient>
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5"
+       id="radialGradient6"
+       cx="11.692075"
+       cy="53.422237"
+       fx="11.692075"
+       fy="53.422237"
+       r="28"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.6085683,-0.92870736,0.92870736,1.6085683,-56.729052,-21.652566)" />
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter6"
+       x="-0.033982929"
+       y="-0.033982929"
+       width="1.0679659"
+       height="1.0679659">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.79293501"
+         id="feGaussianBlur6" />
+    </filter>
+  </defs>
+  <sodipodi:namedview
+     id="namedview5"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="13.890625"
+     inkscape:cx="32"
+     inkscape:cy="32"
+     inkscape:window-width="1920"
+     inkscape:window-height="1018"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg5" />
+  <rect
+     style="fill:#000000;fill-opacity:1;opacity:0.66063001;filter:url(#filter6)"
+     width="56"
+     height="56"
+     x="3.8228786"
+     y="4.2349572"
+     rx="15.452177"
+     ry="15.452177"
+     id="rect1-3" />
+  <rect
+     style="fill:url(#radialGradient6)"
+     width="56"
+     height="56"
+     x="4"
+     y="4"
+     rx="15.452177"
+     ry="15.452177"
+     id="rect1" />
+  <g
+     id="g6"
+     style="opacity:0.59494146;fill:#000000;fill-opacity:1">
+    <circle
+       style="fill:#000000;fill-opacity:1"
+       cx="14.004016"
+       cy="33.373634"
+       r="6"
+       id="circle2" />
+    <circle
+       style="fill:#000000;fill-opacity:1"
+       cx="50.004017"
+       cy="33.373634"
+       r="6"
+       id="circle3" />
+    <path
+       style="fill:#000000;fill-opacity:1"
+       d="m 43.004016,40.555633 c 0,2.661 -4.701,4.818 -10.5,4.818 -5.799,0 -10.5,-2.15685 -10.5,-4.81755 0,-2.6607 4.701,0 10.5,0 5.799,0 10.5,-2.6607 10.5,0 z"
+       id="path3" />
+  </g>
+  <circle
+     style="fill:#ffffff"
+     cx="16.504017"
+     cy="31.873634"
+     r="1.5"
+     id="circle4" />
+  <circle
+     style="fill:#ffffff"
+     cx="52.504017"
+     cy="31.873634"
+     r="1.5"
+     id="circle5" />
+</svg>

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: Adobe Illustrator 25.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+
+<svg
+   version="1.1"
+   id="Layer_1"
+   x="0px"
+   y="0px"
+   viewBox="0 0 64 64"
+   style="enable-background:new 0 0 64 64;"
+   xml:space="preserve"
+   sodipodi:docname="user-blue-desktop.svg"
+   inkscape:version="1.3.2 (091e20ef0f, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><defs
+   id="defs4"><radialGradient
+     id="SVGID_1_-3"
+     cx="32"
+     cy="36.5"
+     r="50.7813"
+     fx="14.3459"
+     fy="19.097"
+     gradientUnits="userSpaceOnUse"
+     gradientTransform="translate(-0.05038414,-1.4991245)">
+	<stop
+   offset="0"
+   style="stop-color:#00F0F4"
+   id="stop1-6" />
+	<stop
+   offset="1"
+   style="stop-color:#1598FF"
+   id="stop2-7" />
+</radialGradient><radialGradient
+     id="SVGID_2_-5"
+     cx="9.6442003"
+     cy="17.5576"
+     r="51.634102"
+     gradientUnits="userSpaceOnUse"
+     gradientTransform="translate(0.04178431,0.0946245)">
+	<stop
+   offset="0"
+   style="stop-color:#15C7FF"
+   id="stop3-3" />
+	<stop
+   offset="1"
+   style="stop-color:#005A9E"
+   id="stop4-5" />
+</radialGradient><radialGradient
+     id="SVGID_2_-9"
+     cx="9.6442003"
+     cy="17.5576"
+     r="51.634102"
+     gradientUnits="userSpaceOnUse"
+     gradientTransform="translate(0.06294115,-1.4210427)">
+	<stop
+   offset="0"
+   style="stop-color:#15C7FF"
+   id="stop3-1" />
+	<stop
+   offset="1"
+   style="stop-color:#005A9E"
+   id="stop4-2" />
+</radialGradient><radialGradient
+     id="SVGID_1_-3-7"
+     cx="32"
+     cy="36.5"
+     r="50.7813"
+     fx="14.3459"
+     fy="19.097"
+     gradientUnits="userSpaceOnUse"
+     gradientTransform="translate(0.01255695,-1.4201672)">
+	<stop
+   offset="0"
+   style="stop-color:#00F0F4"
+   id="stop1-6-0" />
+	<stop
+   offset="1"
+   style="stop-color:#1598FF"
+   id="stop2-7-9" />
+</radialGradient></defs><sodipodi:namedview
+   id="namedview4"
+   pagecolor="#505050"
+   bordercolor="#eeeeee"
+   borderopacity="1"
+   inkscape:showpageshadow="0"
+   inkscape:pageopacity="0"
+   inkscape:pagecheckerboard="0"
+   inkscape:deskcolor="#505050"
+   inkscape:zoom="8.5626212"
+   inkscape:cx="30.6565"
+   inkscape:cy="31.298827"
+   inkscape:window-width="1920"
+   inkscape:window-height="1014"
+   inkscape:window-x="0"
+   inkscape:window-y="0"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="Layer_1" />
+<style
+   type="text/css"
+   id="style1">
+	.st0{fill:url(#SVGID_1_);}
+	.st1{fill:url(#SVGID_2_);}
+</style>
+<radialGradient
+   id="SVGID_1_"
+   cx="32"
+   cy="36.5"
+   r="50.7813"
+   fx="14.3459"
+   fy="19.097"
+   gradientUnits="userSpaceOnUse"
+   gradientTransform="translate(-15.572984,-1.3109274)">
+	<stop
+   offset="0"
+   style="stop-color:#00F0F4"
+   id="stop1" />
+	<stop
+   offset="1"
+   style="stop-color:#1598FF"
+   id="stop2" />
+</radialGradient>
+<path
+   d="m 10.963868,7.500001 c -3.8953812,0 -6.992681,3.092841 -7.0000006,6.986328 l -0.013672,0.01367 v 34.701172 c 0,3.999992 3.2988362,7.298828 7.2988286,7.298828 h 9.015625 21.40039 11.083985 c 3.999992,0 7.300781,-3.298836 7.300781,-7.298828 v -34.70117 l -0.08984,-0.08984 c -0.04778,-3.857113 -3.126484,-6.91016 -6.996097,-6.91016 z"
+   style="fill:url(#SVGID_1_-3)"
+   id="path5" />
+<radialGradient
+   id="SVGID_2_"
+   cx="9.6442"
+   cy="17.5576"
+   r="51.6341"
+   gradientUnits="userSpaceOnUse"
+   gradientTransform="translate(5.9999999e-8,-1.5)">
+	<stop
+   offset="0"
+   style="stop-color:#15C7FF"
+   id="stop3" />
+	<stop
+   offset="1"
+   style="stop-color:#005A9E"
+   id="stop4" />
+</radialGradient>
+<path
+   class="st1"
+   d="M 11,7.4999999 C 7.1000001,7.4999999 4.0000001,10.6 4.0000001,14.5 v 0 H 60 v 0 C 60,10.6 56.9,7.4999999 53,7.4999999 Z M 22.7,49.5 c -2.6,0 -4.7,2.1 -4.7,4.7 v 0 c 0,1.3 1,2.3 2.3,2.3 h 21.4 c 1.3,0 2.3,-1 2.3,-2.3 v 0 c 0,-2.6 -2.1,-4.7 -4.7,-4.7 z"
+   id="path4"
+   style="fill:url(#SVGID_2_)" />
+</svg>
