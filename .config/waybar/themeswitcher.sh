@@ -27,9 +27,8 @@ do
     fi
 done
 
-# Show rofi dialog
+# Open fuzzel for make a choice 
 listNames=${listNames::-2}
-#choice=$(echo -e "$listNames" | rofi -dmenu -replace -config ~/.config/rofi/config-theme.rasi -no-show-icons -width 30 -p "Themes" -format i) 
 choice=$(echo -e "$listNames" | fuzzel -d --index -format i)
 
 # Set new theme by writing the theme information to ~/.cache/.themestyle.sh

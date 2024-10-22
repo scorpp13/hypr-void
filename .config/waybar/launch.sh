@@ -28,7 +28,7 @@ if [ ! -f ~/.config/waybar/themes${arrThemes[1]}/style.css ]; then
     themestyle="/myset;/myset/mixed"
 fi
 
-# Loading the configuration
+# Load config
 cfg_file="config"
 css_file="style.css"
 waybar -c ~/.config/waybar/themes${arrThemes[0]}/$cfg_file -s ~/.config/waybar/themes${arrThemes[1]}/$css_file &
