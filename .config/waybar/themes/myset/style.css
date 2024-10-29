@@ -117,10 +117,10 @@ window#waybar.empty #window {
 /*	CUSTOM APPMENU	*/
 #custom-appmenu {
     background-color: @workspacesbackground2;
-    font-size: 22px;
+    font-size: 20px;
     color: @textcolor1;
     border-radius: 20px;
-    padding: 0px 10px 0px 10px;
+    padding: 0px 11px 0px 11px;
     margin: 0px 15px 0px 10px;
     opacity:0.5;
 }
@@ -128,10 +128,10 @@ window#waybar.empty #window {
 /*	CUSTOM EXIT	*/
 #custom-exit {
     background-color: @workspacesbackground2;
-    font-size: 22px;
+    font-size: 20px;
     color: @textcolor1;
     border-radius: 20px;
-	padding: 0px 11px 0px 11px;
+	padding: 0px 12px 0px 12px;
     margin: 0px 10px 0px 0px;
     opacity: 0.5;
 }
