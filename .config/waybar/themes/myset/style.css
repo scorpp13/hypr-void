@@ -70,20 +70,20 @@ tooltip label {
     border: 1px solid @backgroundlight;
 }
 window#waybar.empty #window {
-    border-color:transparent;
+    border-color: transparent;
 }
 
 /*	TASKBAR	*/
 #taskbar {
     background: @workspacesbackground1;
     margin: 3px 15px 3px 0px;
-    padding:0px;
+    padding: 0px;
     border-radius: 20px;
-    opacity:0.8;
-    border: 1px solid @backgroundlight;
+    opacity: 0.8;
+    border: 2px solid @backgroundlight;
 }
 #taskbar button {
-    margin:0;
+    margin: 0;
     border-radius: 20px;
     padding: 0px 6px 0px 6px;
 }
