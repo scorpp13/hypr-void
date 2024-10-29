@@ -61,13 +61,13 @@ tooltip label {
 /*	WINDOW	*/
 #window {
     background: transparent;
-    margin: 5px 15px 5px 0px;
+    margin: 3px 15px 3px 0px;
     padding: 3px 8px 3px 8px;
     border-radius: 20px;
     color: @textcolor2;
     font-size: 15px;
     opacity: 0.8;
-    border: 1px solid @backgroundlight;
+    border: 1px double @backgroundlight;
 }
 window#waybar.empty #window {
     border-color: transparent;
@@ -76,11 +76,11 @@ window#waybar.empty #window {
 /*	TASKBAR	*/
 #taskbar {
     background: @workspacesbackground1;
-    margin: 3px 15px 3px 0px;
+    margin: 5px 15px 5px -5px;
     padding: 0px;
     border-radius: 20px;
     opacity: 0.8;
-    border: 1px solid @backgroundlight;
+    border: 1px double @backgroundlight;
 }
 #taskbar button {
     margin: 0;
@@ -146,7 +146,7 @@ window#waybar.empty #window {
     padding: 3px 8px 3px 8px;
     margin: 5px 15px 5px 0px;
     opacity: 0.8;
-    border: 1px solid @backgroundlight;
+    border: 1px double @backgroundlight;
 }
 #custom-updates.zero {
     background-color: transparent;
@@ -175,7 +175,7 @@ window#waybar.empty #window {
     padding: 3px 8px 3px 8px;
     margin: 5px 15px 5px 0px;
     opacity:0.8;
-    border:1px solid @backgroundlight;
+    border:1px double @backgroundlight;
 }
 
 /*	CPU TEMPERATURE	*/
@@ -202,7 +202,7 @@ background-color: #f53c3c;
     padding: 3px 8px 3px 8px;
     margin: 5px 15px 5px 0px;
     opacity:0.8;
-    border:1px solid @backgroundlight;   
+    border:1px double @backgroundlight;   
 }
 
 /*	PULSEAUDIO	*/
@@ -215,7 +215,7 @@ background-color: #f53c3c;
     padding: 3px 8px 3px 8px;
     margin: 5px 15px 5px 0px;
     opacity:0.8;
-    border:1px solid @backgroundlight;
+    border:1px double @backgroundlight;
 }
 #pulseaudio.muted {
     background-color: #f53c3c;
@@ -284,5 +284,5 @@ background-color: #f53c3c;
     padding: 0px 8px 0px 8px;
     margin: 5px 15px 5px 0px;
     opacity:0.8;
-    border:1px solid @backgroundlight;
+    border:1px double @backgroundlight;
 }
