@@ -12,26 +12,15 @@
             "active": "",
             "default": ""
         },
-        "persistent-workspaces": {
-            "*": 5
-        }
+        "persistent-workspaces": {"*": 4}
     },
 //		Taskbar
     "wlr/taskbar": {
     	"all-outputs": true,
-        "format": "{icon}",
         "icon-size": 18,
         "tooltip-format": "{name}",
         "on-click": "activate",
-        "on-click-middle": "close",
-        //"ignore-list": ["kitty"],
-        "app_ids-mapping": {
-            "firefoxdeveloperedition": "firefox-developer-edition"
-        },
-        "rewrite": {
-            "Firefox Web Browser": "Firefox",
-            "Foot Server": "Terminal"
-        }
+        "on-click-middle": "close"
     },
 //		Window
     "hyprland/window": {
@@ -39,7 +28,7 @@
             "rewrite": {
             "(.*) - Mousepad": "  $1",
             "(.*) - Thunar": "  $1",
-            "(.*) — Vivaldi": "  $1"
+            "(.*) - Vivaldi": "  $1"
         },
         "max-length": 200,
         "separate-outputs": true
@@ -110,7 +99,6 @@
 //		App Menu
     "custom/appmenu": {
         "format": "",
-        //"on-click": "rofi -show drun -replace",
 		"on-click": "fuzzel",
         "on-click-right": "~/.config/scripts/keybindings.sh",
         "tooltip-format": "Right click for keybinds"
@@ -123,7 +111,7 @@
     },
 //		System tray
     "tray": {
-        "icon-size": 20,
+        "icon-size": 18,
         "spacing": 10
     },
 //		Clock
@@ -149,12 +137,21 @@
 			"on-scroll-down"	: "shift_down"
 		}
     },
+//		Weather	
+	"custom/weather": {
+        "format": "{}",
+        "return-type": "json",
+        "exec": "$HOME/.config/waybar/weather.sh 'Калининград' 2> /dev/null",
+        "interval": 3600,
+        "tooltip": true,
+		"on-click": "alacritty --hold -e curl -s 'ru.wttr.in/?format=v2d'"
+    },	
 //		CPU_temp
     "temperature": {
         "critical-threshold": 80,
-        "format-critical": "CPU {temperatureC}°C",
+        "format-critical": "{temperatureC}°C",
         "format": "",
-        "on-click": "kitty -e btop",
+        "on-click": "alacritty -e btop",
         "tooltip": false
     },
 //		Language
@@ -162,36 +159,10 @@
         //"on-click": "hyprctl switchxkblayout at-translated-set-2-keyboard next",
         "on-click": "hyprctl switchxkblayout lenovo-lenovo-calliope-usb-keyboard next",
         "format": "{}",
-        "format-en": "US",
+        "format-en": "EN",
         "format-ru": "RU",
         //"keyboard-name": "at-translated-set-2-keyboard",
         "keyboard-name": "lenovo-lenovo-calliope-usb-keyboard"
-    },
-//		Network
-    "network": {
-        "format": "{ifname}",
-        "format-wifi": " ",
-        "format-ethernet": "  {ipaddr}",
-        "format-disconnected": "Not connected",
-        "tooltip-format": " {ifname} via {gwaddri}",
-        "tooltip-format-wifi": "   {essid} ({signalStrength}%)",
-        "tooltip-format-ethernet": "  {ifname} ({ipaddr}/{cidr})",
-        "tooltip-format-disconnected": "Disconnected",
-        "max-length": 50,
-        "on-click": "kitty -e nmtui",
-        "on-click-middle": "nmcli r wifi off | nmcli r wifi on"
-    },
-//		Battery
-    "battery": {
-        "states": {
-            "warning": 30,
-            "critical": 15
-        },
-        "format": "{icon}   {capacity}%",
-        "format-charging": "  {capacity}%",
-        "format-plugged": "  {capacity}%",
-        "format-alt": "{icon}  {time}",
-        "format-icons": [" ", " ", " ", " ", " "]
     },
 //		Pulseaudio
     "pulseaudio": {
@@ -206,14 +177,6 @@
         },
         "on-click": "pavucontrol",
         "on-click-middle": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
-    },
-//		Bluetooth
-    "bluetooth": {
-        "format-off": " {}",
-        "on-click": "blueman-manager",
-        "on-click-middle": "bluetoothctl power off | bluetoothctl power on",
-        "tooltip-format": "middle-click to on/off",
-        "tooltip": true
     },
 //		Other
     "user": {
