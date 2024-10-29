@@ -80,7 +80,7 @@ window#waybar.empty #window {
     padding: 0px;
     border-radius: 20px;
     opacity: 0.8;
-    border: 2px solid @backgroundlight;
+    border: 1px solid @backgroundlight;
 }
 #taskbar button {
     margin: 0;
