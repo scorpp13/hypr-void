@@ -69,14 +69,14 @@
     "custom/filemanager": {
         "format": "",
         "on-click": "kitty -e vifm",
-        "tooltip-format": "VIFM"
+        "tooltip-format": "VIFM filemanager"
     },
 //		Web Browser
     "custom/browser": {
         "format": "",
        // "on-click": "vivaldi-stable --proxy-server='http://127.0.0.1:8080'",
         "on-click": "vivaldi-stable",
-        "tooltip-format": "Vivaldi"
+        "tooltip-format": "Vivaldi browser"
     },    
 //		Media Player
     "custom/player": {
@@ -164,7 +164,7 @@
         "format-muted": "",
         "format-source": " {volume}%",
         "format-source-muted": "",
-        "tooltip-format": "middle-click to un/mute",
+        "tooltip-format": "middle-click to (un)mute",
         "tooltip": true,
         "format-icons": {
             "default": [" ", " ", "󰕾 ", " "]
