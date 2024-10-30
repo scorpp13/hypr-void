@@ -44,7 +44,7 @@
 //		Updates
     "custom/updates": {
         "format": "󰶡  {}",
-        "tooltip-format": "{}",
+        "tooltip-format": "{} updates available",
         "escape": true,
         "return-type": "json",       
         "exec": "~/.config/scripts/updates.sh",
@@ -65,30 +65,24 @@
         "on-click": "~/.config/waybar/themeswitcher.sh",
         "tooltip-format": "Themes"
     },
-//		Keybindings
-    "custom/keybindings": {
-        "format": "",
-        "on-click": "~/.config/scripts/keybindings.sh",
-        "tooltip": false
-    },
 //		File Manager
     "custom/filemanager": {
         "format": "",
         "on-click": "kitty -e vifm",
-        "tooltip": false
+        "tooltip-format": "VIFM"
     },
 //		Web Browser
     "custom/browser": {
         "format": "",
        // "on-click": "vivaldi-stable --proxy-server='http://127.0.0.1:8080'",
         "on-click": "vivaldi-stable",
-        "tooltip": false
+        "tooltip-format": "Vivaldi"
     },    
 //		Media Player
     "custom/player": {
         "format": "󱜅",
         "on-click": "~/.config/scripts/mpv.sh",
-        "tooltip": false
+        "tooltip-format": "MPV Player"
     },
 //		Scripts
     "custom/script": {
@@ -107,7 +101,7 @@
     "custom/exit": {
         "format": "",
         "on-click": "wlogout",
-        "tooltip": false
+		"tooltip-format": "Power Menu"
     },
 //		System tray
     "tray": {

@@ -15,8 +15,8 @@ window#waybar {
 /*	WORKSPACES	*/
 #workspaces {
     background: @workspacesbackground1;
-    margin: 2px 1px 3px 1px;
-    padding: 0px 1px;
+    margin: 4px 0px 4px 0px;
+    padding: 0px 2px;
     border-radius: 20px;
     opacity: 0.8;
     font-size: 12px;
@@ -51,8 +51,6 @@ window#waybar {
 tooltip {
     border-radius: 15px;
     background-color: @background;
-    padding: 20px;
-    margin: 0px;
 }
 tooltip label {
     color: @backgroundlight;
@@ -61,7 +59,7 @@ tooltip label {
 /*	WINDOW	*/
 #window {
     background: transparent;
-    margin: 3px 15px 3px 0px;
+    margin: 5px 15px 5px 0px;
     padding: 3px 8px 3px 8px;
     border-radius: 20px;
     color: @textcolor2;
@@ -117,22 +115,22 @@ window#waybar.empty #window {
 /*	CUSTOM APPMENU	*/
 #custom-appmenu {
     background-color: @workspacesbackground2;
-    font-size: 20px;
+    font-size: 22px;
     color: @textcolor1;
     border-radius: 20px;
-    padding: 0px 11px 0px 11px;
-    margin: 0px 15px 0px 10px;
+    padding: 0px 6px 0px 6px;
+    margin: 4px 15px 4px 10px;
     opacity:0.5;
 }
 
 /*	CUSTOM EXIT	*/
 #custom-exit {
     background-color: @workspacesbackground2;
-    font-size: 20px;
+    font-size: 22px;
     color: @textcolor1;
     border-radius: 20px;
-	padding: 0px 12px 0px 12px;
-    margin: 0px 10px 0px 0px;
+	padding: 0px 7px 0px 7px;
+    margin: 4px 10px 4px 0px;
     opacity: 0.5;
 }
 
@@ -188,7 +186,7 @@ background-color: #f53c3c;
     color: @textcolor2;
     border-radius: 20px;
     padding: 3px 8px 3px 8px;
-    margin: 5px 15px 5px 0px;
+    margin: 5px 12px 5px 0px;
     opacity:1.0;
 }
 
@@ -260,7 +258,7 @@ background-color: #f53c3c;
 
 /*	TRAY	*/
 #tray {
-    margin-right: 15;
+	margin: 4px 15px 4px 0px;
     padding: 0px 8px 0px 8px;
     border-radius: 20px;
     opacity:0.8;
