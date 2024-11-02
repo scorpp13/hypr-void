@@ -16,8 +16,8 @@ cat <<"EOF"
 EOF
 
 if gum confirm "Start CleanUp right now?"; then
-    gum spin --title "Cleaning..." -- sleep 0.5
-    sudo xbps-remove -Oo
+	gum spin --title "Cleaning..." -- sleep 0.5
+	sudo xbps-remove -Oo
 elif [ $? -eq 130 ]; then
 	notify-send "Canceled by user"
 	exit 130

@@ -1,47 +1,51 @@
 {
-// GENERAL SETTINGS
-    "position": "top",//bottom
-    "margin-top": 10,
-    "margin-bottom": 0,
-    "layer": "top",
-    "height": 16,
-    "margin-left": 0,
-    "margin-right": 0,    
-    "spacing": 0,
-// CONFIG FILE
-    "include": ["~/.config/waybar/modules.json"],
-// LEFT MODULES
-    "modules-left": [
-        "custom/appmenu",
-        "custom/waybarthemes",
-        "custom/wallpaper",
-        "custom/cliphist",
-        "custom/script",
-        "wlr/taskbar",
-        "group/quicklinks",
-        "hyprland/window",
-    ],
-// CENTER MODULES
-    "modules-center": [
-        "hyprland/workspaces",
-    ],
-// RIGHT MODULES    
-    "modules-right": [
-        "tray",
-        "temperature",
-		"hyprland/language",
-        "custom/updates",
-        "pulseaudio",
-		"custom/weather",
-        "clock",
-        "custom/exit",
-    ],
-// QUICKLINKS
-	"group/quicklinks": {"orientation": "horizontal",
-		"modules": [
-			"custom/browser",
-			"custom/filemanager",
-			"custom/player",
-    		]
+//	GENERAL SETTINGS
+"position": "top",//bottom
+"margin-top": 10,
+"margin-bottom": 0,
+"layer": "top",
+"height": 16,
+"margin-left": 0,
+"margin-right": 0,    
+"spacing": 0,
+
+//	CONFIG FILE
+"include": ["~/.config/waybar/modules.json"],
+
+//	LEFT MODULES
+"modules-left": [
+	"custom/appmenu",
+	"custom/waybarthemes",
+	"custom/wallpaper",
+	"custom/cliphist",
+	"custom/script",
+	"wlr/taskbar",
+	"group/quicklinks",
+	"hyprland/window",
+	],
+
+//	CENTER MODULES
+"modules-center": [
+	"hyprland/workspaces",
+	],
+//	RIGHT MODULES
+"modules-right": [
+	"tray",
+	"temperature",
+	"hyprland/language",
+	"custom/updates",
+	"pulseaudio",
+	"custom/weather",
+	"clock",
+	"custom/exit",
+	],
+
+//	QUICKLINKS
+"group/quicklinks": {"orientation": "horizontal",
+	"modules": [
+		"custom/browser",
+		"custom/filemanager",
+		"custom/player",
+		]
 	}	
 }
