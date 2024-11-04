@@ -1,4 +1,3 @@
-
 #[shell]
 #program = "/bin/fish"
 #args = ["-l"]

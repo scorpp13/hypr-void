@@ -5,10 +5,6 @@ if [[ -f ~/.bashrc ]] ; then
 fi
 
 # Set user_executable PATH
-if [ -d "$HOME/.config/scripts" ] ; then
-	export PATH="$HOME/.config/scripts:$PATH"
-fi
-
 if [ -d "$HOME/.local/bin" ] ; then
 	export PATH="$HOME/.local/bin:$PATH"
 fi

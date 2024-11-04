@@ -15,7 +15,7 @@ if [ -f ~/.my_aliases ]; then
     . ~/.my_aliases
 fi
 
-# Show fastfetch if gui-session is used
+# Show fastfetch if run gui-session
 echo ""
 if [[ $(tty) == *"pts"* ]]; then
     fastfetch -c /usr/share/fastfetch/presets/examples/8.jsonc

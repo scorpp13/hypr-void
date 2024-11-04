@@ -100,16 +100,18 @@ set mouse=a
 " Bookmarks
 " ------------------------------------------------------------------------------
 
-mark b ~/.local/bin/
-mark h ~/
 mark c ~/.config/
-mark C ~/.vifm/
-mark p ~/Pictures/
-mark v ~/Videos/
 mark d ~/Downloads/
-mark R /
-mark M /run/media/as/
-mark P ~/.config/wallpapers/
+mark e /etc
+mark h ~/
+mark l ~/.local/
+mark m /run/media/as/
+mark p ~/Pictures/
+mark s ~/Pictures/screenshots
+mark r /
+mark u /usr
+mark v ~/Video/
+mark w ~/.config/wallpapers/
 
 " ------------------------------------------------------------------------------
 " Commands

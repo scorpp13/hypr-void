@@ -1,5 +1,6 @@
 alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
-alias purge-kernel='sudo vkpurge list'
+alias old-kernel='sudo vkpurge list'
+alias purge-kernel='sudo vkpurge rm all'
 alias cflat='flatpak uninstall --unused --delete-data'
 alias rflat='flatpak repair'
 alias c='clear'
