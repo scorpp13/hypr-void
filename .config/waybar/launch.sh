@@ -10,8 +10,8 @@ fi
 pkill waybar
 sleep 0.2
 
-# Default theme: /THEMEFOLDER;/VARIATION
-themestyle="/myset;/myset/mixed"
+# Set default theme
+themestyle="/colored"
 
 # Get current theme information from .cache/.themestyle.sh
 if [ -f ~/.cache/.themestyle.sh ]; then
@@ -22,13 +22,13 @@ else
 fi
 
 IFS=';' read -ra arrThemes <<< "$themestyle"
-echo ${arrThemes[0]}
+echo $arrThemes
 
-if [ ! -f ~/.config/waybar/themes${arrThemes[1]}/style.css ]; then
-	themestyle="/myset;/myset/mixed"
+if [ ! -f ~/.config/waybar/themes$arrThemes/style.css ]; then
+	themestyle="/colored"
 fi
 
-# Load config
+# Load waybar config
 cfg_file="config"
 css_file="style.css"
-waybar -c ~/.config/waybar/themes${arrThemes[0]}/$cfg_file -s ~/.config/waybar/themes${arrThemes[1]}/$css_file &
+waybar -c ~/.config/waybar/themes/$cfg_file -s ~/.config/waybar/themes$arrThemes/$css_file &
