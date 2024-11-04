@@ -4,7 +4,7 @@ if [[ -f ~/.bashrc ]] ; then
 	. ~/.bashrc
 fi
 
-# Set user_executibale PATH
+# Set user_executable PATH
 if [ -d "$HOME/.config/scripts" ] ; then
 	export PATH="$HOME/.config/scripts:$PATH"
 fi
@@ -22,7 +22,7 @@ if test -z "$XDG_RUNTIME_DIR"; then
 	export XDG_RUNTIME_DIR="/run/user/$(id -u $USER)"
 fi
 
-# If login is nonroot start session gui, else use console
+# If login is nonroot start gui-session, else use console
 if shopt -q login_shell; then
     [[ -f ~/.bashrc ]] && source ~/.bashrc
     [[ -t 0 && $(tty) == /dev/tty1 && ! $DISPLAY ]] && dbus-run-session Hyprland
