@@ -2,6 +2,9 @@
 " Main settings
 " ------------------------------------------------------------------------------
 
+" Enable icons
+source ~/.config/vifm/favicons.vifm
+
 " Command used to edit files in various contexts.  The default is vim.
 if executable('vim')
     set vicmd=vim
@@ -24,6 +27,9 @@ set syscalls
 
 " Trash Directory
 set trash
+
+" Enable mouse
+set mouse=a
 
 " What should be saved automatically on restarting vifm.  Drop "savedirs"
 " value if you don't want vifm to remember last visited directories for you.
@@ -52,7 +58,7 @@ set norunexec
 
 " Format for displaying time in file list. For example:
 " TIME_STAMP_FORMAT=%m/%d-%H:%M
-set timefmt='%d/%m/%Y %H:%M'
+set timefmt='%d-%b-%Y_%H:%M'
 
 " Show list of matches on tab completion in command-line mode
 set wildmenu
@@ -84,17 +90,15 @@ if !has('win')
 endif
 
 " Set custom status line look
-set statusline="  Hint: %z%= %A %10u:%-7g %15s %20d  "
+set statusline="%t%[ -> %T%] %6E %12A %=%d %5u:%g"
 
+" colorscheme dracula
+" colorscheme dwmlight
+" colorscheme gruvbox
+colorscheme luke
+" colorscheme material
 " colorscheme papercolor-dark
 " colorscheme papercolor-light
-" colorscheme gruvbox
-" colorscheme dracula
-" colorscheme Default
-" colorscheme material
-colorscheme luke
-
-set mouse=a
 
 " ------------------------------------------------------------------------------
 " Bookmarks
@@ -146,6 +150,9 @@ command! mount bashmount
 
 " :filetype pattern1,pattern2 defaultprogram,program2
 " :fileviewer pattern1,pattern2 consoleviewer
+
+fileviewer .git/
+	\ git status %d %pu
 
 fileviewer {*.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm,*.svg,*.ttf}
     \ kitten icat --silent --transfer-mode=file --place=%pwx%ph@%pxx%py %c >/dev/tty </dev/tty %N
@@ -277,10 +284,9 @@ fileviewer {*.docx},
 	\vnd.openxmlformats-officedocument.wordprocessingml.document>
 	\ docx2txt.pl %f -
 
-" Directories
-"filextype */
-"	\ {View in thunar}
-"	\ Thunar %f &
+" Enable ls colors in folder preview
+fileviewer */ ls --color=always                                                                  
+fileviewer .*/ ls --color=always
 
 " Syntax highlighting in preview
 "
