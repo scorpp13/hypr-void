@@ -104,18 +104,19 @@ colorscheme luke
 " Bookmarks
 " ------------------------------------------------------------------------------
 
-mark c ~/.config/
-mark d ~/Downloads/
+mark b ~/.backup
+mark c ~/.config
+mark d ~/Downloads
 mark e /etc
 mark h ~/
-mark l ~/.local/
-mark m /run/media/as/
-mark p ~/Pictures/
+mark l ~/.local
+mark m /run/media/as
+mark p ~/Pictures
 mark s ~/Pictures/screenshots
 mark r /
 mark u /usr
-mark v ~/Video/
-mark w ~/.config/wallpapers/
+mark v ~/Video
+mark w ~/.config/wallpapers
 
 " ------------------------------------------------------------------------------
 " Commands
