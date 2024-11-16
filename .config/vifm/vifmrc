@@ -144,6 +144,7 @@ command! vgrep vim "+grep %a"
 command! reload :write | restart full
 command! link ln -s %d/%f %D
 command! mount bashmount
+command! extract xarchiver -d %a
 
 " ------------------------------------------------------------------------------
 " File types association
@@ -227,7 +228,7 @@ fileviewer {*.torrent},<application/x-bittorrent> qbittorrent %c
 
 " FuseZipMount
 filetype {*.zip,*.jar,*.war,*.ear,*.oxt,*.apkg},
-	\<application/zip,application/java-archive>
+	\<application/zip,application/java-archive> xarchiver %f &
 	\ {View contents}
 	\ unzip -l %f | less,
 	\ {Extract here}
@@ -237,7 +238,7 @@ fileviewer *.zip,*.jar,*.war,*.ear,*.oxt unzip -l %f
 " ArchiveMount
 filetype {*.tar,*.tar.bz2,*.tbz2,*.tgz,*.tar.gz,*.tar.xz,*.txz,*.tar.zst,
 	\*.tzst},
-	\<application/x-tar>
+	\<application/x-tar> xarchiver %f &
 	\ {Mount with archivemount}
 	\ FUSE_MOUNT|archivemount %SOURCE_FILE %DESTINATION_DIR
 fileviewer *.tgz,*.tar.gz tar -tzf %c
@@ -247,7 +248,7 @@ fileviewer *.tar.zst,*.tzst tar -t --zstd -f %c
 fileviewer {*.tar},<application/x-tar> tar -tf %c
 
 " Rar2FsMount and rar archives
-filetype {*.rar},<application/x-rar>
+filetype {*.rar},<application/x-rar> xarchiver %f &
 	\ {Mount with rar2fs}
 	\ FUSE_MOUNT|rar2fs %SOURCE_FILE %DESTINATION_DIR
 fileviewer {*.rar},<application/x-rar> unrar v %c
@@ -268,7 +269,7 @@ filetype *.ftp
 	\ FUSE_MOUNT2|curlftpfs -o ftp_port=-,,disable_eprt %PARAM %DESTINATION_DIR %FOREGROUND
 
 " Fuse7z and 7z archives
-filetype {*.7z},<application/x-7z-compressed>
+filetype {*.7z},<application/x-7z-compressed> xarchiver %f &
 	\ {Mount with fuse-7z}
 	\ FUSE_MOUNT|fuse-7z %SOURCE_FILE %DESTINATION_DIR
 fileviewer {*.7z},<application/x-7z-compressed> 7z l %c
