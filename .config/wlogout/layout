@@ -6,8 +6,8 @@
 }
 {
     "label" : "hibernate",
-    "action" : "sleep 1; notify-send 'Hibernate NOT SET'; #loginctl hibernate; swaylock",
-    "text" : "Hibernate",
+    "action" : "sleep 0.2; notify-send 'WellCome Back ^;^'; #loginctl hibernate; swaylock",
+    "text" : "",
     "keybind" : "h"
 }
 {

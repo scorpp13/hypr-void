@@ -51,7 +51,7 @@ button:hover {
 #hibernate {
 	margin: 10px;
 	border-radius: 20px;
-	background-image: image(url("icons/hibernate.png"));
+	background-image: image(url("icons/void-logo.png"));
 }
 #shutdown {
 	margin: 10px;
