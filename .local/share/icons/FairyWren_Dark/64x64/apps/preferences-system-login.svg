@@ -4,7 +4,7 @@
    height="64"
    version="1"
    id="svg5"
-   sodipodi:docname="preferences-tweaks-cerbere.svg"
+   sodipodi:docname="cs-startup-programs.svg"
    inkscape:version="1.3.2 (091e20ef0f, 2023-11-25, custom)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -17,11 +17,11 @@
        id="linearGradient1"
        inkscape:collect="always">
       <stop
-         style="stop-color:#25fec8;stop-opacity:1;"
+         style="stop-color:#00d2ff;stop-opacity:1;"
          offset="0"
          id="stop1" />
       <stop
-         style="stop-color:#36f8aa;stop-opacity:1;"
+         style="stop-color:#00acff;stop-opacity:1;"
          offset="1"
          id="stop2" />
     </linearGradient>
@@ -52,7 +52,7 @@
   </defs>
   <sodipodi:namedview
      id="namedview5"
-     pagecolor="#444444"
+     pagecolor="#ffffff"
      bordercolor="#000000"
      borderopacity="0.25"
      inkscape:showpageshadow="2"
@@ -60,10 +60,10 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:zoom="9.8111066"
-     inkscape:cx="31.240105"
-     inkscape:cy="33.07476"
+     inkscape:cx="31.34203"
+     inkscape:cy="33.023798"
      inkscape:window-width="1920"
-     inkscape:window-height="1018"
+     inkscape:window-height="1020"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"

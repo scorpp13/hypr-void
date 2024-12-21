@@ -65,10 +65,10 @@
        inkscape:collect="always"
        style="color-interpolation-filters:sRGB"
        id="filter6"
-       x="-0.13903935"
-       y="-0.13903935"
-       width="1.2780787"
-       height="1.2780787">
+       x="-0.13131385"
+       y="-0.13131385"
+       width="1.2626277"
+       height="1.2626277">
       <feGaussianBlur
          inkscape:collect="always"
          stdDeviation="0.93862843"
@@ -78,10 +78,10 @@
        inkscape:collect="always"
        style="color-interpolation-filters:sRGB"
        id="filter7"
-       x="-0.14738655"
-       y="-0.14738655"
-       width="1.2947731"
-       height="1.2947731">
+       x="-0.14243883"
+       y="-0.14243883"
+       width="1.2848777"
+       height="1.2848777">
       <feGaussianBlur
          inkscape:collect="always"
          stdDeviation="1.0220658"
@@ -91,10 +91,10 @@
        inkscape:collect="always"
        style="color-interpolation-filters:sRGB"
        id="filter8"
-       x="-0.088808201"
-       y="-0.16772372"
-       width="1.1784596"
-       height="1.3403214">
+       x="-0.086998464"
+       y="-0.1654857"
+       width="1.1746206"
+       height="1.3345762">
       <feGaussianBlur
          inkscape:collect="always"
          stdDeviation="1.1596575"
@@ -104,10 +104,10 @@
        inkscape:collect="always"
        style="color-interpolation-filters:sRGB"
        id="filter9"
-       x="-0.092156512"
-       y="-0.1853919"
-       width="1.1835906"
-       height="1.3659907">
+       x="-0.090074697"
+       y="-0.18179785"
+       width="1.1796151"
+       height="1.3600507">
       <feGaussianBlur
          inkscape:collect="always"
          stdDeviation="1.1922895"
@@ -160,7 +160,7 @@
   </defs>
   <sodipodi:namedview
      id="namedview6"
-     pagecolor="#313131"
+     pagecolor="#fbfbfb"
      bordercolor="#000000"
      borderopacity="0.25"
      inkscape:showpageshadow="2"
@@ -169,7 +169,7 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:zoom="6.34375"
      inkscape:cx="33.182266"
-     inkscape:cy="30.26601"
+     inkscape:cy="30.344828"
      inkscape:window-width="1920"
      inkscape:window-height="1012"
      inkscape:window-x="0"
@@ -185,12 +185,12 @@
      d="M 9.0080052,10.490534 C 29.655639,2.8783001 46.235717,3.4273496 54.978349,19.955017 44.554335,18.805892 34.197267,17.056085 22.528694,29.419499 Z"
      id="path4" />
   <path
-     style="fill:none;stroke:#0700ff;stroke-width:0.3;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter9)"
+     style="fill:none;stroke:#0700ff;stroke-width:0.22188218;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter9)"
      d="m 48.885728,47.016545 c -15.038722,6.224322 -27.059709,4.961137 -34,-7 7.737067,0.547051 14.734895,3.475323 23,-6 z"
      id="path2-7"
      transform="matrix(1.3520689,0,0,1.3520689,-11.273029,-11.142568)" />
   <path
-     style="mix-blend-mode:normal;fill:none;stroke:#ffa500;stroke-width:0.3;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter8)"
+     style="mix-blend-mode:normal;fill:none;stroke:#ffa500;stroke-width:0.22188218;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter8)"
      d="m 14.885728,16.016545 c 15.27114,-5.630064 27.533886,-5.223983 34,7 -7.709676,-0.849902 -15.369839,-2.144071 -24,7 z"
      id="path4-5"
      transform="matrix(1.3520689,0,0,1.3520689,-11.273029,-11.142568)" />
@@ -208,14 +208,14 @@
      transform="scale(-1)"
      id="circle6" />
   <circle
-     style="mix-blend-mode:normal;fill:none;stroke:#001853;stroke-width:0.4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter7)"
+     style="mix-blend-mode:normal;fill:none;stroke:#001853;stroke-width:0.22188218;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter7)"
      cx="43.944256"
      cy="40.031189"
      r="9"
      id="circle4-3"
      transform="matrix(1.3520689,0,0,1.3520689,-11.273029,-11.142568)" />
   <circle
-     style="fill:none;stroke:#790006;stroke-width:0.5;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter6)"
+     style="fill:none;stroke:#790006;stroke-width:0.22188218;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter6)"
      cx="-19.944254"
      cy="-23.031187"
      r="9"
