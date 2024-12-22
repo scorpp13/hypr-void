@@ -5,28 +5,28 @@
     "keybind" : "l"
 }
 {
-    "label" : "hibernate",
-    "action" : "sleep 0.2; notify-send 'WellCome Back ^;^'; #loginctl hibernate; swaylock",
-    "text" : "",
-    "keybind" : "h"
+    "label" : "return",
+    "action" : "sleep 0.2; notify-send 'WellCome Back ^;^'",
+    "text" : "Return",
+    "keybind" : "b"
 }
 {
-    "label" : "logout",
+    "label" : "exit"
     "action" : "sleep 1; loginctl terminate-user $USER",
-    "text" : "Logout",
+    "text" : "Exit",
     "keybind" : "e"
 }
 {
-    "label" : "shutdown",
+    "label" : "poweroff",
     "action" : "sleep 1; loginctl poweroff",
-    "text" : "Shutdown",
-    "keybind" : "s"
+    "text" : "Poweroff",
+    "keybind" : "p"
 }
 {
     "label" : "suspend",
     "action" : "sleep 1; loginctl suspend; hyprlock",
     "text" : "Suspend",
-    "keybind" : "u"
+    "keybind" : "s"
 }
 {
     "label" : "reboot",

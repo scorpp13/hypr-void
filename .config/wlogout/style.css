@@ -38,25 +38,25 @@ button:hover {
 	border-radius: 20px;
 	background-image: image(url("icons/lock.png"));
 }
-#logout {
+#exit {
 	margin: 10px;
 	border-radius: 20px;
-	background-image: image(url("icons/logout.png"));
+	background-image: image(url("icons/exit.png"));
 }
 #suspend {
 	margin: 10px;
 	border-radius: 20px;
 	background-image: image(url("icons/suspend.png"));
 }
-#hibernate {
+#return {
 	margin: 10px;
 	border-radius: 20px;
 	background-image: image(url("icons/void-logo.png"));
 }
-#shutdown {
+#poweroff {
 	margin: 10px;
 	border-radius: 20px;
-	background-image: image(url("icons/shutdown.png"));
+	background-image: image(url("icons/poweroff.png"));
 }
 #reboot {
 	margin: 10px;
