@@ -337,7 +337,7 @@ vnoremap w :view<cr>gv
 nnoremap o :!micro %f<cr>
 
 " Open file in mousepad
-nnoremap e :!mousepad %f<cr>
+nnoremap e :!geany %f<cr>
 
 " Open file in the background using its default program
 nnoremap gb :file &<cr>l

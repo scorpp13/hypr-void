@@ -1627,14 +1627,11 @@ headerbar.windowhandle viewswitchertitle > squeezer > viewswitcher > box.horizon
   background-color: transparent;
 }
 
-.caja-pathbar button label:not(:only-child):first-child,
-.path-bar.linked:not(.vertical) > button label:not(:only-child):first-child {
-  margin-left: 0;
-}
-
-.caja-pathbar button label:not(:only-child):last-child,
-.path-bar.linked:not(.vertical) > button label:not(:only-child):last-child {
-  margin-right: 0;
+.caja-pathbar button label, .caja-pathbar button image,
+.path-bar.linked:not(.vertical) > button label,
+.path-bar.linked:not(.vertical) > button image {
+  margin-left: 2px;
+  margin-right: 2px;
 }
 
 .caja-pathbar button.text-button,
@@ -4583,8 +4580,20 @@ dialog.background > box.dialog-vbox.vertical > grid.horizontal > box.horizontal:
 /*********
  * gedit *
  *********/
-window.org-gnome-gedit > paned.titlebar > separator,
-window.background.csd > paned.titlebar > separator {
+window.org-gnome-gedit > paned.titlebar,
+window.background.csd > paned.titlebar {
+  box-shadow: inset 0 -1px rgba(0, 0, 0, 0.12), inset 0 1px rgba(255, 255, 255, 0.4);
+  background-color: #FFFFFF;
+}
+
+window.org-gnome-gedit > paned.titlebar:backdrop,
+window.background.csd > paned.titlebar:backdrop {
+  background-color: #FAFAFA;
+}
+
+window.org-gnome-gedit > paned.titlebar > separator, window.org-gnome-gedit > paned.titlebar > headerbar,
+window.background.csd > paned.titlebar > separator,
+window.background.csd > paned.titlebar > headerbar {
   background-color: transparent;
 }
 

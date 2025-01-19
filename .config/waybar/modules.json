@@ -138,7 +138,7 @@
 	"exec": "~/.local/bin/weather.sh 'Калининград' 2> /dev/null",
 	"interval": 3600,
 	"tooltip": true,
-	"on-click": "alacritty --hold -e curl -s 'ru.wttr.in/?format=v2d'"
+	"on-click": "alacritty --hold -e curl -s 'ru.wttr.in/Kaliningrad?format=v2d'"
 },	
 //	CPU_temp
 "temperature": {
