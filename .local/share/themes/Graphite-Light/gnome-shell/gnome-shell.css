@@ -28,7 +28,7 @@ stage {
   font-size: 20pt;
 }
 
-.message-list .message-list-placeholder {
+.message-list .message-list-placeholder, .message-dialog-content .message-dialog-title {
   font-weight: 800;
   font-size: 15pt;
 }
@@ -38,12 +38,13 @@ stage {
   font-size: 15pt;
 }
 
-.bt-menu-placeholder.popup-menu-item {
+.bt-menu-placeholder.popup-menu-item, .restart-message, .polkit-dialog-user-layout .polkit-dialog-user-label,
+.polkit-dialog-user-layout .polkit-dialog-user-root-label, .message-dialog-content .message-dialog-title.lightweight {
   font-weight: 700;
   font-size: 13pt;
 }
 
-.background-app-item .title, .message-list-controls, .world-clocks-button .world-clocks-header, .calendar .calendar-month-label {
+.background-app-item .title, .message-list-controls, .dialog-list .dialog-list-title, .world-clocks-button .world-clocks-header, .calendar .calendar-month-label {
   font-weight: 700;
   font-size: 11pt;
 }
@@ -53,7 +54,9 @@ stage {
   font-size: 9pt;
 }
 
-.icon-label-button-container, .background-app-item .subtitle, .message .message-header .message-header-content .event-time {
+.icon-label-button-container, .background-app-item .subtitle, .message .message-header .message-header-content .event-time, .prompt-dialog .prompt-dialog-error-label,
+.prompt-dialog .prompt-dialog-info-label,
+.prompt-dialog .prompt-dialog-null-label, .run-dialog .run-dialog-description, .dialog-list .dialog-list-box .dialog-list-item .dialog-list-item-description {
   font-weight: 400;
   font-size: 9pt;
 }
@@ -164,34 +167,34 @@ stage {
   box-shadow: none !important;
 }
 
-.lg-obj-inspector-button, #LookingGlassDialog > #Toolbar .lg-toolbar-button, .candidate-page-button, .modal-dialog-linked-button, .icon-button.flat, .message .message-header .flat.message-expand-button,
+.modal-dialog .modal-dialog-button-box .modal-dialog-button, .lg-obj-inspector-button, #LookingGlassDialog > #Toolbar .lg-toolbar-button, .candidate-page-button, .icon-button.flat, .message .message-header .flat.message-expand-button,
 .message .message-header .flat.message-close-button, .button.flat, .popup-menu .button {
   color: rgba(0, 0, 0, 0.87);
   background-color: transparent;
   box-shadow: none !important;
 }
 
-.lg-obj-inspector-button:focus, #LookingGlassDialog > #Toolbar .lg-toolbar-button:focus, .candidate-page-button:focus, .modal-dialog-linked-button:focus, .icon-button.flat:focus, .message .message-header .flat.message-expand-button:focus,
+.modal-dialog .modal-dialog-button-box .modal-dialog-button:focus, .lg-obj-inspector-button:focus, #LookingGlassDialog > #Toolbar .lg-toolbar-button:focus, .candidate-page-button:focus, .icon-button.flat:focus, .message .message-header .flat.message-expand-button:focus,
 .message .message-header .flat.message-close-button:focus, .button.flat:focus, .popup-menu .button:focus {
   color: rgba(0, 0, 0, 0.87);
   background-color: rgba(0, 0, 0, 0.08);
   box-shadow: none !important;
 }
 
-.lg-obj-inspector-button:hover, #LookingGlassDialog > #Toolbar .lg-toolbar-button:hover, .candidate-page-button:hover, .modal-dialog-linked-button:hover, .icon-button.flat:hover, .message .message-header .flat.message-expand-button:hover,
+.modal-dialog .modal-dialog-button-box .modal-dialog-button:hover, .lg-obj-inspector-button:hover, #LookingGlassDialog > #Toolbar .lg-toolbar-button:hover, .candidate-page-button:hover, .icon-button.flat:hover, .message .message-header .flat.message-expand-button:hover,
 .message .message-header .flat.message-close-button:hover, .button.flat:hover, .popup-menu .button:hover {
   color: rgba(0, 0, 0, 0.87);
   background-color: rgba(0, 0, 0, 0.12);
 }
 
-.lg-obj-inspector-button:active, #LookingGlassDialog > #Toolbar .lg-toolbar-button:active, .candidate-page-button:active, .modal-dialog-linked-button:active, .icon-button.flat:active, .message .message-header .flat.message-expand-button:active,
+.modal-dialog .modal-dialog-button-box .modal-dialog-button:active, .lg-obj-inspector-button:active, #LookingGlassDialog > #Toolbar .lg-toolbar-button:active, .candidate-page-button:active, .icon-button.flat:active, .message .message-header .flat.message-expand-button:active,
 .message .message-header .flat.message-close-button:active, .button.flat:active, .popup-menu .button:active {
   color: rgba(0, 0, 0, 0.87);
   background-color: rgba(0, 0, 0, 0.2);
   box-shadow: none !important;
 }
 
-.lg-obj-inspector-button:insensitive, #LookingGlassDialog > #Toolbar .lg-toolbar-button:insensitive, .candidate-page-button:insensitive, .modal-dialog-linked-button:insensitive, .icon-button.flat:insensitive, .message .message-header .flat.message-expand-button:insensitive,
+.modal-dialog .modal-dialog-button-box .modal-dialog-button:insensitive, .lg-obj-inspector-button:insensitive, #LookingGlassDialog > #Toolbar .lg-toolbar-button:insensitive, .candidate-page-button:insensitive, .icon-button.flat:insensitive, .message .message-header .flat.message-expand-button:insensitive,
 .message .message-header .flat.message-close-button:insensitive, .button.flat:insensitive, .popup-menu .button:insensitive {
   background-color: transparent;
   color: rgba(0, 0, 0, 0.35);
@@ -312,34 +315,6 @@ stage {
   -st-icon-style: symbolic;
 }
 
-/* Check Boxes */
-.check-box StBoxLayout {
-  spacing: .8em;
-}
-
-.check-box StBin {
-  width: 24px;
-  height: 24px;
-  padding: 6px;
-  border-radius: 6px;
-}
-
-.check-box StBin, .check-box:focus StBin {
-  background-image: url("assets/checkbox-off.svg");
-}
-
-.check-box:hover StBin {
-  background-color: rgba(0, 0, 0, 0.12);
-}
-
-.check-box:active StBin {
-  background-color: rgba(0, 0, 0, 0.26);
-}
-
-.check-box:checked StBin, .check-box:focus:checked StBin {
-  background-image: url("assets/checkbox.svg");
-}
-
 /* Activities Ripple */
 .ripple-box {
   background-color: rgba(51, 51, 51, 0.35);
@@ -351,250 +326,6 @@ stage {
 
 .ripple-box:rtl {
   border-radius: 0 0 0 52px;
-}
-
-/* Modal Dialogs */
-.modal-dialog {
-  background-color: #FFFFFF;
-  box-shadow: 3px 3px 8px -5px rgba(0, 0, 0, 0.35);
-  margin: 15px;
-  border: 2px solid #333333;
-  border-radius: 17px;
-}
-
-.modal-dialog-linked-button:last-child {
-  color: white;
-  background-color: #333333;
-}
-
-.modal-dialog-linked-button:hover:last-child {
-  color: white;
-  background-color: #4a4a4a;
-}
-
-.modal-dialog-linked-button:active:last-child {
-  color: white;
-  background-color: #262626;
-}
-
-.modal-dialog-linked-button:insensitive:last-child {
-  background-color: rgba(51, 51, 51, 0.05);
-  color: rgba(51, 51, 51, 0.35);
-}
-
-.headline {
-  font-size: 12pt;
-}
-
-.modal-dialog {
-  color: rgba(0, 0, 0, 0.6);
-  padding: 0 6px 6px 6px;
-}
-
-.modal-dialog-linked-button {
-  min-height: 32px;
-  padding: 6px;
-  margin: 3px !important;
-  border: none !important;
-  border-radius: 6px;
-}
-
-.modal-dialog-linked-button:first-child {
-  background-color: rgba(0, 0, 0, 0.04);
-}
-
-.modal-dialog-linked-button:first-child:focus {
-  color: rgba(0, 0, 0, 0.87);
-  background-color: rgba(0, 0, 0, 0.08);
-  box-shadow: none !important;
-}
-
-.modal-dialog-linked-button:first-child:hover {
-  color: rgba(0, 0, 0, 0.87);
-  background-color: rgba(0, 0, 0, 0.12);
-}
-
-.modal-dialog-linked-button:first-child:active {
-  color: rgba(0, 0, 0, 0.87);
-  background-color: rgba(0, 0, 0, 0.2);
-  box-shadow: none !important;
-}
-
-.modal-dialog .modal-dialog-content-box {
-  margin: 30px 42px;
-  spacing: 30px;
-  max-width: 28em;
-}
-
-.end-session-dialog {
-  width: 30em;
-}
-
-.end-session-dialog .end-session-dialog-battery-warning,
-.end-session-dialog .dialog-list-title {
-  color: #F4B400;
-}
-
-.message-dialog-content {
-  spacing: 18px;
-}
-
-.message-dialog-content .message-dialog-title {
-  text-align: center;
-  font-size: 18pt;
-  font-weight: 800;
-}
-
-.message-dialog-content .message-dialog-title.lightweight {
-  font-size: 13pt;
-  font-weight: 800;
-}
-
-.message-dialog-content .message-dialog-description {
-  text-align: center;
-}
-
-.dialog-list {
-  spacing: 18px;
-}
-
-.dialog-list .dialog-list-title {
-  text-align: center;
-  font-weight: bold;
-}
-
-.dialog-list .dialog-list-scrollview {
-  max-height: 200px;
-}
-
-.dialog-list .dialog-list-box {
-  spacing: 1em;
-}
-
-.dialog-list .dialog-list-box .dialog-list-item {
-  spacing: 1em;
-}
-
-.dialog-list .dialog-list-box .dialog-list-item .dialog-list-item-title {
-  font-weight: bold;
-}
-
-.dialog-list .dialog-list-box .dialog-list-item .dialog-list-item-description {
-  color: rgba(0, 0, 0, 0.6);
-  font-size: 10pt;
-}
-
-.run-dialog .modal-dialog-content-box {
-  margin-top: 24px;
-  margin-bottom: 12px;
-}
-
-.run-dialog .run-dialog-entry {
-  width: 20em;
-}
-
-.run-dialog .run-dialog-description {
-  text-align: center;
-  color: rgba(0, 0, 0, 0.6);
-  font-size: 10pt;
-}
-
-.prompt-dialog {
-  width: 28em;
-}
-
-.prompt-dialog .modal-dialog-content-box {
-  margin-bottom: 24px;
-}
-
-.prompt-dialog-password-grid {
-  spacing-rows: 8px;
-  spacing-columns: 4px;
-}
-
-.prompt-dialog-password-grid .prompt-dialog-password-entry {
-  width: auto;
-}
-
-.prompt-dialog-password-grid .prompt-dialog-password-entry:ltr {
-  margin-left: 20px;
-}
-
-.prompt-dialog-password-grid .prompt-dialog-password-entry:rtl {
-  margin-right: 20px;
-}
-
-.prompt-dialog-password-layout {
-  spacing: 8px;
-}
-
-.prompt-dialog-password-entry {
-  width: 20em;
-}
-
-.prompt-dialog-error-label,
-.prompt-dialog-info-label,
-.prompt-dialog-null-label {
-  text-align: center;
-  font-size: 10pt;
-  margin: 6px;
-}
-
-.prompt-dialog-error-label {
-  color: #D93025;
-}
-
-.prompt-dialog-info-label,
-.prompt-dialog-null-label {
-  color: rgba(0, 0, 0, 0.38);
-}
-
-.polkit-dialog-user-layout {
-  text-align: center;
-  spacing: 8px;
-  margin-bottom: 6px;
-}
-
-.polkit-dialog-user-layout .polkit-dialog-user-root-label {
-  color: #F4B400;
-}
-
-.audio-device-selection-dialog .modal-dialog-content-box {
-  margin-bottom: 28px;
-}
-
-.audio-device-selection-dialog .audio-selection-box {
-  spacing: 20px;
-}
-
-.audio-selection-device {
-  border: 1px solid rgba(0, 0, 0, 0.12);
-  border-radius: 6px;
-}
-
-.audio-selection-device:hover, .audio-selection-device:focus {
-  background-color: rgba(0, 0, 0, 0.12);
-}
-
-.audio-selection-device:active {
-  background-color: #333333;
-  color: white;
-}
-
-.audio-selection-device-box {
-  padding: 18px;
-  spacing: 18px;
-}
-
-.audio-selection-device-icon {
-  icon-size: 64px;
-}
-
-.welcome-dialog-image {
-  background-image: url("resource:///org/gnome/shell/theme/gnome-shell-start.svg");
-  background-size: contain;
-  height: 300px;
-  width: 300px;
 }
 
 /* Entries */
@@ -2125,30 +1856,6 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   color: rgba(255, 255, 255, 0.3);
 }
 
-/* Slider */
-.slider {
-  height: 20px;
-  color: #FFFFFF;
-  -slider-height: 2px;
-  -slider-background-color: rgba(0, 0, 0, 0.26);
-  -slider-border-color: #333333;
-  -slider-active-background-color: #333333;
-  -slider-active-border-color: #333333;
-  -slider-border-width: 2px;
-  -slider-handle-radius: 8px;
-  -slider-handle-border-width: 2px;
-  -slider-handle-border-color: #333333;
-  -barlevel-height: 2px;
-  -barlevel-background-color: rgba(0, 0, 0, 0.26);
-  -barlevel-border-color: transparent;
-  -barlevel-active-background-color: #333333;
-  -barlevel-active-border-color: transparent;
-  -barlevel-overdrive-color: #D93025;
-  -barlevel-overdrive-border-color: transparent;
-  -barlevel-overdrive-separator-width: 2px;
-  -barlevel-border-width: 0;
-}
-
 /* App Switcher */
 .switcher-popup {
   padding: 8px;
@@ -2206,26 +1913,6 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 .cycler-highlight {
   border: 5px solid #333333;
-}
-
-/* Switches */
-.toggle-switch {
-  width: 40px;
-  height: 20px;
-  background-size: contain;
-  background-image: url("assets/toggle-off.svg");
-}
-
-.toggle-switch:checked {
-  background-image: url("assets/toggle-on.svg");
-}
-
-.quick-toggle-menu .toggle-switch, .popup-sub-menu .toggle-switch {
-  background-image: url("assets/toggle-off-dark.svg");
-}
-
-.quick-toggle-menu .toggle-switch:checked, .popup-sub-menu .toggle-switch:checked {
-  background-image: url("assets/toggle-on-dark.svg");
 }
 
 /* Tiled window previews */
@@ -2862,6 +2549,283 @@ StWidget.focused .app-grid-running-dot {
   font-weight: bold;
 }
 
+/* Check Boxes */
+.check-box StBoxLayout {
+  spacing: .8em;
+}
+
+.check-box StBin {
+  width: 24px;
+  height: 24px;
+  padding: 6px;
+}
+
+.check-box StBin, .check-box:focus StBin {
+  background-image: url("assets/checkbox-off.svg");
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.check-box:hover StBin {
+  background-color: rgba(0, 0, 0, 0.12);
+}
+
+.check-box:active StBin {
+  background-color: rgba(0, 0, 0, 0.26);
+}
+
+.check-box:checked StBin, .check-box:focus:checked StBin {
+  background-image: url("assets/checkbox.svg");
+}
+
+.check-box StIcon {
+  icon-size: 0;
+  padding: 0;
+  color: transparent;
+  border: none;
+}
+
+.check-box:hover StIcon, .check-box:active StIcon {
+  border: none;
+}
+
+.check-box:checked StIcon, .check-box:checked:hover StIcon, .check-box:checked:active StIcon {
+  background-color: transparent;
+  color: transparent;
+}
+
+/* Modal Dialogs */
+.modal-dialog {
+  background-color: #FFFFFF;
+  box-shadow: 3px 3px 8px -5px rgba(0, 0, 0, 0.35);
+  margin: 15px;
+  border: 2px solid #333333;
+  border-radius: 17px;
+}
+
+.modal-dialog .modal-dialog-button-box .modal-dialog-button {
+  min-height: 32px;
+  padding: 6px;
+  margin: 0;
+  border: none !important;
+  border-radius: 6px;
+}
+
+.modal-dialog .modal-dialog-button-box .modal-dialog-button:first-child {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+.modal-dialog .modal-dialog-button-box .modal-dialog-button:first-child:focus {
+  color: rgba(0, 0, 0, 0.87);
+  background-color: rgba(0, 0, 0, 0.08);
+  box-shadow: none !important;
+}
+
+.modal-dialog .modal-dialog-button-box .modal-dialog-button:first-child:hover {
+  color: rgba(0, 0, 0, 0.87);
+  background-color: rgba(0, 0, 0, 0.12);
+}
+
+.modal-dialog .modal-dialog-button-box .modal-dialog-button:first-child:active {
+  color: rgba(0, 0, 0, 0.87);
+  background-color: rgba(0, 0, 0, 0.2);
+  box-shadow: none !important;
+}
+
+.modal-dialog .modal-dialog-button-box .modal-dialog-button:last-child {
+  color: white;
+  background-color: #333333;
+}
+
+.modal-dialog .modal-dialog-button-box .modal-dialog-button:last-child:hover {
+  color: white;
+  background-color: #4a4a4a;
+}
+
+.modal-dialog .modal-dialog-button-box .modal-dialog-button:last-child:active {
+  color: white;
+  background-color: #262626;
+}
+
+.modal-dialog .modal-dialog-button-box .modal-dialog-button:last-child:insensitive {
+  background-color: rgba(51, 51, 51, 0.05);
+  color: rgba(51, 51, 51, 0.35);
+}
+
+.modal-dialog {
+  color: rgba(0, 0, 0, 0.6);
+  padding: 9px;
+}
+
+.modal-dialog .modal-dialog-content-box {
+  margin: 30px 42px;
+  spacing: 30px;
+  max-width: 28em;
+}
+
+.modal-dialog .modal-dialog-button-box {
+  padding-top: 6px;
+}
+
+.dialog-list {
+  spacing: 18px;
+}
+
+.dialog-list .dialog-list-title {
+  text-align: center;
+}
+
+.dialog-list .dialog-list-scrollview {
+  max-height: 200px;
+}
+
+.dialog-list .dialog-list-box {
+  spacing: 1em;
+}
+
+.dialog-list .dialog-list-box .dialog-list-item {
+  spacing: 1em;
+}
+
+.dialog-list .dialog-list-box .dialog-list-item .dialog-list-item-title {
+  font-weight: bold;
+}
+
+.dialog-list .dialog-list-box .dialog-list-item .dialog-list-item-description {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.end-session-dialog {
+  width: 26em;
+}
+
+.end-session-dialog .end-session-dialog-battery-warning,
+.end-session-dialog .dialog-list-title {
+  color: #F4B400;
+  background-color: rgba(244, 180, 0, 0.1);
+  padding: 9px;
+  border-radius: 6px;
+  margin: 4px 0;
+}
+
+.message-dialog-content {
+  spacing: 18px;
+}
+
+.message-dialog-content .message-dialog-title {
+  text-align: center;
+}
+
+.message-dialog-content .message-dialog-description {
+  text-align: center;
+}
+
+.run-dialog {
+  width: 26em;
+  padding-bottom: 6px;
+}
+
+.run-dialog .run-dialog-entry {
+  padding: 12px 9px;
+}
+
+.run-dialog .run-dialog-description {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.prompt-dialog {
+  width: 26em;
+}
+
+.prompt-dialog .prompt-dialog-password-grid {
+  spacing-rows: 8px;
+  spacing-columns: 4px;
+}
+
+.prompt-dialog .prompt-dialog-password-grid .prompt-dialog-password-entry {
+  width: auto;
+}
+
+.prompt-dialog .prompt-dialog-password-grid .prompt-dialog-password-entry:ltr {
+  margin-left: 20px;
+}
+
+.prompt-dialog .prompt-dialog-password-grid .prompt-dialog-password-entry:rtl {
+  margin-right: 20px;
+}
+
+.prompt-dialog .prompt-dialog-password-layout {
+  spacing: 8px;
+}
+
+.prompt-dialog .prompt-dialog-password-entry {
+  width: 20em;
+  padding: 12px 9px;
+}
+
+.prompt-dialog .prompt-dialog-error-label,
+.prompt-dialog .prompt-dialog-info-label,
+.prompt-dialog .prompt-dialog-null-label {
+  text-align: center;
+}
+
+.prompt-dialog .prompt-dialog-error-label {
+  color: #F4B400;
+}
+
+.polkit-dialog-user-layout {
+  text-align: center;
+  spacing: 8px;
+  margin-bottom: 6px;
+}
+
+.polkit-dialog-user-layout .polkit-dialog-user-root-label {
+  color: #F4B400;
+}
+
+.audio-device-selection-dialog .modal-dialog-content-box {
+  margin-bottom: 28px;
+}
+
+.audio-device-selection-dialog .audio-selection-box {
+  spacing: 20px;
+}
+
+.audio-selection-device {
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 6px;
+}
+
+.audio-selection-device:hover, .audio-selection-device:focus {
+  background-color: rgba(0, 0, 0, 0.12);
+}
+
+.audio-selection-device:active {
+  background-color: #333333;
+  color: white;
+}
+
+.audio-selection-device-box {
+  padding: 18px;
+  spacing: 18px;
+}
+
+.audio-selection-device-icon {
+  icon-size: 64px;
+}
+
+.welcome-dialog-image {
+  background-image: url("resource:///org/gnome/shell/theme/gnome-shell-start.svg");
+  background-size: contain;
+  height: 300px;
+  width: 300px;
+}
+
+/* Access portal dialog */
+.access-dialog {
+  text-align: center;
+}
+
 /* Dash */
 #dash {
   padding-left: 6px;
@@ -3034,7 +2998,7 @@ StWidget.focused .app-grid-running-dot {
 }
 
 .message {
-  padding: 0;
+  padding: 6px;
   margin: 3px;
   border-radius: 12px;
 }
@@ -3043,32 +3007,18 @@ StWidget.focused .app-grid-running-dot {
   border-radius: 6px;
 }
 
-.popup-menu .message .notification-button:first-child:ltr {
-  border-radius: 0 0 0 6px;
-}
-
-.popup-menu .message .notification-button:last-child:ltr {
-  border-radius: 0 0 6px;
-}
-
-.popup-menu .message .notification-button:first-child:rtl {
-  border-radius: 0 0 6px;
-}
-
-.popup-menu .message .notification-button:last-child:rtl {
-  border-radius: 0 0 0 6px;
-}
-
-.popup-menu .message .notification-button:first-child:last-child {
-  border-radius: 0 0 6px 6px;
-}
-
 .message .message-header {
-  padding: 0 0.409em;
-  margin: 6px;
-  margin-bottom: 0;
+  padding: 0 6px;
   spacing: 6px;
   color: rgba(0, 0, 0, 0.38);
+}
+
+.message .message-header:ltr {
+  padding-right: 0;
+}
+
+.message .message-header:rtl {
+  padding-left: 0;
 }
 
 .message .message-header .message-source-icon {
@@ -3245,14 +3195,15 @@ StWidget.focused .app-grid-running-dot {
   border: none;
   text-shadow: none;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.25);
-  border-radius: 12px;
+  border-radius: 18px;
+  padding: 6px;
 }
 
 .notification-banner:hover {
   color: rgba(0, 0, 0, 0.87);
   background-color: #FFFFFF;
-  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.25);
-  margin: 12px 12px 18px;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.25);
+  margin: 12px 8px 13px;
 }
 
 .notification-banner:focus {
@@ -3262,9 +3213,7 @@ StWidget.focused .app-grid-running-dot {
 
 .notification-buttons-bin {
   background-color: transparent;
-  padding-top: 0;
   border: none;
-  border-top: 1px solid rgba(0, 0, 0, 0.12);
   spacing: 0;
 }
 
@@ -3275,6 +3224,7 @@ StWidget.focused .app-grid-running-dot {
   color: rgba(0, 0, 0, 0.6);
   font-weight: 500;
   border: none;
+  border-radius: 6px;
 }
 
 .notification-button:focus {
@@ -3292,30 +3242,6 @@ StWidget.focused .app-grid-running-dot {
 .notification-button:active {
   background-color: rgba(0, 0, 0, 0.26);
   color: rgba(0, 0, 0, 0.87);
-}
-
-.notification-button:first-child:ltr {
-  border-radius: 0 0 0 12px;
-}
-
-.notification-button:last-child:ltr {
-  border-radius: 0 0 12px;
-  margin-right: 0 !important;
-}
-
-.notification-button:first-child:rtl {
-  border-radius: 0 0 12px;
-}
-
-.notification-button:last-child:rtl {
-  border-radius: 0 0 0 12px;
-  margin-left: 0 !important;
-}
-
-.notification-button:first-child:last-child {
-  border-radius: 0 0 12px 12px;
-  margin-left: 0 !important;
-  margin-right: 0 !important;
 }
 
 .controls-manager, .secondary-monitor-workspaces {
@@ -3653,7 +3579,7 @@ StWidget.focused .app-grid-running-dot {
   min-height: 20px;
   padding: 6px;
   spacing: 6px;
-  border-radius: 6px !important;
+  border-radius: 3px !important;
   color: rgba(255, 255, 255, 0.7) !important;
 }
 
@@ -4074,6 +4000,58 @@ StWidget.focused .app-grid-running-dot {
   padding: 6px 12px;
   text-align: center;
   -y-offset: 24px;
+}
+
+/* Slider */
+.slider {
+  color: #333333;
+  -slider-handle-radius: 7px;
+  -barlevel-height: 2px;
+  -barlevel-background-color: rgba(0, 0, 0, 0.26);
+  -barlevel-active-background-color: #333333;
+  -barlevel-overdrive-color: #D93025;
+  -barlevel-overdrive-separator-width: 2px;
+}
+
+.slider:hover {
+  color: #454545;
+}
+
+/* Switches */
+.toggle-switch {
+  width: 40px;
+  height: 20px;
+  background-size: contain;
+  background-image: url("assets/toggle-off.svg");
+  background-color: transparent;
+  color: transparent;
+}
+
+.toggle-switch:checked {
+  background-image: url("assets/toggle-on.svg");
+}
+
+.quick-toggle-menu .toggle-switch, .popup-sub-menu .toggle-switch {
+  background-image: url("assets/toggle-off-dark.svg");
+}
+
+.quick-toggle-menu .toggle-switch:checked, .popup-sub-menu .toggle-switch:checked {
+  background-image: url("assets/toggle-on-dark.svg");
+}
+
+.toggle-switch StIcon {
+  icon-size: 0;
+}
+
+.toggle-switch .handle {
+  margin: 0;
+  background: none;
+  box-shadow: none;
+  transition-duration: 0;
+}
+
+.toggle-switch:checked .handle {
+  background: none;
 }
 
 .window-picker {

@@ -28,7 +28,7 @@ stage {
   font-size: 20pt;
 }
 
-.message-list .message-list-placeholder {
+.message-list .message-list-placeholder, .message-dialog-content .message-dialog-title {
   font-weight: 800;
   font-size: 15pt;
 }
@@ -38,12 +38,13 @@ stage {
   font-size: 15pt;
 }
 
-.bt-menu-placeholder.popup-menu-item {
+.bt-menu-placeholder.popup-menu-item, .restart-message, .polkit-dialog-user-layout .polkit-dialog-user-label,
+.polkit-dialog-user-layout .polkit-dialog-user-root-label, .message-dialog-content .message-dialog-title.lightweight {
   font-weight: 700;
   font-size: 13pt;
 }
 
-.background-app-item .title, .message-list-controls, .world-clocks-button .world-clocks-header, .calendar .calendar-month-label {
+.background-app-item .title, .message-list-controls, .dialog-list .dialog-list-title, .world-clocks-button .world-clocks-header, .calendar .calendar-month-label {
   font-weight: 700;
   font-size: 11pt;
 }
@@ -53,7 +54,9 @@ stage {
   font-size: 9pt;
 }
 
-.icon-label-button-container, .background-app-item .subtitle, .message .message-header .message-header-content .event-time {
+.icon-label-button-container, .background-app-item .subtitle, .message .message-header .message-header-content .event-time, .prompt-dialog .prompt-dialog-error-label,
+.prompt-dialog .prompt-dialog-info-label,
+.prompt-dialog .prompt-dialog-null-label, .run-dialog .run-dialog-description, .dialog-list .dialog-list-box .dialog-list-item .dialog-list-item-description {
   font-weight: 400;
   font-size: 9pt;
 }
@@ -164,34 +167,34 @@ stage {
   box-shadow: none !important;
 }
 
-.lg-obj-inspector-button, #LookingGlassDialog > #Toolbar .lg-toolbar-button, .candidate-page-button, .modal-dialog-linked-button, .icon-button.flat, .message .message-header .flat.message-expand-button,
+.modal-dialog .modal-dialog-button-box .modal-dialog-button, .lg-obj-inspector-button, #LookingGlassDialog > #Toolbar .lg-toolbar-button, .candidate-page-button, .icon-button.flat, .message .message-header .flat.message-expand-button,
 .message .message-header .flat.message-close-button, .button.flat, .popup-menu .button {
   color: rgba(0, 0, 0, 0.87);
   background-color: transparent;
   box-shadow: none !important;
 }
 
-.lg-obj-inspector-button:focus, #LookingGlassDialog > #Toolbar .lg-toolbar-button:focus, .candidate-page-button:focus, .modal-dialog-linked-button:focus, .icon-button.flat:focus, .message .message-header .flat.message-expand-button:focus,
+.modal-dialog .modal-dialog-button-box .modal-dialog-button:focus, .lg-obj-inspector-button:focus, #LookingGlassDialog > #Toolbar .lg-toolbar-button:focus, .candidate-page-button:focus, .icon-button.flat:focus, .message .message-header .flat.message-expand-button:focus,
 .message .message-header .flat.message-close-button:focus, .button.flat:focus, .popup-menu .button:focus {
   color: rgba(0, 0, 0, 0.87);
   background-color: rgba(0, 0, 0, 0.08);
   box-shadow: none !important;
 }
 
-.lg-obj-inspector-button:hover, #LookingGlassDialog > #Toolbar .lg-toolbar-button:hover, .candidate-page-button:hover, .modal-dialog-linked-button:hover, .icon-button.flat:hover, .message .message-header .flat.message-expand-button:hover,
+.modal-dialog .modal-dialog-button-box .modal-dialog-button:hover, .lg-obj-inspector-button:hover, #LookingGlassDialog > #Toolbar .lg-toolbar-button:hover, .candidate-page-button:hover, .icon-button.flat:hover, .message .message-header .flat.message-expand-button:hover,
 .message .message-header .flat.message-close-button:hover, .button.flat:hover, .popup-menu .button:hover {
   color: rgba(0, 0, 0, 0.87);
   background-color: rgba(0, 0, 0, 0.12);
 }
 
-.lg-obj-inspector-button:active, #LookingGlassDialog > #Toolbar .lg-toolbar-button:active, .candidate-page-button:active, .modal-dialog-linked-button:active, .icon-button.flat:active, .message .message-header .flat.message-expand-button:active,
+.modal-dialog .modal-dialog-button-box .modal-dialog-button:active, .lg-obj-inspector-button:active, #LookingGlassDialog > #Toolbar .lg-toolbar-button:active, .candidate-page-button:active, .icon-button.flat:active, .message .message-header .flat.message-expand-button:active,
 .message .message-header .flat.message-close-button:active, .button.flat:active, .popup-menu .button:active {
   color: rgba(0, 0, 0, 0.87);
   background-color: rgba(0, 0, 0, 0.2);
   box-shadow: none !important;
 }
 
-.lg-obj-inspector-button:insensitive, #LookingGlassDialog > #Toolbar .lg-toolbar-button:insensitive, .candidate-page-button:insensitive, .modal-dialog-linked-button:insensitive, .icon-button.flat:insensitive, .message .message-header .flat.message-expand-button:insensitive,
+.modal-dialog .modal-dialog-button-box .modal-dialog-button:insensitive, .lg-obj-inspector-button:insensitive, #LookingGlassDialog > #Toolbar .lg-toolbar-button:insensitive, .candidate-page-button:insensitive, .icon-button.flat:insensitive, .message .message-header .flat.message-expand-button:insensitive,
 .message .message-header .flat.message-close-button:insensitive, .button.flat:insensitive, .popup-menu .button:insensitive {
   background-color: transparent;
   color: rgba(0, 0, 0, 0.35);
@@ -312,34 +315,6 @@ stage {
   -st-icon-style: symbolic;
 }
 
-/* Check Boxes */
-.check-box StBoxLayout {
-  spacing: .8em;
-}
-
-.check-box StBin {
-  width: 24px;
-  height: 24px;
-  padding: 6px;
-  border-radius: 6px;
-}
-
-.check-box StBin, .check-box:focus StBin {
-  background-image: url("assets/checkbox-off.svg");
-}
-
-.check-box:hover StBin {
-  background-color: rgba(0, 0, 0, 0.12);
-}
-
-.check-box:active StBin {
-  background-color: rgba(0, 0, 0, 0.26);
-}
-
-.check-box:checked StBin, .check-box:focus:checked StBin {
-  background-image: url("assets/checkbox.svg");
-}
-
 /* Activities Ripple */
 .ripple-box {
   background-color: rgba(51, 51, 51, 0.35);
@@ -353,257 +328,14 @@ stage {
   border-radius: 0 0 0 52px;
 }
 
-/* Modal Dialogs */
-.candidate-popup-content, .modal-dialog {
-  background-color: #FFFFFF;
-  border-radius: 15px;
-  box-shadow: 3px 3px 8px -5px rgba(0, 0, 0, 0.35);
-  margin: 15px;
-  border: 2px solid #333333;
-}
-
-.modal-dialog-linked-button:last-child {
-  color: white;
-  background-color: #333333;
-}
-
-.modal-dialog-linked-button:hover:last-child {
-  color: white;
-  background-color: #4a4a4a;
-}
-
-.modal-dialog-linked-button:active:last-child {
-  color: white;
-  background-color: #262626;
-}
-
-.modal-dialog-linked-button:insensitive:last-child {
-  background-color: rgba(51, 51, 51, 0.05);
-  color: rgba(51, 51, 51, 0.35);
-}
-
-.headline {
-  font-size: 12pt;
-}
-
-.modal-dialog {
-  color: rgba(0, 0, 0, 0.6);
-  padding: 0 6px 6px 6px;
-}
-
-.modal-dialog-linked-button {
-  min-height: 32px;
-  padding: 6px;
-  margin: 3px !important;
-  border: none !important;
-  border-radius: 6px;
-}
-
-.modal-dialog-linked-button:first-child {
-  background-color: rgba(0, 0, 0, 0.04);
-}
-
-.modal-dialog-linked-button:first-child:focus {
-  color: rgba(0, 0, 0, 0.87);
-  background-color: rgba(0, 0, 0, 0.08);
-  box-shadow: none !important;
-}
-
-.modal-dialog-linked-button:first-child:hover {
-  color: rgba(0, 0, 0, 0.87);
-  background-color: rgba(0, 0, 0, 0.12);
-}
-
-.modal-dialog-linked-button:first-child:active {
-  color: rgba(0, 0, 0, 0.87);
-  background-color: rgba(0, 0, 0, 0.2);
-  box-shadow: none !important;
-}
-
-.modal-dialog .modal-dialog-content-box {
-  margin: 30px 42px;
-  spacing: 30px;
-  max-width: 28em;
-}
-
-.end-session-dialog {
-  width: 30em;
-}
-
-.end-session-dialog .end-session-dialog-battery-warning,
-.end-session-dialog .dialog-list-title {
-  color: #F4B400;
-}
-
-.message-dialog-content {
-  spacing: 18px;
-}
-
-.message-dialog-content .message-dialog-title {
-  text-align: center;
-  font-size: 18pt;
-  font-weight: 800;
-}
-
-.message-dialog-content .message-dialog-title.lightweight {
-  font-size: 13pt;
-  font-weight: 800;
-}
-
-.message-dialog-content .message-dialog-description {
-  text-align: center;
-}
-
-.dialog-list {
-  spacing: 18px;
-}
-
-.dialog-list .dialog-list-title {
-  text-align: center;
-  font-weight: bold;
-}
-
-.dialog-list .dialog-list-scrollview {
-  max-height: 200px;
-}
-
-.dialog-list .dialog-list-box {
-  spacing: 1em;
-}
-
-.dialog-list .dialog-list-box .dialog-list-item {
-  spacing: 1em;
-}
-
-.dialog-list .dialog-list-box .dialog-list-item .dialog-list-item-title {
-  font-weight: bold;
-}
-
-.dialog-list .dialog-list-box .dialog-list-item .dialog-list-item-description {
-  color: rgba(0, 0, 0, 0.6);
-  font-size: 10pt;
-}
-
-.run-dialog .modal-dialog-content-box {
-  margin-top: 24px;
-  margin-bottom: 12px;
-}
-
-.run-dialog .run-dialog-entry {
-  width: 20em;
-}
-
-.run-dialog .run-dialog-description {
-  text-align: center;
-  color: rgba(0, 0, 0, 0.6);
-  font-size: 10pt;
-}
-
-.prompt-dialog {
-  width: 28em;
-}
-
-.prompt-dialog .modal-dialog-content-box {
-  margin-bottom: 24px;
-}
-
-.prompt-dialog-password-grid {
-  spacing-rows: 8px;
-  spacing-columns: 4px;
-}
-
-.prompt-dialog-password-grid .prompt-dialog-password-entry {
-  width: auto;
-}
-
-.prompt-dialog-password-grid .prompt-dialog-password-entry:ltr {
-  margin-left: 20px;
-}
-
-.prompt-dialog-password-grid .prompt-dialog-password-entry:rtl {
-  margin-right: 20px;
-}
-
-.prompt-dialog-password-layout {
-  spacing: 8px;
-}
-
-.prompt-dialog-password-entry {
-  width: 20em;
-}
-
-.prompt-dialog-error-label,
-.prompt-dialog-info-label,
-.prompt-dialog-null-label {
-  text-align: center;
-  font-size: 10pt;
-  margin: 6px;
-}
-
-.prompt-dialog-error-label {
-  color: #D93025;
-}
-
-.prompt-dialog-info-label,
-.prompt-dialog-null-label {
-  color: rgba(0, 0, 0, 0.38);
-}
-
-.polkit-dialog-user-layout {
-  text-align: center;
-  spacing: 8px;
-  margin-bottom: 6px;
-}
-
-.polkit-dialog-user-layout .polkit-dialog-user-root-label {
-  color: #F4B400;
-}
-
-.audio-device-selection-dialog .modal-dialog-content-box {
-  margin-bottom: 28px;
-}
-
-.audio-device-selection-dialog .audio-selection-box {
-  spacing: 20px;
-}
-
-.audio-selection-device {
-  border: 1px solid rgba(0, 0, 0, 0.12);
-  border-radius: 6px;
-}
-
-.audio-selection-device:hover, .audio-selection-device:focus {
-  background-color: rgba(0, 0, 0, 0.12);
-}
-
-.audio-selection-device:active {
-  background-color: #333333;
-  color: white;
-}
-
-.audio-selection-device-box {
-  padding: 18px;
-  spacing: 18px;
-}
-
-.audio-selection-device-icon {
-  icon-size: 64px;
-}
-
-.welcome-dialog-image {
-  background-image: url("resource:///org/gnome/shell/theme/gnome-shell-start.svg");
-  background-size: contain;
-  height: 300px;
-  width: 300px;
-}
-
 /* Entries */
 StEntry, .search-entry, .login-dialog StEntry {
   min-height: 20px;
   padding: 6px 12px;
   margin: 2px;
-  border: none;
   border-radius: 6px;
+  selection-background-color: #333333;
+  selected-color: white;
   color: rgba(0, 0, 0, 0.87);
   background-color: rgba(0, 0, 0, 0.04);
   border: 2px solid transparent !important;
@@ -685,12 +417,15 @@ StEntry StLabel.hint-text, .search-entry StLabel.hint-text {
 }
 
 .candidate-popup-content {
+  background-color: #FFFFFF;
   color: rgba(0, 0, 0, 0.6);
-  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.35) !important;
-  border: none;
-  margin: 3px 8px 12px !important;
+  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.15) !important;
+  margin: 3px 5px 8px !important;
   padding: 6px;
   spacing: 6px;
+  background-clip: padding-box;
+  border: 2px solid #333333;
+  border-radius: 14px;
 }
 
 .candidate-index {
@@ -1770,11 +1505,11 @@ StEntry StLabel.hint-text, .search-entry StLabel.hint-text {
 .popup-menu .popup-menu-content {
   padding: 6px;
   background-color: #FFFFFF;
-  border-radius: 12px;
   box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.15);
   margin: 4px 10px 12px;
   font-weight: normal;
   border: 2px solid #333333;
+  border-radius: 14px;
 }
 
 .popup-menu .popup-menu-item {
@@ -2121,30 +1856,6 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   color: rgba(255, 255, 255, 0.3);
 }
 
-/* Slider */
-.slider {
-  height: 20px;
-  color: #FFFFFF;
-  -slider-height: 2px;
-  -slider-background-color: rgba(0, 0, 0, 0.26);
-  -slider-border-color: #333333;
-  -slider-active-background-color: #333333;
-  -slider-active-border-color: #333333;
-  -slider-border-width: 2px;
-  -slider-handle-radius: 8px;
-  -slider-handle-border-width: 2px;
-  -slider-handle-border-color: #333333;
-  -barlevel-height: 2px;
-  -barlevel-background-color: rgba(0, 0, 0, 0.26);
-  -barlevel-border-color: transparent;
-  -barlevel-active-background-color: #333333;
-  -barlevel-active-border-color: transparent;
-  -barlevel-overdrive-color: #D93025;
-  -barlevel-overdrive-border-color: transparent;
-  -barlevel-overdrive-separator-width: 2px;
-  -barlevel-border-width: 0;
-}
-
 /* App Switcher */
 .switcher-popup {
   padding: 8px;
@@ -2202,26 +1913,6 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 .cycler-highlight {
   border: 5px solid #333333;
-}
-
-/* Switches */
-.toggle-switch {
-  width: 40px;
-  height: 20px;
-  background-size: contain;
-  background-image: url("assets/toggle-off.svg");
-}
-
-.toggle-switch:checked {
-  background-image: url("assets/toggle-on.svg");
-}
-
-.quick-toggle-menu .toggle-switch, .popup-sub-menu .toggle-switch {
-  background-image: url("assets/toggle-off-dark.svg");
-}
-
-.quick-toggle-menu .toggle-switch:checked, .popup-sub-menu .toggle-switch:checked {
-  background-image: url("assets/toggle-on-dark.svg");
 }
 
 /* Tiled window previews */
@@ -2301,6 +1992,8 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   background-color: rgba(255, 255, 255, 0.12);
   border-image: none;
   background-image: none;
+  border: none !important;
+  box-shadow: none !important;
 }
 
 .overview-tile:active, .grid-search-result:active, .overview-tile:checked, .grid-search-result:checked {
@@ -2503,6 +2196,10 @@ StWidget.focused .app-grid-running-dot {
   padding: 4px;
 }
 
+.datemenu-popover {
+  border-radius: 16px !important;
+}
+
 .datemenu-calendar-column {
   spacing: 6px;
   border: none;
@@ -2526,13 +2223,6 @@ StWidget.focused .app-grid-running-dot {
 
 .datemenu-calendar-column .datemenu-displays-box {
   spacing: 6px;
-}
-
-.world-clocks-header,
-.weather-header,
-.events-section-title {
-  color: rgba(0, 0, 0, 0.6);
-  font-weight: bold;
 }
 
 .datemenu-today-button,
@@ -2752,7 +2442,7 @@ StWidget.focused .app-grid-running-dot {
 .weather-button,
 .events-button {
   padding: 12px !important;
-  margin: 4px 0 0 !important;
+  margin: 4px 0 2px !important;
 }
 
 .events-button .events-box {
@@ -2859,9 +2549,287 @@ StWidget.focused .app-grid-running-dot {
   font-weight: bold;
 }
 
+/* Check Boxes */
+.check-box StBoxLayout {
+  spacing: .8em;
+}
+
+.check-box StBin {
+  width: 24px;
+  height: 24px;
+  padding: 6px;
+}
+
+.check-box StBin, .check-box:focus StBin {
+  background-image: url("assets/checkbox-off.svg");
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.check-box:hover StBin {
+  background-color: rgba(0, 0, 0, 0.12);
+}
+
+.check-box:active StBin {
+  background-color: rgba(0, 0, 0, 0.26);
+}
+
+.check-box:checked StBin, .check-box:focus:checked StBin {
+  background-image: url("assets/checkbox.svg");
+}
+
+.check-box StIcon {
+  icon-size: 0;
+  padding: 0;
+  color: transparent;
+  border: none;
+}
+
+.check-box:hover StIcon, .check-box:active StIcon {
+  border: none;
+}
+
+.check-box:checked StIcon, .check-box:checked:hover StIcon, .check-box:checked:active StIcon {
+  background-color: transparent;
+  color: transparent;
+}
+
+/* Modal Dialogs */
+.modal-dialog {
+  background-color: #FFFFFF;
+  box-shadow: 3px 3px 8px -5px rgba(0, 0, 0, 0.35);
+  margin: 15px;
+  border: 2px solid #333333;
+  border-radius: 17px;
+}
+
+.modal-dialog .modal-dialog-button-box .modal-dialog-button {
+  min-height: 32px;
+  padding: 6px;
+  margin: 0;
+  border: none !important;
+  border-radius: 6px;
+}
+
+.modal-dialog .modal-dialog-button-box .modal-dialog-button:first-child {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+.modal-dialog .modal-dialog-button-box .modal-dialog-button:first-child:focus {
+  color: rgba(0, 0, 0, 0.87);
+  background-color: rgba(0, 0, 0, 0.08);
+  box-shadow: none !important;
+}
+
+.modal-dialog .modal-dialog-button-box .modal-dialog-button:first-child:hover {
+  color: rgba(0, 0, 0, 0.87);
+  background-color: rgba(0, 0, 0, 0.12);
+}
+
+.modal-dialog .modal-dialog-button-box .modal-dialog-button:first-child:active {
+  color: rgba(0, 0, 0, 0.87);
+  background-color: rgba(0, 0, 0, 0.2);
+  box-shadow: none !important;
+}
+
+.modal-dialog .modal-dialog-button-box .modal-dialog-button:last-child {
+  color: white;
+  background-color: #333333;
+}
+
+.modal-dialog .modal-dialog-button-box .modal-dialog-button:last-child:hover {
+  color: white;
+  background-color: #4a4a4a;
+}
+
+.modal-dialog .modal-dialog-button-box .modal-dialog-button:last-child:active {
+  color: white;
+  background-color: #262626;
+}
+
+.modal-dialog .modal-dialog-button-box .modal-dialog-button:last-child:insensitive {
+  background-color: rgba(51, 51, 51, 0.05);
+  color: rgba(51, 51, 51, 0.35);
+}
+
+.modal-dialog {
+  color: rgba(0, 0, 0, 0.6);
+  padding: 9px;
+}
+
+.modal-dialog .modal-dialog-content-box {
+  margin: 30px 42px;
+  spacing: 30px;
+  max-width: 28em;
+}
+
+.modal-dialog .modal-dialog-button-box {
+  padding-top: 6px;
+}
+
+.dialog-list {
+  spacing: 18px;
+}
+
+.dialog-list .dialog-list-title {
+  text-align: center;
+}
+
+.dialog-list .dialog-list-scrollview {
+  max-height: 200px;
+}
+
+.dialog-list .dialog-list-box {
+  spacing: 1em;
+}
+
+.dialog-list .dialog-list-box .dialog-list-item {
+  spacing: 1em;
+}
+
+.dialog-list .dialog-list-box .dialog-list-item .dialog-list-item-title {
+  font-weight: bold;
+}
+
+.dialog-list .dialog-list-box .dialog-list-item .dialog-list-item-description {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.end-session-dialog {
+  width: 26em;
+}
+
+.end-session-dialog .end-session-dialog-battery-warning,
+.end-session-dialog .dialog-list-title {
+  color: #F4B400;
+  background-color: rgba(244, 180, 0, 0.1);
+  padding: 9px;
+  border-radius: 6px;
+  margin: 4px 0;
+}
+
+.message-dialog-content {
+  spacing: 18px;
+}
+
+.message-dialog-content .message-dialog-title {
+  text-align: center;
+}
+
+.message-dialog-content .message-dialog-description {
+  text-align: center;
+}
+
+.run-dialog {
+  width: 26em;
+  padding-bottom: 6px;
+}
+
+.run-dialog .run-dialog-entry {
+  padding: 12px 9px;
+}
+
+.run-dialog .run-dialog-description {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.prompt-dialog {
+  width: 26em;
+}
+
+.prompt-dialog .prompt-dialog-password-grid {
+  spacing-rows: 8px;
+  spacing-columns: 4px;
+}
+
+.prompt-dialog .prompt-dialog-password-grid .prompt-dialog-password-entry {
+  width: auto;
+}
+
+.prompt-dialog .prompt-dialog-password-grid .prompt-dialog-password-entry:ltr {
+  margin-left: 20px;
+}
+
+.prompt-dialog .prompt-dialog-password-grid .prompt-dialog-password-entry:rtl {
+  margin-right: 20px;
+}
+
+.prompt-dialog .prompt-dialog-password-layout {
+  spacing: 8px;
+}
+
+.prompt-dialog .prompt-dialog-password-entry {
+  width: 20em;
+  padding: 12px 9px;
+}
+
+.prompt-dialog .prompt-dialog-error-label,
+.prompt-dialog .prompt-dialog-info-label,
+.prompt-dialog .prompt-dialog-null-label {
+  text-align: center;
+}
+
+.prompt-dialog .prompt-dialog-error-label {
+  color: #F4B400;
+}
+
+.polkit-dialog-user-layout {
+  text-align: center;
+  spacing: 8px;
+  margin-bottom: 6px;
+}
+
+.polkit-dialog-user-layout .polkit-dialog-user-root-label {
+  color: #F4B400;
+}
+
+.audio-device-selection-dialog .modal-dialog-content-box {
+  margin-bottom: 28px;
+}
+
+.audio-device-selection-dialog .audio-selection-box {
+  spacing: 20px;
+}
+
+.audio-selection-device {
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 6px;
+}
+
+.audio-selection-device:hover, .audio-selection-device:focus {
+  background-color: rgba(0, 0, 0, 0.12);
+}
+
+.audio-selection-device:active {
+  background-color: #333333;
+  color: white;
+}
+
+.audio-selection-device-box {
+  padding: 18px;
+  spacing: 18px;
+}
+
+.audio-selection-device-icon {
+  icon-size: 64px;
+}
+
+.welcome-dialog-image {
+  background-image: url("resource:///org/gnome/shell/theme/gnome-shell-start.svg");
+  background-size: contain;
+  height: 300px;
+  width: 300px;
+}
+
+/* Access portal dialog */
+.access-dialog {
+  text-align: center;
+}
+
 /* Dash */
 #dash {
-  margin-top: 12px;
+  padding-left: 6px;
+  padding-right: 6px;
 }
 
 #dash .dash-background {
@@ -2933,7 +2901,7 @@ StWidget.focused .app-grid-running-dot {
 }
 
 #dash .dash-item-container .app-grid-running-dot {
-  margin-bottom: 18px;
+  offset-y: -12px;
 }
 
 #dash .dash-separator {
@@ -3030,7 +2998,7 @@ StWidget.focused .app-grid-running-dot {
 }
 
 .message {
-  padding: 0;
+  padding: 6px;
   margin: 3px;
   border-radius: 12px;
 }
@@ -3039,32 +3007,18 @@ StWidget.focused .app-grid-running-dot {
   border-radius: 6px;
 }
 
-.popup-menu .message .notification-button:first-child:ltr {
-  border-radius: 0 0 0 6px;
-}
-
-.popup-menu .message .notification-button:last-child:ltr {
-  border-radius: 0 0 6px;
-}
-
-.popup-menu .message .notification-button:first-child:rtl {
-  border-radius: 0 0 6px;
-}
-
-.popup-menu .message .notification-button:last-child:rtl {
-  border-radius: 0 0 0 6px;
-}
-
-.popup-menu .message .notification-button:first-child:last-child {
-  border-radius: 0 0 6px 6px;
-}
-
 .message .message-header {
-  padding: 0 0.409em;
-  margin: 6px;
-  margin-bottom: 0;
+  padding: 0 6px;
   spacing: 6px;
   color: rgba(0, 0, 0, 0.38);
+}
+
+.message .message-header:ltr {
+  padding-right: 0;
+}
+
+.message .message-header:rtl {
+  padding-left: 0;
 }
 
 .message .message-header .message-source-icon {
@@ -3241,14 +3195,15 @@ StWidget.focused .app-grid-running-dot {
   border: none;
   text-shadow: none;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.25);
-  border-radius: 12px;
+  border-radius: 18px;
+  padding: 6px;
 }
 
 .notification-banner:hover {
   color: rgba(0, 0, 0, 0.87);
   background-color: #FFFFFF;
-  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.25);
-  margin: 12px 12px 18px;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.25);
+  margin: 12px 8px 13px;
 }
 
 .notification-banner:focus {
@@ -3258,9 +3213,7 @@ StWidget.focused .app-grid-running-dot {
 
 .notification-buttons-bin {
   background-color: transparent;
-  padding-top: 0;
   border: none;
-  border-top: 1px solid rgba(0, 0, 0, 0.12);
   spacing: 0;
 }
 
@@ -3271,6 +3224,7 @@ StWidget.focused .app-grid-running-dot {
   color: rgba(0, 0, 0, 0.6);
   font-weight: 500;
   border: none;
+  border-radius: 6px;
 }
 
 .notification-button:focus {
@@ -3288,30 +3242,6 @@ StWidget.focused .app-grid-running-dot {
 .notification-button:active {
   background-color: rgba(0, 0, 0, 0.26);
   color: rgba(0, 0, 0, 0.87);
-}
-
-.notification-button:first-child:ltr {
-  border-radius: 0 0 0 12px;
-}
-
-.notification-button:last-child:ltr {
-  border-radius: 0 0 12px;
-  margin-right: 0 !important;
-}
-
-.notification-button:first-child:rtl {
-  border-radius: 0 0 12px;
-}
-
-.notification-button:last-child:rtl {
-  border-radius: 0 0 0 12px;
-  margin-left: 0 !important;
-}
-
-.notification-button:first-child:last-child {
-  border-radius: 0 0 12px 12px;
-  margin-left: 0 !important;
-  margin-right: 0 !important;
 }
 
 .controls-manager, .secondary-monitor-workspaces {
@@ -3649,7 +3579,7 @@ StWidget.focused .app-grid-running-dot {
   min-height: 20px;
   padding: 6px;
   spacing: 6px;
-  border-radius: 6px !important;
+  border-radius: 3px !important;
   color: rgba(255, 255, 255, 0.7) !important;
 }
 
@@ -3780,6 +3710,8 @@ StWidget.focused .app-grid-running-dot {
 .list-search-result:focus, .search-provider-icon:focus, .list-search-result:hover, .search-provider-icon:hover, .list-search-result:selected, .search-provider-icon:selected {
   background-color: rgba(255, 255, 255, 0.12);
   transition-duration: 0;
+  border: none !important;
+  box-shadow: none !important;
 }
 
 .list-search-result:active, .search-provider-icon:active, .list-search-result:checked, .search-provider-icon:checked {
@@ -4070,6 +4002,58 @@ StWidget.focused .app-grid-running-dot {
   -y-offset: 24px;
 }
 
+/* Slider */
+.slider {
+  color: #333333;
+  -slider-handle-radius: 7px;
+  -barlevel-height: 2px;
+  -barlevel-background-color: rgba(0, 0, 0, 0.26);
+  -barlevel-active-background-color: #333333;
+  -barlevel-overdrive-color: #D93025;
+  -barlevel-overdrive-separator-width: 2px;
+}
+
+.slider:hover {
+  color: #454545;
+}
+
+/* Switches */
+.toggle-switch {
+  width: 40px;
+  height: 20px;
+  background-size: contain;
+  background-image: url("assets/toggle-off.svg");
+  background-color: transparent;
+  color: transparent;
+}
+
+.toggle-switch:checked {
+  background-image: url("assets/toggle-on.svg");
+}
+
+.quick-toggle-menu .toggle-switch, .popup-sub-menu .toggle-switch {
+  background-image: url("assets/toggle-off-dark.svg");
+}
+
+.quick-toggle-menu .toggle-switch:checked, .popup-sub-menu .toggle-switch:checked {
+  background-image: url("assets/toggle-on-dark.svg");
+}
+
+.toggle-switch StIcon {
+  icon-size: 0;
+}
+
+.toggle-switch .handle {
+  margin: 0;
+  background: none;
+  box-shadow: none;
+  transition-duration: 0;
+}
+
+.toggle-switch:checked .handle {
+  background: none;
+}
+
 .window-picker {
   spacing: 6px;
 }
@@ -4086,7 +4070,7 @@ StWidget.focused .app-grid-running-dot {
 .window-close, .screenshot-ui-close-button {
   background-color: #242424;
   color: white;
-  border-radius: 21px;
+  border-radius: 9999px;
   padding: 3px;
   height: 30px;
   width: 30px;
@@ -4172,104 +4156,391 @@ StWidget.focused .app-grid-running-dot {
   text-align: center;
 }
 
-#dashtodockContainer.straight-corner #dash, #dashtodockContainer.shrink.straight-corner #dash {
-  border-radius: 0;
-  margin: 0;
+#dashtodockContainer.top #dash .dash-background {
+  border-radius: 24px !important;
 }
 
-#dashtodockContainer.straight-corner #dash .dash-background, #dashtodockContainer.shrink.straight-corner #dash .dash-background {
-  border-radius: 0;
+#dashtodockContainer.top.shrink #dash .dash-background {
+  border-radius: 16px !important;
 }
 
-#dashtodockContainer.extended.top #dash, #dashtodockContainer.extended.bottom #dash, #dashtodockContainer.extended.right #dash, #dashtodockContainer.extended.left #dash {
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding: 0 0;
+#dashtodockContainer.top.straight-corner #dash, #dashtodockContainer.top.shrink.straight-corner #dash, #dashtodockContainer.top.extended #dash, #dashtodockContainer.top.shrink.extended #dash {
+  margin: 0 !important;
+  margin-top: 0 !important;
+  padding: 0 !important;
 }
 
-#dashtodockContainer.extended.top #dash .dash-background, #dashtodockContainer.extended.bottom #dash .dash-background, #dashtodockContainer.extended.right #dash .dash-background, #dashtodockContainer.extended.left #dash .dash-background {
-  border-radius: 0;
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  margin-bottom: 0;
+#dashtodockContainer.top.straight-corner #dash .dash-background, #dashtodockContainer.top.shrink.straight-corner #dash .dash-background, #dashtodockContainer.top.extended #dash .dash-background, #dashtodockContainer.top.shrink.extended #dash .dash-background {
+  margin: 0 !important;
+  margin-bottom: 0 !important;
+  border-radius: 0 !important;
+}
+
+#dashtodockContainer.top.straight-corner #dash .show-apps,
+#dashtodockContainer.top.straight-corner #dash .overview-tile,
+#dashtodockContainer.top.straight-corner #dash .grid-search-result, #dashtodockContainer.top.shrink.straight-corner #dash .show-apps,
+#dashtodockContainer.top.shrink.straight-corner #dash .overview-tile, #dashtodockContainer.top.extended #dash .show-apps,
+#dashtodockContainer.top.extended #dash .overview-tile,
+#dashtodockContainer.top.extended #dash .grid-search-result, #dashtodockContainer.top.shrink.extended #dash .show-apps,
+#dashtodockContainer.top.shrink.extended #dash .overview-tile {
+  margin: 0 !important;
+}
+
+#dashtodockContainer.bottom #dash .dash-background {
+  border-radius: 24px !important;
+}
+
+#dashtodockContainer.bottom.shrink #dash .dash-background {
+  border-radius: 16px !important;
+}
+
+#dashtodockContainer.bottom.straight-corner #dash, #dashtodockContainer.bottom.shrink.straight-corner #dash, #dashtodockContainer.bottom.extended #dash, #dashtodockContainer.bottom.shrink.extended #dash {
+  margin: 0 !important;
+  margin-top: 0 !important;
+  padding: 0 !important;
+}
+
+#dashtodockContainer.bottom.straight-corner #dash .dash-background, #dashtodockContainer.bottom.shrink.straight-corner #dash .dash-background, #dashtodockContainer.bottom.extended #dash .dash-background, #dashtodockContainer.bottom.shrink.extended #dash .dash-background {
+  margin: 0 !important;
+  margin-bottom: 0 !important;
+  border-radius: 0 !important;
+}
+
+#dashtodockContainer.bottom.straight-corner #dash .show-apps,
+#dashtodockContainer.bottom.straight-corner #dash .overview-tile,
+#dashtodockContainer.bottom.straight-corner #dash .grid-search-result, #dashtodockContainer.bottom.shrink.straight-corner #dash .show-apps,
+#dashtodockContainer.bottom.shrink.straight-corner #dash .overview-tile, #dashtodockContainer.bottom.extended #dash .show-apps,
+#dashtodockContainer.bottom.extended #dash .overview-tile,
+#dashtodockContainer.bottom.extended #dash .grid-search-result, #dashtodockContainer.bottom.shrink.extended #dash .show-apps,
+#dashtodockContainer.bottom.shrink.extended #dash .overview-tile {
+  margin: 0 !important;
+}
+
+#dashtodockContainer.left #dash .dash-background {
+  border-radius: 24px !important;
+}
+
+#dashtodockContainer.left.shrink #dash .dash-background {
+  border-radius: 16px !important;
+}
+
+#dashtodockContainer.left.straight-corner #dash, #dashtodockContainer.left.shrink.straight-corner #dash, #dashtodockContainer.left.extended #dash, #dashtodockContainer.left.shrink.extended #dash {
+  margin: 0 !important;
+  margin-top: 0 !important;
+  padding: 0 !important;
+}
+
+#dashtodockContainer.left.straight-corner #dash .dash-background, #dashtodockContainer.left.shrink.straight-corner #dash .dash-background, #dashtodockContainer.left.extended #dash .dash-background, #dashtodockContainer.left.shrink.extended #dash .dash-background {
+  margin: 0 !important;
+  margin-bottom: 0 !important;
+  border-radius: 0 !important;
+}
+
+#dashtodockContainer.left.straight-corner #dash .show-apps,
+#dashtodockContainer.left.straight-corner #dash .overview-tile,
+#dashtodockContainer.left.straight-corner #dash .grid-search-result, #dashtodockContainer.left.shrink.straight-corner #dash .show-apps,
+#dashtodockContainer.left.shrink.straight-corner #dash .overview-tile, #dashtodockContainer.left.extended #dash .show-apps,
+#dashtodockContainer.left.extended #dash .overview-tile,
+#dashtodockContainer.left.extended #dash .grid-search-result, #dashtodockContainer.left.shrink.extended #dash .show-apps,
+#dashtodockContainer.left.shrink.extended #dash .overview-tile {
+  margin: 0 !important;
+}
+
+#dashtodockContainer.right #dash .dash-background {
+  border-radius: 24px !important;
+}
+
+#dashtodockContainer.right.shrink #dash .dash-background {
+  border-radius: 16px !important;
+}
+
+#dashtodockContainer.right.straight-corner #dash, #dashtodockContainer.right.shrink.straight-corner #dash, #dashtodockContainer.right.extended #dash, #dashtodockContainer.right.shrink.extended #dash {
+  margin: 0 !important;
+  margin-top: 0 !important;
+  padding: 0 !important;
+}
+
+#dashtodockContainer.right.straight-corner #dash .dash-background, #dashtodockContainer.right.shrink.straight-corner #dash .dash-background, #dashtodockContainer.right.extended #dash .dash-background, #dashtodockContainer.right.shrink.extended #dash .dash-background {
+  margin: 0 !important;
+  margin-bottom: 0 !important;
+  border-radius: 0 !important;
+}
+
+#dashtodockContainer.right.straight-corner #dash .show-apps,
+#dashtodockContainer.right.straight-corner #dash .overview-tile,
+#dashtodockContainer.right.straight-corner #dash .grid-search-result, #dashtodockContainer.right.shrink.straight-corner #dash .show-apps,
+#dashtodockContainer.right.shrink.straight-corner #dash .overview-tile, #dashtodockContainer.right.extended #dash .show-apps,
+#dashtodockContainer.right.extended #dash .overview-tile,
+#dashtodockContainer.right.extended #dash .grid-search-result, #dashtodockContainer.right.shrink.extended #dash .show-apps,
+#dashtodockContainer.right.shrink.extended #dash .overview-tile {
+  margin: 0 !important;
+}
+
+#dashtodockContainer.extended .dash-background, #dashtodockContainer.straight-corner .dash-background {
+  border-radius: 0 !important;
+}
+
+#dashtodockContainer #dash, #dashtodockContainer:overview #dash {
+  background: transparent;
 }
 
 #dashtodockContainer.left #dash, #dashtodockContainer.right #dash {
-  margin-top: 0;
-  padding: 10px 0;
+  margin-top: 0 !important;
+  padding: 12px !important;
 }
 
-#dashtodockContainer.left #dash .dash-background, #dashtodockContainer.right #dash .dash-background {
-  margin-bottom: 0;
+#dashtodockContainer.left #dash #dashtodockDashContainer, #dashtodockContainer.right #dash #dashtodockDashContainer {
+  padding: 10px 0 !important;
 }
 
-#dashtodockContainer.left .dash-item-container .app-well-app, #dashtodockContainer.left .show-apps, #dashtodockContainer.right .dash-item-container .app-well-app, #dashtodockContainer.right .show-apps {
-  padding: 6px;
+#dashtodockContainer.left .show-apps,
+#dashtodockContainer.left .overview-tile,
+#dashtodockContainer.left .grid-search-result, #dashtodockContainer.right .show-apps,
+#dashtodockContainer.right .overview-tile,
+#dashtodockContainer.right .grid-search-result {
+  padding: 2px 6px !important;
 }
 
-#dashtodockContainer.left #dash {
-  margin-left: 6px;
+#dashtodockContainer.left .dash-background, #dashtodockContainer.right .dash-background {
+  margin-bottom: 0 !important;
 }
 
-#dashtodockContainer.right #dash {
-  margin-right: 6px;
+#dashtodockContainer.left.shrink #dash #dashtodockDashContainer, #dashtodockContainer.right.shrink #dash #dashtodockDashContainer {
+  padding: 4px 0 !important;
 }
 
-#dashtodockContainer.dashtodock #dash .dash-background {
-  background-color: #212121;
+#dashtodockContainer.left.shrink .dash-background, #dashtodockContainer.right.shrink .dash-background {
+  padding: 4px !important;
+}
+
+#dashtodockContainer.left.shrink .show-apps,
+#dashtodockContainer.left.shrink .overview-tile,
+#dashtodockContainer.left.shrink .grid-search-result, #dashtodockContainer.right.shrink .show-apps,
+#dashtodockContainer.right.shrink .overview-tile,
+#dashtodockContainer.right.shrink .grid-search-result {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+#dashtodockContainer.left.extended #dash #dashtodockDashContainer, #dashtodockContainer.left.straight-corner #dash #dashtodockDashContainer, #dashtodockContainer.right.extended #dash #dashtodockDashContainer, #dashtodockContainer.right.straight-corner #dash #dashtodockDashContainer {
+  padding: 0 !important;
+}
+
+#dashtodockContainer.left.extended #dash #dashtodockDashContainer #dashtodockDashScrollview:first-child, #dashtodockContainer.left.straight-corner #dash #dashtodockDashContainer #dashtodockDashScrollview:first-child, #dashtodockContainer.right.extended #dash #dashtodockDashContainer #dashtodockDashScrollview:first-child, #dashtodockContainer.right.straight-corner #dash #dashtodockDashContainer #dashtodockDashScrollview:first-child {
+  padding-top: 0 !important;
+}
+
+#dashtodockContainer.left.extended #dash #dashtodockDashContainer #dashtodockDashScrollview:last-child, #dashtodockContainer.left.straight-corner #dash #dashtodockDashContainer #dashtodockDashScrollview:last-child, #dashtodockContainer.right.extended #dash #dashtodockDashContainer #dashtodockDashScrollview:last-child, #dashtodockContainer.right.straight-corner #dash #dashtodockDashContainer #dashtodockDashScrollview:last-child {
+  padding-bottom: 0 !important;
+}
+
+#dashtodockContainer.left.extended #dash #dashtodockDashContainer > :first-child .show-apps, #dashtodockContainer.left.straight-corner #dash #dashtodockDashContainer > :first-child .show-apps, #dashtodockContainer.right.extended #dash #dashtodockDashContainer > :first-child .show-apps, #dashtodockContainer.right.straight-corner #dash #dashtodockDashContainer > :first-child .show-apps {
+  padding-bottom: 6px !important;
+}
+
+#dashtodockContainer.left.extended #dash #dashtodockDashContainer > :last-child .show-apps, #dashtodockContainer.left.straight-corner #dash #dashtodockDashContainer > :last-child .show-apps, #dashtodockContainer.right.extended #dash #dashtodockDashContainer > :last-child .show-apps, #dashtodockContainer.right.straight-corner #dash #dashtodockDashContainer > :last-child .show-apps {
+  padding-bottom: 24px !important;
+}
+
+#dashtodockContainer.left.extended.shrink #dash #dashtodockDashContainer > :last-child .show-apps, #dashtodockContainer.left.straight-corner.shrink #dash #dashtodockDashContainer > :last-child .show-apps, #dashtodockContainer.right.extended.shrink #dash #dashtodockDashContainer > :last-child .show-apps, #dashtodockContainer.right.straight-corner.shrink #dash #dashtodockDashContainer > :last-child .show-apps {
+  padding-bottom: 0 !important;
+}
+
+#dashtodockContainer.left.extended.shrink .dash-background, #dashtodockContainer.left.straight-corner.shrink .dash-background, #dashtodockContainer.right.extended.shrink .dash-background, #dashtodockContainer.right.straight-corner.shrink .dash-background {
+  padding: 0 !important;
+}
+
+#dashtodockContainer.left.extended.shrink .show-apps,
+#dashtodockContainer.left.extended.shrink .overview-tile,
+#dashtodockContainer.left.extended.shrink .grid-search-result, #dashtodockContainer.left.straight-corner.shrink .show-apps,
+#dashtodockContainer.left.straight-corner.shrink .overview-tile,
+#dashtodockContainer.left.straight-corner.shrink .grid-search-result, #dashtodockContainer.right.extended.shrink .show-apps,
+#dashtodockContainer.right.extended.shrink .overview-tile,
+#dashtodockContainer.right.extended.shrink .grid-search-result, #dashtodockContainer.right.straight-corner.shrink .show-apps,
+#dashtodockContainer.right.straight-corner.shrink .overview-tile,
+#dashtodockContainer.right.straight-corner.shrink .grid-search-result {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+#dashtodockContainer.left.extended .overview-tile, #dashtodockContainer.left.extended .grid-search-result, #dashtodockContainer.left.straight-corner .overview-tile, #dashtodockContainer.left.straight-corner .grid-search-result, #dashtodockContainer.right.extended .overview-tile, #dashtodockContainer.right.extended .grid-search-result, #dashtodockContainer.right.straight-corner .overview-tile, #dashtodockContainer.right.straight-corner .grid-search-result {
+  padding: 2px 12px !important;
+}
+
+#dashtodockContainer.left.extended .show-apps, #dashtodockContainer.left.straight-corner .show-apps, #dashtodockContainer.right.extended .show-apps, #dashtodockContainer.right.straight-corner .show-apps {
+  padding: 2px 12px 24px !important;
+}
+
+#dashtodockContainer.top .dash-background, #dashtodockContainer.bottom .dash-background {
+  padding: 12px 10px !important;
+}
+
+#dashtodockContainer.top .show-apps,
+#dashtodockContainer.top .overview-tile,
+#dashtodockContainer.top .grid-search-result, #dashtodockContainer.bottom .show-apps,
+#dashtodockContainer.bottom .overview-tile,
+#dashtodockContainer.bottom .grid-search-result {
+  margin: 0 2px !important;
+  padding-bottom: 12px !important;
+}
+
+#dashtodockContainer.top .show-apps .overview-icon,
+#dashtodockContainer.top .overview-tile .overview-icon,
+#dashtodockContainer.top .grid-search-result .overview-icon, #dashtodockContainer.bottom .show-apps .overview-icon,
+#dashtodockContainer.bottom .overview-tile .overview-icon,
+#dashtodockContainer.bottom .grid-search-result .overview-icon {
+  padding: 6px !important;
+  spacing: 6px !important;
+}
+
+#dashtodockContainer.top.shrink .dash-background, #dashtodockContainer.bottom.shrink .dash-background {
+  padding: 4px 2px !important;
+}
+
+#dashtodockContainer.top.shrink .show-apps,
+#dashtodockContainer.top.shrink .overview-tile,
+#dashtodockContainer.top.shrink .grid-search-result, #dashtodockContainer.bottom.shrink .show-apps,
+#dashtodockContainer.bottom.shrink .overview-tile,
+#dashtodockContainer.bottom.shrink .grid-search-result {
+  margin: 0 !important;
+  padding: 0 2px 12px !important;
+}
+
+#dashtodockContainer.top.extended #dash #dashtodockDashContainer, #dashtodockContainer.top.straight-corner #dash #dashtodockDashContainer, #dashtodockContainer.bottom.extended #dash #dashtodockDashContainer, #dashtodockContainer.bottom.straight-corner #dash #dashtodockDashContainer {
+  padding: 0 !important;
+}
+
+#dashtodockContainer.top.extended #dash #dashtodockDashContainer #dashtodockDashScrollview:first-child, #dashtodockContainer.top.straight-corner #dash #dashtodockDashContainer #dashtodockDashScrollview:first-child, #dashtodockContainer.bottom.extended #dash #dashtodockDashContainer #dashtodockDashScrollview:first-child, #dashtodockContainer.bottom.straight-corner #dash #dashtodockDashContainer #dashtodockDashScrollview:first-child {
+  padding-left: 0 !important;
+}
+
+#dashtodockContainer.top.extended #dash #dashtodockDashContainer #dashtodockDashScrollview:last-child, #dashtodockContainer.top.straight-corner #dash #dashtodockDashContainer #dashtodockDashScrollview:last-child, #dashtodockContainer.bottom.extended #dash #dashtodockDashContainer #dashtodockDashScrollview:last-child, #dashtodockContainer.bottom.straight-corner #dash #dashtodockDashContainer #dashtodockDashScrollview:last-child {
+  padding-right: 0 !important;
+}
+
+#dashtodockContainer.top.extended #dash #dashtodockDashContainer > :first-child .show-apps, #dashtodockContainer.top.straight-corner #dash #dashtodockDashContainer > :first-child .show-apps, #dashtodockContainer.bottom.extended #dash #dashtodockDashContainer > :first-child .show-apps, #dashtodockContainer.bottom.straight-corner #dash #dashtodockDashContainer > :first-child .show-apps {
+  padding-left: 0 !important;
+}
+
+#dashtodockContainer.top.extended #dash #dashtodockDashContainer > :last-child .show-apps, #dashtodockContainer.top.straight-corner #dash #dashtodockDashContainer > :last-child .show-apps, #dashtodockContainer.bottom.extended #dash #dashtodockDashContainer > :last-child .show-apps, #dashtodockContainer.bottom.straight-corner #dash #dashtodockDashContainer > :last-child .show-apps {
+  padding-right: 18px !important;
+}
+
+#dashtodockContainer.top.extended.shrink .dash-background, #dashtodockContainer.top.straight-corner.shrink .dash-background, #dashtodockContainer.bottom.extended.shrink .dash-background, #dashtodockContainer.bottom.straight-corner.shrink .dash-background {
+  padding: 0 !important;
+}
+
+#dashtodockContainer.top.extended.shrink .show-apps,
+#dashtodockContainer.top.extended.shrink .overview-tile,
+#dashtodockContainer.top.extended.shrink .grid-search-result, #dashtodockContainer.top.straight-corner.shrink .show-apps,
+#dashtodockContainer.top.straight-corner.shrink .overview-tile,
+#dashtodockContainer.top.straight-corner.shrink .grid-search-result, #dashtodockContainer.bottom.extended.shrink .show-apps,
+#dashtodockContainer.bottom.extended.shrink .overview-tile,
+#dashtodockContainer.bottom.extended.shrink .grid-search-result, #dashtodockContainer.bottom.straight-corner.shrink .show-apps,
+#dashtodockContainer.bottom.straight-corner.shrink .overview-tile,
+#dashtodockContainer.bottom.straight-corner.shrink .grid-search-result {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+#dashtodockContainer.top.extended.shrink #dash #dashtodockDashContainer > :last-child .show-apps, #dashtodockContainer.top.straight-corner.shrink #dash #dashtodockDashContainer > :last-child .show-apps, #dashtodockContainer.bottom.extended.shrink #dash #dashtodockDashContainer > :last-child .show-apps, #dashtodockContainer.bottom.straight-corner.shrink #dash #dashtodockDashContainer > :last-child .show-apps {
+  padding-right: 0 !important;
+}
+
+#dashtodockContainer.top.extended .dash-separator, #dashtodockContainer.top.straight-corner .dash-separator, #dashtodockContainer.bottom.extended .dash-separator, #dashtodockContainer.bottom.straight-corner .dash-separator {
+  margin: 0 8px !important;
+}
+
+#dashtodockContainer.top.extended .show-apps,
+#dashtodockContainer.top.extended .overview-tile,
+#dashtodockContainer.top.extended .grid-search-result, #dashtodockContainer.top.straight-corner .show-apps,
+#dashtodockContainer.top.straight-corner .overview-tile,
+#dashtodockContainer.top.straight-corner .grid-search-result, #dashtodockContainer.bottom.extended .show-apps,
+#dashtodockContainer.bottom.extended .overview-tile,
+#dashtodockContainer.bottom.extended .grid-search-result, #dashtodockContainer.bottom.straight-corner .show-apps,
+#dashtodockContainer.bottom.straight-corner .overview-tile,
+#dashtodockContainer.bottom.straight-corner .grid-search-result {
+  padding: 12px 2px !important;
 }
 
 #dashtodockContainer #dash .dash-background {
   background-color: #212121;
 }
 
-#dashtodockContainer .app-well-app-running-dot {
+#dashtodockContainer #dash .overview-tile .overview-icon, #dashtodockContainer #dash .grid-search-result .overview-icon,
+#dashtodockContainer #dash .show-apps .overview-icon {
+  color: white;
+}
+
+#dashtodockContainer #dash .overview-tile:focus .overview-icon, #dashtodockContainer #dash .grid-search-result:focus .overview-icon,
+#dashtodockContainer #dash .show-apps:focus .overview-icon {
+  background-color: rgba(255, 255, 255, 0.04);
+}
+
+#dashtodockContainer #dash .overview-tile:hover .overview-icon, #dashtodockContainer #dash .grid-search-result:hover .overview-icon,
+#dashtodockContainer #dash .show-apps:hover .overview-icon {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+#dashtodockContainer #dash .overview-tile:active .overview-icon, #dashtodockContainer #dash .grid-search-result:active .overview-icon,
+#dashtodockContainer #dash .show-apps:active .overview-icon {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
-#dashtodockContainer StWidget.focused .app-well-app-running-dot {
+#dashtodockContainer #dash .overview-tile:checked .overview-icon, #dashtodockContainer #dash .grid-search-result:checked .overview-icon,
+#dashtodockContainer #dash .show-apps:checked .overview-icon {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+#dashtodockContainer #dash .app-grid-running-dot {
+  margin: 0 !important;
+  offset-y: 0 !important;
+  background-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+#dashtodockContainer #dash StWidget.focused .app-grid-running-dot {
   background-color: #DDDDDD !important;
 }
 
-#dashtodockContainer:overview #dash .app-well-app-running-dot {
+#dashtodockContainer:overview #dash {
+  background: none;
+}
+
+#dashtodockContainer:overview #dash .overview-tile .overview-icon, #dashtodockContainer:overview #dash .grid-search-result .overview-icon,
+#dashtodockContainer:overview #dash .show-apps .overview-icon {
+  color: white;
+}
+
+#dashtodockContainer:overview #dash .overview-tile:focus .overview-icon, #dashtodockContainer:overview #dash .grid-search-result:focus .overview-icon,
+#dashtodockContainer:overview #dash .show-apps:focus .overview-icon {
+  background-color: rgba(255, 255, 255, 0.04);
+}
+
+#dashtodockContainer:overview #dash .overview-tile:hover .overview-icon, #dashtodockContainer:overview #dash .grid-search-result:hover .overview-icon,
+#dashtodockContainer:overview #dash .show-apps:hover .overview-icon {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+#dashtodockContainer:overview #dash .overview-tile:active .overview-icon, #dashtodockContainer:overview #dash .grid-search-result:active .overview-icon,
+#dashtodockContainer:overview #dash .show-apps:active .overview-icon {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
-#dashtodockContainer:overview #dash StWidget.focused .app-well-app-running-dot {
+#dashtodockContainer:overview #dash .overview-tile:checked .overview-icon, #dashtodockContainer:overview #dash .grid-search-result:checked .overview-icon,
+#dashtodockContainer:overview #dash .show-apps:checked .overview-icon {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+#dashtodockContainer:overview #dash .dash-background {
+  background-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+#dashtodockContainer:overview #dash .app-grid-running-dot {
+  background-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+#dashtodockContainer:overview #dash StWidget.focused .app-grid-running-dot {
   background-color: white !important;
-}
-
-#dashtodockContainer .show-apps .overview-icon,
-#dashtodockContainer .app-well-app .overview-icon {
-  color: rgba(255, 255, 255, 0.7);
-}
-
-#dashtodockContainer .show-apps:hover .overview-icon, #dashtodockContainer .show-apps:focus .overview-icon, #dashtodockContainer .show-apps:selected .overview-icon,
-#dashtodockContainer .app-well-app:hover .overview-icon,
-#dashtodockContainer .app-well-app:focus .overview-icon,
-#dashtodockContainer .app-well-app:selected .overview-icon {
-  background-color: rgba(255, 255, 255, 0.12);
-}
-
-#dashtodockContainer .show-apps:active .overview-icon, #dashtodockContainer .show-apps:checked .overview-icon,
-#dashtodockContainer .app-well-app:active .overview-icon,
-#dashtodockContainer .app-well-app:checked .overview-icon {
-  background-color: rgba(255, 255, 255, 0.3);
-}
-
-#dashtodockContainer:overview #dash .show-apps .overview-icon, #dashtodockContainer:overview #dash .app-well-app .overview-icon {
-  color: rgba(255, 255, 255, 0.7);
-}
-
-#dashtodockContainer:overview #dash .show-apps:hover .overview-icon, #dashtodockContainer:overview #dash .show-apps:focus .overview-icon, #dashtodockContainer:overview #dash .show-apps:selected .overview-icon, #dashtodockContainer:overview #dash .app-well-app:hover .overview-icon, #dashtodockContainer:overview #dash .app-well-app:focus .overview-icon, #dashtodockContainer:overview #dash .app-well-app:selected .overview-icon {
-  background-color: rgba(255, 255, 255, 0.12);
-}
-
-#dashtodockContainer:overview #dash .show-apps:active .overview-icon, #dashtodockContainer:overview #dash .show-apps:checked .overview-icon, #dashtodockContainer:overview #dash .app-well-app:active .overview-icon, #dashtodockContainer:overview #dash .app-well-app:checked .overview-icon {
-  background-color: rgba(255, 255, 255, 0.3);
 }
 
 #dashtodockContainer.opaque #dash .dash-background {
@@ -4278,10 +4549,6 @@ StWidget.focused .app-grid-running-dot {
 
 #dashtodockContainer.transparent #dash .dash-background {
   background-color: rgba(33, 33, 33, 0.35);
-}
-
-#dashtodockContainer:overview #dash .dash-background {
-  background-color: rgba(255, 255, 255, 0.12);
 }
 
 #dashtodockContainer.opaque:overview #dash .dash-background, #dashtodockContainer.transparent:overview #dash .dash-background {
@@ -4302,8 +4569,8 @@ StWidget.focused .app-grid-running-dot {
   padding: 1px 2px;
 }
 
-#dashtodockContainer.extended .app-well-app .overview-icon,
-#dashtodockContainer.extended .show-apps .overview-icon, #dashtodockContainer.extended:overview .app-well-app .overview-icon,
+#dashtodockContainer.extended .overview-tile .overview-icon, #dashtodockContainer.extended .grid-search-result .overview-icon,
+#dashtodockContainer.extended .show-apps .overview-icon, #dashtodockContainer.extended:overview .overview-tile .overview-icon,
 #dashtodockContainer.extended:overview .show-apps .overview-icon {
   border-radius: 6px;
 }
@@ -4321,6 +4588,10 @@ StWidget.focused .app-grid-running-dot {
   height: auto;
   border-right-width: 1px;
   margin: 32px 0;
+}
+
+.dash-label.bottom {
+  margin-bottom: 12px !important;
 }
 
 .openweather-button, .openweather-button-action, .openweather-menu-button-container, .openweather-button-box {

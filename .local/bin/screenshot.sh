@@ -1,11 +1,11 @@
-#!/bin/bash
+#!/usr/bin/bash
 
 DIR="$HOME/Pictures/screenshots/"
 NAME="screenshot_$(date +%d%m%Y_%H%M%S).png"
 
 option2="Selected area"
-option3="Fullscreen (delay 3 sec)"
-option4="Current display (delay 3 sec)"
+option3="Fullscreen (delay 5 sec)"
+option4="Current display (delay 5 sec)"
 
 options="$option2\n$option3\n$option4"
 
@@ -19,14 +19,14 @@ case $choice in
 		swappy -f "$DIR$NAME"
 		;;
 	$option3)
-		sleep 3
+		sleep 5
 		grim "$DIR$NAME"
 		xclip -selection clipboard -t image/png -i "$DIR$NAME"
 		notify-send "Screenshot created" "Mode: Fullscreen"
 		swappy -f "$DIR$NAME"
 		;;
 	$option4)
-		sleep3
+		sleep 5
 		monitor="$(hyprctl monitors | awk '/Monitor/{monitor=$2} /focused: yes/{print monitor; exit}')"
 		grim -o "$monitor" "$DIR$NAME"
 		xclip -selection clipboard -t image/png -i "$DIR$NAME"

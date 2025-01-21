@@ -1,4 +1,12 @@
-#!/bin/bash
+#!/usr/bin/bash
+
+RED='\033[0;31m'                                                                                  
+GREEN='\033[0;32m'                                                                                
+YELLOW='\033[0;33m'                                                                               
+BLUE='\033[0;34m'                                                                                 
+PURPLE='\033[0;35m'                                                                               
+CYAN='\033[0;36m'                                                                                 
+NONE='\033[0m'
 
 # This script merges some images to one file. It prompts the user to select an
 # image file(s); set the number of columns and lines for an output file.
@@ -19,3 +27,5 @@ if gum confirm "Merge selected images?"; then
 		exit;
 fi
 notify-send "Merging finished"
+echo -e "${GREEN}"
+read -rp "Press Enter to continue" </dev/tty

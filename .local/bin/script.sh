@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/bash
 
 option1="󱗄	Calculator"
 option2="	Font search"

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/bash
 
 # This script converts some video to a GIF. It prompts the user to select an
 # video file with `gum filter` Set the frame rate, desired width, and max

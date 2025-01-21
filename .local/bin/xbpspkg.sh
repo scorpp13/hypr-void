@@ -1,3 +1,3 @@
-#!/bin/bash
+#!/usr/bin/bash
 
 alacritty -e fuzzypkg

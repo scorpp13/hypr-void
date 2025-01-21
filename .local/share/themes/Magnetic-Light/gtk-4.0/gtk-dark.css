@@ -4146,6 +4146,22 @@ actionbar > revealer > box button.combo:only-child:disabled {
   color: rgba(0, 0, 0, 0.3);
 }
 
+actionbar > revealer > box entry {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+actionbar > revealer > box entry:focus-within {
+  color: rgba(0, 0, 0, 0.87);
+}
+
+actionbar > revealer > box entry:drop(active), actionbar > revealer > box entry:hover:not(:focus-within) {
+  color: rgba(0, 0, 0, 0.87);
+}
+
+actionbar > revealer > box entry:disabled {
+  color: rgba(0, 0, 0, 0.3);
+}
+
 actionbar > revealer > box stackswitcher {
   background-color: rgba(0, 0, 0, 0.04);
 }
@@ -5674,10 +5690,6 @@ popover.entry-completion > contents {
 
 .nautilus-window flap > separator {
   background-color: transparent;
-}
-
-.nautilus-window placesview label {
-  color: rgba(231, 237, 243, 0.7);
 }
 
 .nautilus-window .nautilus-grid-view .view,
@@ -7628,7 +7640,8 @@ overlay-split-view > shadow.down {
 
 .sidebar-pane .sidebar > scrolledwindow,
 .sidebar-pane toolbarview > scrolledwindow,
-.sidebar-pane navigation-view-page stack > scrolledwindow, placessidebar > scrolledwindow, window.background > widget > leaflet.unfolded > box > scrolledwindow, leaflet.unfolded > box > scrolledwindow, leaflet.unfolded .contacts-contact-list > scrolledwindow, .sidebar-pane toolbarview > stack > box > widget > widget > scrolledwindow {
+.sidebar-pane navigation-view-page stack > scrolledwindow, placessidebar > scrolledwindow, window.background > contents > leaflet.unfolded > box > scrolledwindow,
+window.background > widget > leaflet.unfolded > box > scrolledwindow, leaflet.unfolded > box > scrolledwindow, leaflet.unfolded .contacts-contact-list > scrolledwindow, .sidebar-pane toolbarview > stack > box > widget > widget > scrolledwindow {
   background-color: #e7edf3;
   color: rgba(0, 0, 0, 0.87);
   border-radius: 14px;
@@ -7637,7 +7650,8 @@ overlay-split-view > shadow.down {
 
 .sidebar-pane .sidebar > scrolledwindow .dim-label,
 .sidebar-pane toolbarview > scrolledwindow .dim-label,
-.sidebar-pane navigation-view-page stack > scrolledwindow .dim-label, placessidebar > scrolledwindow .dim-label, window.background > widget > leaflet.unfolded > box > scrolledwindow .dim-label, leaflet.unfolded > box > scrolledwindow .dim-label, leaflet.unfolded .contacts-contact-list > scrolledwindow .dim-label, .sidebar-pane .sidebar > scrolledwindow row label.subtitle,
+.sidebar-pane navigation-view-page stack > scrolledwindow .dim-label, placessidebar > scrolledwindow .dim-label, window.background > contents > leaflet.unfolded > box > scrolledwindow .dim-label,
+window.background > widget > leaflet.unfolded > box > scrolledwindow .dim-label, leaflet.unfolded > box > scrolledwindow .dim-label, leaflet.unfolded .contacts-contact-list > scrolledwindow .dim-label, .sidebar-pane .sidebar > scrolledwindow row label.subtitle,
 .sidebar-pane toolbarview > scrolledwindow row label.subtitle,
 .sidebar-pane navigation-view-page stack > scrolledwindow row label.subtitle, row .sidebar-pane .sidebar > scrolledwindow label.subtitle, .sidebar-pane row .sidebar > scrolledwindow label.subtitle,
 row .sidebar-pane toolbarview > scrolledwindow label.subtitle,
@@ -7655,7 +7669,8 @@ row.expander .sidebar-pane navigation-view-page stack > scrolledwindow image.exp
 
 .sidebar-pane .sidebar > scrolledwindow > scrollbar > range > trough > slider,
 .sidebar-pane toolbarview > scrolledwindow > scrollbar > range > trough > slider,
-.sidebar-pane navigation-view-page stack > scrolledwindow > scrollbar > range > trough > slider, placessidebar > scrolledwindow > scrollbar > range > trough > slider, window.background > widget > leaflet.unfolded > box > scrolledwindow > scrollbar > range > trough > slider, leaflet.unfolded > box > scrolledwindow > scrollbar > range > trough > slider, leaflet.unfolded .contacts-contact-list > scrolledwindow > scrollbar > range > trough > slider, .sidebar-pane toolbarview > stack > box > widget > widget > scrolledwindow > scrollbar > range > trough > slider {
+.sidebar-pane navigation-view-page stack > scrolledwindow > scrollbar > range > trough > slider, placessidebar > scrolledwindow > scrollbar > range > trough > slider, window.background > contents > leaflet.unfolded > box > scrolledwindow > scrollbar > range > trough > slider,
+window.background > widget > leaflet.unfolded > box > scrolledwindow > scrollbar > range > trough > slider, leaflet.unfolded > box > scrolledwindow > scrollbar > range > trough > slider, leaflet.unfolded .contacts-contact-list > scrolledwindow > scrollbar > range > trough > slider, .sidebar-pane toolbarview > stack > box > widget > widget > scrolledwindow > scrollbar > range > trough > slider {
   background-color: rgba(0, 0, 0, 0.38);
 }
 
@@ -7696,64 +7711,89 @@ row.expander .sidebar-pane navigation-view-page stack > scrolledwindow image.exp
   margin: 0 6px 6px;
 }
 
-.sidebar-pane .navigation-sidebar > separator, placessidebar list.navigation-sidebar > separator, window.background > widget > leaflet.unfolded > box > scrolledwindow > viewport > widget > stack > .navigation-sidebar > separator,
+.sidebar-pane .navigation-sidebar > separator, placessidebar list.navigation-sidebar > separator, window.background > contents > leaflet.unfolded > box > scrolledwindow > viewport > widget > stack > .navigation-sidebar > separator,
+window.background > contents > leaflet.unfolded > box > scrolledwindow > viewport > widget > stack > box > .navigation-sidebar > separator,
+window.background > widget > leaflet.unfolded > box > scrolledwindow > viewport > widget > stack > .navigation-sidebar > separator,
 window.background > widget > leaflet.unfolded > box > scrolledwindow > viewport > widget > stack > box > .navigation-sidebar > separator, leaflet.unfolded > box > scrolledwindow > viewport > .navigation-sidebar > separator, leaflet.unfolded .contacts-contact-list > scrolledwindow > viewport > .navigation-sidebar > separator, .sidebar-pane toolbarview > stack > box > widget > widget > scrolledwindow > .navigation-sidebar > separator {
   background-color: transparent;
 }
 
-.sidebar-pane .navigation-sidebar > row, placessidebar list.navigation-sidebar > row, window.background > widget > leaflet.unfolded > box > scrolledwindow > viewport > widget > stack > .navigation-sidebar > row,
+.sidebar-pane .navigation-sidebar > row, placessidebar list.navigation-sidebar > row, window.background > contents > leaflet.unfolded > box > scrolledwindow > viewport > widget > stack > .navigation-sidebar > row,
+window.background > contents > leaflet.unfolded > box > scrolledwindow > viewport > widget > stack > box > .navigation-sidebar > row,
+window.background > widget > leaflet.unfolded > box > scrolledwindow > viewport > widget > stack > .navigation-sidebar > row,
 window.background > widget > leaflet.unfolded > box > scrolledwindow > viewport > widget > stack > box > .navigation-sidebar > row, leaflet.unfolded > box > scrolledwindow > viewport > .navigation-sidebar > row, leaflet.unfolded .contacts-contact-list > scrolledwindow > viewport > .navigation-sidebar > row, .sidebar-pane toolbarview > stack > box > widget > widget > scrolledwindow > .navigation-sidebar > row {
   color: rgba(0, 0, 0, 0.6);
   border-radius: 8px;
 }
 
-.sidebar-pane .navigation-sidebar > row:hover, placessidebar list.navigation-sidebar > row:hover, window.background > widget > leaflet.unfolded > box > scrolledwindow > viewport > widget > stack > .navigation-sidebar > row:hover,
-window.background > widget > leaflet.unfolded > box > scrolledwindow > viewport > widget > stack > box > .navigation-sidebar > row:hover, leaflet.unfolded > box > scrolledwindow > viewport > .navigation-sidebar > row:hover, leaflet.unfolded .contacts-contact-list > scrolledwindow > viewport > .navigation-sidebar > row:hover, .sidebar-pane toolbarview > stack > box > widget > widget > scrolledwindow > .navigation-sidebar > row:hover, .sidebar-pane .navigation-sidebar > row:active, placessidebar list.navigation-sidebar > row:active, window.background > widget > leaflet.unfolded > box > scrolledwindow > viewport > widget > stack > .navigation-sidebar > row:active,
-window.background > widget > leaflet.unfolded > box > scrolledwindow > viewport > widget > stack > box > .navigation-sidebar > row:active, leaflet.unfolded > box > scrolledwindow > viewport > .navigation-sidebar > row:active, leaflet.unfolded .contacts-contact-list > scrolledwindow > viewport > .navigation-sidebar > row:active, .sidebar-pane toolbarview > stack > box > widget > widget > scrolledwindow > .navigation-sidebar > row:active, .sidebar-pane .navigation-sidebar > row:focus, placessidebar list.navigation-sidebar > row:focus, window.background > widget > leaflet.unfolded > box > scrolledwindow > viewport > widget > stack > .navigation-sidebar > row:focus,
+.sidebar-pane .navigation-sidebar > row:hover, placessidebar list.navigation-sidebar > row:hover, window.background > contents > leaflet.unfolded > box > scrolledwindow > viewport > widget > stack > .navigation-sidebar > row:hover,
+window.background > contents > leaflet.unfolded > box > scrolledwindow > viewport > widget > stack > box > .navigation-sidebar > row:hover,
+window.background > widget > leaflet.unfolded > box > scrolledwindow > viewport > widget > stack > .navigation-sidebar > row:hover,
+window.background > widget > leaflet.unfolded > box > scrolledwindow > viewport > widget > stack > box > .navigation-sidebar > row:hover, leaflet.unfolded > box > scrolledwindow > viewport > .navigation-sidebar > row:hover, leaflet.unfolded .contacts-contact-list > scrolledwindow > viewport > .navigation-sidebar > row:hover, .sidebar-pane toolbarview > stack > box > widget > widget > scrolledwindow > .navigation-sidebar > row:hover, .sidebar-pane .navigation-sidebar > row:active, placessidebar list.navigation-sidebar > row:active, window.background > contents > leaflet.unfolded > box > scrolledwindow > viewport > widget > stack > .navigation-sidebar > row:active,
+window.background > contents > leaflet.unfolded > box > scrolledwindow > viewport > widget > stack > box > .navigation-sidebar > row:active,
+window.background > widget > leaflet.unfolded > box > scrolledwindow > viewport > widget > stack > .navigation-sidebar > row:active,
+window.background > widget > leaflet.unfolded > box > scrolledwindow > viewport > widget > stack > box > .navigation-sidebar > row:active, leaflet.unfolded > box > scrolledwindow > viewport > .navigation-sidebar > row:active, leaflet.unfolded .contacts-contact-list > scrolledwindow > viewport > .navigation-sidebar > row:active, .sidebar-pane toolbarview > stack > box > widget > widget > scrolledwindow > .navigation-sidebar > row:active, .sidebar-pane .navigation-sidebar > row:focus, placessidebar list.navigation-sidebar > row:focus, window.background > contents > leaflet.unfolded > box > scrolledwindow > viewport > widget > stack > .navigation-sidebar > row:focus,
+window.background > contents > leaflet.unfolded > box > scrolledwindow > viewport > widget > stack > box > .navigation-sidebar > row:focus,
+window.background > widget > leaflet.unfolded > box > scrolledwindow > viewport > widget > stack > .navigation-sidebar > row:focus,
 window.background > widget > leaflet.unfolded > box > scrolledwindow > viewport > widget > stack > box > .navigation-sidebar > row:focus, leaflet.unfolded > box > scrolledwindow > viewport > .navigation-sidebar > row:focus, leaflet.unfolded .contacts-contact-list > scrolledwindow > viewport > .navigation-sidebar > row:focus, .sidebar-pane toolbarview > stack > box > widget > widget > scrolledwindow > .navigation-sidebar > row:focus {
   color: rgba(0, 0, 0, 0.87);
 }
 
-.sidebar-pane .navigation-sidebar > row:selected, placessidebar list.navigation-sidebar > row:selected, window.background > widget > leaflet.unfolded > box > scrolledwindow > viewport > widget > stack > .navigation-sidebar > row:selected,
+.sidebar-pane .navigation-sidebar > row:selected, placessidebar list.navigation-sidebar > row:selected, window.background > contents > leaflet.unfolded > box > scrolledwindow > viewport > widget > stack > .navigation-sidebar > row:selected,
+window.background > contents > leaflet.unfolded > box > scrolledwindow > viewport > widget > stack > box > .navigation-sidebar > row:selected,
+window.background > widget > leaflet.unfolded > box > scrolledwindow > viewport > widget > stack > .navigation-sidebar > row:selected,
 window.background > widget > leaflet.unfolded > box > scrolledwindow > viewport > widget > stack > box > .navigation-sidebar > row:selected, leaflet.unfolded > box > scrolledwindow > viewport > .navigation-sidebar > row:selected, leaflet.unfolded .contacts-contact-list > scrolledwindow > viewport > .navigation-sidebar > row:selected, .sidebar-pane toolbarview > stack > box > widget > widget > scrolledwindow > .navigation-sidebar > row:selected {
   font-weight: 500;
   background-color: #2e3540;
   color: #e7edf3;
 }
 
-.sidebar-pane .navigation-sidebar > row:selected:hover, placessidebar list.navigation-sidebar > row:selected:hover, window.background > widget > leaflet.unfolded > box > scrolledwindow > viewport > widget > stack > .navigation-sidebar > row:selected:hover,
-window.background > widget > leaflet.unfolded > box > scrolledwindow > viewport > widget > stack > box > .navigation-sidebar > row:selected:hover, leaflet.unfolded > box > scrolledwindow > viewport > .navigation-sidebar > row:selected:hover, leaflet.unfolded .contacts-contact-list > scrolledwindow > viewport > .navigation-sidebar > row:selected:hover, .sidebar-pane toolbarview > stack > box > widget > widget > scrolledwindow > .navigation-sidebar > row:selected:hover, .sidebar-pane .navigation-sidebar > row:selected:focus, placessidebar list.navigation-sidebar > row:selected:focus, window.background > widget > leaflet.unfolded > box > scrolledwindow > viewport > widget > stack > .navigation-sidebar > row:selected:focus,
+.sidebar-pane .navigation-sidebar > row:selected:hover, placessidebar list.navigation-sidebar > row:selected:hover, window.background > contents > leaflet.unfolded > box > scrolledwindow > viewport > widget > stack > .navigation-sidebar > row:selected:hover,
+window.background > contents > leaflet.unfolded > box > scrolledwindow > viewport > widget > stack > box > .navigation-sidebar > row:selected:hover,
+window.background > widget > leaflet.unfolded > box > scrolledwindow > viewport > widget > stack > .navigation-sidebar > row:selected:hover,
+window.background > widget > leaflet.unfolded > box > scrolledwindow > viewport > widget > stack > box > .navigation-sidebar > row:selected:hover, leaflet.unfolded > box > scrolledwindow > viewport > .navigation-sidebar > row:selected:hover, leaflet.unfolded .contacts-contact-list > scrolledwindow > viewport > .navigation-sidebar > row:selected:hover, .sidebar-pane toolbarview > stack > box > widget > widget > scrolledwindow > .navigation-sidebar > row:selected:hover, .sidebar-pane .navigation-sidebar > row:selected:focus, placessidebar list.navigation-sidebar > row:selected:focus, window.background > contents > leaflet.unfolded > box > scrolledwindow > viewport > widget > stack > .navigation-sidebar > row:selected:focus,
+window.background > contents > leaflet.unfolded > box > scrolledwindow > viewport > widget > stack > box > .navigation-sidebar > row:selected:focus,
+window.background > widget > leaflet.unfolded > box > scrolledwindow > viewport > widget > stack > .navigation-sidebar > row:selected:focus,
 window.background > widget > leaflet.unfolded > box > scrolledwindow > viewport > widget > stack > box > .navigation-sidebar > row:selected:focus, leaflet.unfolded > box > scrolledwindow > viewport > .navigation-sidebar > row:selected:focus, leaflet.unfolded .contacts-contact-list > scrolledwindow > viewport > .navigation-sidebar > row:selected:focus, .sidebar-pane toolbarview > stack > box > widget > widget > scrolledwindow > .navigation-sidebar > row:selected:focus {
   background-color: rgba(46, 53, 64, 0.9);
   color: #e7edf3;
 }
 
+window.background > contents > leaflet.unfolded > box > scrolledwindow entry,
 window.background > widget > leaflet.unfolded > box > scrolledwindow entry {
   background-color: rgba(0, 0, 0, 0.04);
   color: rgba(0, 0, 0, 0.6);
   border-radius: 8px;
 }
 
+window.background > contents > leaflet.unfolded > box > scrolledwindow entry:focus-within,
 window.background > widget > leaflet.unfolded > box > scrolledwindow entry:focus-within {
   color: rgba(0, 0, 0, 0.87);
 }
 
-window.background > widget > leaflet.unfolded > box > scrolledwindow entry:drop(active), window.background > widget > leaflet.unfolded > box > scrolledwindow entry:hover:not(:focus-within) {
+window.background > contents > leaflet.unfolded > box > scrolledwindow entry:drop(active),
+window.background > widget > leaflet.unfolded > box > scrolledwindow entry:drop(active), window.background > contents > leaflet.unfolded > box > scrolledwindow entry:hover:not(:focus-within),
+window.background > widget > leaflet.unfolded > box > scrolledwindow entry:hover:not(:focus-within) {
   color: rgba(0, 0, 0, 0.87);
 }
 
+window.background > contents > leaflet.unfolded > box > scrolledwindow entry:disabled,
 window.background > widget > leaflet.unfolded > box > scrolledwindow entry:disabled {
   color: rgba(0, 0, 0, 0.3);
 }
 
+window.background > contents > leaflet.unfolded > box > scrolledwindow entry image,
 window.background > widget > leaflet.unfolded > box > scrolledwindow entry image {
   color: rgba(0, 0, 0, 0.6);
 }
 
-window.background > widget > leaflet.unfolded > box > scrolledwindow entry image:hover, window.background > widget > leaflet.unfolded > box > scrolledwindow entry image:active {
+window.background > contents > leaflet.unfolded > box > scrolledwindow entry image:hover,
+window.background > widget > leaflet.unfolded > box > scrolledwindow entry image:hover, window.background > contents > leaflet.unfolded > box > scrolledwindow entry image:active,
+window.background > widget > leaflet.unfolded > box > scrolledwindow entry image:active {
   color: rgba(0, 0, 0, 0.87);
 }
 
+window.background > contents > leaflet.unfolded > box > scrolledwindow entry image:disabled,
 window.background > widget > leaflet.unfolded > box > scrolledwindow entry image:disabled {
   color: rgba(0, 0, 0, 0.3);
 }
@@ -7761,35 +7801,40 @@ window.background > widget > leaflet.unfolded > box > scrolledwindow entry image
 .content-pane scrolledwindow scrollbar.top, .sidebar-pane .sidebar > scrolledwindow > scrollbar.top,
 .sidebar-pane toolbarview > scrolledwindow > scrollbar.top,
 .sidebar-pane navigation-view-page stack > scrolledwindow > scrollbar.top, filechooser paned > box scrolledwindow scrollbar.top, placessidebar > scrolledwindow > scrollbar.top, .nautilus-window .nautilus-grid-view scrolledwindow scrollbar.top,
-.nautilus-window .nautilus-list-view scrolledwindow scrollbar.top, window.background > widget > leaflet.unfolded > box > scrolledwindow > scrollbar.top, leaflet.unfolded > box > scrolledwindow > scrollbar.top, leaflet.unfolded .contacts-contact-list > scrolledwindow > scrollbar.top, .sidebar-pane toolbarview > stack > box > widget > widget > scrolledwindow > scrollbar.top {
+.nautilus-window .nautilus-list-view scrolledwindow scrollbar.top, window.background > contents > leaflet.unfolded > box > scrolledwindow > scrollbar.top,
+window.background > widget > leaflet.unfolded > box > scrolledwindow > scrollbar.top, leaflet.unfolded > box > scrolledwindow > scrollbar.top, leaflet.unfolded .contacts-contact-list > scrolledwindow > scrollbar.top, .sidebar-pane toolbarview > stack > box > widget > widget > scrolledwindow > scrollbar.top {
   border-bottom: none;
 }
 
 .content-pane scrolledwindow scrollbar.bottom, .sidebar-pane .sidebar > scrolledwindow > scrollbar.bottom,
 .sidebar-pane toolbarview > scrolledwindow > scrollbar.bottom,
 .sidebar-pane navigation-view-page stack > scrolledwindow > scrollbar.bottom, filechooser paned > box scrolledwindow scrollbar.bottom, placessidebar > scrolledwindow > scrollbar.bottom, .nautilus-window .nautilus-grid-view scrolledwindow scrollbar.bottom,
-.nautilus-window .nautilus-list-view scrolledwindow scrollbar.bottom, window.background > widget > leaflet.unfolded > box > scrolledwindow > scrollbar.bottom, leaflet.unfolded > box > scrolledwindow > scrollbar.bottom, leaflet.unfolded .contacts-contact-list > scrolledwindow > scrollbar.bottom, .sidebar-pane toolbarview > stack > box > widget > widget > scrolledwindow > scrollbar.bottom {
+.nautilus-window .nautilus-list-view scrolledwindow scrollbar.bottom, window.background > contents > leaflet.unfolded > box > scrolledwindow > scrollbar.bottom,
+window.background > widget > leaflet.unfolded > box > scrolledwindow > scrollbar.bottom, leaflet.unfolded > box > scrolledwindow > scrollbar.bottom, leaflet.unfolded .contacts-contact-list > scrolledwindow > scrollbar.bottom, .sidebar-pane toolbarview > stack > box > widget > widget > scrolledwindow > scrollbar.bottom {
   border-top: none;
 }
 
 .content-pane scrolledwindow scrollbar.left, .sidebar-pane .sidebar > scrolledwindow > scrollbar.left,
 .sidebar-pane toolbarview > scrolledwindow > scrollbar.left,
 .sidebar-pane navigation-view-page stack > scrolledwindow > scrollbar.left, filechooser paned > box scrolledwindow scrollbar.left, placessidebar > scrolledwindow > scrollbar.left, .nautilus-window .nautilus-grid-view scrolledwindow scrollbar.left,
-.nautilus-window .nautilus-list-view scrolledwindow scrollbar.left, window.background > widget > leaflet.unfolded > box > scrolledwindow > scrollbar.left, leaflet.unfolded > box > scrolledwindow > scrollbar.left, leaflet.unfolded .contacts-contact-list > scrolledwindow > scrollbar.left, .sidebar-pane toolbarview > stack > box > widget > widget > scrolledwindow > scrollbar.left {
+.nautilus-window .nautilus-list-view scrolledwindow scrollbar.left, window.background > contents > leaflet.unfolded > box > scrolledwindow > scrollbar.left,
+window.background > widget > leaflet.unfolded > box > scrolledwindow > scrollbar.left, leaflet.unfolded > box > scrolledwindow > scrollbar.left, leaflet.unfolded .contacts-contact-list > scrolledwindow > scrollbar.left, .sidebar-pane toolbarview > stack > box > widget > widget > scrolledwindow > scrollbar.left {
   border-right: none;
 }
 
 .content-pane scrolledwindow scrollbar.right, .sidebar-pane .sidebar > scrolledwindow > scrollbar.right,
 .sidebar-pane toolbarview > scrolledwindow > scrollbar.right,
 .sidebar-pane navigation-view-page stack > scrolledwindow > scrollbar.right, filechooser paned > box scrolledwindow scrollbar.right, placessidebar > scrolledwindow > scrollbar.right, .nautilus-window .nautilus-grid-view scrolledwindow scrollbar.right,
-.nautilus-window .nautilus-list-view scrolledwindow scrollbar.right, window.background > widget > leaflet.unfolded > box > scrolledwindow > scrollbar.right, leaflet.unfolded > box > scrolledwindow > scrollbar.right, leaflet.unfolded .contacts-contact-list > scrolledwindow > scrollbar.right, .sidebar-pane toolbarview > stack > box > widget > widget > scrolledwindow > scrollbar.right {
+.nautilus-window .nautilus-list-view scrolledwindow scrollbar.right, window.background > contents > leaflet.unfolded > box > scrolledwindow > scrollbar.right,
+window.background > widget > leaflet.unfolded > box > scrolledwindow > scrollbar.right, leaflet.unfolded > box > scrolledwindow > scrollbar.right, leaflet.unfolded .contacts-contact-list > scrolledwindow > scrollbar.right, .sidebar-pane toolbarview > stack > box > widget > widget > scrolledwindow > scrollbar.right {
   border-left: none;
 }
 
 .content-pane scrolledwindow scrollbar > range > trough > slider, .sidebar-pane .sidebar > scrolledwindow > scrollbar > range > trough > slider,
 .sidebar-pane toolbarview > scrolledwindow > scrollbar > range > trough > slider,
 .sidebar-pane navigation-view-page stack > scrolledwindow > scrollbar > range > trough > slider, filechooser paned > box scrolledwindow scrollbar > range > trough > slider, placessidebar > scrolledwindow > scrollbar > range > trough > slider, .nautilus-window .nautilus-grid-view scrolledwindow scrollbar > range > trough > slider,
-.nautilus-window .nautilus-list-view scrolledwindow scrollbar > range > trough > slider, window.background > widget > leaflet.unfolded > box > scrolledwindow > scrollbar > range > trough > slider, leaflet.unfolded > box > scrolledwindow > scrollbar > range > trough > slider, leaflet.unfolded .contacts-contact-list > scrolledwindow > scrollbar > range > trough > slider, .sidebar-pane toolbarview > stack > box > widget > widget > scrolledwindow > scrollbar > range > trough > slider {
+.nautilus-window .nautilus-list-view scrolledwindow scrollbar > range > trough > slider, window.background > contents > leaflet.unfolded > box > scrolledwindow > scrollbar > range > trough > slider,
+window.background > widget > leaflet.unfolded > box > scrolledwindow > scrollbar > range > trough > slider, leaflet.unfolded > box > scrolledwindow > scrollbar > range > trough > slider, leaflet.unfolded .contacts-contact-list > scrolledwindow > scrollbar > range > trough > slider, .sidebar-pane toolbarview > stack > box > widget > widget > scrolledwindow > scrollbar > range > trough > slider {
   border: 6px solid transparent;
 }
 

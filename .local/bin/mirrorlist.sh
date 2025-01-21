@@ -1,4 +1,4 @@
-#!/bin/bash   
+#!/usr/bin/bash   
 
 RED='\033[0;31m'
 GREEN='\033[0;32m'
@@ -26,3 +26,5 @@ else
 	exit;
 fi
 notify-send "Changing mirror has finished"
+echo -e "${GREEN}"
+read -rp "Press Enter to continue" </dev/tty
