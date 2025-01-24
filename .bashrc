@@ -11,8 +11,8 @@ PS1='
 \e[1;34m=> \e[m'
 
 # Define aliases
-if [ -f ~/.my_aliases ]; then
-    . ~/.my_aliases
+if [ -f ~/.alias ]; then
+    . ~/.alias
 fi
 
 # Show fastfetch if run gui-session

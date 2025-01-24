@@ -17,6 +17,6 @@ if status is-interactive
 end
 
 # Aliases
-if [ -f ~/.my_aliases ]
-    source ~/.my_aliases
+if [ -f ~/.alias ]
+    source ~/.alias
 end
