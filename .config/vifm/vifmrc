@@ -382,12 +382,10 @@ nnoremap + <C-w>5>
 " nnoremap A cW
 
 " Open console in current directory
-if $DISPLAY && executable('xterm')
+if $DISPLAY && $TERM
+	nnoremap ,t :!$TERM &<cr>
+elseif $DISPLAY && executable('xterm')
     nnoremap ,t :!xterm &<cr>
-elseif executable('alacritty') 
-    nnoremap ,t :!alacritty &<cr>
-elseif executable('kitty')
-	nnoremap ,t :!kitty &<cr>
 endif
 
 " Open editor to edit vifmrc and apply settings after returning to vifm
