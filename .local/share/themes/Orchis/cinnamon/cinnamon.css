@@ -1910,11 +1910,19 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   color: rgba(255, 255, 255, 0.6);
   border-radius: 0;
   spacing: 6px;
-  border-bottom: 2px solid transparent;
 }
 
 .grouped-window-list-item-box.top, .grouped-window-list-item-box.bottom {
+  border-bottom: 2px solid transparent;
   padding: 0 2px;
+}
+
+.grouped-window-list-item-box.left {
+  border-left: 2px solid transparent;
+}
+
+.grouped-window-list-item-box.right {
+  border-right: 2px solid transparent;
 }
 
 .grouped-window-list-item-box:hover {
@@ -2241,6 +2249,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   text-shadow: none;
   transition-duration: 100ms;
   border-radius: 0;
+  text-align: center;
 }
 
 .applet-box.vertical {

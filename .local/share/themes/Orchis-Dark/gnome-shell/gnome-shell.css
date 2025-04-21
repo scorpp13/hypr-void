@@ -627,7 +627,7 @@ StEntry StLabel.hint-text {
 }
 
 .popup-sub-menu .toggle-switch, .quick-toggle-menu .toggle-switch {
-  background-image: url("assets/menu-toggle-off.svg");
+  background-image: url("assets/menu-toggle-off.svg") !important;
 }
 
 .popup-sub-menu .toggle-switch:checked, .quick-toggle-menu .toggle-switch:checked {
@@ -1911,10 +1911,6 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   margin: 6px 18px 6px 0 !important;
   padding: 0 !important;
   background-color: rgba(0, 0, 0, 0.1) !important;
-}
-
-.quick-toggle-menu .popup-menu-item .toggle-switch {
-  background-image: url("assets/menu-toggle-off.svg");
 }
 
 .quick-toggle-menu .header {

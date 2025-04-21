@@ -47,13 +47,13 @@ calendar.raven-calendar:selected, .budgie-popover.budgie-menu row.activatable > 
   background-color: rgba(235, 235, 235, 0.987);
 }
 
-.nemo-window .view selection, .nemo-window .view:selected, .nautilus-window notebook .view:not(treeview) selection, .nautilus-window notebook .view:not(treeview):selected, .nautilus-window flowboxchild:selected .icon-item-background, flowbox flowboxchild:selected, .background.csd .view:selected {
+.nemo-window .view selection, .nemo-window .view:selected, .thunar .standard-view.frame widget.view:selected, .nautilus-window notebook .view:not(treeview) selection, .nautilus-window notebook .view:not(treeview):selected, .nautilus-window flowboxchild:selected .icon-item-background, flowbox flowboxchild:selected, .background.csd .view:selected {
   color: #1A73E8;
   background-color: rgba(26, 115, 232, 0.2);
 }
 
 .nemo-window .nemo-window-pane widget.entry:selected, XfdesktopIconView.view:active, XfdesktopIconView.view:selected, XfdesktopIconView.view:checked, window.background.csd evview.view.content-view:selected, window.background.csd evview.view.content-view:selected:backdrop, statuspage.search-view entry.search > window.background treeview.view:selected, calendar:selected, spinbutton.vertical selection, spinbutton:not(.vertical) selection,
-entry selection, label selection, textview text selection:focus, textview text selection, widget.view:selected, .view:selected {
+entry selection, label selection, textview text selection:focus, textview text selection, .view:selected {
   color: white;
   background-color: #1A73E8;
 }
@@ -644,7 +644,6 @@ button {
   min-width: 16px;
   padding: 6px 10px;
   border-radius: 12px;
-  font-weight: 500;
 }
 
 button:drop(active) {
@@ -2040,7 +2039,6 @@ tabbox > tab, notebook > header tab {
   outline: none;
   background-clip: padding-box;
   color: rgba(0, 0, 0, 0.6);
-  font-weight: 500;
 }
 
 tabbox > tab:hover, notebook > header tab:hover {
@@ -6418,11 +6416,47 @@ window.background.csd > box.vertical > overlay > stack > scrolledwindow.frame > 
 }
 
 window.background:not(.solid-csd):not(.csd) > grid.horizontal > grid.horizontal {
-  background-color: transparent;
+  box-shadow: inset 0 -1px rgba(0, 0, 0, 0.12);
+  background-color: #FFFFFF;
+}
+
+window.background:not(.solid-csd):not(.csd) > grid.horizontal > widget > widget viewport.frame > box > box > box > grid toolbar {
+  background: none;
+  border: none;
+  padding: 3px;
+}
+
+window.background:not(.solid-csd):not(.csd) > grid.horizontal > widget > widget > scrolledwindow > viewport.frame {
+  background: #FFFFFF;
+}
+
+window.background:not(.solid-csd):not(.csd) > grid.horizontal > widget > widget > scrolledwindow > viewport.frame > grid > box.horizontal {
+  background: #FFFFFF;
+}
+
+window.background:not(.solid-csd):not(.csd) > grid.horizontal > widget > widget > scrolledwindow > viewport.frame > grid > box.horizontal > box.vertical > toolbar {
+  background: #FFFFFF;
+}
+
+window.background:not(.solid-csd):not(.csd) > grid.horizontal > widget > widget > scrolledwindow > viewport.frame > grid > box.vertical > toolbar {
+  background: none;
+  border: none;
+  padding: 6px;
+}
+
+window.background:not(.solid-csd):not(.csd) > grid.horizontal > widget > widget > scrolledwindow > viewport.frame > grid > box.horizontal > #combobox.linked,
+window.background:not(.solid-csd):not(.csd) > grid.horizontal > widget > widget > scrolledwindow > viewport.frame > grid > box.horizontal > grid.horizontal > box.horizontal {
+  background: #FFFFFF;
+}
+
+window.background:not(.solid-csd):not(.csd) > grid.horizontal > widget > widget toolbar.small-button {
+  border: none;
 }
 
 window.background:not(.solid-csd):not(.csd) > notebook:not(.frame) {
-  border: none;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-left: none;
+  border-right: none;
   background-color: #FFFFFF;
   box-shadow: none;
 }
@@ -6433,12 +6467,15 @@ window.background:not(.solid-csd):not(.csd) > notebook:not(.frame) > stack {
   background-color: #FFFFFF;
 }
 
-#combobox > entry {
-  border-radius: 2px 0 0 2px;
+window.background:not(.solid-csd):not(.csd) > notebook:not(.frame) > header {
+  box-shadow: none;
+  margin: 0;
+  border: none;
+  background-color: transparent;
 }
 
-#combobox > button {
-  border-radius: 0 2px 2px 0;
+window.background:not(.solid-csd):not(.csd) > notebook:not(.frame) > header > tabs > tab {
+  margin: 3px 0 0;
 }
 
 #gtk-combobox-popup-window scrolledwindow.frame {
@@ -8264,8 +8301,18 @@ window#whiskermenu-window .title-area > .commands-area > button.flat.command-but
   border: none;
 }
 
-.thunar .standard-view.frame > .view {
+.thunar .standard-view.frame widget.view:selected {
   border-radius: 12px;
+}
+
+.thunar paned paned paned > notebook.frame {
+  border: none;
+  border-radius: 0;
+}
+
+.thunar paned paned paned > notebook.frame .standard-view.frame > widget.view {
+  border-radius: 0;
+  box-shadow: inset 0 0 0 3px rgba(26, 115, 232, 0.25);
 }
 
 .thunar .sidebar {
