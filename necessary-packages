@@ -42,7 +42,6 @@
 	ln -s /usr/share/examples/pipewire/20-pipewire-pulse.conf /etc/pipewire/pipewire.conf.d/
 "pipx"
 "polkit"
-"polkit-kde-agent"
 "pywal"
 "qalculate"
 "qt5-wayland"
