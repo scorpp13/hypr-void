@@ -1,10 +1,122 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16">
- <defs>
-  <style id="current-color-scheme" type="text/css">
-   .ColorScheme-Text { color:#444444; } .ColorScheme-Highlight { color:#4285f4; } .ColorScheme-NeutralText { color:#ff9800; } .ColorScheme-PositiveText { color:#4caf50; } .ColorScheme-NegativeText { color:#f44336; }
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="16"
+   height="16"
+   viewBox="0 0 16 16"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="user-home.svg"
+   inkscape:version="1.4 (e7c3feb100, 2024-10-09)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="23.884082"
+     inkscape:cx="12.435061"
+     inkscape:cy="6.0919236"
+     inkscape:current-layer="svg1" />
+  <defs
+     id="defs1">
+    <inkscape:path-effect
+       effect="fillet_chamfer"
+       id="path-effect3"
+       is_visible="true"
+       lpeversion="1"
+       nodesatellites_param="F,0,0,1,0,0.76696262,0,1 @ F,0,0,1,0,0.63503901,0,1 @ F,0,0,1,0,0.89054609,0,1 @ F,0,0,1,0,0.89054609,0,1 @ F,0,0,1,0,0.89054609,0,1 @ F,0,0,1,0,0.89054609,0,1 @ F,0,0,1,0,0.89054609,0,1 @ F,0,0,1,0,0.89054609,0,1 @ F,0,1,1,0,0.63503901,0,1 @ F,0,0,1,0,0.76696262,0,1 @ F,0,0,1,0,0.76696262,0,1"
+       radius="0"
+       unit="px"
+       method="auto"
+       mode="F"
+       chamfer_steps="1"
+       flexible="false"
+       use_knot_distance="true"
+       apply_no_radius="true"
+       apply_with_radius="true"
+       only_selected="false"
+       hide_knots="false" />
+    <style
+       id="current-color-scheme"
+       type="text/css">
+   .ColorScheme-Text { color:#dfdfdf; } .ColorScheme-Highlight { color:#4285f4; } .ColorScheme-NeutralText { color:#ff9800; } .ColorScheme-PositiveText { color:#4caf50; } .ColorScheme-NegativeText { color:#f44336; }
   </style>
- </defs>
- <g transform="translate(-465,-187)">
-  <path style="fill:currentColor" class="ColorScheme-Text" d="m466.5 195h1.5v6h4v-4h3v4h4v-6h1.5l-7-7z"/>
- </g>
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#SVGID_1_-3-2-7"
+       id="radialGradient2"
+       cx="473.5"
+       cy="194.5"
+       fx="473.5"
+       fy="194.5"
+       r="7"
+       gradientTransform="matrix(1,0,0,0.92857143,0,13.892857)"
+       gradientUnits="userSpaceOnUse" />
+    <radialGradient
+       id="SVGID_1_-3-2-7"
+       cx="-159.43106"
+       cy="15.462561"
+       r="64.706802"
+       gradientTransform="matrix(-0.89413329,0,0,0.96304834,-80.753654,49.330428)"
+       gradientUnits="userSpaceOnUse"
+       fx="-159.43106"
+       fy="15.462561">
+      <stop
+         offset="0"
+         style="stop-color:#006fff;stop-opacity:1;"
+         id="stop1-6-9-5" />
+      <stop
+         offset="1"
+         style="stop-color:#15baff;stop-opacity:1;"
+         id="stop2-7-1-3" />
+    </radialGradient>
+    <inkscape:path-effect
+       effect="fillet_chamfer"
+       id="path-effect1"
+       is_visible="true"
+       lpeversion="1"
+       nodesatellites_param="F,0,0,1,0,2.2050452,0,1 @ F,0,1,1,0,2.2050452,0,1 @ F,0,1,1,0,2.2050452,0,1 @ F,0,1,1,0,2.2050452,0,1 @ F,0,0,1,0,0.95487539,0,1 @ F,0,0,1,0,0.95487539,0,1"
+       radius="0"
+       unit="px"
+       method="auto"
+       mode="F"
+       chamfer_steps="1"
+       flexible="false"
+       use_knot_distance="true"
+       apply_no_radius="true"
+       apply_with_radius="true"
+       only_selected="false"
+       hide_knots="false" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#SVGID_1_-3-2-7"
+       id="radialGradient3"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0,-2.3702164,2.2009153,0,27.643752,1346.1447)"
+       cx="481.32437"
+       cy="206.13271"
+       fx="481.32437"
+       fy="206.13271"
+       r="7" />
+  </defs>
+  <g
+     id="layer1"
+     transform="matrix(1.1259396,0,0,1.1259396,-525.1324,-211.1741)"
+     style="fill:url(#radialGradient2)">
+    <path
+       style="fill:url(#radialGradient3);fill-opacity:1"
+       class="ColorScheme-Text"
+       d="m 467.26696,195 h 0.098 A 0.63503901,0.63503901 45 0 1 468,195.63504 v 4.47441 A 0.89054609,0.89054609 45 0 0 468.89055,201 h 2.2189 A 0.89054609,0.89054609 135 0 0 472,200.10945 v -2.2189 A 0.89054609,0.89054609 135 0 1 472.89055,197 h 1.2189 A 0.89054609,0.89054609 45 0 1 475,197.89055 v 2.2189 A 0.89054609,0.89054609 45 0 0 475.89055,201 h 2.2189 A 0.89054609,0.89054609 135 0 0 479,200.10945 v -4.47441 A 0.63503901,0.63503901 135 0 1 479.63504,195 h 0.098 a 0.31768632,0.31768632 112.5 0 0 0.22464,-0.54232 l -5.91536,-5.91536 a 0.76696262,0.76696262 0 0 0 -1.08464,0 l -5.91536,5.91536 A 0.31768632,0.31768632 67.5 0 0 467.26696,195 Z"
+       id="path1"
+       inkscape:path-effect="#path-effect3"
+       inkscape:original-d="m 466.5,195 h 1.5 v 6 h 4 v -4 h 3 v 4 h 4 v -6 h 1.5 l -7,-7 z" />
+  </g>
 </svg>

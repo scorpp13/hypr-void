@@ -1,9 +1,106 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" version="1">
- <rect style="opacity:0.2" width="44" height="56" x="-54" y="5" rx="2.75" ry="2.8" transform="scale(-1,1)"/>
- <rect style="fill:#8e8e8e" width="44" height="56" x="-54" y="4" rx="2.75" ry="2.8" transform="scale(-1,1)"/>
- <rect style="fill:#333333" width="40" height="24" x="12" y="6" rx="0" ry="0"/>
- <circle style="opacity:0.2" cx="32" cy="47" r="12"/>
- <circle style="fill:#ffffff" cx="32" cy="46" r="12"/>
- <circle style="fill:#8e8e8e" cx="32" cy="46" r="6"/>
- <path style="opacity:0.1;fill:#ffffff" d="M 12.75 4 C 11.2265 4 10 5.2495812 10 6.8007812 L 10 7.8007812 C 10 6.2495813 11.2265 5 12.75 5 L 51.25 5 C 52.7735 5 54 6.2495812 54 7.8007812 L 54 6.8007812 C 54 5.2495813 52.7735 4 51.25 4 L 12.75 4 z"/>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="64"
+   height="64"
+   version="1"
+   id="svg5"
+   sodipodi:docname="multimedia-player.svg"
+   inkscape:version="1.4 (e7c3feb100, 2024-10-09)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs5">
+    <linearGradient
+       id="linearGradient6"
+       inkscape:collect="always">
+      <stop
+         style="stop-color:#4c4c4c;stop-opacity:1;"
+         offset="0"
+         id="stop6" />
+      <stop
+         style="stop-color:#727272;stop-opacity:1;"
+         offset="1"
+         id="stop7" />
+    </linearGradient>
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient6"
+       id="radialGradient8"
+       cx="-14.143308"
+       cy="47.360657"
+       fx="-14.143308"
+       fy="47.360657"
+       r="14.846736"
+       gradientTransform="matrix(0,-3.957363,3.6545068,0,-187.22315,4.9990192)"
+       gradientUnits="userSpaceOnUse" />
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter8"
+       x="-0.070262235"
+       y="-0.057383198"
+       width="1.1405245"
+       height="1.1147664">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.76806566"
+         id="feGaussianBlur8" />
+    </filter>
+  </defs>
+  <sodipodi:namedview
+     id="namedview5"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:zoom="9.2265625"
+     inkscape:cx="1.19221"
+     inkscape:cy="33.869602"
+     inkscape:current-layer="svg5" />
+  <rect
+     style="fill:url(#radialGradient8)"
+     width="29.693472"
+     height="56"
+     x="-46.846737"
+     y="4"
+     rx="4.6425066"
+     ry="4.6425066"
+     transform="scale(-1,1)"
+     id="rect2" />
+  <rect
+     style="opacity:0.26825906;fill:#000000;fill-opacity:1;stroke-width:0.809867;filter:url(#filter8)"
+     width="26.235395"
+     height="32.123646"
+     x="18.882303"
+     y="5.7832351"
+     rx="3.0347164"
+     ry="3.0347164"
+     id="rect3-6" />
+  <rect
+     style="opacity:0.458;fill:#000000;fill-opacity:1;stroke-width:0.809867"
+     width="26.235395"
+     height="32.123646"
+     x="18.882303"
+     y="5.7832351"
+     rx="3.0347164"
+     ry="3.0347164"
+     id="rect3" />
+  <circle
+     style="fill:#000000;stroke-width:0.718993;fill-opacity:1;opacity:0.458"
+     cx="32"
+     cy="48.299145"
+     r="8.6279211"
+     id="circle4" />
+  <circle
+     style="fill:#ffffff;stroke-width:0.718993;opacity:0.40656945;fill-opacity:1"
+     cx="32"
+     cy="48.299145"
+     r="4.3139606"
+     id="circle5" />
 </svg>

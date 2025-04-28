@@ -1,30 +1,126 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" version="1">
- <g style="fill:#8e8e8e">
-  <rect width="2" height="52" x="-24" y="-58" transform="scale(-1)"/>
-  <rect width="2" height="52" x="-18" y="-58" transform="scale(-1)"/>
-  <rect width="2" height="52" x="-42" y="-58" transform="scale(-1)"/>
-  <rect width="2" height="52" x="-36" y="-58" transform="scale(-1)"/>
-  <rect width="2" height="52" x="-30" y="-58" transform="scale(-1)"/>
-  <rect width="2" height="52" x="-48" y="-58" transform="scale(-1)"/>
-  <rect width="2" height="40" x="-24" y="12" transform="rotate(-90)"/>
-  <rect width="2" height="40" x="-18" y="12" transform="rotate(-90)"/>
-  <rect width="2" height="40" x="-12" y="12" transform="rotate(-90)"/>
-  <rect width="2" height="40" x="-42" y="12" transform="rotate(-90)"/>
-  <rect width="2" height="40" x="-36" y="12" transform="rotate(-90)"/>
-  <rect width="2" height="40" x="-30" y="12" transform="rotate(-90)"/>
-  <rect width="2" height="40" x="-48" y="12" transform="rotate(-90)"/>
-  <rect width="2" height="40" x="-54" y="12" transform="rotate(-90)"/>
- </g>
- <rect style="opacity:0.2" width="36" height="48" x="14" y="9" rx="2.5" ry="2.5"/>
- <rect style="fill:#4f4f4f" width="36" height="48" x="14" y="8" rx="2.5" ry="2.5"/>
- <g style="opacity:0.4;fill:#ffffff">
-  <rect width="2" height="6" x="23" y="14"/>
-  <rect width="2" height="6" x="23" y="22"/>
-  <rect width="2" height="12" x="23" y="30"/>
-  <rect width="2" height="16" x="31" y="14"/>
-  <rect width="2" height="16" x="31" y="32"/>
-  <rect width="2" height="12" x="39" y="14"/>
-  <rect width="2" height="6" x="39" y="28"/>
-  <rect width="2" height="14" x="39" y="36"/>
- </g>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="64"
+   height="64"
+   version="1"
+   id="svg24"
+   sodipodi:docname="media-memory.svg"
+   inkscape:version="1.4 (e7c3feb100, 2024-10-09)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs24">
+    <inkscape:path-effect
+       effect="fillet_chamfer"
+       id="path-effect1"
+       is_visible="true"
+       lpeversion="1"
+       nodesatellites_param="F,0,1,1,0,1.0764371,0,1 @ F,0,0,1,0,0,0,1 @ F,0,1,1,0,1.0764371,0,1 @ F,0,1,1,0,1.0764371,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,1,1,0,1.0764371,0,1 @ F,0,1,1,0,1.0764371,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,1,1,0,1.0764371,0,1 @ F,0,1,1,0,1.0764371,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,1,1,0,1.0764371,0,1 @ F,0,1,1,0,1.0764371,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,1,1,0,1.0764371,0,1 @ F,0,1,1,0,1.0764371,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,1,1,0,1.0764371,0,1 @ F,0,1,1,0,1.0764371,0,1 @ F,0,0,1,0,0,0,1 @ F,0,1,1,0,1.0764371,0,1 @ F,0,1,1,0,1.0764371,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,1,1,0,1.0764371,0,1 @ F,0,1,1,0,1.0764371,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,1,1,0,1.0764371,0,1 @ F,0,1,1,0,1.0764371,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,1,1,0,1.0764371,0,1 @ F,0,1,1,0,1.0764371,0,1 @ F,0,0,1,0,0,0,1 @ F,0,1,1,0,1.0764371,0,1 @ F,0,1,1,0,1.0764371,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,1,1,0,1.0764371,0,1 @ F,0,1,1,0,1.0764371,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,1,1,0,1.0764371,0,1 @ F,0,1,1,0,1.0764371,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,1,1,0,1.0764371,0,1 @ F,0,1,1,0,1.0764371,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,1,1,0,1.0764371,0,1 @ F,0,1,1,0,1.0764371,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,1,1,0,1.0764371,0,1 @ F,0,1,1,0,1.0764371,0,1 @ F,0,0,1,0,0,0,1 @ F,0,1,1,0,1.0764371,0,1 @ F,0,1,1,0,1.0764371,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,1,1,0,1.0764371,0,1 @ F,0,1,1,0,1.0764371,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,1,1,0,1.0764371,0,1 @ F,0,1,1,0,1.0764371,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,1.0764371,0,1"
+       radius="0"
+       unit="px"
+       method="auto"
+       mode="F"
+       chamfer_steps="1"
+       flexible="false"
+       use_knot_distance="true"
+       apply_no_radius="true"
+       apply_with_radius="true"
+       only_selected="false"
+       hide_knots="false" />
+    <inkscape:path-effect
+       effect="fillet_chamfer"
+       id="path-effect25"
+       is_visible="true"
+       lpeversion="1"
+       nodesatellites_param=""
+       radius="0"
+       unit="px"
+       method="auto"
+       mode="F"
+       chamfer_steps="1"
+       flexible="false"
+       use_knot_distance="true"
+       apply_no_radius="true"
+       apply_with_radius="true"
+       only_selected="false"
+       hide_knots="false" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient6"
+       id="radialGradient25"
+       cx="25.292879"
+       cy="38.420715"
+       fx="25.292879"
+       fy="38.420715"
+       r="18"
+       gradientTransform="matrix(3.4085047,0,0,4.5446729,-71.660519,-120.33693)"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       id="linearGradient6"
+       inkscape:collect="always">
+      <stop
+         style="stop-color:#4c4c4c;stop-opacity:1;"
+         offset="0"
+         id="stop6" />
+      <stop
+         style="stop-color:#727272;stop-opacity:1;"
+         offset="1"
+         id="stop7" />
+    </linearGradient>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter25"
+       x="-0.1051977"
+       y="-0.078898277"
+       width="1.2103954"
+       height="1.1577966">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="1.5362989"
+         id="feGaussianBlur25" />
+    </filter>
+  </defs>
+  <sodipodi:namedview
+     id="namedview24"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:zoom="18.453125"
+     inkscape:cx="28.369179"
+     inkscape:cy="33.788315"
+     inkscape:current-layer="svg24" />
+  <path
+     id="rect1"
+     style="fill:#a2a2a2;fill-opacity:1;stroke-width:1.07087"
+     d="m -21.291016,-5.2346402 v -9.6305938 h 9.632548 a 1.0764371,1.0764371 135 0 0 1.076437,-1.076437 1.0713014,1.0713014 44.724666 0 0 -1.076437,-1.066141 h -9.632548 v -4.283204 h 9.632548 a 1.0764371,1.0764371 135 0 0 1.076437,-1.076437 1.0713014,1.0713014 44.724666 0 0 -1.076437,-1.066141 l -9.632548,0 v -4.283203 h 9.632548 a 1.0764371,1.0764371 135 0 0 1.076437,-1.076437 1.07033,1.07033 44.672143 0 0 -1.076437,-1.064188 h -9.632548 v -4.285156 h 9.632548 a 1.0764371,1.0764371 135 0 0 1.076437,-1.076437 1.07033,1.07033 44.672143 0 0 -1.076437,-1.064188 h -9.632548 v -4.283203 h 9.632548 a 1.0764371,1.0764371 135 0 0 1.076437,-1.076437 1.0713014,1.0713014 44.724666 0 0 -1.076437,-1.066141 h -9.632548 v -4.283204 h 9.632548 a 1.0764371,1.0764371 135 0 0 1.076437,-1.076437 1.0713014,1.0713014 44.724666 0 0 -1.076437,-1.066141 h -9.632548 v -9.630594 a 1.0764371,1.0764371 45 0 0 -1.076437,-1.076437 1.0713014,1.0713014 134.72467 0 0 -1.066141,1.076437 v 9.630594 h -4.283203 v -9.630594 a 1.0764371,1.0764371 45 0 0 -1.076437,-1.076437 1.07033,1.07033 134.67214 0 0 -1.064188,1.076437 v 9.630594 h -4.285156 v -9.630594 a 1.0764371,1.0764371 45 0 0 -1.076437,-1.076437 1.07033,1.07033 134.67214 0 0 -1.064188,1.076437 v 9.630594 h -4.283203 v -9.630594 a 1.0764371,1.0764371 45 0 0 -1.076437,-1.076437 1.0713014,1.0713014 134.72467 0 0 -1.066141,1.076437 v 9.630594 h -9.632548 a 1.0764371,1.0764371 135 0 0 -1.076437,1.076437 1.0713014,1.0713014 44.724666 0 0 1.076437,1.066141 h 9.632548 v 4.283204 h -9.632548 a 1.0764371,1.0764371 135 0 0 -1.076437,1.076437 1.0713014,1.0713014 44.724666 0 0 1.076437,1.066141 h 9.632548 v 4.283203 h -9.632548 a 1.0764371,1.0764371 135 0 0 -1.076437,1.076437 1.07033,1.07033 44.672143 0 0 1.076437,1.064188 h 9.632548 v 4.285156 h -9.632548 a 1.0764371,1.0764371 135 0 0 -1.076437,1.076437 1.07033,1.07033 44.672143 0 0 1.076437,1.064188 h 9.632548 v 4.283203 h -9.632548 a 1.0764371,1.0764371 135 0 0 -1.076437,1.076437 1.0713014,1.0713014 44.724666 0 0 1.076437,1.066141 h 9.632548 v 4.283204 h -9.632548 a 1.0764371,1.0764371 135 0 0 -1.076437,1.076437 1.0713014,1.0713014 44.724666 0 0 1.076437,1.066141 h 9.632548 v 9.6305938 a 1.0764371,1.0764371 45 0 0 1.076437,1.0764371 1.0713014,1.0713014 134.72467 0 0 1.066141,-1.0764371 v -9.6305938 h 4.283203 v 9.6305938 a 1.0764371,1.0764371 45 0 0 1.076437,1.0764371 1.07033,1.07033 134.67214 0 0 1.064188,-1.0764371 v -9.6305938 h 4.285156 v 9.6305938 a 1.0764371,1.0764371 45 0 0 1.076437,1.0764371 1.07033,1.07033 134.67214 0 0 1.064188,-1.0764371 v -9.6305938 h 4.283203 v 9.6305938 a 1.0764371,1.0764371 45 0 0 1.076437,1.0764371 1.0713014,1.0713014 134.72467 0 0 1.066141,-1.0764371 z"
+     transform="scale(-1)"
+     sodipodi:nodetypes="ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+     inkscape:path-effect="#path-effect1"
+     inkscape:original-d="M -21.291016,-4.1582031 V -14.865234 h 10.708985 v -2.142578 h -10.708985 v -4.283204 h 10.708985 v -2.142578 h -10.708985 v -4.283203 h 10.708985 v -2.140625 h -10.708985 v -4.285156 h 10.708985 v -2.140625 h -10.708985 v -4.283203 h 10.708985 v -2.142578 h -10.708985 v -4.283204 h 10.708985 v -2.142578 h -10.708985 v -10.707031 h -2.142578 v 10.707031 h -4.283203 v -10.707031 h -2.140625 v 10.707031 h -4.285156 v -10.707031 h -2.140625 v 10.707031 h -4.283203 v -10.707031 h -2.142578 v 10.707031 h -10.708985 v 2.142578 h 10.708985 v 4.283204 h -10.708985 v 2.142578 h 10.708985 v 4.283203 h -10.708985 v 2.140625 h 10.708985 v 4.285156 h -10.708985 v 2.140625 h 10.708985 v 4.283203 h -10.708985 v 2.142578 h 10.708985 v 4.283204 h -10.708985 v 2.142578 h 10.708985 v 10.7070309 h 2.142578 V -14.865234 h 4.283203 v 10.7070309 h 2.140625 V -14.865234 h 4.285156 v 10.7070309 h 2.140625 V -14.865234 h 4.283203 v 10.7070309 z" />
+  <rect
+     style="fill:url(#radialGradient25)"
+     width="36"
+     height="48"
+     x="14"
+     y="8"
+     rx="7.106266"
+     ry="7.106266"
+     id="rect16" />
+  <rect
+     style="fill:none;stroke:#000000;stroke-opacity:1;stroke-width:0.2;stroke-dasharray:none;filter:url(#filter25)"
+     width="36"
+     height="48"
+     x="14"
+     y="8"
+     rx="7.106266"
+     ry="7.106266"
+     id="rect16-5" />
 </svg>

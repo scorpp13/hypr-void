@@ -1,6 +1,54 @@
+:root {
+  --blue-1: $blue_1;
+  --blue-2: $blue_2;
+  --blue-3: $blue_3;
+  --blue-4: $blue_4;
+  --blue-5: $blue_5;
+  --green-1: $green-1;
+  --green-2: $green-2;
+  --green-3: $green-3;
+  --green-4: $green-4;
+  --green-5: $green-5;
+  --yellow-1: $yellow-1;
+  --yellow-2: $yellow-2;
+  --yellow-3: $yellow-3;
+  --yellow-4: $yellow-4;
+  --yellow-5: $yellow-5;
+  --orange-1: $orange-1;
+  --orange-2: $orange-2;
+  --orange-3: $orange-3;
+  --orange-4: $orange-4;
+  --orange-5: $orange-5;
+  --red-1: $red-1;
+  --red-2: $red-2;
+  --red-3: $red-3;
+  --red-4: $red-4;
+  --red-5: $red-5;
+  --purple-1: $purple-1;
+  --purple-2: $purple-2;
+  --purple-3: $purple-3;
+  --purple-4: $purple-4;
+  --purple-5: $purple-5;
+  --brown-1: $brown-1;
+  --brown-2: $brown-2;
+  --brown-3: $brown-3;
+  --brown-4: $brown-4;
+  --brown-5: $brown-5;
+  --light-1: $light-1;
+  --light-2: $light-2;
+  --light-3: $light-3;
+  --light-4: $light-4;
+  --light-5: $light-5;
+  --dark-1: $dark-1;
+  --dark-2: $dark-2;
+  --dark-3: $dark-3;
+  --dark-4: $dark-4;
+  --dark-5: $dark-5;
+}
+
 @define-color blue_1 #99c1f1;
 @define-color blue_2 #62a0ea;
-@define-color blue_3 #3584e4;
+@define-color blue_3 #3281EA;
 @define-color blue_4 #1c71d8;
 @define-color blue_5 #1a5fb4;
 @define-color green_1 #8ff0a4;
@@ -5405,6 +5453,10 @@ popover.entry-completion > contents {
   border-left: none;
 }
 
+.nautilus-window .sidebar-pane .toolbar {
+  margin: 0 0 12px 6px;
+}
+
 .nautilus-window flap.unfolded > placessidebar,
 .nautilus-window .sidebar-pane > toolbarview > placessidebar {
   background-color: #2C2C2C;
@@ -5416,7 +5468,7 @@ popover.entry-completion > contents {
 .nautilus-window .sidebar-pane > toolbarview > placessidebar > scrolledwindow {
   margin: 0 0 12px 12px;
   border-radius: 12px;
-  background-color: rgba(var(--accent-bg-color), 0.08);
+  background-color: rgba(50, 129, 234, 0.08);
 }
 
 .nautilus-window flap.unfolded > placessidebar > scrolledwindow > overshoot.top, .nautilus-window flap.unfolded > placessidebar > scrolledwindow > undershoot.top,
@@ -6797,6 +6849,315 @@ window#desktopwindow {
   background: none;
 }
 
+themeselector,
+panelthemeselector {
+  margin: 9px;
+}
+
+themeselector checkbutton,
+panelthemeselector checkbutton {
+  padding: 0;
+  min-height: 44px;
+  min-width: 44px;
+  padding: 1px;
+  background-clip: content-box;
+  border-radius: 9999px;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.12);
+}
+
+themeselector checkbutton.follow:checked, themeselector checkbutton.light:checked, themeselector checkbutton.dark:checked,
+panelthemeselector checkbutton.follow:checked,
+panelthemeselector checkbutton.light:checked,
+panelthemeselector checkbutton.dark:checked {
+  box-shadow: inset 0 0 0 2px var(--accent-bg-color);
+}
+
+themeselector checkbutton.follow,
+panelthemeselector checkbutton.follow {
+  background-image: linear-gradient(to bottom right, #ffffff 50%, #202020 50%);
+}
+
+themeselector checkbutton.light,
+panelthemeselector checkbutton.light {
+  background-color: #ffffff;
+}
+
+themeselector checkbutton.dark,
+panelthemeselector checkbutton.dark {
+  background-color: #202020;
+}
+
+themeselector checkbutton.theme-selector radio,
+panelthemeselector checkbutton.theme-selector radio {
+  -gtk-icon-source: none;
+  border: none;
+  background: none;
+  box-shadow: none;
+  min-height: 20px;
+  min-width: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+themeselector checkbutton.theme-selector radio:hover, themeselector checkbutton.theme-selector radio:active, themeselector checkbutton.theme-selector radio:checked,
+panelthemeselector checkbutton.theme-selector radio:hover,
+panelthemeselector checkbutton.theme-selector radio:active,
+panelthemeselector checkbutton.theme-selector radio:checked {
+  background-color: transparent;
+  background-image: none;
+}
+
+themeselector checkbutton.theme-selector radio:checked,
+panelthemeselector checkbutton.theme-selector radio:checked {
+  -gtk-icon-size: 20px;
+  -gtk-icon-source: -gtk-scaled(-gtk-recolor(url("assets/scalable/select-symbolic.svg")), -gtk-recolor(url("assets/scalable/select-symbolic@2.svg")));
+  color: white;
+  background-color: var(--accent-bg-color);
+}
+
+themeselector checkbutton.theme-selector radio:checked, themeselector checkbutton.theme-selector radio:checked:hover, themeselector checkbutton.theme-selector radio:checked:active,
+panelthemeselector checkbutton.theme-selector radio:checked,
+panelthemeselector checkbutton.theme-selector radio:checked:hover,
+panelthemeselector checkbutton.theme-selector radio:checked:active {
+  box-shadow: 0 2px 3px -1px rgba(0, 0, 0, 0.08), 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+themeswitcher {
+  padding: 6px;
+}
+
+themeswitcher .check {
+  min-height: 20px;
+  min-width: 20px;
+  background: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 9999px;
+  color: white;
+  background-color: var(--accent-bg-color);
+}
+
+themeswitcher .check, themeswitcher .check:hover, themeswitcher .check:active {
+  box-shadow: 0 2px 3px -1px rgba(0, 0, 0, 0.08), 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+themeswitcher checkbutton {
+  padding: 0;
+  min-height: 44px;
+  min-width: 44px;
+  padding: 1px;
+  background-clip: content-box;
+  border-radius: 9999px;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.12);
+}
+
+themeswitcher checkbutton:checked {
+  box-shadow: inset 0 0 0 2px var(--accent-bg-color);
+}
+
+themeswitcher checkbutton radio, themeswitcher checkbutton radio:hover, themeswitcher checkbutton radio:active, themeswitcher checkbutton radio:checked, themeswitcher checkbutton radio:checked:hover, themeswitcher checkbutton radio:checked:active {
+  background-color: transparent;
+  border: none;
+  background: none;
+  box-shadow: none;
+  color: transparent;
+  -gtk-icon-source: none;
+  -gtk-icon-size: 0;
+}
+
+themeswitcher checkbutton.system {
+  background: linear-gradient(-45deg, #1e1e1e 50%, white 50%);
+}
+
+themeswitcher checkbutton.light {
+  color: alpha(black, 0.8);
+  background-color: white;
+}
+
+themeswitcher checkbutton.dark {
+  color: white;
+  background-color: #1e1e1e;
+}
+
+styleselector checkbutton {
+  padding: 0;
+  min-height: 44px;
+  min-width: 44px;
+  padding: 0;
+  background-clip: content-box;
+  border-radius: 9999px;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.12);
+}
+
+styleselector checkbutton:hover {
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.12);
+}
+
+styleselector checkbutton:checked {
+  box-shadow: inset 0 0 0 2px var(--accent-bg-color);
+}
+
+styleselector checkbutton > radio {
+  min-height: 20px;
+  min-width: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+styleselector checkbutton > radio, styleselector checkbutton > radio:hover, styleselector checkbutton > radio:focus, styleselector checkbutton > radio:not(:focus) {
+  color: transparent;
+  border: none;
+  background: none;
+  box-shadow: none;
+  -gtk-icon-source: none;
+  -gtk-icon-size: 0;
+}
+
+styleselector checkbutton > radio:checked, styleselector checkbutton > radio:checked:hover, styleselector checkbutton > radio:checked:focus, styleselector checkbutton > radio:checked:not(:focus), styleselector checkbutton > radio:active, styleselector checkbutton > radio:active:hover, styleselector checkbutton > radio:active:focus, styleselector checkbutton > radio:active:not(:focus) {
+  -gtk-icon-size: 20px;
+  -gtk-icon-source: -gtk-scaled(-gtk-recolor(url("assets/scalable/select-symbolic.svg")), -gtk-recolor(url("assets/scalable/select-symbolic@2.svg")));
+  color: white;
+  background-color: var(--accent-bg-color);
+  box-shadow: 0 2px 3px -1px rgba(0, 0, 0, 0.08), 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+.note-window headerbar, .note-window headerbar:backdrop {
+  box-shadow: none;
+}
+
+.note-window.style-yellow, .note-window.style-yellow .text-view.view, .note-window.style-yellow .text-view.view > text, .note-window.style-yellow headerbar {
+  background-color: #FBC02D;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.note-window.style-yellow * {
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.note-window.style-yellow .text-view.view > text > selection {
+  background-color: rgba(0, 0, 0, 0.26);
+}
+
+.note-window.style-yellow popover > arrow,
+.note-window.style-yellow popover > contents {
+  background-color: #fccf5f;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.note-window.style-pink, .note-window.style-pink .text-view.view, .note-window.style-pink .text-view.view > text, .note-window.style-pink headerbar {
+  background-color: #F06292;
+  color: white;
+}
+
+.note-window.style-pink * {
+  color: white;
+}
+
+.note-window.style-pink .text-view.view > text > selection {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.note-window.style-pink popover > arrow,
+.note-window.style-pink popover > contents {
+  background-color: #f491b2;
+  color: white;
+}
+
+.note-window.style-green, .note-window.style-green .text-view.view, .note-window.style-green .text-view.view > text, .note-window.style-green headerbar {
+  background-color: #66BB6A;
+  color: white;
+}
+
+.note-window.style-green * {
+  color: white;
+}
+
+.note-window.style-green .text-view.view > text > selection {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.note-window.style-green popover > arrow,
+.note-window.style-green popover > contents {
+  background-color: #89cb8c;
+  color: white;
+}
+
+.note-window.style-purple, .note-window.style-purple .text-view.view, .note-window.style-purple .text-view.view > text, .note-window.style-purple headerbar {
+  background-color: #BA68C8;
+  color: white;
+}
+
+.note-window.style-purple * {
+  color: white;
+}
+
+.note-window.style-purple .text-view.view > text > selection {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.note-window.style-purple popover > arrow,
+.note-window.style-purple popover > contents {
+  background-color: #cb8dd6;
+  color: white;
+}
+
+.note-window.style-blue, .note-window.style-blue .text-view.view, .note-window.style-blue .text-view.view > text, .note-window.style-blue headerbar {
+  background-color: #3281EA;
+  color: white;
+}
+
+.note-window.style-blue * {
+  color: white;
+}
+
+.note-window.style-blue .text-view.view > text > selection {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.note-window.style-blue popover > arrow,
+.note-window.style-blue popover > contents {
+  background-color: #609def;
+  color: white;
+}
+
+.note-window.style-gray, .note-window.style-gray .text-view.view, .note-window.style-gray .text-view.view > text, .note-window.style-gray headerbar {
+  background-color: #727272;
+  color: white;
+}
+
+.note-window.style-gray * {
+  color: white;
+}
+
+.note-window.style-gray .text-view.view > text > selection {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.note-window.style-gray popover > arrow,
+.note-window.style-gray popover > contents {
+  background-color: #8c8c8c;
+  color: white;
+}
+
+.note-window.style-charcoal, .note-window.style-charcoal .text-view.view, .note-window.style-charcoal .text-view.view > text, .note-window.style-charcoal headerbar {
+  background-color: #333333;
+  color: white;
+}
+
+.note-window.style-charcoal * {
+  color: white;
+}
+
+.note-window.style-charcoal .text-view.view > text > selection {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.note-window.style-charcoal popover > arrow,
+.note-window.style-charcoal popover > contents {
+  background-color: #444444;
+  color: white;
+}
+
 avatar {
   border-radius: 9999px;
   font-weight: bold;
@@ -8160,287 +8521,6 @@ floating-sheet > sheet.background {
   box-shadow: 0 8px 6px -5px rgba(0, 0, 0, 0.2), 0 16px 16px 2px rgba(0, 0, 0, 0.14), 0 6px 18px 5px rgba(0, 0, 0, 0.12);
   border-radius: 18px;
   outline: none;
-}
-
-themeselector,
-panelthemeselector {
-  margin: 9px;
-}
-
-themeselector checkbutton,
-panelthemeselector checkbutton {
-  padding: 0;
-  min-height: 44px;
-  min-width: 44px;
-  padding: 1px;
-  background-clip: content-box;
-  border-radius: 9999px;
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.12);
-}
-
-themeselector checkbutton.follow:checked, themeselector checkbutton.light:checked, themeselector checkbutton.dark:checked,
-panelthemeselector checkbutton.follow:checked,
-panelthemeselector checkbutton.light:checked,
-panelthemeselector checkbutton.dark:checked {
-  box-shadow: inset 0 0 0 2px var(--accent-bg-color);
-}
-
-themeselector checkbutton.follow,
-panelthemeselector checkbutton.follow {
-  background-image: linear-gradient(to bottom right, #ffffff 50%, #202020 50%);
-}
-
-themeselector checkbutton.light,
-panelthemeselector checkbutton.light {
-  background-color: #ffffff;
-}
-
-themeselector checkbutton.dark,
-panelthemeselector checkbutton.dark {
-  background-color: #202020;
-}
-
-themeselector checkbutton.theme-selector radio,
-panelthemeselector checkbutton.theme-selector radio {
-  -gtk-icon-source: none;
-  border: none;
-  background: none;
-  box-shadow: none;
-  min-height: 20px;
-  min-width: 20px;
-  padding: 0;
-  margin: 0;
-}
-
-themeselector checkbutton.theme-selector radio:hover, themeselector checkbutton.theme-selector radio:active, themeselector checkbutton.theme-selector radio:checked,
-panelthemeselector checkbutton.theme-selector radio:hover,
-panelthemeselector checkbutton.theme-selector radio:active,
-panelthemeselector checkbutton.theme-selector radio:checked {
-  background-color: transparent;
-  background-image: none;
-}
-
-themeselector checkbutton.theme-selector radio:checked,
-panelthemeselector checkbutton.theme-selector radio:checked {
-  -gtk-icon-size: 20px;
-  -gtk-icon-source: -gtk-scaled(-gtk-recolor(url("assets/scalable/select-symbolic.svg")), -gtk-recolor(url("assets/scalable/select-symbolic@2.svg")));
-  color: white;
-  background-color: var(--accent-bg-color);
-}
-
-themeselector checkbutton.theme-selector radio:checked, themeselector checkbutton.theme-selector radio:checked:hover, themeselector checkbutton.theme-selector radio:checked:active,
-panelthemeselector checkbutton.theme-selector radio:checked,
-panelthemeselector checkbutton.theme-selector radio:checked:hover,
-panelthemeselector checkbutton.theme-selector radio:checked:active {
-  box-shadow: 0 2px 3px -1px rgba(0, 0, 0, 0.08), 0 1px 2px 0 rgba(0, 0, 0, 0.1);
-}
-
-themeswitcher {
-  padding: 6px;
-}
-
-themeswitcher .check {
-  min-height: 20px;
-  min-width: 20px;
-  background: none;
-  padding: 0;
-  margin: 0;
-  border-radius: 9999px;
-  color: white;
-  background-color: var(--accent-bg-color);
-}
-
-themeswitcher .check, themeswitcher .check:hover, themeswitcher .check:active {
-  box-shadow: 0 2px 3px -1px rgba(0, 0, 0, 0.08), 0 1px 2px 0 rgba(0, 0, 0, 0.1);
-}
-
-themeswitcher checkbutton {
-  padding: 0;
-  min-height: 44px;
-  min-width: 44px;
-  padding: 1px;
-  background-clip: content-box;
-  border-radius: 9999px;
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.12);
-}
-
-themeswitcher checkbutton:checked {
-  box-shadow: inset 0 0 0 2px var(--accent-bg-color);
-}
-
-themeswitcher checkbutton radio, themeswitcher checkbutton radio:hover, themeswitcher checkbutton radio:active, themeswitcher checkbutton radio:checked, themeswitcher checkbutton radio:checked:hover, themeswitcher checkbutton radio:checked:active {
-  background-color: transparent;
-  border: none;
-  background: none;
-  box-shadow: none;
-  color: transparent;
-  -gtk-icon-source: none;
-  -gtk-icon-size: 0;
-}
-
-themeswitcher checkbutton.system {
-  background: linear-gradient(-45deg, #1e1e1e 50%, white 50%);
-}
-
-themeswitcher checkbutton.light {
-  color: alpha(black, 0.8);
-  background-color: white;
-}
-
-themeswitcher checkbutton.dark {
-  color: white;
-  background-color: #1e1e1e;
-}
-
-styleselector checkbutton {
-  padding: 0;
-  min-height: 44px;
-  min-width: 44px;
-  padding: 0;
-  background-clip: content-box;
-  border-radius: 9999px;
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.12);
-}
-
-styleselector checkbutton:hover {
-  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.12);
-}
-
-styleselector checkbutton:checked {
-  box-shadow: inset 0 0 0 2px var(--accent-bg-color);
-}
-
-styleselector checkbutton > radio {
-  min-height: 20px;
-  min-width: 20px;
-  padding: 0;
-  margin: 0;
-}
-
-styleselector checkbutton > radio, styleselector checkbutton > radio:hover, styleselector checkbutton > radio:focus, styleselector checkbutton > radio:not(:focus) {
-  color: transparent;
-  border: none;
-  background: none;
-  box-shadow: none;
-  -gtk-icon-source: none;
-  -gtk-icon-size: 0;
-}
-
-styleselector checkbutton > radio:checked, styleselector checkbutton > radio:checked:hover, styleselector checkbutton > radio:checked:focus, styleselector checkbutton > radio:checked:not(:focus), styleselector checkbutton > radio:active, styleselector checkbutton > radio:active:hover, styleselector checkbutton > radio:active:focus, styleselector checkbutton > radio:active:not(:focus) {
-  -gtk-icon-size: 20px;
-  -gtk-icon-source: -gtk-scaled(-gtk-recolor(url("assets/scalable/select-symbolic.svg")), -gtk-recolor(url("assets/scalable/select-symbolic@2.svg")));
-  color: white;
-  background-color: var(--accent-bg-color);
-  box-shadow: 0 2px 3px -1px rgba(0, 0, 0, 0.08), 0 1px 2px 0 rgba(0, 0, 0, 0.1);
-}
-
-.note-window headerbar, .note-window headerbar:backdrop {
-  box-shadow: none;
-}
-
-.note-window.style-yellow, .note-window.style-yellow .text-view.view, .note-window.style-yellow .text-view.view > text, .note-window.style-yellow headerbar {
-  background-color: #FBC02D;
-  color: rgba(0, 0, 0, 0.87);
-}
-
-.note-window.style-yellow * {
-  color: rgba(0, 0, 0, 0.87);
-}
-
-.note-window.style-yellow popover > arrow,
-.note-window.style-yellow popover > contents {
-  background-color: #fccf5f;
-  color: rgba(0, 0, 0, 0.87);
-}
-
-.note-window.style-pink, .note-window.style-pink .text-view.view, .note-window.style-pink .text-view.view > text, .note-window.style-pink headerbar {
-  background-color: #F06292;
-  color: white;
-}
-
-.note-window.style-pink * {
-  color: white;
-}
-
-.note-window.style-pink popover > arrow,
-.note-window.style-pink popover > contents {
-  background-color: #f491b2;
-  color: white;
-}
-
-.note-window.style-green, .note-window.style-green .text-view.view, .note-window.style-green .text-view.view > text, .note-window.style-green headerbar {
-  background-color: #66BB6A;
-  color: white;
-}
-
-.note-window.style-green * {
-  color: white;
-}
-
-.note-window.style-green popover > arrow,
-.note-window.style-green popover > contents {
-  background-color: #89cb8c;
-  color: white;
-}
-
-.note-window.style-purple, .note-window.style-purple .text-view.view, .note-window.style-purple .text-view.view > text, .note-window.style-purple headerbar {
-  background-color: #BA68C8;
-  color: white;
-}
-
-.note-window.style-purple * {
-  color: white;
-}
-
-.note-window.style-purple popover > arrow,
-.note-window.style-purple popover > contents {
-  background-color: #cb8dd6;
-  color: white;
-}
-
-.note-window.style-blue, .note-window.style-blue .text-view.view, .note-window.style-blue .text-view.view > text, .note-window.style-blue headerbar {
-  background-color: #3281EA;
-  color: white;
-}
-
-.note-window.style-blue * {
-  color: white;
-}
-
-.note-window.style-blue popover > arrow,
-.note-window.style-blue popover > contents {
-  background-color: #609def;
-  color: white;
-}
-
-.note-window.style-gray, .note-window.style-gray .text-view.view, .note-window.style-gray .text-view.view > text, .note-window.style-gray headerbar {
-  background-color: #727272;
-  color: white;
-}
-
-.note-window.style-gray * {
-  color: white;
-}
-
-.note-window.style-gray popover > arrow,
-.note-window.style-gray popover > contents {
-  background-color: #8c8c8c;
-  color: white;
-}
-
-.note-window.style-charcoal, .note-window.style-charcoal .text-view.view, .note-window.style-charcoal .text-view.view > text, .note-window.style-charcoal headerbar {
-  background-color: #333333;
-  color: white;
-}
-
-.note-window.style-charcoal * {
-  color: white;
-}
-
-.note-window.style-charcoal popover > arrow,
-.note-window.style-charcoal popover > contents {
-  background-color: #444444;
-  color: white;
 }
 
 /* GTK NAMED COLORS

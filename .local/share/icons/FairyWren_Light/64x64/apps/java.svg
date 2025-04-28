@@ -4,7 +4,7 @@
    height="64"
    version="1"
    id="svg18"
-   sodipodi:docname="application-x-java-archive.svg"
+   sodipodi:docname="java11-openjdk.svg"
    inkscape:version="1.4 (e7c3feb100, 2024-10-09)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -17,11 +17,11 @@
        id="linearGradient4"
        inkscape:collect="always">
       <stop
-         style="stop-color:#ff4f54;stop-opacity:1;"
+         style="stop-color:#f07c54;stop-opacity:1;"
          offset="0"
          id="stop3" />
       <stop
-         style="stop-color:#fa7e6a;stop-opacity:1;"
+         style="stop-color:#ad4535;stop-opacity:1;"
          offset="1"
          id="stop4" />
     </linearGradient>
@@ -45,8 +45,8 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:zoom="12.606388"
-     inkscape:cx="14.913074"
-     inkscape:cy="34.942602"
+     inkscape:cx="15.98396"
+     inkscape:cy="34.704628"
      inkscape:window-width="3440"
      inkscape:window-height="1361"
      inkscape:window-x="0"

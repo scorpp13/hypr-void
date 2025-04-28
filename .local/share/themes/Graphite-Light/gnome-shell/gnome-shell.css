@@ -2654,7 +2654,7 @@ StWidget.focused .app-grid-running-dot {
 
 .modal-dialog {
   color: rgba(0, 0, 0, 0.6);
-  padding: 9px;
+  padding: 11px;
 }
 
 .modal-dialog .modal-dialog-content-box {

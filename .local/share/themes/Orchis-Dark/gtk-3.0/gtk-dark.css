@@ -47,7 +47,7 @@ calendar.raven-calendar:selected, .budgie-popover.budgie-menu row.activatable > 
   background-color: #414141;
 }
 
-.nemo-window .view selection, .nemo-window .view:selected, .thunar .standard-view.frame widget.view:selected, .nautilus-window notebook .view:not(treeview) selection, .nautilus-window notebook .view:not(treeview):selected, .nautilus-window flowboxchild:selected .icon-item-background, flowbox flowboxchild:selected, .background.csd .view:selected {
+.nemo-window .view selection, .nemo-window .view:selected, .nautilus-window notebook .view:not(treeview) selection, .nautilus-window notebook .view:not(treeview):selected, .nautilus-window flowboxchild:selected .icon-item-background, flowbox flowboxchild:selected, .background.csd .view:selected {
   color: #3281EA;
   background-color: rgba(50, 129, 234, 0.2);
 }
@@ -8296,10 +8296,6 @@ window#whiskermenu-window .title-area > .commands-area > button.flat.command-but
 
 .thunar .standard-view.frame {
   border: none;
-}
-
-.thunar .standard-view.frame widget.view:selected {
-  border-radius: 12px;
 }
 
 .thunar paned paned paned > notebook.frame {

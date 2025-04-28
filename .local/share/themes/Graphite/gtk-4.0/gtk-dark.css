@@ -1989,33 +1989,13 @@ row headerbar label.subtitle:backdrop {
 }
 
 headerbar > windowhandle > box {
-  padding: 0 6px;
+  padding: 6px;
 }
 
 headerbar > windowhandle > box,
 headerbar > windowhandle > box > box.start,
 headerbar > windowhandle > box > box.end {
   border-spacing: 6px;
-}
-
-headerbar entry,
-headerbar spinbutton,
-headerbar button,
-headerbar stackswitcher,
-headerbar menubutton,
-headerbar splitbutton,
-headerbar separator {
-  margin-top: 6px;
-  margin-bottom: 6px;
-}
-
-headerbar menubutton > button,
-headerbar spinbutton > button,
-headerbar splitbutton > button,
-headerbar splitbutton > menubutton,
-headerbar stackswitcher > button {
-  margin-top: 0;
-  margin-bottom: 0;
 }
 
 headerbar .linked:not(.vertical) > entry:not(:only-child) {
@@ -2031,21 +2011,6 @@ headerbar separator:not(.spacer) {
   background-color: rgba(255, 255, 255, 0.12);
 }
 
-headerbar switch {
-  margin-top: 12px;
-  margin-bottom: 12px;
-}
-
-headerbar spinbutton button {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-headerbar .entry-tag {
-  margin-top: 5px;
-  margin-bottom: 5px;
-}
-
 headerbar .titlebar {
   background-color: transparent;
   box-shadow: none;
@@ -2056,7 +2021,7 @@ headerbar headerbar + separator {
 }
 
 headerbar stackswitcher {
-  margin: 6px 0;
+  margin: 0;
   border-radius: 9999px;
   border: 2px solid #E0E0E0;
 }
@@ -2104,7 +2069,7 @@ headerbar .selection-mode {
 }
 
 headerbar.default-decoration {
-  min-height: 36px;
+  min-height: 48px;
   background-color: #2C2C2C;
   background-image: image(#2C2C2C);
   color: white;
@@ -2114,6 +2079,10 @@ headerbar.default-decoration:backdrop {
   background-color: #2C2C2C;
   background-image: image(#2C2C2C);
   color: rgba(255, 255, 255, 0.7);
+}
+
+headerbar.default-decoration > windowhandle > box {
+  padding: 0;
 }
 
 headerbar.default-decoration windowcontrols button,
@@ -2127,16 +2096,6 @@ headerbar.default-decoration windowcontrols menubutton {
 .solid-csd headerbar:dir(rtl), .solid-csd headerbar:dir(ltr) {
   border-radius: 0;
   box-shadow: none;
-}
-
-.top-bar {
-  box-shadow: none;
-  background: none;
-  border: none;
-}
-
-.top-bar .collapse-spacing {
-  padding: 0;
 }
 
 window.devel headerbar.titlebar {
@@ -5311,8 +5270,44 @@ overlay-split-view > shadow.down {
 /******************
  * AdwToolbarView *
  ******************/
+toolbarview > .top-bar searchbar > revealer > box,
+toolbarview > .top-bar actionbar > revealer > box,
+toolbarview > .bottom-bar searchbar > revealer > box,
+toolbarview > .bottom-bar actionbar > revealer > box {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+toolbarview > .top-bar .toolbar,
+toolbarview > .bottom-bar .toolbar {
+  background-color: transparent;
+}
+
 toolbarview > .top-bar .collapse-spacing,
 toolbarview > .bottom-bar .collapse-spacing {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+toolbarview > .top-bar .collapse-spacing headerbar,
+toolbarview > .bottom-bar .collapse-spacing headerbar {
+  min-height: 36px;
+}
+
+toolbarview > .top-bar .collapse-spacing headerbar > windowhandle > box,
+toolbarview > .bottom-bar .collapse-spacing headerbar > windowhandle > box {
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+toolbarview > .top-bar .collapse-spacing headerbar.default-decoration,
+toolbarview > .bottom-bar .collapse-spacing headerbar.default-decoration {
+  min-height: 36px;
+}
+
+toolbarview > .top-bar .collapse-spacing headerbar.default-decoration > windowhandle > box,
+toolbarview > .bottom-bar .collapse-spacing headerbar.default-decoration > windowhandle > box {
   padding-top: 0;
   padding-bottom: 0;
 }
@@ -5335,7 +5330,7 @@ toolbarview > .bottom-bar:backdrop > windowhandle {
 }
 
 toolbarview > .top-bar.raised {
-  box-shadow: 0 1px rgba(255, 255, 255, 0.12), 0 2px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 1px rgba(255, 255, 255, 0.12);
 }
 
 toolbarview > .top-bar.raised.border {
@@ -5343,7 +5338,7 @@ toolbarview > .top-bar.raised.border {
 }
 
 toolbarview > .bottom-bar.raised {
-  box-shadow: 0 -1px rgba(255, 255, 255, 0.12), 0 -2px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 -1px rgba(255, 255, 255, 0.12);
 }
 
 toolbarview > .bottom-bar.raised.border {
@@ -6013,7 +6008,7 @@ popover.entry-completion > contents {
 
 #NautilusPathBar {
   border-radius: 9999px;
-  margin: 6px 0;
+  margin: 0;
 }
 
 #NautilusPathBar #NautilusPathButton {
@@ -7035,11 +7030,6 @@ toast > label {
 
 viewswitcher {
   margin: 0;
-}
-
-viewswitcher.wide {
-  margin-top: 6px;
-  margin-bottom: 6px;
 }
 
 viewswitcher.wide button.toggle:checked, viewswitcher.wide button.toggle.flat:checked {
