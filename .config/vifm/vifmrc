@@ -95,7 +95,7 @@ set statusline="%t%[ -> %T%] %6E %12A %=%d %5u:%g"
 " colorscheme dracula
 " colorscheme dwmlight
 " colorscheme gruvbox
-colorscheme luke
+ colorscheme luke
 " colorscheme material
 " colorscheme papercolor-dark
 " colorscheme papercolor-light
