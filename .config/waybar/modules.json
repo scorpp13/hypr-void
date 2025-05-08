@@ -36,9 +36,9 @@
 //	Cliphist
 "custom/cliphist": {
 	"format": "",
-	"on-click": "sleep 0.1 && ~/.local/bin/cliphist.sh",
-	"on-click-right": "sleep 0.1 && ~/.local/bin/cliphist.sh d",
-	"on-click-middle": "sleep 0.1 && ~/.local/bin/cliphist.sh w",
+	"on-click": "sleep 0.1 && cliphist.sh",
+	"on-click-right": "sleep 0.1 && cliphist.sh d",
+	"on-click-middle": "sleep 0.1 && cliphist.sh w",
 	"tooltip-format": "Clipboard"
 },
 //	Updates
@@ -47,11 +47,11 @@
 	"tooltip-format": "{} updates available",
 	"escape": true,
 	"return-type": "json",
-	"exec": "~/.local/bin/updates.sh",
+	"exec": "updates.sh",
 	"restart-interval": 3600,
-	"on-click": "alacritty -e ~/.local/bin/installupdates.sh",
-	"on-click-middle": "alacritty -e ~/.local/bin/cleanup.sh",
-	"on-click-right": "alacritty -e ~/.local/bin/mirrorlist.sh"
+	"on-click": "kitty --class floating -e installupdates.sh",
+	"on-click-middle": "kitty --class floating -e cleanup.sh",
+	"on-click-right": "kitty --class floating -e mirrorlist.sh"
 },
 //	Wallpapers
 "custom/wallpaper": {
@@ -62,7 +62,7 @@
 //	Themes
 "custom/waybarthemes": {
 	"format": "",
-	"on-click": "~/.local/bin/themeswitcher.sh",
+	"on-click": "themeswitcher.sh",
 	"tooltip-format": "Themes"
 },
 //	File Manager
@@ -81,20 +81,20 @@
 //	Media Player
 "custom/player": {
 	"format": "󱜅",
-	"on-click": "~/.local/bin/mpv.sh",
+	"on-click": "mpv.sh",
 	"tooltip-format": "MPV Player"
 },
 //	Scripts
 "custom/script": {
 	"format": "",
-	"on-click": "~/.local/bin/script.sh",
+	"on-click": "script.sh",
 	"tooltip-format": "Custom scripts"
 },
 //	App Menu
 "custom/appmenu": {
 	"format": "",
 	"on-click": "fuzzel",
-	"on-click-right": "~/.local/bin/keybindings.sh",
+	"on-click-right": "keybindings.sh",
 	"tooltip-format": "Right click for keybinds"
 },
 //	Power Menu
@@ -135,17 +135,17 @@
 "custom/weather": {
 	"format": "{}",
 	"return-type": "json",
-	"exec": "~/.local/bin/weather.sh 'Калининград' 2> /dev/null",
+	"exec": "weather.sh 'Калининград' 2> /dev/null",
 	"interval": 3600,
 	"tooltip": true,
-	"on-click": "alacritty --hold -e curl -s 'ru.wttr.in/Kaliningrad?format=v2d'"
+	"on-click": "kitty --class floating -e wttr.sh"
 },	
 //	CPU_temp
 "temperature": {
 	"critical-threshold": 80,
 	"format-critical": "{temperatureC}°C",
 	"format": "",
-	"on-click": "alacritty -e btop",
+	"on-click": "kitty --class floating -e btop",
 	"tooltip": false
 },
 //	Language

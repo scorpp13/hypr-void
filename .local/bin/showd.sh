@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 
 TMP_FILE="$XDG_RUNTIME_DIR/hyprland-show-desktop"
 

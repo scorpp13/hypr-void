@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 
 sleep 1
 pkill xdg-desktop-portal-hyprland

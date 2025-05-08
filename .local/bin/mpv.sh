@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 
 option1="	IPTV sport"
 option2="󰄘	IPTV full"
@@ -10,12 +10,12 @@ options="$option1\n$option2\n$option3\n$option4"
 choice=$(echo -e "$options" | fuzzel -d) 
 
 case $choice in
-	$option1)
+	"$option1")
 		sleep 1 && mpv ~/Video/iptv_sport.m3u ;;
-	$option2)
+	"$option2")
 		mpv ~/Video/iptv_full.m3u ;;
-	$option3)
+	"$option3")
 		mpv --player-operation-mode=pseudo-gui --idle ;;
-	$option4)
+	"$option4")
 		mpv ~/Music/ ;;
 esac

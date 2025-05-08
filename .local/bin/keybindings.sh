@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 
 config_file=~/.config/hypr/conf/keybindings.conf
 keybinds=$(grep -oP '(?<=bind = ).*' $config_file)
