@@ -1,0 +1,30 @@
+" Kanagawa color scheme for vifm
+
+" Reset all styles first
+highlight clear
+
+highlight Border       cterm=none ctermfg=235 ctermbg=default
+
+highlight TopLine      cterm=none ctermfg=179 ctermbg=235
+highlight TopLineSel   cterm=bold ctermfg=179 ctermbg=237
+
+highlight Win         cterm=none ctermfg=223 ctermbg=default
+highlight Directory   cterm=bold ctermfg=109 ctermbg=default
+highlight CurrLine    cterm=bold,inverse ctermfg=default ctermbg=default
+highlight OtherLine   cterm=bold ctermfg=default ctermbg=235
+highlight Selected    cterm=bold ctermfg=132 ctermbg=237
+
+highlight JobLine     cterm=bold ctermfg=110 ctermbg=238
+highlight StatusLine  cterm=bold ctermfg=179 ctermbg=236
+highlight ErrorMsg    cterm=bold ctermfg=167 ctermbg=default
+highlight WildMenu    cterm=bold ctermfg=235 ctermbg=110
+highlight CmdLine     cterm=none ctermfg=223 ctermbg=default
+
+highlight Executable  cterm=bold ctermfg=142 ctermbg=default
+highlight Link        cterm=bold ctermfg=110 ctermbg=default
+highlight BrokenLink  cterm=bold ctermfg=167 ctermbg=default
+highlight HardLink    cterm=bold ctermfg=179 ctermbg=default
+highlight Device      cterm=bold ctermfg=172 ctermbg=default
+highlight Fifo        cterm=bold ctermfg=109 ctermbg=default
+highlight Socket      cterm=bold ctermfg=132 ctermbg=default
+
