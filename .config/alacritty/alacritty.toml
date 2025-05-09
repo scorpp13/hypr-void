@@ -1,6 +1,6 @@
-#[shell]
-#program = "/bin/fish"
-#args = ["-l"]
+[terminal.shell]
+program = "/bin/fish"
+args = ["-l"]
 
 [env]
 TERM = "xterm-256color"
@@ -36,6 +36,11 @@ size = 11
 
 [general]
 import = [
-	"~/.config/alacritty/theme/taerminal.toml",
 #	"~/.config/alacritty/theme/dracula.toml",
+#	"~/.config/alacritty/theme/gruvbox_material.toml",
+#	"~/.config/alacritty/theme/hardhacker.toml",
+#	"~/.config/alacritty/theme/material_theme.toml",
+	"~/.config/alacritty/theme/noctis_lux.toml",
+#	"~/.config/alacritty/theme/pastel_dark.toml",
+#	"~/.config/alacritty/theme/taerminal.toml",
 ]
