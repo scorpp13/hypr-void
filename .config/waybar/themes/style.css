@@ -51,9 +51,11 @@ window#waybar {
 tooltip {
 	border-radius: 15px;
 	background-color: @background;
+	border: 1px double @backgroundlight;
 }
 tooltip label {
 	color: @backgroundlight;
+	font-family: Roboto;
 }
 
 /*	WINDOW	*/
@@ -100,7 +102,7 @@ window#waybar.empty #window {
 #custom-filemanager,
 #custom-player,
 #custom-cliphist,
-#custom-wallpaper,
+#custom-system,
 #custom-themes {
 	margin-right: 20px;
 	font-size: 20px;

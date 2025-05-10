@@ -18,6 +18,7 @@
 	"custom/themes",
 	"custom/cliphist",
 	"custom/script",
+	"custom/system",
 	"wlr/taskbar",
 	"group/quicklinks",
 	"hyprland/window",
