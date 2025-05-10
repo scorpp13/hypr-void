@@ -1,13 +1,14 @@
 #!/usr/bin/env bash
 
-option1="󱗄	Calculator"
+option1="	Calculator"
 option2="	Font search"
 option3="	Convert to jpg"
 option4="󰙴	Merge images"
 option5="	 Archive extractor"
 option6="	Package manager"
+option7="	 XBPS history and logs"
 
-options="$option1\n$option2\n$option3\n$option4\n$option5\n$option6"
+options="$option1\n$option2\n$option3\n$option4\n$option5\n$option6\n$option7"
 
 choice=$(echo -e "$options" | fuzzel -d) 
 
@@ -24,4 +25,6 @@ case $choice in
 		kitty --class floating -e extract.sh ;;
 	"$option6")
 		kitty --class floating -e xbpspkg.sh ;;
+	"$option7")
+		kitty --class floating -e xbps-hist.sh -l -c -f;;
 esac

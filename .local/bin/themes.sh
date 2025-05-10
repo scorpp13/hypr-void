@@ -13,7 +13,7 @@ case $choice in
 	"$option1")
 		themeswitcher.sh ;;
 	"$option2")
-		nwg-look ;;
+		nwg-look && fuzzel.sh ;;
 	"$option3")
 		qt6ct ;;
 	"$option4")

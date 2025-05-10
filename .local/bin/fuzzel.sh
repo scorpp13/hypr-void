@@ -9,6 +9,10 @@ S=$(echo "$color7"ff | sed 's/#//')
 M=$(echo "$color3"ff | sed 's/#//')
 C=$(echo "$color1"ff | sed 's/#//')
 
+icon=$(cat ${HOME}/.config/gtk-3.0/settings.ini | \
+grep "gtk-icon-theme-name" | \
+sed 's/gtk-icon-theme-name=//')
+
 cat > ~/.config/fuzzel/wal_fuzzel.ini<< EOF
 [colors]
 background=$b
@@ -18,4 +22,6 @@ selection=$s
 selection-text=$S
 selection-match=$M
 border=$C
+[main]
+icon-theme=$icon
 EOF
