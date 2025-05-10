@@ -15,8 +15,7 @@
 //	LEFT MODULES
 "modules-left": [
 	"custom/appmenu",
-	"custom/waybarthemes",
-	"custom/wallpaper",
+	"custom/themes",
 	"custom/cliphist",
 	"custom/script",
 	"wlr/taskbar",

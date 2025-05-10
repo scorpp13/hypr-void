@@ -101,15 +101,12 @@ window#waybar.empty #window {
 #custom-player,
 #custom-cliphist,
 #custom-wallpaper,
-#custom-waybarthemes {
+#custom-themes {
 	margin-right: 20px;
 	font-size: 20px;
 	font-weight: bold;
 	opacity: 0.8;
 	color: @iconcolor;
-}
-#custom-wallpaper {
-	margin-right: 23px;
 }
 
 /*	CUSTOM APPMENU	*/

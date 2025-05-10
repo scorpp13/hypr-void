@@ -29,7 +29,7 @@ done
 
 # Call fuzzel for make a choice 
 listNames=${listNames::-2}
-choice=$(echo -e "$listNames" | fuzzel -d --index -format i)
+choice=$(echo -e "$listNames" | fuzzel -d --index -p "Switch Waybar Theme" -f "Fira Code:weight=regular:size=12" -t 990000ff)
 
 # Set new theme
 if [ "$choice" ]; then

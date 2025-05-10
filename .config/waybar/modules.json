@@ -33,7 +33,7 @@
 	"max-length": 200,
 	"separate-outputs": true
 },
-//	Cliphist
+//	Cliphist  
 "custom/cliphist": {
 	"format": "",
 	"on-click": "sleep 0.1 && cliphist.sh",
@@ -53,17 +53,11 @@
 	"on-click-middle": "kitty --class floating -e cleanup.sh",
 	"on-click-right": "kitty --class floating -e mirrorlist.sh"
 },
-//	Wallpapers
-"custom/wallpaper": {
-	"format": "",
-	"on-click": "waypaper",
-	"tooltip-format": "Wallpapers"
-},
-//	Themes
-"custom/waybarthemes": {
-	"format": "",
-	"on-click": "themeswitcher.sh",
-	"tooltip-format": "Themes"
+//	Themes  
+"custom/themes": {
+	"format": "",
+	"on-click": "themes.sh",
+	"tooltip-format": "Desktop Themes"
 },
 //	File Manager
 "custom/filemanager": {
