@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Name=fuzzypkg
+Exec=env FDELAY=1 fuzzypkg %U
+Type=Application
+Terminal=true
+Icon=package-x-generic
+Categories=System
+Hidden=true
