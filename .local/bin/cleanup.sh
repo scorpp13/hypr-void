@@ -16,14 +16,16 @@ cat <<"EOF"
 EOF
 
 if gum confirm "Start CleanUp right now?"; then
-	gum spin --title "Cleaning..." -- sleep 0.5
-	sudo xbps-remove -Oo
-elif [ $? -eq 130 ]; then
-	notify-send "Canceled by user"
-	exit 130
-else
-	notify-send "CleanUp interrupted"
-	exit;
+	if gum confirm "Provide FullClean including cache?"; then
+		gum spin --title "Starting FullClean..." -- sleep 0.5
+		sudo xbps-remove -Oo
+	else	
+		gum spin --title "Starting OrphanClean..." -- sleep 0.5
+		sudo xbps-remove -o
+	fi
+		else
+			notify-send "CleanUp interrupted"
+		exit;
 fi
 notify-send "CleanUp finished"
 echo -e "${GREEN}"
