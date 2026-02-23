@@ -619,7 +619,7 @@ window.background > box.vertical > toolbar.primary-toolbar > toolitem > .linked 
 window.csd > box.vertical > box.vertical > toolbar.horizontal > toolitem > box.horizontal > button,
 window.solid-csd > box.vertical > box.vertical > toolbar.horizontal > toolitem > .linked > button,
 window.solid-csd > box.vertical > box.vertical > toolbar.horizontal > toolitem > box.horizontal > button, .nautilus-window headerbar revealer > button, .linked:not(.vertical) > button.disclosure-button:not(.suggested-action):not(.destructive-action):not(:only-child), filechooser #pathbarbox > stack > box > button, check,
-radio, headerbar button.titlebutton, button.close, button.circular, .inline-toolbar button.image-button, button.image-button {
+radio, headerbar button.titlebutton:not(.suggested-action):not(.destructive-action), button.close, button.circular, .inline-toolbar button.image-button, button.image-button {
   border-radius: 9999px;
 }
 
@@ -628,7 +628,7 @@ window.background > box.vertical > toolbar.primary-toolbar > toolitem > .linked 
 window.csd > box.vertical > box.vertical > toolbar.horizontal > toolitem > box.horizontal > button label,
 window.solid-csd > box.vertical > box.vertical > toolbar.horizontal > toolitem > .linked > button label,
 window.solid-csd > box.vertical > box.vertical > toolbar.horizontal > toolitem > box.horizontal > button label, .nautilus-window headerbar revealer > button label, .linked:not(.vertical) > button.disclosure-button:not(.suggested-action):not(.destructive-action):not(:only-child) label, filechooser #pathbarbox > stack > box > button label, check label,
-radio label, headerbar button.titlebutton label, button.close label, button.circular label, .inline-toolbar button.image-button label, button.image-button label {
+radio label, headerbar button.titlebutton:not(.suggested-action):not(.destructive-action) label, button.close label, button.circular label, .inline-toolbar button.image-button label, button.image-button label {
   padding: 0;
 }
 
@@ -656,7 +656,7 @@ button:drop(active) {
 radio, scrollbar button, notebook > header > tabs > arrow, spinbutton.vertical button, spinbutton:not(.vertical) button, modelbutton.flat,
 .menuitem.button.flat, .nemo-window .toolbar button, #buttonbox_frame button, .xfce4-panel.background button, .xfce4-panel.background button.flat, .raven stackswitcher.linked > button, .lock-dialog button, .mate-panel-menu-bar button, window.background.csd.geary-main-window stack#conversation_viewer .geary-expanded > .geary-composer-embed headerbar button,
 window#GearyMainWindow.background.csd stack#conversation_viewer .geary-expanded > .geary-composer-embed headerbar button, layouttabbar button, filechooser #pathbarbox > stack > box > button, messagedialog.csd .dialog-action-box button, .app-notification button, actionbar > revealer > box button:not(.suggested-action):not(.destructive-action), .caja-pathbar button,
-.path-bar.linked:not(.vertical) > button, .nemo-window .primary-toolbar button:not(.text-button), headerbar button:not(.suggested-action):not(.destructive-action), toolbar button, combobox > .linked:not(.vertical) > button:not(:only-child), .inline-toolbar button, button.flat {
+.path-bar.linked:not(.vertical) > button, .nemo-window .primary-toolbar button:not(.text-button), .titlebar button:not(.suggested-action):not(.destructive-action), toolbar button, combobox > .linked:not(.vertical) > button:not(:only-child), .inline-toolbar button, button.flat {
   transition: all 75ms cubic-bezier(0, 0, 0.2, 1), border-image 225ms cubic-bezier(0, 0, 0.2, 1), background-size 300ms cubic-bezier(0, 0, 0.2, 1), background-image 1200ms cubic-bezier(0, 0, 0.2, 1);
   outline: none;
   box-shadow: inset 0 0 0 9999px transparent;
@@ -674,7 +674,7 @@ window#GearyMainWindow.background.csd stack#conversation_viewer .geary-expanded 
 radio:focus, scrollbar button:focus, notebook > header > tabs > arrow:focus, spinbutton.vertical button:focus, spinbutton:not(.vertical) button:focus, modelbutton.flat:focus,
 .menuitem.button.flat:focus, .nemo-window .toolbar button:focus, #buttonbox_frame button:focus, .xfce4-panel.background button:focus, .raven stackswitcher.linked > button:focus, .lock-dialog button:focus, .mate-panel-menu-bar button:focus, window.background.csd.geary-main-window stack#conversation_viewer .geary-expanded > .geary-composer-embed headerbar button:focus,
 window#GearyMainWindow.background.csd stack#conversation_viewer .geary-expanded > .geary-composer-embed headerbar button:focus, layouttabbar button:focus, filechooser #pathbarbox > stack > box > button:focus, messagedialog.csd .dialog-action-box button:focus, .app-notification button:focus, actionbar > revealer > box button:focus:not(.suggested-action):not(.destructive-action), .caja-pathbar button:focus,
-.path-bar.linked:not(.vertical) > button:focus, .nemo-window .primary-toolbar button:focus:not(.text-button), headerbar button:focus:not(.suggested-action):not(.destructive-action), toolbar button:focus, combobox > .linked:not(.vertical) > button:focus:not(:only-child), .inline-toolbar button:focus, button.flat:focus {
+.path-bar.linked:not(.vertical) > button:focus, .nemo-window .primary-toolbar button:focus:not(.text-button), .titlebar button:focus:not(.suggested-action):not(.destructive-action), toolbar button:focus, combobox > .linked:not(.vertical) > button:focus:not(:only-child), .inline-toolbar button:focus, button.flat:focus {
   box-shadow: inset 0 0 0 2px alpha(currentColor, 0.08);
   color: white;
 }
@@ -685,7 +685,7 @@ window#GearyMainWindow.background.csd stack#conversation_viewer .geary-expanded 
 radio:hover, scrollbar button:hover, notebook > header > tabs > arrow:hover, spinbutton.vertical button:hover, spinbutton:not(.vertical) button:hover, modelbutton.flat:hover,
 .menuitem.button.flat:hover, .nemo-window .toolbar button:hover, #buttonbox_frame button:hover, .xfce4-panel.background button:hover, .raven stackswitcher.linked > button:hover, .lock-dialog button:hover, .mate-panel-menu-bar button:hover, window.background.csd.geary-main-window stack#conversation_viewer .geary-expanded > .geary-composer-embed headerbar button:hover,
 window#GearyMainWindow.background.csd stack#conversation_viewer .geary-expanded > .geary-composer-embed headerbar button:hover, layouttabbar button:hover, filechooser #pathbarbox > stack > box > button:hover, messagedialog.csd .dialog-action-box button:hover, .app-notification button:hover, actionbar > revealer > box button:hover:not(.suggested-action):not(.destructive-action), .caja-pathbar button:hover,
-.path-bar.linked:not(.vertical) > button:hover, .nemo-window .primary-toolbar button:hover:not(.text-button), headerbar button:hover:not(.suggested-action):not(.destructive-action), toolbar button:hover, combobox > .linked:not(.vertical) > button:hover:not(:only-child), .inline-toolbar button:hover, button.flat:hover {
+.path-bar.linked:not(.vertical) > button:hover, .nemo-window .primary-toolbar button:hover:not(.text-button), .titlebar button:hover:not(.suggested-action):not(.destructive-action), toolbar button:hover, combobox > .linked:not(.vertical) > button:hover:not(:only-child), .inline-toolbar button:hover, button.flat:hover {
   box-shadow: inset 0 0 0 9999px alpha(currentColor, 0.08);
   color: white;
 }
@@ -696,7 +696,7 @@ window#GearyMainWindow.background.csd stack#conversation_viewer .geary-expanded 
 radio:active, scrollbar button:active, notebook > header > tabs > arrow:active, spinbutton.vertical button:active, spinbutton:not(.vertical) button:active, modelbutton.flat:active,
 .menuitem.button.flat:active, .nemo-window .toolbar button:active, #buttonbox_frame button:active, .xfce4-panel.background button:active, .raven stackswitcher.linked > button:active, .lock-dialog button:active, .mate-panel-menu-bar button:active, window.background.csd.geary-main-window stack#conversation_viewer .geary-expanded > .geary-composer-embed headerbar button:active,
 window#GearyMainWindow.background.csd stack#conversation_viewer .geary-expanded > .geary-composer-embed headerbar button:active, layouttabbar button:active, filechooser #pathbarbox > stack > box > button:active, messagedialog.csd .dialog-action-box button:active, .app-notification button:active, actionbar > revealer > box button:active:not(.suggested-action):not(.destructive-action), .caja-pathbar button:active,
-.path-bar.linked:not(.vertical) > button:active, .nemo-window .primary-toolbar button:active:not(.text-button), headerbar button:active:not(.suggested-action):not(.destructive-action), toolbar button:active, combobox > .linked:not(.vertical) > button:active:not(:only-child), .inline-toolbar button:active, button.flat:active {
+.path-bar.linked:not(.vertical) > button:active, .nemo-window .primary-toolbar button:active:not(.text-button), .titlebar button:active:not(.suggested-action):not(.destructive-action), toolbar button:active, combobox > .linked:not(.vertical) > button:active:not(:only-child), .inline-toolbar button:active, button.flat:active {
   transition: all 75ms cubic-bezier(0, 0, 0.2, 1), border-image 225ms cubic-bezier(0, 0, 0.2, 1), background-size 0ms, background-image 0ms;
   animation: ripple 225ms cubic-bezier(0, 0, 0.2, 1) forwards;
   box-shadow: inset 0 0 0 9999px alpha(currentColor, 0.08);
@@ -711,7 +711,7 @@ window#GearyMainWindow.background.csd stack#conversation_viewer .geary-expanded 
 radio:disabled, scrollbar button:disabled, notebook > header > tabs > arrow:disabled, spinbutton.vertical button:disabled, spinbutton:not(.vertical) button:disabled, modelbutton.flat:disabled,
 .menuitem.button.flat:disabled, .nemo-window .toolbar button:disabled, #buttonbox_frame button:disabled, .xfce4-panel.background button:disabled, .raven stackswitcher.linked > button:disabled, .lock-dialog button:disabled, .mate-panel-menu-bar button:disabled, window.background.csd.geary-main-window stack#conversation_viewer .geary-expanded > .geary-composer-embed headerbar button:disabled,
 window#GearyMainWindow.background.csd stack#conversation_viewer .geary-expanded > .geary-composer-embed headerbar button:disabled, layouttabbar button:disabled, filechooser #pathbarbox > stack > box > button:disabled, messagedialog.csd .dialog-action-box button:disabled, .app-notification button:disabled, actionbar > revealer > box button:disabled:not(.suggested-action):not(.destructive-action), .caja-pathbar button:disabled,
-.path-bar.linked:not(.vertical) > button:disabled, .nemo-window .primary-toolbar button:disabled:not(.text-button), headerbar button:disabled:not(.suggested-action):not(.destructive-action), toolbar button:disabled, combobox > .linked:not(.vertical) > button:disabled:not(:only-child), .inline-toolbar button:disabled, button.flat:disabled {
+.path-bar.linked:not(.vertical) > button:disabled, .nemo-window .primary-toolbar button:disabled:not(.text-button), .titlebar button:disabled:not(.suggested-action):not(.destructive-action), toolbar button:disabled, combobox > .linked:not(.vertical) > button:disabled:not(:only-child), .inline-toolbar button:disabled, button.flat:disabled {
   box-shadow: none;
   background-color: transparent;
   color: rgba(255, 255, 255, 0.3);
@@ -719,14 +719,14 @@ window#GearyMainWindow.background.csd stack#conversation_viewer .geary-expanded 
 
 .nemo-window .toolbar button:checked, #buttonbox_frame button:checked, .xfce4-panel.background button:checked, .raven stackswitcher.linked > button:checked, .lock-dialog button:checked, .mate-panel-menu-bar button:checked, window.background.csd.geary-main-window stack#conversation_viewer .geary-expanded > .geary-composer-embed headerbar button:checked,
 window#GearyMainWindow.background.csd stack#conversation_viewer .geary-expanded > .geary-composer-embed headerbar button:checked, layouttabbar button:checked, filechooser #pathbarbox > stack > box > button:checked, messagedialog.csd .dialog-action-box button:checked, .app-notification button:checked, actionbar > revealer > box button:checked:not(.suggested-action):not(.destructive-action), .caja-pathbar button:checked,
-.path-bar.linked:not(.vertical) > button:checked, .nemo-window .primary-toolbar button:checked:not(.text-button), headerbar button:checked:not(.suggested-action):not(.destructive-action), toolbar button:checked, combobox > .linked:not(.vertical) > button:checked:not(:only-child), .inline-toolbar button:checked, button.flat:checked, button.flat:checked:hover {
+.path-bar.linked:not(.vertical) > button:checked, .nemo-window .primary-toolbar button:checked:not(.text-button), .titlebar button:checked:not(.suggested-action):not(.destructive-action), toolbar button:checked, combobox > .linked:not(.vertical) > button:checked:not(:only-child), .inline-toolbar button:checked, button.flat:checked, button.flat:checked:hover {
   background-color: alpha(currentColor, 0.1);
   color: white;
 }
 
 .nemo-window .toolbar button:checked:disabled, #buttonbox_frame button:checked:disabled, .xfce4-panel.background button:checked:disabled, .raven stackswitcher.linked > button:checked:disabled, .lock-dialog button:checked:disabled, .mate-panel-menu-bar button:checked:disabled, window.background.csd.geary-main-window stack#conversation_viewer .geary-expanded > .geary-composer-embed headerbar button:checked:disabled,
 window#GearyMainWindow.background.csd stack#conversation_viewer .geary-expanded > .geary-composer-embed headerbar button:checked:disabled, layouttabbar button:checked:disabled, filechooser #pathbarbox > stack > box > button:checked:disabled, messagedialog.csd .dialog-action-box button:checked:disabled, .app-notification button:checked:disabled, actionbar > revealer > box button:checked:disabled:not(.suggested-action):not(.destructive-action), .caja-pathbar button:checked:disabled,
-.path-bar.linked:not(.vertical) > button:checked:disabled, .nemo-window .primary-toolbar button:checked:disabled:not(.text-button), headerbar button:checked:disabled:not(.suggested-action):not(.destructive-action), toolbar button:checked:disabled, combobox > .linked:not(.vertical) > button:checked:disabled:not(:only-child), .inline-toolbar button:checked:disabled, button.flat:checked:disabled {
+.path-bar.linked:not(.vertical) > button:checked:disabled, .nemo-window .primary-toolbar button:checked:disabled:not(.text-button), .titlebar button:checked:disabled:not(.suggested-action):not(.destructive-action), toolbar button:checked:disabled, combobox > .linked:not(.vertical) > button:checked:disabled:not(:only-child), .inline-toolbar button:checked:disabled, button.flat:checked:disabled {
   background-color: alpha(currentColor, 0.1);
   color: rgba(255, 255, 255, 0.5);
 }
@@ -1269,44 +1269,44 @@ searchbar > revealer > box {
 /***************
  * Header bars *
  ***************/
-.nemo-window .primary-toolbar button:not(.text-button), headerbar button:not(.suggested-action):not(.destructive-action) {
+.nemo-window .primary-toolbar button:not(.text-button), .titlebar button:not(.suggested-action):not(.destructive-action) {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.nemo-window .primary-toolbar .linked:not(.vertical) > button:not(.text-button), headerbar .linked:not(.vertical) > button:not(.suggested-action):not(.destructive-action) {
+.nemo-window .primary-toolbar .linked:not(.vertical):not(.path-bar) > button:not(.text-button), .titlebar .linked:not(.vertical):not(.path-bar) > button:not(.suggested-action):not(.destructive-action) {
   border-radius: 9999px;
 }
 
-.nemo-window .primary-toolbar button:focus:not(.text-button), headerbar button:focus:not(.suggested-action):not(.destructive-action), .nemo-window .primary-toolbar button:hover:not(.text-button), headerbar button:hover:not(.suggested-action):not(.destructive-action), .nemo-window .primary-toolbar button:active:not(.text-button), headerbar button:active:not(.suggested-action):not(.destructive-action), .nemo-window .primary-toolbar button:checked:not(.text-button), headerbar button:checked:not(.suggested-action):not(.destructive-action) {
+.nemo-window .primary-toolbar button:focus:not(.text-button), .titlebar button:focus:not(.suggested-action):not(.destructive-action), .nemo-window .primary-toolbar button:hover:not(.text-button), .titlebar button:hover:not(.suggested-action):not(.destructive-action), .nemo-window .primary-toolbar button:active:not(.text-button), .titlebar button:active:not(.suggested-action):not(.destructive-action), .nemo-window .primary-toolbar button:checked:not(.text-button), .titlebar button:checked:not(.suggested-action):not(.destructive-action) {
   color: white;
 }
 
-.nemo-window .primary-toolbar button:disabled:not(.text-button), headerbar button:disabled:not(.suggested-action):not(.destructive-action) {
+.nemo-window .primary-toolbar button:disabled:not(.text-button), .titlebar button:disabled:not(.suggested-action):not(.destructive-action) {
   color: rgba(255, 255, 255, 0.3);
 }
 
-.nemo-window .primary-toolbar button:checked:disabled:not(.text-button), headerbar button:checked:disabled:not(.suggested-action):not(.destructive-action) {
+.nemo-window .primary-toolbar button:checked:disabled:not(.text-button), .titlebar button:checked:disabled:not(.suggested-action):not(.destructive-action) {
   background-color: transparent;
   color: rgba(255, 255, 255, 0.5);
 }
 
-.nemo-window .primary-toolbar button:backdrop:not(.text-button), headerbar button:backdrop:not(.suggested-action):not(.destructive-action) {
+.nemo-window .primary-toolbar button:backdrop:not(.text-button), .titlebar button:backdrop:not(.suggested-action):not(.destructive-action) {
   color: rgba(255, 255, 255, 0.5);
 }
 
-.nemo-window .primary-toolbar button:backdrop:focus:not(.text-button), headerbar button:backdrop:focus:not(.suggested-action):not(.destructive-action), .nemo-window .primary-toolbar button:backdrop:hover:not(.text-button), headerbar button:backdrop:hover:not(.suggested-action):not(.destructive-action), .nemo-window .primary-toolbar button:backdrop:active:not(.text-button), headerbar button:backdrop:active:not(.suggested-action):not(.destructive-action) {
+.nemo-window .primary-toolbar button:backdrop:focus:not(.text-button), .titlebar button:backdrop:focus:not(.suggested-action):not(.destructive-action), .nemo-window .primary-toolbar button:backdrop:hover:not(.text-button), .titlebar button:backdrop:hover:not(.suggested-action):not(.destructive-action), .nemo-window .primary-toolbar button:backdrop:active:not(.text-button), .titlebar button:backdrop:active:not(.suggested-action):not(.destructive-action) {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.nemo-window .primary-toolbar button:backdrop:disabled:not(.text-button), headerbar button:backdrop:disabled:not(.suggested-action):not(.destructive-action) {
+.nemo-window .primary-toolbar button:backdrop:disabled:not(.text-button), .titlebar button:backdrop:disabled:not(.suggested-action):not(.destructive-action) {
   color: rgba(255, 255, 255, 0.3);
 }
 
-.nemo-window .primary-toolbar button:backdrop:checked:not(.text-button), headerbar button:backdrop:checked:not(.suggested-action):not(.destructive-action) {
+.nemo-window .primary-toolbar button:backdrop:checked:not(.text-button), .titlebar button:backdrop:checked:not(.suggested-action):not(.destructive-action) {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.nemo-window .primary-toolbar button:backdrop:checked:disabled:not(.text-button), headerbar button:backdrop:checked:disabled:not(.suggested-action):not(.destructive-action) {
+.nemo-window .primary-toolbar button:backdrop:checked:disabled:not(.text-button), .titlebar button:backdrop:checked:disabled:not(.suggested-action):not(.destructive-action) {
   color: rgba(255, 255, 255, 0.3);
 }
 
@@ -1415,10 +1415,23 @@ searchbar > revealer > box {
   border-radius: 9999px;
 }
 
+.titlebar .path-bar button:not(.suggested-action):not(.destructive-action) {
+  color: rgba(255, 255, 255, 0.7);
+  border-radius: 3px;
+}
+
 .titlebar .path-bar button:not(.suggested-action):not(.destructive-action).text-button {
   min-width: 0;
   padding-left: 6px;
   padding-right: 6px;
+}
+
+.titlebar .path-bar button:not(.suggested-action):not(.destructive-action):focus, .titlebar .path-bar button:not(.suggested-action):not(.destructive-action):hover, .titlebar .path-bar button:not(.suggested-action):not(.destructive-action):active, .titlebar .path-bar button:not(.suggested-action):not(.destructive-action):checked {
+  color: white;
+}
+
+.titlebar .path-bar button:not(.suggested-action):not(.destructive-action):disabled {
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .titlebar.selection-mode {
@@ -1604,6 +1617,20 @@ headerbar.windowhandle viewswitchertitle > squeezer > viewswitcher > box.horizon
   border-radius: 0;
 }
 
+window.background.csd > widget > headerbar:not(.titlebar) {
+  min-height: 36px;
+  border: none;
+  box-shadow: none;
+  padding: 0 3px;
+}
+
+window.background.csd > widget > headerbar:not(.titlebar) button.titlebutton {
+  padding: 0;
+  min-height: 24px;
+  min-width: 24px;
+  margin: 0 3px;
+}
+
 /************
  * Pathbars *
  ************/
@@ -1787,6 +1814,11 @@ menubar:backdrop,
 .menubar:backdrop {
   background-color: #3C3C3C;
   color: rgba(255, 255, 255, 0.7);
+}
+
+headerbar menubar, headerbar menubar:backdrop, headerbar .menubar, headerbar .menubar:backdrop {
+  background-color: transparent;
+  box-shadow: none;
 }
 
 menubar > menuitem,
@@ -8294,8 +8326,45 @@ window#whiskermenu-window .title-area > .commands-area > button.flat.command-but
   border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 }
 
+.thunar headerbar.titlebar toolbar {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.thunar headerbar.titlebar toolbar:not(.inline-toolbar):not(.osd) scale,
+.thunar headerbar.titlebar toolbar:not(.inline-toolbar):not(.osd) entry,
+.thunar headerbar.titlebar toolbar:not(.inline-toolbar):not(.osd) spinbutton,
+.thunar headerbar.titlebar toolbar:not(.inline-toolbar):not(.osd) button,
+.thunar headerbar.titlebar toolbar:not(.inline-toolbar):not(.osd) stackswitcher {
+  margin: 0 3px;
+}
+
+.thunar headerbar.titlebar toolbar:not(.inline-toolbar):not(.osd) button {
+  min-height: 0;
+  min-width: 0;
+}
+
+.thunar headerbar.titlebar toolbar:not(.inline-toolbar):not(.osd) switch {
+  margin: 6px 3px;
+}
+
 .thunar .standard-view.frame {
   border: none;
+}
+
+.thunar .standard-view.frame widget.view {
+  padding: 6px;
+  border-radius: 3px;
+}
+
+.thunar .standard-view.frame .view:hover {
+  color: white;
+}
+
+.thunar .standard-view.frame .view:selected {
+  color: white;
+  background: #3281EA;
 }
 
 .thunar paned paned paned > notebook.frame {
@@ -8569,8 +8638,16 @@ read if you used those and something break with a version upgrade you're on your
 @define-color wm_title white;
 @define-color wm_unfocused_title rgba(255, 255, 255, 0.7);
 @define-color wm_highlight rgba(255, 255, 255, 0.1);
+@define-color wm_border #090909;
 @define-color wm_bg #2C2C2C;
 @define-color wm_unfocused_bg #3C3C3C;
+@define-color wm_button_icon white;
+@define-color wm_button_close_hover_bg #fd5f51;
+@define-color wm_button_close_active_bg #fc2714;
+@define-color wm_button_max_hover_bg #38c76a;
+@define-color wm_button_max_active_bg #2b9751;
+@define-color wm_button_min_hover_bg #fdbe04;
+@define-color wm_button_min_active_bg #c29102;
 /*
 FIXME this is really an API */
 @define-color content_view_bg #2C2C2C;

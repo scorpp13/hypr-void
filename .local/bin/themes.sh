@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/bash
 
 option1="	Waybar Theme"
 option2="	GTK Theme"

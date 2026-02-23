@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/bash
 
 # Path to theme folder
 themes_path="$HOME/.config/waybar/themes"

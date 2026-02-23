@@ -34,7 +34,7 @@
 	"temperature",
 	"hyprland/language",
 	"custom/updates",
-	"pulseaudio",
+	"wireplumber",
 	"custom/weather",
 	"clock",
 	"custom/exit",

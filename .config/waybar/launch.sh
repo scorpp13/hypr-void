@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/bash
 
 # Check if waybar-disabled file exists
 if [ -f $HOME/.cache/waybar-disabled ] ;then

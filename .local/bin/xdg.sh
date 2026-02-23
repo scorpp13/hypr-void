@@ -1,10 +1,9 @@
-#!/usr/bin/env bash
+#!/usr/bin/bash
 
 sleep 1
 pkill xdg-desktop-portal-hyprland
 pkill xdg-desktop-portal-gnome
 pkill xdg-desktop-portal-kde
-pkill xdg-desktop-portal-lxqt
 pkill xdg-desktop-portal-wlr
 pkill xdg-desktop-portal-gtk
 pkill xdg-desktop-portal

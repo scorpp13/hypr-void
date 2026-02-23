@@ -233,8 +233,9 @@ iconview:hover, iconview:selected {
 rubberband, .content-view rubberband, .content-view columnview.view > rubberband,
 .content-view treeview.view > rubberband, .content-view .rubberband, columnview.view > rubberband,
 treeview.view > rubberband, gridview > rubberband, flowbox > rubberband {
+  --accent-bg-color: @accent_bg_color;
   border: 1px solid var(--accent-bg-color);
-  background-color: rgba(var(--accent-bg-color), 0.3);
+  background-color: color-mix(in srgb, var(--accent-bg-color) 30%, transparent);
 }
 
 flowbox > flowboxchild {
@@ -258,11 +259,6 @@ gridview > child {
 
 gridview > child:selected {
   outline-color: alpha(currentColor, 0.06);
-}
-
-gridview > child box {
-  border-spacing: 8px;
-  margin: 12px;
 }
 
 coverflow cover {
@@ -1715,40 +1711,40 @@ searchbar > revealer > box splitbutton {
   color: rgba(0, 0, 0, 0.38);
 }
 
-.sidebar-pane entry, .nautilus-window .content-pane headerbar entry, headerbar entry {
+toolbarview .top-bar searchbar > revealer > box entry, .sidebar-pane entry, .nautilus-window .content-pane headerbar entry, headerbar entry {
   caret-color: white;
 }
 
-.sidebar-pane entry, .nautilus-window .content-pane headerbar entry, headerbar entry, headerbar entry:drop(active), headerbar entry:focus-within {
+toolbarview .top-bar searchbar > revealer > box entry, .sidebar-pane entry, .nautilus-window .content-pane headerbar entry, headerbar entry, headerbar entry:drop(active), headerbar entry:focus-within {
   color: white;
 }
 
-.sidebar-pane entry:not(:disabled):not(:focus-within):hover, .nautilus-window .content-pane headerbar entry:not(:disabled):not(:focus-within):hover, headerbar entry:not(:disabled):not(:focus-within):hover {
+toolbarview .top-bar searchbar > revealer > box entry:not(:disabled):not(:focus-within):hover, .sidebar-pane entry:not(:disabled):not(:focus-within):hover, .nautilus-window .content-pane headerbar entry:not(:disabled):not(:focus-within):hover, headerbar entry:not(:disabled):not(:focus-within):hover {
   color: white;
 }
 
-.sidebar-pane entry:disabled, .nautilus-window .content-pane headerbar entry:disabled, headerbar entry:disabled {
+toolbarview .top-bar searchbar > revealer > box entry:disabled, .sidebar-pane entry:disabled, .nautilus-window .content-pane headerbar entry:disabled, headerbar entry:disabled {
   color: rgba(255, 255, 255, 0.5);
 }
 
-.sidebar-pane entry > text > placeholder, .nautilus-window .content-pane headerbar entry > text > placeholder, headerbar entry > text > placeholder {
+toolbarview .top-bar searchbar > revealer > box entry > text > placeholder, .sidebar-pane entry > text > placeholder, .nautilus-window .content-pane headerbar entry > text > placeholder, headerbar entry > text > placeholder {
   color: rgba(255, 255, 255, 0.5);
 }
 
-.sidebar-pane entry > text > block-cursor, .nautilus-window .content-pane headerbar entry > text > block-cursor, headerbar entry > text > block-cursor {
+toolbarview .top-bar searchbar > revealer > box entry > text > block-cursor, .sidebar-pane entry > text > block-cursor, .nautilus-window .content-pane headerbar entry > text > block-cursor, headerbar entry > text > block-cursor {
   color: #2C2C2C;
   background-color: white;
 }
 
-.sidebar-pane entry > image, .nautilus-window .content-pane headerbar entry > image, headerbar entry > image {
+toolbarview .top-bar searchbar > revealer > box entry > image, .sidebar-pane entry > image, .nautilus-window .content-pane headerbar entry > image, headerbar entry > image {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.sidebar-pane entry > image:hover, .nautilus-window .content-pane headerbar entry > image:hover, headerbar entry > image:hover, .sidebar-pane entry > image:active, .nautilus-window .content-pane headerbar entry > image:active, headerbar entry > image:active {
+toolbarview .top-bar searchbar > revealer > box entry > image:hover, .sidebar-pane entry > image:hover, .nautilus-window .content-pane headerbar entry > image:hover, headerbar entry > image:hover, toolbarview .top-bar searchbar > revealer > box entry > image:active, .sidebar-pane entry > image:active, .nautilus-window .content-pane headerbar entry > image:active, headerbar entry > image:active {
   color: white;
 }
 
-.sidebar-pane entry > image:disabled, .nautilus-window .content-pane headerbar entry > image:disabled, headerbar entry > image:disabled {
+toolbarview .top-bar searchbar > revealer > box entry > image:disabled, .sidebar-pane entry > image:disabled, .nautilus-window .content-pane headerbar entry > image:disabled, headerbar entry > image:disabled {
   color: rgba(255, 255, 255, 0.5);
 }
 
@@ -2043,11 +2039,6 @@ headerbar > windowhandle > box > widget > box.end:dir(ltr) {
   margin-left: 6px;
 }
 
-headerbar switch {
-  margin-top: 9px;
-  margin-bottom: 9px;
-}
-
 headerbar.selection-mode {
   transition: background-color 0.1ms 225ms, color 75ms cubic-bezier(0, 0, 0.2, 1);
   animation: ripple-on-headerbar 225ms cubic-bezier(0, 0, 0.2, 1);
@@ -2188,10 +2179,14 @@ pathbar > button.slider-button {
 }
 
 headerbar .pathbar {
-  margin-top: 6px;
-  margin-bottom: 6px;
   background-color: rgba(255, 255, 255, 0.04);
   color: rgba(255, 255, 255, 0.7);
+}
+
+headerbar .pathbar button {
+  margin: 0;
+  min-height: 20px;
+  border-radius: 10px;
 }
 
 .pathbar > button {
@@ -3396,7 +3391,7 @@ scale > trough > slider {
   min-width: 32px;
   margin: -15px;
   border-radius: 50%;
-  color: var(--accent-bg-color);
+  color: #1A73E8;
   background-color: transparent;
 }
 
@@ -3430,17 +3425,16 @@ scale > trough > slider:active {
   transition: background-color 75ms cubic-bezier(0, 0, 0.2, 1), background-size 0, background-image 0;
   background-image: -gtk-scaled(url("assets/scale-slider.png"), url("assets/scale-slider@2.png")), radial-gradient(circle, alpha(currentColor, 0.12) 10%, transparent 0%);
   background-size: auto, 0% 0%;
-  color: var(--accent-bg-color);
+  color: #1A73E8;
 }
 
 scale > trough > highlight {
-  transition: background-image 75ms cubic-bezier(0, 0, 0.2, 1);
-  background-image: image(var(--accent-bg-color));
+  transition: background-color 75ms cubic-bezier(0, 0, 0.2, 1);
+  background-color: #1A73E8;
 }
 
 scale > trough > highlight:disabled {
-  background-color: #F2F2F2;
-  background-image: image(rgba(0, 0, 0, 0.26));
+  background-color: rgba(0, 0, 0, 0.26);
 }
 
 scale > trough > fill {
@@ -5307,7 +5301,7 @@ gridview > child:selected, calendar:selected, calendar > grid > label.day-number
 
 .view:selected, iconview:selected, flowbox > flowboxchild:selected, calendar > grid > label.today, stacksidebar row:selected {
   color: var(--accent-bg-color);
-  background-color: rgba(var(--accent-bg-color), 0.2);
+  background-color: color-mix(in srgb, var(--accent-bg-color) 20%, transparent);
 }
 
 textview text selection:focus, textview text selection, label > selection, entry > text > selection, calendar > grid > label.today:selected {
@@ -5974,8 +5968,25 @@ row.expander:not(:checked) .nautilus-window .content-pane headerbar popover.back
   margin: 4px;
 }
 
-#NautilusViewCell clamp box {
+.nautilus-grid-view child.activatable {
+  padding: 0;
+}
+
+.nautilus-grid-view child.activatable #NautilusViewCell {
+  padding: 6px;
+}
+
+.nautilus-grid-view child.activatable #NautilusViewCell clamp box {
   margin: 0;
+  border-spacing: 0;
+}
+
+.nautilus-grid-view child.activatable #NautilusViewCell .icon-ui-labels-box {
+  margin: 0 0 12px;
+  border-spacing: 0;
+}
+
+.nautilus-grid-view child.activatable #NautilusViewCell .dim-label, .nautilus-grid-view child.activatable #NautilusViewCell entry > text > placeholder, .nautilus-grid-view child.activatable #NautilusViewCell row label.subtitle, row .nautilus-grid-view child.activatable #NautilusViewCell label.subtitle, .nautilus-grid-view child.activatable #NautilusViewCell row.property > box.header > box.title > .title, .nautilus-grid-view child.activatable #NautilusViewCell row.expander:not(:checked) image.expander-row-arrow, row.expander:not(:checked) .nautilus-grid-view child.activatable #NautilusViewCell image.expander-row-arrow {
   border-spacing: 0;
 }
 
@@ -5988,10 +5999,11 @@ row.expander:not(:checked) .nautilus-window .content-pane headerbar popover.back
   min-width: 28px;
   min-height: 28px;
   padding: 0;
+  margin: 4px 0;
 }
 
 #NautilusQueryEditor > * {
-  margin: 4px 0;
+  margin: 0;
 }
 
 #NautilusPathBar {
@@ -7421,6 +7433,77 @@ styleselector checkbutton > radio:checked, styleselector checkbutton > radio:che
   color: white;
 }
 
+window.background.chromium {
+  background-color: #FFFFFF;
+}
+
+window.background.chromium headerbar.header-bar.titlebar {
+  padding: 0 12px;
+  background-color: #F2F2F2;
+  color: rgba(0, 0, 0, 0.87);
+  border-radius: 18px 18px 0 0;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  border: none;
+}
+
+window.background.chromium headerbar.header-bar.titlebar:backdrop {
+  background-color: #F2F2F2;
+  color: rgba(0, 0, 0, 0.38);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  border: none;
+}
+
+window.background.chromium headerbar.header-bar.titlebar button.titlebutton {
+  min-height: 24px;
+  min-width: 24px;
+  margin: 6px 3px;
+  padding: 0;
+}
+
+.main-window {
+  background: linear-gradient(127deg, color-mix(in srgb, var(--background-color-0) 55%, transparent), color-mix(in srgb, var(--background-color-0) 0%, transparent) 70.71%), linear-gradient(217deg, color-mix(in srgb, var(--background-color-1) 55%, transparent), color-mix(in srgb, var(--background-color-1) 0%, transparent) 70.71%), linear-gradient(336deg, color-mix(in srgb, var(--background-color-2) 55%, transparent), color-mix(in srgb, var(--background-color-2) 0%, transparent) 70.71%);
+  transition-property: background;
+  transition-duration: 250ms;
+  transition-timing-function: ease;
+}
+
+.main-window .content-pane, .main-window .content-pane:backdrop, .main-window .sidebar-pane, .main-window .sidebar-pane:backdrop {
+  background-color: transparent;
+}
+
+scrollbar,
+scrollbar.overlay-indicator {
+  border: none;
+}
+
+scrollbar, scrollbar.dragging, scrollbar.hovering,
+scrollbar.overlay-indicator,
+scrollbar.overlay-indicator.dragging,
+scrollbar.overlay-indicator.hovering {
+  background-color: transparent;
+}
+
+.main-window > overlay-split-view > widget.background > playlistview {
+  background: linear-gradient(127deg, color-mix(in srgb, var(--background-color-0) 55%, transparent), color-mix(in srgb, var(--background-color-0) 0%, transparent) 70.71%), linear-gradient(217deg, color-mix(in srgb, var(--background-color-1) 55%, transparent), color-mix(in srgb, var(--background-color-1) 0%, transparent) 70.71%), linear-gradient(336deg, color-mix(in srgb, var(--background-color-2) 55%, transparent), color-mix(in srgb, var(--background-color-2) 0%, transparent) 70.71%), var(--window-bg-color);
+  transition-property: background;
+  transition-duration: 250ms;
+  transition-timing-function: ease;
+}
+
+.main-window volume > scale trough highlight {
+  background: color-mix(in srgb, var(--accent-bg-color) var(--dim-opacity), transparent);
+}
+
+.main-window songcover picture.cover {
+  background: linear-gradient(to bottom, var(--background-color-0), var(--background-color-1));
+}
+
+.drag-overlay-status-page {
+  background-color: color-mix(in srgb, var(--accent-bg-color) 50%, transparent);
+  color: var(--accent-fg-color);
+  padding: 32px;
+}
+
 avatar {
   border-radius: 9999px;
   font-weight: bold;
@@ -8754,7 +8837,7 @@ toolbarview > .bottom-bar actionbar > revealer > box {
 toolbarview > .top-bar .toolbar,
 toolbarview > .bottom-bar .toolbar {
   background-color: transparent;
-  padding: 0 0 0 6px;
+  padding: 6px;
   border-spacing: 0;
 }
 
@@ -8835,6 +8918,10 @@ toolbarview .top-bar:backdrop {
   background-color: transparent;
 }
 
+toolbarview .top-bar searchbar > revealer > box {
+  color: white;
+}
+
 tabview toolbarview .top-bar, tabview toolbarview .top-bar:backdrop {
   background-color: #FFFFFF;
 }
@@ -8864,7 +8951,6 @@ toolbarview > .bottom-bar actionbar > revealer > box {
   background-color: transparent;
   color: inherit;
   box-shadow: none;
-  padding-top: 6px;
 }
 
 toolbarview > .bottom-bar actionbar > revealer > box:backdrop {
@@ -8983,8 +9069,16 @@ read if you used those and something break with a version upgrade you're on your
 @define-color wm_title white;
 @define-color wm_unfocused_title rgba(255, 255, 255, 0.7);
 @define-color wm_highlight rgba(255, 255, 255, 0.1);
+@define-color wm_border #a6a6a6;
 @define-color wm_bg #2C2C2C;
 @define-color wm_unfocused_bg #3C3C3C;
+@define-color wm_button_icon white;
+@define-color wm_button_close_hover_bg #fd5f51;
+@define-color wm_button_close_active_bg #fc2714;
+@define-color wm_button_max_hover_bg #38c76a;
+@define-color wm_button_max_active_bg #2b9751;
+@define-color wm_button_min_hover_bg #fdbe04;
+@define-color wm_button_min_active_bg #c29102;
 /*
 FIXME this is really an API */
 @define-color content_view_bg #FFFFFF;

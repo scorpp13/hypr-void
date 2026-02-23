@@ -616,9 +616,17 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   spacing: 25px;
 }
 
+.window-border {
+  border: 3px solid #1A73E8;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.05);
+  /* Cover rounded corners and some bad adjustment gaps */
+  box-shadow: 0 0 0 1px #1A73E8 inset;
+}
+
 .expo-workspaces-name-entry,
 .expo-workspaces-name-entry#selected {
-  height: 15px;
+  height: 12pt;
   border-radius: 12px;
   font-size: 9pt;
   padding: 5px 8px;
@@ -630,12 +638,9 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 .expo-workspaces-name-entry:focus,
 .expo-workspaces-name-entry#selected:focus {
-  border: 1px solid #1A73E8;
-  background-color: #1A73E8;
-  color: white;
-  font-style: italic;
+  border: 2px solid #1A73E8;
   transition-duration: 300;
-  selection-background-color: white;
+  selection-background-color: #1A73E8;
   selected-color: #1A73E8;
 }
 
@@ -2072,7 +2077,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 .sound-player-overlay {
   width: 290px;
-  height: 80px;
+  min-height: 80px;
   padding: 12px 18px;
   spacing: 6px;
   background-color: rgba(0, 0, 0, 0.45);
@@ -2106,7 +2111,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .sound-player-overlay StButton:insensitive {
-  opacty: 0.35;
+  opacity: 0.35;
   color: rgba(255, 255, 255, 0.5);
 }
 

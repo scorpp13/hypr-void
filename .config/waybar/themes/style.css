@@ -202,8 +202,8 @@ window#waybar.empty #window {
 	border:1px double @backgroundlight;   
 }
 
-/*	PULSEAUDIO	*/
-#pulseaudio {
+/*	WIREPLUMBER	*/
+#wireplumber {
 	background-color: transparent;
 	font-size: 15px;
 	font-weight: bold;
@@ -214,7 +214,7 @@ window#waybar.empty #window {
 	opacity:0.8;
 	border:1px double @backgroundlight;
 }
-#pulseaudio.muted {
+#wireplumber.muted {
 	background-color: #f53c3c;
 }
 

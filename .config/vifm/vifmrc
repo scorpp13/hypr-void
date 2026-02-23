@@ -12,8 +12,6 @@ elseif executable('nvim')
     set vicmd=nvim
 elseif executable('helix')
     set vicmd=hx
-elseif executable('micro')
-    set vicmd=micro
 elseif $EDITOR != ''
     echo 'Note: using `'.$EDITOR.'` as an editor'
     let &vicmd = $EDITOR
@@ -104,7 +102,6 @@ set statusline="%t%[ -> %T%] %6E %12A %=%d %5u:%g"
 " Bookmarks
 " ------------------------------------------------------------------------------
 
-mark b ~/.backup
 mark c ~/.config
 mark d ~/Downloads
 mark e /etc
@@ -334,9 +331,6 @@ nnoremap S :sort<cr>
 " Toggle visibility of preview window
 nnoremap w :view<cr>
 vnoremap w :view<cr>gv
-
-" Open file in micro
-nnoremap o :!micro %f<cr>
 
 " Open file in mousepad
 nnoremap e :!geany %f<cr>

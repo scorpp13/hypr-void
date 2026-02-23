@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/bash
 
 case $1 in
 	d) cliphist list | fuzzel -d| cliphist delete

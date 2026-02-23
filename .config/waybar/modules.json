@@ -53,9 +53,9 @@
 	"on-click-middle": "kitty --class floating -e cleanup.sh",
 	"on-click-right": "kitty --class floating -e mirrorlist.sh"
 },
-//	Themes  
+//	Themes   
 "custom/themes": {
-	"format": "",
+	"format": "",
 	"on-click": "themes.sh",
 	"tooltip-format": "Desktop Themes"
 },
@@ -135,7 +135,7 @@
 "custom/weather": {
 	"format": "{}",
 	"return-type": "json",
-	"exec": "weather.sh 'Калининград' 2> /dev/null",
+	"exec": "weather.sh 'Псков' 2> /dev/null",
 	"interval": 3600,
 	"tooltip": true,
 	"on-click": "kitty --class floating -e wttr.sh"
@@ -150,16 +150,16 @@
 },
 //	Language
 "hyprland/language": {
-	//"on-click": "hyprctl switchxkblayout at-translated-set-2-keyboard next",
-	"on-click": "hyprctl switchxkblayout lenovo-lenovo-calliope-usb-keyboard next",
+	"on-click": "hyprctl switchxkblayout at-translated-set-2-keyboard next",
+	//"on-click": "hyprctl switchxkblayout lenovo-lenovo-calliope-usb-keyboard next",
 	"format": "{}",
 	"format-en": "EN",
 	"format-ru": "RU",
-	//"keyboard-name": "at-translated-set-2-keyboard",
-	"keyboard-name": "lenovo-lenovo-calliope-usb-keyboard"
+	"keyboard-name": "at-translated-set-2-keyboard",
+	//RR"keyboard-name": "lenovo-lenovo-calliope-usb-keyboard"
 },
-//	Pulseaudio
-"pulseaudio": {
+//	Wireplumber
+"wireplumber": {
 	"format": "{icon} {volume}%",
 	"format-muted": "",
 	"format-source": " {volume}%",
@@ -169,7 +169,7 @@
 	"format-icons": {
 		"default": [" ", " ", "󰕾 ", " "]
 	},
-	"on-click": "pavucontrol",
+	"on-click": "kitty --class floating -e wiremix",
 	"on-click-middle": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
 },
 //	Other

@@ -1,4 +1,4 @@
-#!/usr/bin/env bash   
+#!/usr/bin/bash   
 
 threshhold_zero=-1
 threshhold_green=0

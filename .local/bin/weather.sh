@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/bash
 
 text=$(curl ru.wttr.in/$1?format=1)
 

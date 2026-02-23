@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/bash
 
 . "${HOME}/.cache/wal/colors.sh"
 b=$(echo "$color7"ff | sed 's/#//')

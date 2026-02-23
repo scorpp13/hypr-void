@@ -1,14 +1,17 @@
 # install with xbps-install -S <package name>
-"alacritty"
-"blueman"
+"adwaita-fonts"
+"alsa-pipewire" | mkdir -p /etc/alsa/conf.d
+	ln -s /usr/share/alsa/alsa.conf.d/50-pipewire.conf /etc/alsa/conf.d
+	ln -s /usr/share/alsa/alsa.conf.d/99-pipewire-default.conf /etc/alsa/conf.d
 "brightnessctl"
 "btop"
 "breeze-qt6"
 "cantarell-fonts"
 "cliphist"
+"curl"
 "dunst"
+"elogind"
 "fastfetch"
-"feh"
 "ffmpeg"
 "fish-shell"
 "font-awesome"
@@ -24,24 +27,22 @@
 "gtk+"
 "gvfs-mtp"
 "gum"
-"hyprland" set from repo
+"hyprland" set from repo | /etc/xbps.d/hyprland-void.conf
 	repository=https://raw.githubusercontent.com/Makrennel/hyprland-void/repository-x86_64-glibc
 "inxi"
 "kitty"
 "mesa"
 "mesa-dri"
 "meson"
-"micro"
 "mpv"
 "nerd-fonts-symbols-ttf"
 "NetworkManager"
 "network-manager-applet"
 "nwg-look"
-"pavucontrol"
 "pipewire" | mkdir -p /etc/pipewire/pipewire.conf.d
 	ln -s /usr/share/examples/wireplumber/10-wireplumber.conf /etc/pipewire/pipewire.conf.d/
 	ln -s /usr/share/examples/pipewire/20-pipewire-pulse.conf /etc/pipewire/pipewire.conf.d/
-"pipx"
+"python3-pipx"
 "polkit"
 "pywal"
 "qalculate"
@@ -60,6 +61,7 @@
 "vsv"
 "Waybar"
 "waypaper" | pipx install waypaper
+"wiremix"
 "wlogout"
 "wlr-randr"
 "udiskie"
@@ -69,7 +71,6 @@
 "xdg-desktop-portal-gtk"
 "xdg-desktop-portal-hyprland"
 "xdg-desktop-portal-kde"
-"xdg-desktop-portal-lxqt"
 "xdg-desktop-portal-wlr"
 "xdg-user-dirs"
 "xdg-utils"
