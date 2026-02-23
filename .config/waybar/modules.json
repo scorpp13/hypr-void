@@ -75,7 +75,7 @@
 //	Media Player
 "custom/player": {
 	"format": "󱜅",
-	"on-click": "mpv.sh",
+	"on-click": "mpv --player-operation-mode=pseudo-gui --idle",
 	"tooltip-format": "MPV Player"
 },
 //	Scripts
@@ -156,7 +156,7 @@
 	"format-en": "EN",
 	"format-ru": "RU",
 	"keyboard-name": "at-translated-set-2-keyboard",
-	//RR"keyboard-name": "lenovo-lenovo-calliope-usb-keyboard"
+	//"keyboard-name": "lenovo-lenovo-calliope-usb-keyboard"
 },
 //	Wireplumber
 "wireplumber": {
