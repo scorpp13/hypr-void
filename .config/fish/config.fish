@@ -1,4 +1,4 @@
-# Start Hyprland on nonroot TTY-login (for login shell = fish)
+## Start Hyprland on nonroot TTY-login (for login shell = fish)
 #if status --is-login
 #  if test -z "$DISPLAY" -a $XDG_VTNR = 1
 #    exec Hyprland

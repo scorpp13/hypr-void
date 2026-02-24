@@ -15,6 +15,7 @@ if [ -f ~/.alias ]; then
     . ~/.alias
 fi
 
+## For default (bash) shell in your terminal
 # Show fastfetch if run gui-session
 echo ""
 if [[ $(tty) == *"pts"* ]]; then
