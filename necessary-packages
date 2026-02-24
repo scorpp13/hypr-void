@@ -10,7 +10,9 @@
 "cliphist"
 "curl"
 "dunst"
-"elogind"
+"elogind" | enable elogind service and then disable acpid service
+	ln -s /etc/sv/elogind/ /var/service/
+	rm /var/service/acpid
 "fastfetch"
 "ffmpeg"
 "fish-shell"
@@ -49,8 +51,10 @@
 "qt5-wayland"
 "qt6-wayland"
 "qt6ct"
-"seatd" | ln -s /etc/sv/seatd /var/service | usermod -aG _seatd as |
 "slurp"
+"socklog-void" | gpasswd -a $USER socklog
+	ln -s /etc/sv/socklog-unix/ /var/service/
+	ln -s /etc/sv/nanoklogd/ /var/service/
 "swappy"
 "Thunar"
 "thunar-archive-plugin"
@@ -67,10 +71,8 @@
 "udiskie"
 "xarchiver"
 "xdg-desktop-portal"
-"xdg-desktop-portal-gnome"
 "xdg-desktop-portal-gtk"
 "xdg-desktop-portal-hyprland"
-"xdg-desktop-portal-kde"
 "xdg-desktop-portal-wlr"
 "xdg-user-dirs"
 "xdg-utils"

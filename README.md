@@ -14,6 +14,10 @@ A working configuration of Hyprland for Void Linux
 - `cp -r .config .local .vim .Xresources .bash_profile .bashrc .gtkrc-2.0 .alias .vimrc $HOME`
 - [ ] Install necessary software from list
 - `sudo xbps-install -S ...`
+- [ ] For tty-login you can change default issue
+- `sudo cp issue /etc/`
+- [ ] For systems with sound card sof-essx8336 copy preconfig file
+- `sudo cp alsa-base.conf /etc/modprobe.d/`
 - [ ] Reboot your machine
 - `sudo reboot`
 - [ ] Enjoy
