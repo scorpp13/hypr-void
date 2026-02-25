@@ -172,6 +172,26 @@
 	"on-click": "kitty --class floating -e wiremix",
 	"on-click-middle": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
 },
+ // Battery
+"battery": {
+    "interval": 1,
+    "states": {
+      "good": 80,
+      "warning": 20,
+      "critical": 10
+    },
+    "format-discharging": "{icon}  {capacity}%",
+    "format-charging": "{icon}  {capacity}%",
+	"format-warning": "{icon}  {capacity}%}",
+    //"format-plugged": "  {capacity}%", // An empty format will hide the module
+    //"format-alt": "{icon}  {time}",
+    //"format-good": "",
+    "format-icons": {
+		"discharging": ["󰪞", "󰪟", "󰪠", "󰪡", "󰪢", "󰪣", "󰪤", "󰪥"],
+		"charging": ["󰢟", "󰢜", "󰢝", "󰢞", "󱃌"],
+		"warning": ["󱃍"]
+	}
+},
 //	Other
 "user": {
 	"format": "{user}",

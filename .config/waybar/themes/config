@@ -37,6 +37,7 @@
 	"wireplumber",
 	"custom/weather",
 	"clock",
+	"battery",
 	"custom/exit",
 	],
 

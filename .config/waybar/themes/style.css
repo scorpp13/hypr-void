@@ -283,3 +283,47 @@ window#waybar.empty #window {
 	opacity:0.8;
 	border:1px double @backgroundlight;
 }
+
+/*	BATTERY	*/
+#battery {
+    background-color: transparent;
+    font-size: 15px;
+	font-weight: bold;
+    color: @textcolor2;
+	border-radius: 20px;
+   	padding: 0px 8px 0px 8px;
+	margin: 5px 15px 5px 0px;
+	opacity:0.8;
+	border:1px double @backgroundlight;
+}
+#battery.charging, #battery.plugged {
+    color: @textcolor2;
+    background-color: transparent;
+    font-size: 15px;
+	font-weight: bold;
+	border-radius: 20px;
+   	padding: 0px 8px 0px 8px;
+	margin: 5px 15px 5px 0px;
+	opacity:0.8;
+	border:1px double @backgroundlight;
+}
+#battery.warning:not(.charging) {
+    background-color: #ffde0c;
+	font-size: 15px;
+	font-weight: bold;
+    color: @textcolor2;
+	border-radius: 20px;
+	padding: 0px 8px 0px 8px;
+	margin: 5px 15px 5px 0px;
+	opacity:1.0;
+}
+#battery.critical:not(.charging) {
+    background-color: #dc2f2f;
+	font-size: 15px;
+	font-weight: bold;
+    color: @textcolor2;
+	border-radius: 20px;
+	padding: 0px 8px 0px 8px;
+	margin: 5px 15px 5px 0px;
+	opacity:1.0;
+}
