@@ -117,7 +117,7 @@ window#waybar.empty #window {
 	color: @textcolor1;
 	border-radius: 20px;
 	padding: 0px 6px 0px 6px;
-	margin: 4px 15px 4px 10px;
+	margin: 3px 15px 3px 10px;
 	opacity:0.5;
 }
 
@@ -128,7 +128,7 @@ window#waybar.empty #window {
 	color: @textcolor1;
 	border-radius: 20px;
 	padding: 0px 7px 0px 7px;
-	margin: 4px 10px 4px 0px;
+	margin: 3px 10px 3px 0px;
 	opacity: 0.5;
 }
 
