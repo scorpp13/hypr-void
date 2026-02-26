@@ -308,10 +308,10 @@ window#waybar.empty #window {
 	border:1px double @backgroundlight;
 }
 #battery.warning:not(.charging) {
-    background-color: #ffde0c;
+    background-color: #ffed00;
 	font-size: 15px;
 	font-weight: bold;
-    color: @textcolor2;
+    color: #000000;
 	border-radius: 20px;
 	padding: 0px 8px 0px 8px;
 	margin: 5px 15px 5px 0px;
