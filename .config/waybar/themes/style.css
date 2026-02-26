@@ -1,6 +1,6 @@
 /*	GENERAL	*/
 * {
-	font-family: "Fira Sans Semibold", FontAwesome, Roboto;
+	font-family: inherit;
 	border: none;
 	border-radius: 0px;
 }
@@ -54,8 +54,7 @@ tooltip {
 	border: 1px double @backgroundlight;
 }
 tooltip label {
-	color: @backgroundlight;
-	font-family: Roboto;
+	color: @iconcolor;
 }
 
 /*	WINDOW	*/
@@ -166,7 +165,6 @@ window#waybar.empty #window {
 	background-color: transparent;
 	font-size: 15px;
 	font-weight: bold;
-	font-family: EmojiOne;
 	color: @textcolor2;
 	border-radius: 20px;
 	padding: 3px 8px 3px 8px;
@@ -215,7 +213,7 @@ window#waybar.empty #window {
 	border:1px double @backgroundlight;
 }
 #wireplumber.muted {
-	background-color: #f53c3c;
+	background-color: @workspacesbackground2;
 }
 
 /*	NETWORK & BLUETOOTH
@@ -238,7 +236,7 @@ window#waybar.empty #window {
 	color: @textcolor2;
 }
 #network.disconnected {
-	background-color: #f53c3c;
+	background-color: @workspacesbackground2;
 }
 #bluetooth, #bluetooth.on, #bluetooth.connected {
 	background-color: transparent;
@@ -251,7 +249,7 @@ window#waybar.empty #window {
 	border:2px solid @backgroundlight;
 }
 #bluetooth.off {
-	background-color: #f53c3c;
+	background-color: @workspacesbackground2;
 }
 */
 
