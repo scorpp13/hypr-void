@@ -4,8 +4,8 @@ DIR="$HOME/Pictures/screenshots/"
 NAME="screenshot_$(date +%d%m%Y_%H%M%S).png"
 
 option1="Selected area"
-option2="Fullscreen (delay 5 sec)"
-option3="Current display (delay 5 sec)"
+option2="Fullscreen (delay 3 sec)"
+option3="Current display (delay 3 sec)"
 
 options="$option1\n$option2\n$option3"
 
@@ -18,19 +18,19 @@ case $choice in
 		notify-send "Screenshot created" "Mode: Selected area"
 		swappy -f "$DIR$NAME"
 		;;
-	"$option1")
-		sleep 5
+	"$option2")
+		sleep 3
 		grim "$DIR$NAME"
 		xclip -selection clipboard -t image/png -i "$DIR$NAME"
 		notify-send "Screenshot created" "Mode: Fullscreen"
 		swappy -f "$DIR$NAME"
 		;;
 	"$option3")
-		sleep 5
+		sleep 3
 		monitor="$(hyprctl monitors | awk '/Monitor/{monitor=$2} /focused: yes/{print monitor; exit}')"
 		grim -o "$monitor" "$DIR$NAME"
 		xclip -selection clipboard -t image/png -i "$DIR$NAME"
-		notify-send "Screenshot created and copied to clipboard" "Mode: Fullscreen"
+		notify-send "Screenshot created" "Mode: Current display"
 		swappy -f "$DIR$NAME"
 		;;
 esac
