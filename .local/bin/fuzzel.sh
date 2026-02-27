@@ -13,6 +13,10 @@ icon=$(cat ${HOME}/.config/gtk-3.0/settings.ini | \
 grep "gtk-icon-theme-name" | \
 sed 's/gtk-icon-theme-name=//')
 
+font=$(cat ${HOME}/.config/gtk-3.0/settings.ini | \
+grep "gtk-font-name" | \
+sed 's/gtk-font-name=//' | sed 's/[0-9]//g')
+
 cat > ~/.config/fuzzel/wal_fuzzel.ini<< EOF
 [colors]
 background=$b
@@ -24,4 +28,5 @@ selection-match=$M
 border=$C
 [main]
 icon-theme=$icon
+font=$font
 EOF
