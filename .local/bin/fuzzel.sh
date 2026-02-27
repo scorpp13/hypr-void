@@ -15,7 +15,8 @@ sed 's/gtk-icon-theme-name=//')
 
 font=$(cat ${HOME}/.config/gtk-3.0/settings.ini | \
 grep "gtk-font-name" | \
-sed 's/gtk-font-name=//' | sed 's/[0-9]//g')
+sed 's/gtk-font-name=//' | \
+tr -d '0-9') # grep -o '[^0-9]*') .. sed 's/[0-9]//g')
 
 cat > ~/.config/fuzzel/wal_fuzzel.ini<< EOF
 [colors]
