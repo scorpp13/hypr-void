@@ -18,7 +18,7 @@ EOF
 
 if gum confirm "Start update right now?"; then
 	gum spin --title "Starting Update..." -- sleep 0.5
-	sudo xbps-install -Su
+	sudo xbps-install -Suy && updates.sh
 elif [ $? -eq 130 ]; then
 	notify-send "Canceled by user"
 	exit 130
