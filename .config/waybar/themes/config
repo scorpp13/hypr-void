@@ -1,10 +1,10 @@
 {
 //	GENERAL SETTINGS
-"position": "top",//bottom
+"position": "top", //bottom
 "margin-top": 10,
-"margin-bottom": 0,
+"margin-bottom": 5,
 "layer": "top",
-"height": 16,
+//"height": 10,
 "margin-left": 0,
 "margin-right": 0,    
 "spacing": 0,
