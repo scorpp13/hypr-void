@@ -26,7 +26,6 @@ else
 	notify-send "Update interrupted"
 	exit;
 fi
-updates.sh > /dev/null 2>&1
 notify-send "Update complete"
 echo -e "${GREEN}"
 read -rp "Press Enter to continue" </dev/tty

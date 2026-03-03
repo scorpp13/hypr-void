@@ -26,7 +26,7 @@
 "hyprland/window": {
 	"format": "{}",
 	"rewrite": {
-		"(.*) - Mousepad": "  $1",
+		"(.*) - Geany": "  $1",
 		"(.*) - Thunar": "  $1",
 		"(.*) - Vivaldi": "  $1"
 	},
@@ -49,7 +49,7 @@
 	"return-type": "json",
 	"exec": "updates.sh",
 	"restart-interval": 3600,
-	"on-click": "kitty --class floating -e installupdates.sh",
+	"on-click": "kitty --class floating -e installupdates.sh && ~/.config/waybar/launch.sh",
 	"on-click-middle": "kitty --class floating -e cleanup.sh",
 	"on-click-right": "kitty --class floating -e mirrorlist.sh"
 },

@@ -1,0 +1,10 @@
+{
+"position": "bottom",
+"margin-top": 4,
+"margin-bottom": 10,
+"layer": "top",
+"margin-left": 0,
+"margin-right": 0,    
+"spacing": 0,
+"include": ["~/.config/waybar/themes/config"],
+}
