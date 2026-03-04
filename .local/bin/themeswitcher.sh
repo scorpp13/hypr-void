@@ -41,3 +41,4 @@ if [ "$choice" ]; then
 	~/.config/waybar/launch.sh
 fi
 fuzzel.sh
+dunst.sh
