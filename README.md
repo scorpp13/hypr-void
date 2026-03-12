@@ -10,7 +10,7 @@ A working configuration of Hyprland for Void Linux
 - `void-installer | login:root password:voidlinux`
 - [ ] After restart run full-update
 - `xbps-install -u xbps`
-- `xbps-install -S void-repo-multilib void-repo-multilib-nonfree void-repo-nonfree`
+- `xbps-install -Su void-repo-multilib void-repo-multilib-nonfree void-repo-nonfree`
 - `xbps-install -Su`
 - [ ] Install git package
 - `xbps-install -S git`
