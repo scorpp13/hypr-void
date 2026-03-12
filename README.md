@@ -1,4 +1,5 @@
-<img src="https://i.ibb.co/8PPKHmG/merge-190125-140315.png" width="400"/>
+<img src="preview/merge_090326_094246.jpg" width="400"/>
+<img src="preview/merge_120326_194954.jpg" width="400"/>
 
 # My config files for Hyprland
 
