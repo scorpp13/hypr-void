@@ -8,12 +8,13 @@
 "btop"
 "breeze-qt6"
 "cantarell-fonts"
+"clang"
 "cliphist"
 "curl"
 "dunst"
-"elogind" | enable elogind service and then disable acpid service
-	ln -s /etc/sv/elogind/ /var/service/
+"elogind" | disable acpid service and then enable elogind service
 	rm /var/service/acpid
+	ln -s /etc/sv/elogind/ /var/service/
 "fastfetch"
 "ffmpeg"
 "fish-shell"
@@ -38,13 +39,18 @@
 "meson"
 "mpv"
 "nerd-fonts-symbols-ttf"
-"NetworkManager"
+"NetworkManager" | disable wpa_supplicant and dhcpcd services before enabling NetworkManager serice
+	rm /var/service/wpa_supplicant
+	rm /var/service/dhcpcd
+	ln -s /etc/sv/NetworkManager/ /var/service/
 "network-manager-applet"
 "nwg-look"
 "pipewire" | mkdir -p /etc/pipewire/pipewire.conf.d
 	ln -s /usr/share/examples/wireplumber/10-wireplumber.conf /etc/pipewire/pipewire.conf.d/
 	ln -s /usr/share/examples/pipewire/20-pipewire-pulse.conf /etc/pipewire/pipewire.conf.d/
+"python3-pkgconfig"
 "python3-pipx"
+"python3-cairo"
 "polkit"
 "pywal"
 "qalculate"
