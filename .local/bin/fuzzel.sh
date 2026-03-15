@@ -18,9 +18,11 @@ grep "gtk-font-name" | \
 sed 's/gtk-font-name=//' | \
 tr -d '0-9') # grep -o '[^0-9]*') .. sed 's/[0-9]//g')
 
-if grep -q "top" ~/.cache/.themestyle.sh ;
-	then anchor="top-left"
-	else anchor="bottom-left"
+if grep -q "top" ~/.cache/.themestyle.sh ; then
+		 anchor="top-left"
+	elif grep -q "bottom" ~/.cache/.themestyle.sh ; then
+		 anchor="bottom-left"
+	else anchor="top-left"
 fi
 
 cat > ~/.config/fuzzel/wal_fuzzel.ini<< EOF
