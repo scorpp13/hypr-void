@@ -15,14 +15,13 @@ cat <<"EOF"
 ┗┛┗┛┗┛┛┗┛┗
 EOF
 
-if gum confirm "Start CleanUp right now?"; then
-	if gum confirm "Run FullClean including cache and old configs?"; then
-		gum spin --title "Starting FullClean..." -- sleep 0.5
-		sudo vkpurge rm all && sudo xbps-remove -o && sudo xbps-remove -OO
-	else	
-		gum spin --title "Purging Orphans and Old Kernels..." -- sleep 0.5
-		sudo vkpurge rm all && sudo xbps-remove -o
-	fi
+type=$(gum choose "FullClean" "PurgeOrphans")
+if [ "$type" == "FullClean" ]; then
+	gum spin --title "Starting FullClean..." -- sleep 0.5
+	sudo vkpurge rm all && sudo xbps-remove -o && sudo xbps-remove -OO
+		elif [ "$type" == "PurgeOrphans" ]; then
+			gum spin --title "Purging Orphans and Old Kernels..." -- sleep 0.5
+			sudo vkpurge rm all && sudo xbps-remove -o
 		else
 			notify-send "CleanUp interrupted"
 		exit;
