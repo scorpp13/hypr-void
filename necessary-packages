@@ -5,7 +5,6 @@
 	ln -s /usr/share/alsa/alsa.conf.d/99-pipewire-default.conf /etc/alsa/conf.d
 "bashmount"
 "brightnessctl"
-"btop"
 "breeze-qt6"
 "cantarell-fonts"
 "clang"
