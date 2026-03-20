@@ -21,6 +21,6 @@ if [ "$updates" -gt $threshhold_red ]; then
 fi
 if [ "$updates" -gt $threshhold_zero ]; then
 	printf '{"text": "%s", "alt": "%s", "tooltip": "%s Updates", "class": "%s"}' "$updates" "$updates" "$updates" "$css_class"
-else
+		else
 	printf '{"text": "0", "alt": "0", "tooltip": "0 Updates", "class": "zero"}'
 fi

@@ -28,15 +28,15 @@ if gum confirm "Extract selected file?"; then
 			*.7z)		7zz x $INPUT		;;
 			*) notify-send "$INPUT isn't a valid archive file" && exit;;
 		esac
-	else
-		notify-send "$INPUT can't be extracted"
+		else
+			notify-send "$INPUT can't be extracted"
 		exit;
 	fi
-	elif [ $? -eq 130 ]; then
-		notify-send "Canceled by user"
+		elif [ $? -eq 130 ]; then
+			notify-send "Canceled by user"
 		exit 130
-	else
-		notify-send "Extracting interrupted"
+		else
+			notify-send "Extracting interrupted"
 		exit;
 fi
 notify-send "Extracting finished"	

@@ -20,7 +20,7 @@ do
 			if [ -f $themes_path$result/config.sh ]; then
 				source $themes_path$result/config.sh
 				listNames+="$theme_name\n"
-			else
+				else
 				listNames+="$arrThemes$result\n"
 			fi
 		fi

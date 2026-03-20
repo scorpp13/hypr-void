@@ -19,12 +19,12 @@ EOF
 if gum confirm "Start update right now?"; then
 	gum spin --title "Starting Update..." -- sleep 0.5
 	sudo xbps-install -Su
-elif [ $? -eq 130 ]; then
-	notify-send "Canceled by user"
-	exit 130
-else
-	notify-send "Update interrupted"
-	exit;
+		elif [ $? -eq 130 ]; then
+			notify-send "Canceled by user"
+		exit 130
+		else
+			notify-send "Update interrupted"
+		exit;
 fi
 notify-send "Update complete"
 echo -e "${GREEN}"
