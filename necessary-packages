@@ -28,8 +28,8 @@
 "gtk+"
 "gvfs-mtp"
 "gum"
-"hyprland" set from repo | /etc/xbps.d/hyprland-void.conf
-	repository=https://raw.githubusercontent.com/Makrennel/hyprland-void/repository-x86_64-glibc
+"hyprland" from repo | hyprlock hypridle hyprpolkitagent hyprsunset
+	echo repository=https://raw.githubusercontent.com/Event-Horizon-VL/blackhole-vl/repository-x86_64 | sudo tee /etc/xbps.d/20-repository-extra.conf
 "inxi"
 "kitty"
 "mesa"
@@ -60,6 +60,7 @@
 	ln -s /etc/sv/socklog-unix/ /var/service/
 	ln -s /etc/sv/nanoklogd/ /var/service/
 "swappy"
+"swaybg"
 "Thunar"
 "thunar-archive-plugin"
 "thunar-volman"

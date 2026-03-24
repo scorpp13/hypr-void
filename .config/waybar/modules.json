@@ -145,7 +145,7 @@
 	"critical-threshold": 80,
 	"format-critical": "{temperatureC}°C",
 	"format": "",
-	"on-click": "kitty --class floating -e btop",
+	"on-click": "kitty --class floating -e top -i",
 	"tooltip": false
 },
 //	Language

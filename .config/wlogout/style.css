@@ -9,7 +9,7 @@
 	box-shadow: none;
 }
 window {
-    background-color: rgba(200, 220, 255, 0);
+    background-color: rgba(47, 53, 59, 0.75);
 	background-size: cover;
 	font-size: 16pt;
 	color: @color7;
