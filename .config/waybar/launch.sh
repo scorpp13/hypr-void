@@ -1,14 +1,13 @@
 #!/usr/bin/bash
 
-# Check if waybar-disabled file exists
-if [ -f ~/.cache/waybar-disabled ] ;then
-	pkill waybar
-	exit 1 
-fi
+# Prevent duplicate waybar launches (lock)
+exec 200>/tmp/waybar.lock
+flock -n 200 || exit 0
 
 # Quit all running waybar instances
-pkill waybar
-sleep 0.2
+killall waybar || true
+pkill waybar || true
+sleep 0.5
 
 # Set default theme
 themestyle="/colour-top"
@@ -32,3 +31,7 @@ fi
 cfg_file="config"
 css_file="style.css"
 waybar -c ~/.config/waybar/themes$arrThemes/$cfg_file -s ~/.config/waybar/themes$arrThemes/$css_file &
+
+# Unlock waybar launch on exit
+flock -u 200
+exec 200>&-
