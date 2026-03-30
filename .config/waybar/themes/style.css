@@ -19,7 +19,6 @@ window#waybar {
 	padding: 0px 1px;
 	border-radius: 20px;
 	border: 1px double @backgroundlight;
-	opacity: 0.8;
 }
 #workspaces button {
 	font-size: 14px;
@@ -31,7 +30,7 @@ window#waybar {
 	color: @textcolor1;
 	background: transparent;
 	transition: all 0.3s ease-in-out;
-	opacity: 0.7;
+	opacity: 0.5;
 }
 #workspaces button.active {
 	font-size: 16px;
@@ -39,12 +38,13 @@ window#waybar {
 	color: @textcolor2;
 	background: @backgrounddark;
 	transition: all 0.3s ease-in-out;
-	opacity: 1.0;
+	opacity: 0.7;
 }
 #workspaces button:hover {
 	color: @textcolor2;
 	font-size: 17px;
 	font-weight: bold;
+	opacity: 1.0;
 }
 
 /*	TOOLTIPS	*/
