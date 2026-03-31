@@ -24,7 +24,7 @@ window#waybar {
 	font-size: 14px;
 	font-weight: bold;
 	min-width: 20px;
-	padding: 0px 5px;
+	padding: 0px 3px;
 	margin: 2px 3px;
 	border-radius: 20px;
 	color: @textcolor1;
@@ -35,6 +35,8 @@ window#waybar {
 #workspaces button.active {
 	font-size: 16px;
 	font-weight: bold;
+	min-width: 35px;
+	margin: 3px;
 	color: @textcolor2;
 	background: @backgrounddark;
 	transition: all 0.3s ease-in-out;
@@ -117,7 +119,7 @@ window#waybar.empty #window {
 	color: @textcolor1;
 	border-radius: 20px;
 	padding: 0px 6px 0px 6px;
-	margin: 3px 15px 3px 10px;
+	margin: 3px 15px 5px 10px;
 	opacity:0.5;
 }
 
@@ -128,7 +130,7 @@ window#waybar.empty #window {
 	color: @textcolor1;
 	border-radius: 20px;
 	padding: 0px 7px 0px 7px;
-	margin: 3px 10px 3px 0px;
+	margin: 3px 10px 5px 0px;
 	opacity: 0.5;
 }
 
