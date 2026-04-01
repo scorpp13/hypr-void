@@ -8,6 +8,6 @@ PURPLE='\033[0;35m'
 CYAN='\033[0;36m'
 NONE='\033[0m'
 
-curl "ru.wttr.in/Pskov?0"
+curl "ru.wttr.in/Pskov?F"
 echo -e "$GREEN"
 read -rp "Press Enter to continue" </dev/tty

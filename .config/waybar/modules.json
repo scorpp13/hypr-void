@@ -138,7 +138,7 @@
 	"exec": "weather.sh 'Псков' 2> /dev/null",
 	"interval": 3600,
 	"tooltip": true,
-	"on-click": "kitty --class floating -e wttr.sh"
+	"on-click": "kitty --class wttr.sh -e wttr.sh"
 },	
 //	CPU_temp
 "temperature": {
