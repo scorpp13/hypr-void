@@ -1,13 +1,11 @@
 <details><summary>Click to preview</summary>
 
-{% note info %}
-
 <img src="preview/merge_090326_094246.jpg" width="400"/>
 
-{% endnote %}
-
 <img src="preview/merge_120326_194954.jpg" width="400"/>
+
 <img src="preview/merge_030426_194948.jpg" width="400"/>
+
 </details>
 
 # My config files for Hyprland
