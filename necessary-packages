@@ -28,7 +28,7 @@
 "gtk+"
 "gvfs-mtp"
 "gum"
-"hyprland" from repo | hyprlock hypridle hyprpolkitagent hyprsunset hyprpaper hyprpicker
+"hyprland" from repo | hyprlock hypridle hyprpolkitagent hyprsunset hyprpicker
 	echo repository=https://raw.githubusercontent.com/Event-Horizon-VL/blackhole-vl/repository-x86_64 | sudo tee /etc/xbps.d/20-repository-extra.conf
 "inxi"
 "kitty"
@@ -60,6 +60,7 @@
 	ln -s /etc/sv/socklog-unix/ /var/service/
 	ln -s /etc/sv/nanoklogd/ /var/service/
 "swappy"
+"swaybg"
 "Thunar"
 "thunar-archive-plugin"
 "thunar-volman"
