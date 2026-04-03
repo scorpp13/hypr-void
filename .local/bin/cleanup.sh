@@ -8,7 +8,6 @@ PURPLE='\033[0;35m'
 CYAN='\033[1;36m'
 NONE='\033[0m'
 
-
 echo -e "${YELLOW}"
 cat <<"EOF"
 ┏┓┓ ┏┓┏┓┳┓

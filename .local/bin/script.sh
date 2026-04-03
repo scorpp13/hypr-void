@@ -20,5 +20,5 @@ case $choice in
 	"$option4")
 		kitty --class floating -e extract.sh ;;
 	"$option5")
-		kitty --class floating -e colorpicker.sh ;;
+		kitty --class colorpicker.sh -e colorpicker.sh ;;
 esac
