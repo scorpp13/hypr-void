@@ -18,25 +18,26 @@ void-installer
 - [ ] `password:voidlinux`
 
 #### After restart run full-update
-
-- `xbps-install -u xbps`
-
-- `xbps-install -Su void-repo-multilib void-repo-multilib-nonfree void-repo-nonfree`
-
-- `xbps-install -Su`
+```
+xbps-install -u xbps
+```
+```
+xbps-install -Su void-repo-multilib void-repo-multilib-nonfree void-repo-nonfree
+```
+```
+xbps-install -Su
+```
 
 #### Install git package
-
-- `xbps-install -S git`
+```
+xbps-install -S git
+```
 
 #### Clone git-repo or download and extract it to your $HOME
 ```
 git clone
 ```
-from one of those locations:
-
 - [ ] https://gitlab.com/scorpp13/hypr-void.git
-
 - [ ] https://github.com/scorpp13/hypr-void.git
 
 #### Change to hypr-void directory
@@ -50,25 +51,25 @@ cp -r .config .local .vim .Xresources .bash_profile .bashrc .gtkrc-2.0 .alias .v
 ```
 
 #### Install necessary software from list
-
 ```
 sudo xbps-install -S
 ```
 
 #### For tty-login you can change default issue
-
 ```
 sudo cp issue /etc/
 ```
 
 #### For systems with sound card sof-essx8336 copy preconfig file
-
-- `sudo cp alsa-base.conf /etc/modprobe.d/`
+```
+sudo cp alsa-base.conf /etc/modprobe.d/
+```
 
 #### Reboot your machine
-
-- `sudo reboot`
+```
+sudo reboot
+```
 
 #### Enjoy
 
-- `^;^`
+- [ ] ^;^
