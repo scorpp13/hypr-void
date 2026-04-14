@@ -14,7 +14,7 @@ A working configuration of Hyprland for Void Linux
 ```
 void-installer 
 ```
-- [ ] ``login`` `root`
+- [ ] `username` `root`
 - [ ] `password` `voidlinux`
 
 #### After restart run full-update
