@@ -8,7 +8,7 @@
 
 A working configuration of Hyprland for Void Linux
 
-### Installation
+## Installation
 
 #### Install void-base system
 ```
@@ -72,4 +72,4 @@ sudo reboot
 
 #### Enjoy
 
-- [ ] ^;^
+### `^;^`
