@@ -14,7 +14,7 @@ A working configuration of Hyprland for Void Linux
 ```
 void-installer 
 ```
-- [ login ] `root`
+- [ ] `login` `root`
 - [ ] `password` `voidlinux`
 
 #### After restart run full-update
@@ -37,7 +37,7 @@ xbps-install -S git
 ```
 git clone
 ```
-- [ ] https://gitlab.com/scorpp13/hypr-void.git
+- [ ] `https://gitlab.com/scorpp13/hypr-void.git`
 - [ ] https://github.com/scorpp13/hypr-void.git
 
 #### Change to hypr-void directory
