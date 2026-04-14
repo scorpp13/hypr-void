@@ -46,18 +46,19 @@ A working configuration of Hyprland for Void Linux
 
 - `sudo xbps-install -S ...`
 
-- [ ] For tty-login you can change default issue
+#### For tty-login you can change default issue
 
 - `sudo cp issue /etc/`
 
-- [ ] For systems with sound card sof-essx8336 copy preconfig file
+#### For systems with sound card sof-essx8336 copy preconfig file
 
 - `sudo cp alsa-base.conf /etc/modprobe.d/`
 
-- [ ] Reboot your machine
+#### Reboot your machine
 
 - `sudo reboot`
 
-- [ ] Enjoy
+#### Enjoy
 
 - `^;^`
+
