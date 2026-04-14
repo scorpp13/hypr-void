@@ -40,11 +40,14 @@ A working configuration of Hyprland for Void Linux
 
 #### Copy files and folders from it to your $HOME
 
-```cp -r .config .local .vim .Xresources .bash_profile .bashrc .gtkrc-2.0 .alias .vimrc $HOME```
+```
+cp -r .config .local .vim .Xresources .bash_profile .bashrc .gtkrc-2.0 .alias .vimrc $HOME
+```
 
 #### Install necessary software from list
 
-```sudo xbps-install -S```
+```
+sudo xbps-install -S```
 
 #### For tty-login you can change default issue
 
