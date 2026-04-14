@@ -50,7 +50,7 @@ cd $HOME/hypr-void/
 cp -r .config .local .vim .Xresources .bash_profile .bashrc .gtkrc-2.0 .alias .vimrc $HOME
 ```
 
-#### Install software from 'necessary-packages' list
+#### Install software from <necessary-packages> list
 ```
 sudo xbps-install -S ...
 ```
