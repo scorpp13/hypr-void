@@ -9,7 +9,7 @@
 A working configuration of Hyprland for Void Linux
 
 ### Installation
-'''
+`
 #### Install void-base system
 
 - `void-installer | login:root password:voidlinux`
@@ -61,4 +61,6 @@ A working configuration of Hyprland for Void Linux
 #### Enjoy
 
 - `^;^`
+``
+
 ```
