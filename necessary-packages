@@ -29,7 +29,8 @@
 "gtk+"
 "gvfs-mtp"
 "gum"
-"hyprland" from repo | hyprlock hypridle hyprpolkitagent hyprsunset hyprpicker
+"hyprland" "hyprlock" "hypridle" "hyprpolkitagent" "hyprsunset" "hyprpicker" "xdg-desktop-portal-hyprland"
+	*hyprland packages install after adding repository below:
 	echo repository=https://raw.githubusercontent.com/Event-Horizon-VL/blackhole-vl/repository-x86_64 | sudo tee /etc/xbps.d/20-repository-extra.conf
 "inxi"
 "kitty"
