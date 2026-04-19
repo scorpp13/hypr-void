@@ -1,6 +1,6 @@
 alias update='sudo xbps-install -Su'
-alias install='sudo xbps-install -S'
-alias remove='sudo xbps-remove'
+alias ins='sudo xbps-install -S'
+alias del='sudo xbps-remove'
 alias query='sudo xbps-query'
 alias reconf='sudo xbps-reconfigure'
 alias pkgdb='sudo xbps-pkgdb'
