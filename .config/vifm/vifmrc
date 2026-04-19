@@ -93,7 +93,7 @@ set statusline="%t%[ -> %T%] %6E %12A %=%d %5u:%g"
 " colorscheme dracula
 " colorscheme dwmlight
 " colorscheme kanagawa
- colorscheme luke
+colorscheme luke
 " colorscheme material
 " colorscheme papercolor-dark
 " colorscheme papercolor-light
@@ -125,6 +125,8 @@ mark w ~/.config/wallpapers
 "  %C for current file under the cursor of inactive pane
 "  %f for selected file(s)
 "  %F for selected file(s) of inactive pane
+"  %d for current directory name
+"  %D for current directory name of inactive pane
 "  %b is the same as %f %F
 "  %r{x} for list of files in register {x}
 "  %m runs the command in a menu window
@@ -132,7 +134,6 @@ mark w ~/.config/wallpapers
 "  see `:help vifm-macros` and `:help vifm-filename-modifiers` for more
 
 command! df df -h %m 2> /dev/null
-command! diff vim -d %f %F
 command! zip zip -r %c.zip %f
 command! run !! ./%f
 command! make !!make %a
@@ -142,6 +143,15 @@ command! reload :write | restart full
 command! link ln -s %d/%f %D
 command! mount bashmount
 command! extract xarchiver -d %a
+command! diff : if selected() < 2
+            \ |     if paneisat('right') && paneisat('bottom')
+            \ |         execute '!vim -d %%C %%c'
+            \ |     else
+            \ |         execute '!vim -d %%c %%C'
+            \ |     endif
+            \ | else
+            \ |     execute '!vim -d %%f'
+            \ | endif
 
 " ------------------------------------------------------------------------------
 " File types association
