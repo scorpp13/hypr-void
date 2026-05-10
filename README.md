@@ -23,7 +23,7 @@ sudo xbps-install -S git
 git clone https://github.com/scorpp13/hypr-void.git $HOME/hypr-void/
 ```
 Alternatively it may be cloned from those locations:
-- https://gitlab.com/scorpp13/hypr-void.git
+- [ ] https://gitlab.com/scorpp13/hypr-void.git
 - [ ] https://codeberg.org/scorpp13/hypr-void.git
 - [ ] https://git@git.sourcecraft.dev/scorpp13/hypr-void.git
 
@@ -42,7 +42,7 @@ sudo cp alsa-base.conf /etc/modprobe.d/
 
 After first start of hyprland desktop:
 - Run waypaper, choose wallpapers folder and change to wallpaper you preffer
-- [ ] Reload Hyprland instance (press SUPER+R) to dismiss warnings (no wal colors in cache)
+- Reload Hyprland instance (press SUPER+R) to dismiss warnings (no wal colors in cache)
 
 #### Enjoy
 #### `^;^`
