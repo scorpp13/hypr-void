@@ -10,54 +10,27 @@ A working configuration of Hyprland for Void Linux
 
 ## Installation
 
-#### Install void-base system
+#### Install void-base system from latest live cd
+- [ ] `username` `root`
+- [ ] `password` `voidlinux`
 ```
 void-installer 
 ```
-- [ ] `username` `root`
-- [ ] `password` `voidlinux`
 
-#### After restart run full-update
+#### After system restart Install git package and clone hypr-void dotfiles
 ```
-xbps-install -u xbps
+sudo xbps-install -S git
+git clone https://github.com/scorpp13/hypr-void.git $HOME/hypr-void/
 ```
-```
-xbps-install -Su void-repo-multilib void-repo-multilib-nonfree void-repo-nonfree
-```
-```
-xbps-install -Su
-```
-
-#### Install git package
-```
-xbps-install -S git
-```
-
-#### Clone git-repo or download and extract it to your $HOME
-```
-git clone
-```
+- Alternatively it may be cloned from those locations:
 - [ ] https://gitlab.com/scorpp13/hypr-void.git
-- [ ] https://github.com/scorpp13/hypr-void.git
+- [ ] https://codeberg.org/scorpp13/hypr-void.git
+- [ ] https://git@git.sourcecraft.dev/scorpp13/hypr-void.git
 
-#### Change to hypr-void directory
+#### Change to dotfiles folder and start installation script
 ```
 cd $HOME/hypr-void/
-```
-
-#### Copy files and folders from it to your $HOME
-```
-cp -r .config .local .vim .Xresources .bash_profile .bashrc .gtkrc-2.0 .alias .vimrc $HOME
-```
-
-#### Install software from "necessary-packages" list
-```
-sudo xbps-install -S ...
-```
-
-#### For tty-login you can change default issue
-```
-sudo cp issue /etc/
+./install.sh
 ```
 
 #### For systems with sound card sof-essx8336 copy preconfig file
@@ -65,10 +38,11 @@ sudo cp issue /etc/
 sudo cp alsa-base.conf /etc/modprobe.d/
 ```
 
-#### Reboot your machine
-```
-sudo reboot
-```
+#### Final steps
+
+After first start of hyprland desktop:
+- [ ] Run waypaper, choose wallpapers folder and change to wallpaper you preffer
+- [ ] Reload Hyprland instance (press SUPER+R) to dismiss warnings (no wal colors in cache)
 
 #### Enjoy
 #### `^;^`

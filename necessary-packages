@@ -1,85 +1,82 @@
-# install with xbps-install -S <package name>
-"adwaita-fonts"
-"alsa-pipewire" | mkdir -p /etc/alsa/conf.d
-	ln -s /usr/share/alsa/alsa.conf.d/50-pipewire.conf /etc/alsa/conf.d
-	ln -s /usr/share/alsa/alsa.conf.d/99-pipewire-default.conf /etc/alsa/conf.d
-"bashmount"
-"brightnessctl"
-"breeze-qt6"
-"cantarell-fonts"
-"clang"
-"cliphist"
-"curl"
-"dunst"
-"elogind" | disable acpid service and then enable elogind service
-	rm /var/service/acpid
-	ln -s /etc/sv/elogind/ /var/service/
-"fastfetch"
-"ffmpeg"
-"fish-shell"
-"font-awesome"
-"font-firacode"
-"fontmanager"
-"fuzzel"
-"fuzzypkg"
-"galculator"
-"geany"
-"gpicview"
-"grim"
-"gtk+"
-"gvfs-mtp"
-"gum"
-"hyprland" "hyprlock" "hypridle" "hyprpolkitagent" "hyprsunset" "hyprpicker" "xdg-desktop-portal-hyprland"
-	*hyprland packages install after adding repository below:
-	echo repository=https://raw.githubusercontent.com/Event-Horizon-VL/blackhole-vl/repository-x86_64 | sudo tee /etc/xbps.d/20-repository-extra.conf
-"inxi"
-"kitty"
-"mesa"
-"mesa-dri"
-"meson"
-"mpv"
-"nerd-fonts-symbols-ttf"
-"NetworkManager" | disable wpa_supplicant and dhcpcd services before enabling NetworkManager serice
-	rm /var/service/wpa_supplicant
-	rm /var/service/dhcpcd
-	ln -s /etc/sv/NetworkManager/ /var/service/
-"network-manager-applet"
-"nwg-look"
-"pipewire" | mkdir -p /etc/pipewire/pipewire.conf.d
-	ln -s /usr/share/examples/wireplumber/10-wireplumber.conf /etc/pipewire/pipewire.conf.d/
-	ln -s /usr/share/examples/pipewire/20-pipewire-pulse.conf /etc/pipewire/pipewire.conf.d/
-"python3-pkgconfig"
-"python3-pipx"
-"python3-cairo"
-"polkit"
-"pywal"
-"qt5-wayland"
-"qt6-wayland"
-"qt6ct"
-"slurp"
-"socklog-void" | gpasswd -a $USER socklog
-	ln -s /etc/sv/socklog-unix/ /var/service/
-	ln -s /etc/sv/nanoklogd/ /var/service/
-"swappy"
-"swaybg"
-"Thunar"
-"thunar-archive-plugin"
-"thunar-volman"
-"tumbler"
-"vifm"
-"vim"
-"vivaldi"
-"vsv"
-"Waybar"
-"waypaper" | pipx install waypaper
-"wiremix"
-"wlogout"
-"wlr-randr"
-"udiskie"
-"xarchiver"
-"xdg-desktop-portal"
-"xdg-desktop-portal-gtk"
-"xdg-desktop-portal-wlr"
-"xdg-user-dirs"
-"xdg-utils"
-"xorg-minimal"
+aisleriot
+adwaita-fonts
+alsa-pipewire
+bashmount
+brightnessctl
+breeze-qt6
+cantarell-fonts
+clang
+cliphist
+curl
+dbus
+dunst
+elogind
+fastfetch
+ffmpeg
+fish-shell
+font-awesome
+font-firacode
+fontmanager
+fuzzel
+fuzzypkg
+galculator
+geany
+gpicview
+grim
+gtk+
+gvfs-mtp
+gum
+hyprland
+hyprlock
+hypridle
+hyprpicker
+hyprpolkitagent
+hyprsunset
+hyprsysteminfo
+inxi
+kitty
+mesa
+mesa-dri
+meson
+mpv
+nerd-fonts-symbols-ttf
+NetworkManager
+network-manager-applet
+nwg-look
+pipewire
+polkit
+python3-cairo-devel
+python3-gobject-devel
+python3-imageio
+python3-pipx
+python3-platformdirs
+python3-pkgconfig
+pywal
+qt5-wayland
+qt6-wayland
+qt6ct
+slurp
+socklog-void
+swappy
+swaybg
+Thunar
+thunar-archive-plugin
+thunar-volman
+tumbler
+vifm
+vim
+vivaldi
+vsv
+Waybar
+wiremix
+wlogout
+wlr-randr
+udiskie
+xarchiver
+xdg-desktop-portal
+xdg-desktop-portal-gtk
+xdg-desktop-portal-hyprland
+xdg-desktop-portal-wlr
+xdg-user-dirs
+xdg-utils
+xorg-minimal
