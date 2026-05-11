@@ -11,8 +11,8 @@ A working configuration of Hyprland for Void Linux
 ## Installation
 
 #### Install void-base system from latest live cd
-- [ ] `username` `root`
-- [ ] `password` `voidlinux`
+`username` `root`
+`password` `voidlinux`
 ```
 void-installer 
 ```
@@ -23,9 +23,9 @@ sudo xbps-install -S git
 git clone https://github.com/scorpp13/hypr-void.git $HOME/hypr-void/
 ```
 Alternatively it may be cloned from those locations:
-- [ ] https://gitlab.com/scorpp13/hypr-void.git
-- [ ] https://codeberg.org/scorpp13/hypr-void.git
-- [ ] https://git@git.sourcecraft.dev/scorpp13/hypr-void.git
+- https://gitlab.com/scorpp13/hypr-void.git
+- https://codeberg.org/scorpp13/hypr-void.git
+- https://git@git.sourcecraft.dev/scorpp13/hypr-void.git
 
 #### Change to dotfiles folder and start installation script
 ```
