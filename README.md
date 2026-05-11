@@ -11,8 +11,6 @@ A working configuration of Hyprland for Void Linux
 ## Installation
 
 #### Install void-base system from latest live cd
-``username` `root`
-``password` `voidlinux`
 ```
 void-installer 
 ```
