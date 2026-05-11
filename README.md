@@ -20,7 +20,7 @@ void-installer
 sudo xbps-install -S git
 git clone https://github.com/scorpp13/hypr-void.git $HOME/hypr-void/
 ```
-    Alternatively it may be cloned from those locations:
+Alternatively it may be cloned from those locations:
 - https://gitlab.com/scorpp13/hypr-void.git
 - https://codeberg.org/scorpp13/hypr-void.git
 - https://git@git.sourcecraft.dev/scorpp13/hypr-void.git
@@ -30,12 +30,12 @@ git clone https://github.com/scorpp13/hypr-void.git $HOME/hypr-void/
 cd $HOME/hypr-void/
 ./install.sh
 ```
-    For systems with sound card sof-essx8336 copy preconfig file:
-- `sudo cp alsa-base.conf /etc/modprobe.d/`
+For systems with sound card sof-essx8336 copy preconfig file:
+- ```sudo cp alsa-base.conf /etc/modprobe.d/```
 
 #### Final steps
 
-    After first start of hyprland desktop:
+After first start of hyprland desktop:
 - Run waypaper, choose wallpapers folder and change to wallpaper you preffer
 - Reload Hyprland instance (press SUPER+R) to dismiss warnings (no wal colors in cache)
 
