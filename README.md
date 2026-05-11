@@ -22,7 +22,7 @@ git clone https://github.com/scorpp13/hypr-void.git $HOME/hypr-void/
 ```
 Alternatively it may be cloned from those locations:
 - `https://gitlab.com/scorpp13/hypr-void.git`
-- `https://codeberg.org/scorpp13/hypr-void.git`
+- ``https://codeberg.org/scorpp13/hypr-void.git``
 - `https://git@git.sourcecraft.dev/scorpp13/hypr-void.git`
 
 #### Change to dotfiles folder and start installation script
@@ -31,7 +31,7 @@ cd $HOME/hypr-void/
 ./install.sh
 ```
 For systems with sound card sof-essx8336 copy preconfig file:
-- `sudo cp alsa-base.conf /etc/modprobe.d/`
+- ``sudo cp alsa-base.conf /etc/modprobe.d/``
 
 #### Final steps
 
