@@ -41,4 +41,3 @@ After first start of hyprland desktop:
 
 #### Enjoy
 #### `^;^`
-
