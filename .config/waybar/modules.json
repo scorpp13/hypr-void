@@ -144,6 +144,7 @@
 },	
 //	CPU_temp
 "temperature": {
+	"thermal-zone": 2,
 	"critical-threshold": 80,
 	"format-critical": "{temperatureC}°C",
 	"format": "",
