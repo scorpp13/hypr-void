@@ -1,0 +1,9 @@
+-- XDG
+hl.env("XDG_CURRENT_DESKTOP", "Hyprland")
+hl.env("XDG_SESSION_TYPE", "wayland")
+hl.env("XDG_SESSION_DESKTOP", "Hyprland")
+-- Aquamarine
+hl.env("AQ_NO_MODIFIERS", "1")
+-- App's
+hl.env("KITTY_ENABLE_WAYLAND", "1")
+hl.env("EDITOR", "vim")

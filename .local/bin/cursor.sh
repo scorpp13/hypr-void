@@ -1,0 +1,6 @@
+#!/usr/bin/bash
+
+cursor_theme=$(grep 'gtk-cursor-theme-name' ~/.config/gtk-3.0/settings.ini | sed 's/.*\s*=\s*//')
+cursor_size=$(grep 'gtk-cursor-theme-size' ~/.config/gtk-3.0/settings.ini | sed 's/.*\s*=\s*//')
+
+hyprctl setcursor $cursor_theme $cursor_size

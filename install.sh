@@ -2,10 +2,8 @@
 GREEN='\033[0;32m'
 # Postinstall update and repository config
 sudo xbps-install -u xbps
-echo "
-repository=https://mirror.black-hole.dev/x86_64/
-repository=https://raw.githubusercontent.com/Makrennel/hyprland-void/repository-x86_64-glibc
-" | sudo tee /etc/xbps.d/20-repository-extra.conf
+echo "repository=https://mirror.black-hole.dev/x86_64/" | sudo tee /etc/xbps.d/20-repository-extra.conf
+#echo "repository=https://raw.githubusercontent.com/Makrennel/hyprland-void/repository-x86_64-glibc" | sudo tee /etc/xbps.d/20-repository-extra.conf
 #echo repository=https://github.com/Encoded14/void-extra/releases/download/repository-x86_64 | sudo tee /etc/xbps.d/20-repository-extra.conf
 sudo xbps-install -Su void-repo-multilib void-repo-multilib-nonfree void-repo-nonfree
 # Clone preconfigure from dotfiles
