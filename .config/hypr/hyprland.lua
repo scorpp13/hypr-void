@@ -1,6 +1,3 @@
--- Load pywal colors
---require("$HOME/.cache/wal/colors-hyprland.conf")
-
 -- Monitor
 require("conf/monitor")
 
@@ -25,10 +22,10 @@ require("conf/decoration")
 -- Miscellaneous
 require("conf/misc")
 
--- Keybindings
-require("conf/keybindings")
+-- Binds
+require("conf/binds")
 
--- Window Rule
+-- Window Rules
 require("conf/windowrules")
 
 -- Animation

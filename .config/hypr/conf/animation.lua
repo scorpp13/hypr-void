@@ -3,3 +3,7 @@ hl.config({
 		enabled = true,
 	},
 })
+require("conf/animations/default")
+--require("conf/animations/minimal")
+--require("/conf/animations/fast")
+--require("conf/animations/popin")
