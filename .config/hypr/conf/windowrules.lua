@@ -1,9 +1,10 @@
+-- Ignore maximize requests from all apps. You'll probably like this.
 local suppressMaximizeRule = hl.window_rule({
-    -- Ignore maximize requests from all apps. You'll probably like this.
     name  = "suppress-maximize-events",
     match = { class = ".*" },
     suppress_event = "maximize",
 })
+
 -- suppressMaximizeRule:set_enabled(false)
 hl.window_rule({
     -- Fix some dragging issues with XWayland
@@ -18,6 +19,7 @@ hl.window_rule({
     },
     no_focus = true,
 })
+
 -- nm_applet window rule
 hl.window_rule({
 	name = "nm-connection-editor",
@@ -25,6 +27,7 @@ hl.window_rule({
 	float = true,
 	persistent_size = true,
 })
+
 -- waypaper window rule
 hl.window_rule({
 	name = "waypaper",
@@ -32,6 +35,7 @@ hl.window_rule({
 	float = true,
 	persistent_size = true,
 })
+
 -- nwg-look window rule
 hl.window_rule({
 	name = "nwg-look",
@@ -39,6 +43,7 @@ hl.window_rule({
 	float = true,
 	persistent_size = true,
 })
+
 -- qt6ct window rule
 hl.window_rule({
 	name = "qt6ct",
@@ -46,6 +51,7 @@ hl.window_rule({
 	float = true,
 	persistent_size = true,
 })
+
 -- Galculator window rule
 hl.window_rule({
 	name = "galculator",
@@ -53,6 +59,7 @@ hl.window_rule({
 	float = true,
 	persistent_size = true,
 })
+
 -- ColorPicker window rule
 hl.window_rule({
 	name = "colorpicker.sh",
@@ -60,6 +67,7 @@ hl.window_rule({
 	float = true,
 	size = { 300, 150 },
 })
+
 -- Weather window rule
 hl.window_rule({
 	name = "wttr.sh",
@@ -67,6 +75,7 @@ hl.window_rule({
 	float = true,
 	size = { 1300, 950 },
 })
+
 -- Default size of floating windows
 hl.window_rule({
 	name = "floating",
@@ -74,36 +83,42 @@ hl.window_rule({
 	float = true,
 	size = { 850, 600 },
 })
+
 -- Browser tile
 hl.window_rule({
 	name = "vivaldi-stable",
 	match = { class = "vivaldi-stable" },
 	tile = true,
 })
+
 -- Browser iddle inhibit in fullscreen mode
 hl.window_rule({
 	name = "vivaldi-stable",
 	match = { class = "vivaldi-stable" },
 	idle_inhibit = fullscreen,
 })
+
 -- mpv iddle inhibit in fullscreen mode
 hl.window_rule({
 	name = "mpv",
 	match = { class = "mpv" },
 	idle_inhibit = fullscreen,
 })
+
 -- gtk-layer-shell layer rule
 hl.layer_rule({
 	name = "gtk-layer-shell",
 	match = { namespace = "gtk-layer-shell" },
 	blur = true,
 })
+
 -- logout dialog layer rule
 hl.layer_rule({
 	name = "logout_dialog",
 	match = { namespace = "logout_dialog" },
 	blur = true,
 })
+
 -- Waybar layer rule
 hl.layer_rule({
 	name = "waybar",
@@ -112,6 +127,7 @@ hl.layer_rule({
 	xray = 1,
 	ignore_alpha = 0.01,
 })
+
 -- Hyprland-run windowrule
 hl.window_rule({
     name  = "move-hyprland-run",

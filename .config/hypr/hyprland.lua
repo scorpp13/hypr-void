@@ -16,6 +16,9 @@ require("conf/input")
 -- General
 require("conf/general")
 
+-- Colors
+require("conf/colors")
+
 -- Decoration
 require("conf/decoration")
 
