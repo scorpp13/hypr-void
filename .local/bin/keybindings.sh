@@ -39,6 +39,6 @@ BEGIN {
         combo = (mods != "" ? mods : key)
     }
 
-    # Output: Line 1 (Keys), Line 2 (Description), followed by the Null separator
+    # Output: Column 1 (Keys), Column 2 (Description)
     printf "%s\n➔ %s\0", combo, desc
 }' | fuzzel --dmenu0 "Keybinds" --config=$HOME/.config/fuzzel/fuzzel_d.ini
