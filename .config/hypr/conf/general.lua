@@ -3,15 +3,11 @@ hl.config({
 		gaps_in = 3,
 		gaps_out = 6,
 		border_size = 2,
-		col = {
-		--	active_border = "$color11",
-		--	inactive_border = "$color0",
-		},
 		layout = "dwindle", -- master scrolling monocle
 		resize_on_border = true,
 	},
 	dwindle = {
-		preserve_split = true, -- You probably want this
+		preserve_split = true, -- you probably want this
 	},
 	master = {
 		new_status = "master",

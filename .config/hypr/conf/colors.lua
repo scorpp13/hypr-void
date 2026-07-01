@@ -10,7 +10,7 @@ hl.config({
     },
 })
 
-hl.window_rule({ -- not sure how to syntax "pin 1"
+hl.window_rule({
     match        = { pin = 1 },
     border_color = "rgba(afc6ffAA) rgba(afc6ff77)",
 })

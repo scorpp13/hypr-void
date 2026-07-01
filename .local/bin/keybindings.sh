@@ -40,5 +40,5 @@ BEGIN {
     }
 
     # Output: Column 1 (Keys), Column 2 (Description)
-    printf "%s\n➔ %s\0", combo, desc
+    printf "%s\n>>> %s\0", combo, desc
 }' | fuzzel --dmenu0 "Keybinds" --config=$HOME/.config/fuzzel/fuzzel_d.ini
