@@ -39,3 +39,14 @@ icon-theme=$icon
 font=$font
 anchor=$anchor
 EOF
+
+cat > ~/.config/fuzzel/wal_dfuzzel.ini<< EOF
+[colors]
+background=$s
+text=$S
+match=$M
+selection=$b
+selection-text=$t
+selection-match=$C
+border=$s
+EOF
