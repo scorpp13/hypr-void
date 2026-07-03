@@ -1,6 +1,13 @@
 local mainMod = "SUPER"
 
 -- Apps
+hl.bind(mainMod .. " + CTRL + M",	hl.dsp.exec_cmd("fuzzel"), { description = "Menu" })
+hl.bind(mainMod .. " + CTRL + R",	hl.dsp.exec_cmd("~/.config/waybar/launch.sh"), { description = "Waybar reload" })
+hl.bind(mainMod .. " + CTRL + F",	hl.dsp.exec_cmd("thunar"), { description = "FileManager" })
+hl.bind(mainMod .. " + CTRL + C",	hl.dsp.exec_cmd("cliphist.sh"), { description = "Clipboard" })
+hl.bind(mainMod .. " + CTRL + T",	hl.dsp.exec_cmd("themeswitcher.sh"), { description = "Waybar theme" })
+hl.bind(mainMod .. " + RETURN",		hl.dsp.exec_cmd("kitty -e fish"), { description = "Terminal" })
+hl.bind(mainMod .. " + PRINT",		hl.dsp.exec_cmd("screenshot.sh"), { description = "ScreenShoter" })
 hl.bind(mainMod .. " + B",			hl.dsp.exec_cmd("vivaldi"), { description = "Browser" })
 hl.bind(mainMod .. " + A",			hl.dsp.exec_cmd("sol"), { description = "Aisleriot" })
 hl.bind(mainMod .. " + C",			hl.dsp.exec_cmd("galculator"), { description = "Calculator" })
@@ -8,30 +15,22 @@ hl.bind(mainMod .. " + H",			hl.dsp.exec_cmd("kitty --class floating -e top"), {
 hl.bind(mainMod .. " + Q",			hl.dsp.exec_cmd("wlogout"), { description = "WLogout" })
 hl.bind(mainMod .. " + R",			hl.dsp.exec_cmd("hyprctl reload"), { description = "Hyprland reload" })
 hl.bind(mainMod .. " + W",			hl.dsp.exec_cmd("waypaper"), { description = "Waypaper" })
-hl.bind(mainMod .. " + PRINT",		hl.dsp.exec_cmd("screenshot.sh"), { description = "ScreenShoter" })
-hl.bind(mainMod .. " + RETURN",		hl.dsp.exec_cmd("kitty -e fish"), { description = "Terminal" })
-hl.bind(mainMod .. " + CTRL + M",	hl.dsp.exec_cmd("fuzzel"), { description = "Menu" })
-hl.bind(mainMod .. " + CTRL + K",	hl.dsp.exec_cmd("keybindings.sh"), { description = "KeyBindings" })
-hl.bind(mainMod .. " + CTRL + R",	hl.dsp.exec_cmd("~/.config/waybar/launch.sh"), { description = "Waybar reload" })
-hl.bind(mainMod .. " + CTRL + F",	hl.dsp.exec_cmd("thunar"), { description = "FileManager" })
-hl.bind(mainMod .. " + CTRL + C",	hl.dsp.exec_cmd("cliphist.sh"), { description = "Clipboard" })
-hl.bind(mainMod .. " + CTRL + T",	hl.dsp.exec_cmd("themeswitcher.sh"), { description = "Waybar theme" })
 
 -- Windows
 hl.bind(mainMod .. " + F",			hl.dsp.window.fullscreen({ mode = "fullscreen", action = "toggle" }), { description = "Toggle fullscreen" })
 hl.bind(mainMod .. " + M",			hl.dsp.window.fullscreen({ mode = "maximized", action = "toggle" }), { description = "Toggle maximize" })
 hl.bind(mainMod .. " + T",			hl.dsp.window.float({ action = "toggle" }), { description = "Toggle tile/float" })
 hl.bind(mainMod .. " + J",			hl.dsp.layout("togglesplit"), { description = "Toggle split" })
+hl.bind(mainMod .. " + K",			hl.dsp.layout("swapsplit"), { description = "Swap split" })
 hl.bind(mainMod .. " + G",			hl.dsp.group.toggle(), { description = "Toggle group" })
 hl.bind(mainMod .. " + S",			hl.dsp.workspace.toggle_special("magic"), { description = "Toggle special workspace" })
-hl.bind(mainMod .. " + up",			hl.dsp.window.resize({ x = 0, y = -100, relative = true }), { repeating = true }, { description = "Reduce window height" })
-hl.bind(mainMod .. " + down",		hl.dsp.window.resize({ x = 0, y = 100, relative = true }), { repeating = true }, { description = "Increase window height" })
-hl.bind(mainMod .. " + right",		hl.dsp.window.resize({ x = 100, y = 0, relative = true }), { repeating = true }, { description = "Increase window width" })
-hl.bind(mainMod .. " + left",		hl.dsp.window.resize({ x = -100, y = 0, relative = true }), { repeating = true }, { description = "Reduce window width" })
 hl.bind(mainMod .. " + ESCAPE",		hl.dsp.window.close(), { description = "Kill active window" })
 hl.bind(mainMod .. " + SHIFT + Q",	hl.dsp.exec_cmd("hyprctl activewindow | grep pid | tr -d 'pid:' | xargs kill"), { description = "Quit active window and all open instances" })
 hl.bind(mainMod .. " + SHIFT + S",	hl.dsp.window.move({ workspace = "special:magic" }), { description = "Move window to special workspace" })
-hl.bind(mainMod .. " + SHIFT + K",	hl.dsp.layout("swapsplit"), { description = "Swap split" })
+hl.bind(mainMod .. " + up",			hl.dsp.window.resize({ x = 0, y = -100, relative = true }), { repeating = true }, { description = "Reduce window height" })
+hl.bind(mainMod .. " + down",		hl.dsp.window.resize({ x = 0, y = 100, relative = true }), { repeating = true }, { description = "Increase window height" })
+hl.bind(mainMod .. " + left",		hl.dsp.window.resize({ x = -100, y = 0, relative = true }), { repeating = true }, { description = "Reduce window width" })
+hl.bind(mainMod .. " + right",		hl.dsp.window.resize({ x = 100, y = 0, relative = true }), { repeating = true }, { description = "Increase window width" })
 
 -- Move active window to a workspace with mainMod + SHIFT + [0-9]
 for i = 1, 10 do
@@ -47,7 +46,6 @@ hl.bind(mainMod .. " + X", function ()
     hl.dispatch(hl.dsp.workspace.toggle_special("minimize"))
     hl.dispatch(hl.dsp.window.move({workspace = "special:minimize"}))
     hl.dispatch(hl.dsp.workspace.toggle_special("minimize"))
-    { description = "Minimize window to special workspace" }
 end)
 
 -- Mouse drag config
