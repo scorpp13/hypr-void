@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/sh
 
 check_and_start() {
 if ! pgrep -x "$1" >/dev/null; then

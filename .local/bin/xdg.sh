@@ -1,14 +1,8 @@
-#!/usr/bin/bash
+#!/bin/sh
 
 sleep 1
-pkill xdg-desktop-portal-hyprland
-pkill xdg-desktop-portal-gnome
-pkill xdg-desktop-portal-kde
-pkill xdg-desktop-portal-wlr
-pkill xdg-desktop-portal-gtk
-pkill xdg-desktop-portal
-sleep 1
+killall -e xdg-desktop-portal-hyprland
+killall xdg-desktop-portal
 /usr/libexec/xdg-desktop-portal-hyprland &
 sleep 2
 /usr/libexec/xdg-desktop-portal &
-sleep 1
