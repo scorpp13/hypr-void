@@ -7,9 +7,8 @@
 # My config files for Hyprland
 
 A working configuration of Hyprland for Void Linux
-- Just moving to a new lua config.
-- Old version based on hyprlang is also working.
-- For stay on old config simply rename the hyprland.lua file.
+- A new config based on lua script language.
+- Old version based on hyprlang is also available.
 
 ## Installation
 
