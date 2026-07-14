@@ -27,6 +27,8 @@ gtk+
 gvfs-mtp
 gum
 hyprland
+hyprland-guiutils
+hyprland-qt-support
 hyprlock
 hypridle
 hyprpicker
