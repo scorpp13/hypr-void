@@ -19,7 +19,7 @@ hl.exec_cmd("dunst")
 hl.exec_cmd("hypridle")
 
 -- Start Screenfilter
-hl.exec_cmd("hyprsunset -t 5500")
+hl.exec_cmd("hyprsunset")
 
 -- Start Cliphist(ory)
 hl.exec_cmd("wl-paste --watch cliphist store")
