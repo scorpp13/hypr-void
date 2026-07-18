@@ -48,13 +48,6 @@ hl.bind(mainMod .. " + X", function ()
     hl.dispatch(hl.dsp.workspace.toggle_special("minimize"))
 end)
 
--- Mouse drag config
-hl.config({
-    binds = {
-        drag_threshold = 10 -- Fire a drag event only after dragging for more than 10px
-    }
-})
-
 -- Scroll through existing workspaces with mainMod + scroll
 hl.bind(mainMod .. " + mouse_up",	hl.dsp.focus({ workspace = "r+1" }), { description = "Switch to previous workspace" })
 hl.bind(mainMod .. " + mouse_down",	hl.dsp.focus({ workspace = "r-1" }), { description = "Switch to next workspace" })

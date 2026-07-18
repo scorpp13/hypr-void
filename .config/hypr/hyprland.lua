@@ -13,8 +13,8 @@ require("conf/ecosystem")
 -- Input
 require("conf/input")
 
--- General
-require("conf/general")
+-- Base
+require("conf/base")
 
 -- Colors
 require("conf/colors")

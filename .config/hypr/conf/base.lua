@@ -17,4 +17,8 @@ hl.config({
 	scrolling = {
 		fullscreen_on_one_column = true,
 	},
+	binds = {
+		drag_threshold = 10, -- Fire a drag event only after dragging for more than 10px
+		allow_workspace_cycles = true,
+	},
 })
