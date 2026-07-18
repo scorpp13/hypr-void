@@ -19,14 +19,14 @@ hl.bind(mainMod .. " + W",			hl.dsp.exec_cmd("waypaper"), { description = "Waypa
 -- Windows
 hl.bind(mainMod .. " + F",			hl.dsp.window.fullscreen({ mode = "fullscreen", action = "toggle" }), { description = "Toggle fullscreen" })
 hl.bind(mainMod .. " + M",			hl.dsp.window.fullscreen({ mode = "maximized", action = "toggle" }), { description = "Toggle maximize" })
-hl.bind(mainMod .. " + T",			hl.dsp.window.float({ action = "toggle" }), { description = "Toggle tile/float" })
+hl.bind(mainMod .. " + T",			hl.dsp.window.float({ action = "toggle" }), { description = "Toggle efloat" })
 hl.bind(mainMod .. " + J",			hl.dsp.layout("togglesplit"), { description = "Toggle split" })
 hl.bind(mainMod .. " + K",			hl.dsp.layout("swapsplit"), { description = "Swap split" })
 hl.bind(mainMod .. " + G",			hl.dsp.group.toggle(), { description = "Toggle group" })
-hl.bind(mainMod .. " + S",			hl.dsp.workspace.toggle_special("magic"), { description = "Toggle special workspace" })
+hl.bind(mainMod .. " + S",			hl.dsp.workspace.toggle_special("magic"), { description = "Toggle magic workspace" })
 hl.bind(mainMod .. " + ESCAPE",		hl.dsp.window.close(), { description = "Kill active window" })
 hl.bind(mainMod .. " + SHIFT + Q",	hl.dsp.exec_cmd("hyprctl activewindow | grep pid | tr -d 'pid:' | xargs kill"), { description = "Quit active window and all open instances" })
-hl.bind(mainMod .. " + SHIFT + S",	hl.dsp.window.move({ workspace = "special:magic" }), { description = "Move window to special workspace" })
+hl.bind(mainMod .. " + SHIFT + S",	hl.dsp.window.move({ workspace = "special:magic" }), { description = "Move window to magic workspace" })
 hl.bind(mainMod .. " + up",			hl.dsp.window.resize({ x = 0, y = -100, relative = true }), { repeating = true }, { description = "Reduce window height" })
 hl.bind(mainMod .. " + down",		hl.dsp.window.resize({ x = 0, y = 100, relative = true }), { repeating = true }, { description = "Increase window height" })
 hl.bind(mainMod .. " + left",		hl.dsp.window.resize({ x = -100, y = 0, relative = true }), { repeating = true }, { description = "Reduce window width" })
@@ -39,24 +39,38 @@ for i = 1, 10 do
     hl.bind(mainMod .. " + SHIFT + " .. key, hl.dsp.window.move({ workspace = i }), { description = "Move window to workspace " .. i })
 end
 
--- Minimize window
-hl.bind(mainMod .. " + X", function ()
-    hl.dispatch(hl.dsp.workspace.toggle_special("minimize"))
-    hl.dispatch(hl.dsp.window.move({workspace = "+0"}))
-    hl.dispatch(hl.dsp.workspace.toggle_special("minimize"))
-    hl.dispatch(hl.dsp.window.move({workspace = "special:minimize"}))
-    hl.dispatch(hl.dsp.workspace.toggle_special("minimize"))
-end)
-
 -- Scroll through existing workspaces with mainMod + scroll
 hl.bind(mainMod .. " + mouse_up",	hl.dsp.focus({ workspace = "r+1" }), { description = "Switch to previous workspace" })
 hl.bind(mainMod .. " + mouse_down",	hl.dsp.focus({ workspace = "r-1" }), { description = "Switch to next workspace" })
 
 -- Move/resize windows with mainMod + LMB/RMB and dragging
 hl.bind(mainMod .. " + mouse:272",	hl.dsp.window.drag(),   { mouse = true, description = "Move window" })
-hl.bind(mainMod .. " + mouse:272",	hl.dsp.window.float({ action = "toggle" }), { mouse = true, click = true, description = "Toggle tile/float" })
 hl.bind(mainMod .. " + mouse:273",	hl.dsp.window.resize(), { mouse = true, description = "Resize window" })
-hl.bind(mainMod .. " + mouse:273",	hl.dsp.window.move({ workspace = "special:magic" }), { mouse = true, click = true, description = "Move window to special workspace" })
+
+-- Toggle float with mainMod + LMB and clicking
+hl.bind(mainMod .. " + mouse:272",	hl.dsp.window.float({ action = "toggle" }), { mouse = true, click = true, description = "Toggle float" })
+
+-- Toggle magic with mainMod + RMB and clicking
+hl.bind(mainMod .. " + mouse:273", function ()
+    if hl.get_workspace("special:magic") then
+        hl.dispatch(hl.dsp.window.move({ workspace = hl.get_active_workspace(), window = "tag:magic", mouse = true, click = true }))
+        hl.dispatch(hl.dsp.window.clear_tags({ window = "tag:magic" }))
+    else
+        hl.dispatch(hl.dsp.window.tag({ tag = "magic", window = hl.get_active_window() }))
+        hl.dispatch(hl.dsp.window.move({ workspace = "special:magic", follow = false, mouse = true, click = true }))
+    end
+end)
+
+-- Toggle minimized with mainMod + MMB and clicking
+hl.bind(mainMod .. " + mouse:274", function ()
+    if hl.get_workspace("special:minimized") then
+        hl.dispatch(hl.dsp.window.move({ workspace = hl.get_active_workspace(), window = "tag:minimized", mouse = true, click = true }))
+        hl.dispatch(hl.dsp.window.clear_tags({ window = "tag:minimized" }))
+    else
+        hl.dispatch(hl.dsp.window.tag({ tag = "minimized", window = hl.get_active_window() }))
+        hl.dispatch(hl.dsp.window.move({ workspace = "special:minimized", follow = false, mouse = true, click = true }))
+    end
+end)
 
 -- Laptop multimedia keys for volume and LCD brightness
 hl.bind("XF86AudioRaiseVolume",		hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"), { locked = true, repeating = true })
