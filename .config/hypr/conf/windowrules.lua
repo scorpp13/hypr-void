@@ -124,8 +124,6 @@ hl.layer_rule({
 	name = "waybar",
 	match = { namespace = "waybar" },
 	blur = true,
-	xray = 1,
-	ignore_alpha = 0.01,
 })
 
 -- Hyprland-run windowrule
