@@ -10,12 +10,7 @@ hl.config({
 		preserve_split = true, -- you probably want this
 	},
 	master = {
-		new_status = "master",
-		new_on_top=1,
-		mfact = 0.5,
-	},
-	scrolling = {
-		fullscreen_on_one_column = true,
+		mfact = 0.5, --default 0.55
 	},
 	binds = {
 		drag_threshold = 10, -- Fire a drag event only after dragging for more than 10px
