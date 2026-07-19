@@ -40,5 +40,5 @@ BEGIN {
     }
 
     # Output: Column 1 (Keys), Column 2 (Description)
-    printf "%s\n>>> %s\0", combo, desc
-}' | fuzzel --dmenu0 --config=$HOME/.config/fuzzel/dfuzzel.ini
+    printf "%-28s\n %s\0", combo, desc
+}' | fuzzel --dmenu0 --counter --config=$HOME/.config/fuzzel/dfuzzel.ini

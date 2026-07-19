@@ -33,13 +33,13 @@ hl.bind(mainMod .. " + W",			hl.dsp.exec_cmd("waypaper"), { description = "Waypa
 -- Windows
 hl.bind(mainMod .. " + F",			hl.dsp.window.fullscreen({ mode = "fullscreen", action = "toggle" }), { description = "Toggle fullscreen" })
 hl.bind(mainMod .. " + M",			hl.dsp.window.fullscreen({ mode = "maximized", action = "toggle" }), { description = "Toggle maximize" })
-hl.bind(mainMod .. " + T",			hl.dsp.window.float({ action = "toggle" }), { description = "Toggle efloat" })
+hl.bind(mainMod .. " + T",			hl.dsp.window.float({ action = "toggle" }), { description = "Toggle float" })
 hl.bind(mainMod .. " + J",			hl.dsp.layout("togglesplit"), { description = "Toggle split" })
 hl.bind(mainMod .. " + K",			hl.dsp.layout("swapsplit"), { description = "Swap split" })
 hl.bind(mainMod .. " + G",			hl.dsp.group.toggle(), { description = "Toggle group" })
 hl.bind(mainMod .. " + S",			hl.dsp.workspace.toggle_special("magic"), { description = "Toggle magic workspace" })
 hl.bind(mainMod .. " + ESCAPE",		hl.dsp.window.close(), { description = "Kill active window" })
-hl.bind(mainMod .. " + SHIFT + Q",	hl.dsp.exec_cmd("hyprctl activewindow | grep pid | tr -d 'pid:' | xargs kill"), { description = "Quit active window and all open instances" })
+hl.bind(mainMod .. " + SHIFT + Q",	hl.dsp.exec_cmd("hyprctl activewindow | grep pid | tr -d 'pid:' | xargs kill"), { description = "Quit active window and all instances" })
 hl.bind(mainMod .. " + SHIFT + S",	hl.dsp.window.move({ workspace = "special:magic" }), { description = "Move window to magic workspace" })
 hl.bind(mainMod .. " + up",			hl.dsp.window.resize({ x = 0, y = -100, relative = true }), { repeating = true }, { description = "Reduce window height" })
 hl.bind(mainMod .. " + down",		hl.dsp.window.resize({ x = 0, y = 100, relative = true }), { repeating = true }, { description = "Increase window height" })
@@ -74,7 +74,7 @@ hl.bind(mainMod .. " + mouse:272",	hl.dsp.window.drag(),   { mouse = true, descr
 hl.bind(mainMod .. " + mouse:273",	hl.dsp.window.resize(), { mouse = true, description = "Resize window" })
 
 -- Toggle float with mainMod + LMB and clicking
-hl.bind(mainMod .. " + mouse:272",	hl.dsp.window.float({ action = "toggle" }), { mouse = true, click = true, description = "Click toggle float" })
+hl.bind(mainMod .. " + mouse:272",	hl.dsp.window.float({ action = "toggle" }), { mouse = true, click = true, description = "Toggle-click float" })
 
 -- Toggle magic with mainMod + RMB and clicking
 hl.bind(mainMod .. " + mouse:273", function ()
@@ -85,7 +85,7 @@ hl.bind(mainMod .. " + mouse:273", function ()
         hl.dispatch(hl.dsp.window.tag({ tag = "magic", window = hl.get_active_window() }))
         hl.dispatch(hl.dsp.window.move({ workspace = "special:magic", follow = false, mouse = true, click = true }))
     end
-end, { description = "Click toggle move window to magic workspace" })
+end, { description = "Toggle-click move to magic workspace" })
 
 -- Toggle minimized with mainMod + MMB and clicking
 hl.bind(mainMod .. " + mouse:274", function ()
@@ -96,7 +96,7 @@ hl.bind(mainMod .. " + mouse:274", function ()
         hl.dispatch(hl.dsp.window.tag({ tag = "minimized", window = hl.get_active_window() }))
         hl.dispatch(hl.dsp.window.move({ workspace = "special:minimized", follow = false, mouse = true, click = true }))
     end
-end, { description = "Click toggle window minimized state" })
+end, { description = "Toggle-click minimized state" })
 
 -- Laptop multimedia keys for volume and LCD brightness
 hl.bind("XF86AudioRaiseVolume",		hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"), { locked = true, repeating = true })
