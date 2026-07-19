@@ -1,5 +1,19 @@
 local mainMod = "SUPER"
 
+local function layout_bind(bind_table)
+    return function ()
+        local workspace = hl.get_active_special_workspace() or
+                          hl.get_active_workspace()
+		if not workspace then
+			return
+		end
+        local layout = workspace.tiled_layout
+		if bind_table[layout] then
+			hl.dispatch(bind_table[layout])
+		end
+    end
+end
+
 -- Apps
 hl.bind(mainMod .. " + CTRL + M",	hl.dsp.exec_cmd("fuzzel"), { description = "Menu" })
 hl.bind(mainMod .. " + CTRL + R",	hl.dsp.exec_cmd("~/.config/waybar/launch.sh"), { description = "Waybar reload" })
@@ -32,23 +46,35 @@ hl.bind(mainMod .. " + down",		hl.dsp.window.resize({ x = 0, y = 100, relative =
 hl.bind(mainMod .. " + left",		hl.dsp.window.resize({ x = -100, y = 0, relative = true }), { repeating = true }, { description = "Reduce window width" })
 hl.bind(mainMod .. " + right",		hl.dsp.window.resize({ x = 100, y = 0, relative = true }), { repeating = true }, { description = "Increase window width" })
 
--- Move active window to a workspace with mainMod + SHIFT + [0-9]
-for i = 1, 10 do
-    local key = i % 10 -- 10 maps to key 0
+-- Move active window to a workspace with mainMod + SHIFT + [1-4]
+for i = 1, 4 do
+    local key = i
     hl.bind(mainMod .. " + " .. key, hl.dsp.focus({ workspace = i}), { description = "Focus workspace " .. i })
     hl.bind(mainMod .. " + SHIFT + " .. key, hl.dsp.window.move({ workspace = i }), { description = "Move window to workspace " .. i })
 end
 
--- Scroll through existing workspaces with mainMod + scroll
-hl.bind(mainMod .. " + mouse_up",	hl.dsp.focus({ workspace = "r+1" }), { description = "Switch to previous workspace" })
-hl.bind(mainMod .. " + mouse_down",	hl.dsp.focus({ workspace = "r-1" }), { description = "Switch to next workspace" })
+-- Scroll through windows / workspaces
+hl.bind(mainMod .. " + SHIFT + mouse_up",	hl.dsp.focus({ workspace = "r+1" }), { description = "Scroll to previous workspace" })
+hl.bind(mainMod .. " + SHIFT + mouse_down",	hl.dsp.focus({ workspace = "r-1" }), { description = "Scroll to next workspace" })
+hl.bind(mainMod .. " + mouse_up", layout_bind({
+    scrolling = hl.dsp.layout("swapcol l"),
+    dwindle   = hl.dsp.layout("cycleprev"),
+    monocle   = hl.dsp.layout("cycleprev"),
+    master    = hl.dsp.layout("cycleprev"),
+}), { description = "Scroll to previous window" })
+hl.bind(mainMod .. " + mouse_down", layout_bind({
+    scrolling = hl.dsp.layout("swapcol r"),
+    dwindle   = hl.dsp.layout("cyclenext"),
+    monocle   = hl.dsp.layout("cyclenext"),
+    master    = hl.dsp.layout("cyclenext"),
+}), { description = "Scroll to next window" })
 
 -- Move/resize windows with mainMod + LMB/RMB and dragging
 hl.bind(mainMod .. " + mouse:272",	hl.dsp.window.drag(),   { mouse = true, description = "Move window" })
 hl.bind(mainMod .. " + mouse:273",	hl.dsp.window.resize(), { mouse = true, description = "Resize window" })
 
 -- Toggle float with mainMod + LMB and clicking
-hl.bind(mainMod .. " + mouse:272",	hl.dsp.window.float({ action = "toggle" }), { mouse = true, click = true, description = "Toggle float" })
+hl.bind(mainMod .. " + mouse:272",	hl.dsp.window.float({ action = "toggle" }), { mouse = true, click = true, description = "Click toggle float" })
 
 -- Toggle magic with mainMod + RMB and clicking
 hl.bind(mainMod .. " + mouse:273", function ()
@@ -59,7 +85,7 @@ hl.bind(mainMod .. " + mouse:273", function ()
         hl.dispatch(hl.dsp.window.tag({ tag = "magic", window = hl.get_active_window() }))
         hl.dispatch(hl.dsp.window.move({ workspace = "special:magic", follow = false, mouse = true, click = true }))
     end
-end)
+end, { description = "Click toggle window to magic workspace" })
 
 -- Toggle minimized with mainMod + MMB and clicking
 hl.bind(mainMod .. " + mouse:274", function ()
@@ -70,7 +96,7 @@ hl.bind(mainMod .. " + mouse:274", function ()
         hl.dispatch(hl.dsp.window.tag({ tag = "minimized", window = hl.get_active_window() }))
         hl.dispatch(hl.dsp.window.move({ workspace = "special:minimized", follow = false, mouse = true, click = true }))
     end
-end)
+end, { description = "Click toggle minimized" })
 
 -- Laptop multimedia keys for volume and LCD brightness
 hl.bind("XF86AudioRaiseVolume",		hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"), { locked = true, repeating = true })
@@ -87,13 +113,10 @@ hl.bind(mainMod .. " + tab", function ()
 	if hl.get_active_special_workspace() then
 		workspace = hl.get_active_special_workspace()
 	end
-
     local next_layout = "dwindle"
-
     if not workspace then
         return
     end
-
     for i = 1, #layouts do
         if layouts[i] == workspace.tiled_layout then
             local next_layout_idx = (i % #layouts) + 1
@@ -101,13 +124,12 @@ hl.bind(mainMod .. " + tab", function ()
             break
         end
     end
-
 	if workspace.special then
 		hl.workspace_rule({ workspace = tostring(workspace.name), layout = next_layout })
 	else
 		hl.workspace_rule({ workspace = tostring(workspace.id), layout = next_layout })
 	end
-end)
+end, { description = "Toggle layouts" })
 
 -- Zooming
 local MAX_ZOOM = 3
@@ -127,7 +149,7 @@ local function zoom(offset)
     hl.config({ cursor = { zoom_factor = current } })
 end
 
-hl.bind(mainMod .. " + Z", zoom)
+hl.bind(mainMod .. " + Z", zoom,  { description = "ZOOM in/out" })
 hl.bind(mainMod .. " + KP_ADD", function()
     zoom(0.5)
 end)
