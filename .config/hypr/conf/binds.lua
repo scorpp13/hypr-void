@@ -85,7 +85,7 @@ hl.bind(mainMod .. " + mouse:273", function ()
         hl.dispatch(hl.dsp.window.tag({ tag = "magic", window = hl.get_active_window() }))
         hl.dispatch(hl.dsp.window.move({ workspace = "special:magic", follow = false, mouse = true, click = true }))
     end
-end, { description = "Click toggle window to magic workspace" })
+end, { description = "Click toggle move window to magic workspace" })
 
 -- Toggle minimized with mainMod + MMB and clicking
 hl.bind(mainMod .. " + mouse:274", function ()
@@ -96,7 +96,7 @@ hl.bind(mainMod .. " + mouse:274", function ()
         hl.dispatch(hl.dsp.window.tag({ tag = "minimized", window = hl.get_active_window() }))
         hl.dispatch(hl.dsp.window.move({ workspace = "special:minimized", follow = false, mouse = true, click = true }))
     end
-end, { description = "Click toggle minimized" })
+end, { description = "Click toggle window minimized state" })
 
 -- Laptop multimedia keys for volume and LCD brightness
 hl.bind("XF86AudioRaiseVolume",		hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"), { locked = true, repeating = true })
