@@ -1,5 +1,7 @@
 local mainMod = "SUPER"
 
+-- Local functions
+--Bind Table
 local function layout_bind(bind_table)
     return function ()
         local workspace = hl.get_active_special_workspace() or
@@ -13,6 +15,22 @@ local function layout_bind(bind_table)
 		end
     end
 end
+--Magnifier
+local MAX_ZOOM = 3
+local MIN_ZOOM = 1
+local ZOOM_TOGGLE_FACTOR = 1.5
+local function zoom(offset)
+    local current = hl.get_config("cursor.zoom_factor")
+    if offset ~= nil then
+        current = current + offset
+    elseif current ~= MIN_ZOOM then
+        current = MIN_ZOOM
+    else
+        current = ZOOM_TOGGLE_FACTOR
+    end
+    current = math.max(MIN_ZOOM, math.min(MAX_ZOOM, current))
+    hl.config({ cursor = { zoom_factor = current } })
+end
 
 -- Apps
 hl.bind(mainMod .. " + CTRL + M",	hl.dsp.exec_cmd("fuzzel"), { description = "Menu" })
@@ -25,7 +43,7 @@ hl.bind(mainMod .. " + PRINT",		hl.dsp.exec_cmd("screenshot.sh"), { description 
 hl.bind(mainMod .. " + B",			hl.dsp.exec_cmd("vivaldi"), { description = "Browser" })
 hl.bind(mainMod .. " + A",			hl.dsp.exec_cmd("sol"), { description = "Aisleriot" })
 hl.bind(mainMod .. " + C",			hl.dsp.exec_cmd("galculator"), { description = "Calculator" })
-hl.bind(mainMod .. " + H",			hl.dsp.exec_cmd("kitty --class floating -e top"), { description = "Top app" })
+hl.bind(mainMod .. " + H",			hl.dsp.exec_cmd("kitty --class floating -e top"), { description = "TopApp" })
 hl.bind(mainMod .. " + Q",			hl.dsp.exec_cmd("wlogout"), { description = "WLogout" })
 hl.bind(mainMod .. " + R",			hl.dsp.exec_cmd("hyprctl reload"), { description = "Hyprland reload" })
 hl.bind(mainMod .. " + W",			hl.dsp.exec_cmd("waypaper"), { description = "Waypaper" })
@@ -46,16 +64,42 @@ hl.bind(mainMod .. " + down",		hl.dsp.window.resize({ x = 0, y = 100, relative =
 hl.bind(mainMod .. " + left",		hl.dsp.window.resize({ x = -100, y = 0, relative = true }), { repeating = true }, { description = "Reduce window width" })
 hl.bind(mainMod .. " + right",		hl.dsp.window.resize({ x = 100, y = 0, relative = true }), { repeating = true }, { description = "Increase window width" })
 
--- Move active window to a workspace with mainMod + SHIFT + [1-4]
+-- Magnifier
+hl.bind(mainMod .. " + Z", zoom, { description = "Magnifier" })
+
+-- Focus selected workspace / Move active window to selected workspace
 for i = 1, 4 do
     local key = i
     hl.bind(mainMod .. " + " .. key, hl.dsp.focus({ workspace = i}), { description = "Focus workspace " .. i })
     hl.bind(mainMod .. " + SHIFT + " .. key, hl.dsp.window.move({ workspace = i }), { description = "Move window to workspace " .. i })
 end
 
--- Scroll through windows / workspaces
-hl.bind(mainMod .. " + SHIFT + mouse_up",	hl.dsp.focus({ workspace = "r+1" }), { description = "Scroll to previous workspace" })
-hl.bind(mainMod .. " + SHIFT + mouse_down",	hl.dsp.focus({ workspace = "r-1" }), { description = "Scroll to next workspace" })
+-- Toggle layouts
+hl.bind(mainMod .. " + tab", function ()
+    local layouts     = { "scrolling", "dwindle", "master", "monocle" }
+    local workspace   = hl.get_active_workspace()
+	if hl.get_active_special_workspace() then
+		workspace = hl.get_active_special_workspace()
+	end
+    local next_layout = "dwindle"
+    if not workspace then
+        return
+    end
+    for i = 1, #layouts do
+        if layouts[i] == workspace.tiled_layout then
+            local next_layout_idx = (i % #layouts) + 1
+            next_layout = layouts[next_layout_idx]
+            break
+        end
+    end
+	if workspace.special then
+		hl.workspace_rule({ workspace = tostring(workspace.name), layout = next_layout })
+	else
+		hl.workspace_rule({ workspace = tostring(workspace.id), layout = next_layout })
+	end
+end, { description = "Toggle layouts" })
+
+-- Scroll with mainMod + mouse wheel through windows / workspaces
 hl.bind(mainMod .. " + mouse_up", layout_bind({
     scrolling = hl.dsp.layout("swapcol l"),
     dwindle   = hl.dsp.layout("cycleprev"),
@@ -68,6 +112,8 @@ hl.bind(mainMod .. " + mouse_down", layout_bind({
     monocle   = hl.dsp.layout("cyclenext"),
     master    = hl.dsp.layout("cyclenext"),
 }), { description = "Scroll to next window" })
+hl.bind(mainMod .. " + SHIFT + mouse_up",	hl.dsp.focus({ workspace = "r+1" }), { description = "Scroll to previous workspace" })
+hl.bind(mainMod .. " + SHIFT + mouse_down",	hl.dsp.focus({ workspace = "r-1" }), { description = "Scroll to next workspace" })
 
 -- Move/resize windows with mainMod + LMB/RMB and dragging
 hl.bind(mainMod .. " + mouse:272",	hl.dsp.window.drag(),   { mouse = true, description = "Move window" })
@@ -105,51 +151,3 @@ hl.bind("XF86AudioMute",			hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ 
 hl.bind("XF86AudioMicMute",			hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"),   { locked = true, repeating = true })
 hl.bind("XF86MonBrightnessUp",		hl.dsp.exec_cmd("brightnessctl -e4 -n2 set 5%+"),                  { locked = true, repeating = true })
 hl.bind("XF86MonBrightnessDown",	hl.dsp.exec_cmd("brightnessctl -e4 -n2 set 5%-"),                  { locked = true, repeating = true })
-
--- Toggle layouts
-hl.bind(mainMod .. " + tab", function ()
-    local layouts     = { "scrolling", "dwindle", "master", "monocle" }
-    local workspace   = hl.get_active_workspace()
-	if hl.get_active_special_workspace() then
-		workspace = hl.get_active_special_workspace()
-	end
-    local next_layout = "dwindle"
-    if not workspace then
-        return
-    end
-    for i = 1, #layouts do
-        if layouts[i] == workspace.tiled_layout then
-            local next_layout_idx = (i % #layouts) + 1
-            next_layout = layouts[next_layout_idx]
-            break
-        end
-    end
-	if workspace.special then
-		hl.workspace_rule({ workspace = tostring(workspace.name), layout = next_layout })
-	else
-		hl.workspace_rule({ workspace = tostring(workspace.id), layout = next_layout })
-	end
-end, { description = "Toggle layouts" })
-
--- Zooming
-local MAX_ZOOM = 3
-local MIN_ZOOM = 1
-local ZOOM_TOGGLE_FACTOR = 1.5
-
-local function zoom(offset)
-    local current = hl.get_config("cursor.zoom_factor")
-    if offset ~= nil then
-        current = current + offset
-    elseif current ~= MIN_ZOOM then
-        current = MIN_ZOOM
-    else
-        current = ZOOM_TOGGLE_FACTOR
-    end
-    current = math.max(MIN_ZOOM, math.min(MAX_ZOOM, current))
-    hl.config({ cursor = { zoom_factor = current } })
-end
-
-hl.bind(mainMod .. " + Z", zoom,  { description = "ZOOM in/out" })
-hl.bind(mainMod .. " + KP_ADD", function()
-    zoom(0.5)
-end)
