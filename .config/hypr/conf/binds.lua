@@ -101,16 +101,16 @@ end, { description = "Toggle layouts" })
 
 -- Scroll with mainMod + mouse wheel through windows / workspaces
 hl.bind(mainMod .. " + mouse_up", layout_bind({
-    scrolling = hl.dsp.layout("swapcol l"),
-    dwindle   = hl.dsp.layout("cycleprev"),
-    monocle   = hl.dsp.layout("cycleprev"),
-    master    = hl.dsp.layout("cycleprev"),
+    scrolling = hl.dsp.layout("swapcol l"), -- Scrolling: swap column with left one
+    dwindle   = hl.dsp.layout("swapsplit"), -- Dwindle: swap window split
+    monocle   = hl.dsp.layout("cycleprev"), -- Monocle: cycle prev window
+    master    = hl.dsp.layout("cycleprev"), -- Master: cycle prev window
 }), { description = "Scroll to previous window" })
 hl.bind(mainMod .. " + mouse_down", layout_bind({
-    scrolling = hl.dsp.layout("swapcol r"),
-    dwindle   = hl.dsp.layout("cyclenext"),
-    monocle   = hl.dsp.layout("cyclenext"),
-    master    = hl.dsp.layout("cyclenext"),
+    scrolling = hl.dsp.layout("swapcol r"), -- Scrolling: swap column with right one
+    dwindle   = hl.dsp.layout("togglesplit"), -- Dwindle: toggle window split
+    monocle   = hl.dsp.layout("cyclenext"), -- Monocle: cycle prev window
+    master    = hl.dsp.layout("cyclenext"), -- Master: cycle prev window
 }), { description = "Scroll to next window" })
 hl.bind(mainMod .. " + SHIFT + mouse_up",	hl.dsp.focus({ workspace = "r+1" }), { description = "Scroll to previous workspace" })
 hl.bind(mainMod .. " + SHIFT + mouse_down",	hl.dsp.focus({ workspace = "r-1" }), { description = "Scroll to next workspace" })
