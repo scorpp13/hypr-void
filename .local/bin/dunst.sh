@@ -1,5 +1,10 @@
 #!/usr/bin/bash
 
+. "${HOME}/.cache/wal/colors.sh"
+frame_color='"'$foreground'"'
+foreground='"'#ffffff'"'
+background='"'$background'70"'
+
 config=$HOME/.config/dunst/dunstrc
 
 icon=$(cat ${HOME}/.config/gtk-3.0/settings.ini | \
@@ -17,7 +22,7 @@ if grep -q "top" ~/.cache/.themestyle.sh ; then
 	else origin="top-right"
 fi
 
-head -n -4 "$config" > dunstrc_
-echo -e "[global]\norigin = $origin\nfont = $font\nicon_theme = $icon" >> dunstrc_
+head -n -6 "$config" > dunstrc_
+echo -e "origin = $origin\nfont = $font\nicon_theme = $icon\nframe_color = $frame_color\nforeground = $foreground\nbackground = $background" >> dunstrc_
 mv dunstrc_ "$config"
 dunstctl reload

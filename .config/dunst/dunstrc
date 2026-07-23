@@ -14,13 +14,12 @@ progress_bar_max_width = 300
 progress_bar_corner_radius = 6
 icon_corner_radius = 0
 indicate_hidden = yes
-#transparency = 30
 separator_height = 2
 padding = 8
 horizontal_padding = 8
 text_icon_padding = 4
 frame_width = 2
-frame_color = "#ffffff"
+timeout = 6
 gap_size = 0
 separator_color = frame
 sort = yes
@@ -35,11 +34,8 @@ ignore_newline = no
 stack_duplicates = true
 hide_duplicate_count = false
 show_indicators = yes
-#enable_recursive_icon_lookup = true
-#icon_position = left
-#min_icon_size = 32
-#max_icon_size = 128
-#icon_path = /usr/share/icons/papirus/16x16/status/:/usr/share/icons/papirus/16x16/devices/
+enable_recursive_icon_lookup = true
+icon_position = left
 sticky_history = yes
 history_length = 20
 browser = /usr/bin/xdg-open
@@ -53,24 +49,10 @@ force_xinerama = false
 mouse_left_click = close_current
 mouse_middle_click = do_action, close_current
 mouse_right_click = close_all
-
-[urgency_low]
-background = "#00000070"
-foreground = "#888888"
-timeout = 6
-
-[urgency_normal]
-background = "#00000070"
-foreground = "#ffffff"
-timeout = 6
-
-[urgency_critical]
-background = "#90000070"
-foreground = "#ffffff"
-frame_color = "#ffffff"
-timeout = 6
-
-[global]
+# dunst.sh
 origin = bottom-right
 font = Adwaita Sans 13
 icon_theme = Tela
+frame_color = "#d9d4ba"
+foreground = "#ffffff"
+background = "#0E111370"
