@@ -13,7 +13,8 @@ sed 's/gtk-icon-theme-name=//')
 
 font=$(cat ${HOME}/.config/gtk-3.0/settings.ini | \
 grep "gtk-font-name" | \
-sed 's/gtk-font-name=//')
+sed 's/gtk-font-name=//' | \
+tr -d '0-9') # grep -o '[^0-9]*') .. sed 's/[0-9]//g')
 
 if grep -q "top" ~/.cache/.themestyle.sh ; then
 		 origin="top-right"
@@ -23,6 +24,6 @@ if grep -q "top" ~/.cache/.themestyle.sh ; then
 fi
 
 head -n -6 "$config" > dunstrc_
-echo -e "origin = $origin\nfont = $font\nicon_theme = $icon\nframe_color = $frame_color\nforeground = $foreground\nbackground = $background" >> dunstrc_
+echo -e "origin = $origin\nfont = "$font" 14\nicon_theme = $icon\nframe_color = $frame_color\nforeground = $foreground\nbackground = $background" >> dunstrc_
 mv dunstrc_ "$config"
 dunstctl reload

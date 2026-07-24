@@ -25,7 +25,7 @@ if grep -q "top" ~/.cache/.themestyle.sh ; then
 	else anchor="top-left"
 fi
 
-cat > ~/.config/fuzzel/wal_fuzzel.ini<< EOF
+cat > ~/.config/fuzzel/_fuzzel.ini<< EOF
 [colors]
 background=$b
 text=$t
@@ -36,11 +36,11 @@ selection-match=$M
 border=$C
 [main]
 icon-theme=$icon
-font=$font
+font=$font:size=14
 anchor=$anchor
 EOF
 
-cat > ~/.config/fuzzel/wal_dfuzzel.ini<< EOF
+cat > ~/.config/fuzzel/_dfuzzel.ini<< EOF
 [colors]
 background=$s
 text=$S
