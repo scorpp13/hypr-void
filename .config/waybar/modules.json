@@ -56,7 +56,7 @@
 	"on-click-middle": "kitty --class floating -e cleanup.sh",
 	"on-click-right": "kitty --class floating -e mirrorlist.sh"
 },
-//	Themes   
+//	Themes 
 "custom/themes": {
 	"format": "",
 	"on-click": "themes.sh",
@@ -113,7 +113,7 @@
 },
 //	Clock
 "clock": {
-	"tooltip-format": "<big>{:%a %d %B}</big>\n\n<tt><small>{calendar}</small></tt>",
+	"tooltip-format": "<big><b>{:%a %d %B}</b></big>\n\n<tt>{calendar}</tt>",
 	//"format-alt": "{:%d-%m-%Y}",
 	"calendar": {
 		"mode"          : "year",
@@ -122,10 +122,10 @@
 		"on-scroll"     : 1,
 			"format": {
 				"months"	: "<span color='#ffead3'><b>{}</b></span>",
-				"days"		: "<span color='#ecc6d9'><b>{}</b></span>",
-				//"weeks"		: "<span color='#99ffdd'><b>W{}</b></span>",
+				"days"		: "<span color='#ffeedd'>{}</span>",
+				//"weeks"		: "<span color='#ffffff'><b>{}</b></span>",
 				"weekdays"	: "<span color='#ffcc66'><b>{}</b></span>",
-				"today"		: "<span color='#ff6699'><b><u>{}</u></b></span>"
+				"today"		: "<span color='#99ff66'><b>{}</b></span>"
 			}
 		},
 	"actions": {

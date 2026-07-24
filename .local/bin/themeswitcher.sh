@@ -31,7 +31,6 @@ done
 listNames=${listNames::-2}
 choice=$(echo -e "$listNames" | fuzzel -d --index \
 	-p "Switch Waybar Theme" \
-#	-f "Fira Code:weight=regular:size=12" \
 	-t 990000ff)
 
 # Set new theme
@@ -40,5 +39,7 @@ if [ "$choice" ]; then
 	echo "${listThemes[$choice+1]}" > ~/.cache/.themestyle.sh
 	~/.config/waybar/launch.sh
 fi
+
+# PostInstall scripts
 fuzzel.sh
 dunst.sh
