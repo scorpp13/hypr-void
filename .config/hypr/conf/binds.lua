@@ -138,24 +138,24 @@ hl.bind(mainMod .. " + mouse:272", hl.dsp.window.float({ action = "toggle" }),
 -- Toggle magic with mainMod + RMB and clicking
 hl.bind(mainMod .. " + mouse:273", function ()
     if hl.get_workspace("special:magic") then
-        hl.dispatch(hl.dsp.window.move({ workspace = hl.get_active_workspace(), window = "tag:magic", mouse = true, click = true }))
+        hl.dispatch(hl.dsp.window.move({ workspace = hl.get_active_workspace(), window = "tag:magic" }))
         hl.dispatch(hl.dsp.window.clear_tags({ window = "tag:magic" }))
     else
         hl.dispatch(hl.dsp.window.tag({ tag = "magic", window = hl.get_active_window() }))
-        hl.dispatch(hl.dsp.window.move({ workspace = "special:magic", follow = false, mouse = true, click = true }))
+        hl.dispatch(hl.dsp.window.move({ workspace = "special:magic", follow = false }))
     end
-end, { description = "Toggle-click move to magic workspace" })
+end, { mouse = true, click = true, description = "Toggle-click move to magic workspace" })
 
 -- Toggle minimized with mainMod + MMB and clicking
 hl.bind(mainMod .. " + mouse:274", function ()
     if hl.get_workspace("special:minimized") then
-        hl.dispatch(hl.dsp.window.move({ workspace = hl.get_active_workspace(), window = "tag:minimized", mouse = true, click = true }))
+        hl.dispatch(hl.dsp.window.move({ workspace = hl.get_active_workspace(), window = "tag:minimized" }))
         hl.dispatch(hl.dsp.window.clear_tags({ window = "tag:minimized" }))
     else
         hl.dispatch(hl.dsp.window.tag({ tag = "minimized", window = hl.get_active_window() }))
-        hl.dispatch(hl.dsp.window.move({ workspace = "special:minimized", follow = false, mouse = true, click = true }))
+        hl.dispatch(hl.dsp.window.move({ workspace = "special:minimized", follow = false }))
     end
-end, { description = "Toggle-click minimized state" })
+end, { mouse = true, click = true, description = "Toggle-click minimized state" })
 
 -- Move/resize windows with mainMod + LMB/RMB and dragging
 hl.bind(mainMod .. " + mouse:272",	hl.dsp.window.drag(),
@@ -169,19 +169,19 @@ hl.bind(mainMod .. " + mouse_up", layout_bind({
     dwindle   = hl.dsp.layout("swapsplit"), -- Dwindle: swap window split
     monocle   = hl.dsp.layout("cycleprev"), -- Monocle: cycle prev window
     master    = hl.dsp.layout("cycleprev"), -- Master: cycle prev window
-}), { description = "Scroll to previous window" })
+}), { mouse = true, description = "Scroll to previous window" })
 --
 hl.bind(mainMod .. " + mouse_down", layout_bind({
     scrolling = hl.dsp.layout("swapcol r"), -- Scrolling: swap column with right one
     dwindle   = hl.dsp.layout("togglesplit"), -- Dwindle: toggle window split
     monocle   = hl.dsp.layout("cyclenext"), -- Monocle: cycle prev window
     master    = hl.dsp.layout("cyclenext"), -- Master: cycle prev window
-}), { description = "Scroll to next window" })
+}), { mouse = true, description = "Scroll to next window" })
 --
 hl.bind(mainMod .. " + SHIFT + mouse_up",	hl.dsp.focus({ workspace = "r+1" }),
-											{ description = "Scroll to previous workspace" })
+											{ mouse = true, description = "Scroll to previous workspace" })
 hl.bind(mainMod .. " + SHIFT + mouse_down",	hl.dsp.focus({ workspace = "r-1" }),
-											{ description = "Scroll to next workspace" })
+											{ mouse = true, description = "Scroll to next workspace" })
 
 -- Laptop multimedia keys for volume and LCD brightness
 hl.bind("XF86AudioRaiseVolume",		hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"), { locked = true, repeating = true })
