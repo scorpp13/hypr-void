@@ -74,16 +74,16 @@ hl.bind(mainMod .. " + K",			   hl.dsp.layout("swapsplit"),
 									   { description = "Swap split" })
 hl.bind(mainMod .. " + G",			   hl.dsp.group.toggle(),
 									   { description = "Toggle group" })
-hl.bind(mainMod .. " + S",			   hl.dsp.workspace.toggle_special("magic"),
-									   { description = "Toggle magic workspace" })
+hl.bind(mainMod .. " + S",			   hl.dsp.workspace.toggle_special("minimized"),
+									   { description = "Toggle minimized workspace" })
 hl.bind(mainMod .. " + Z", 			   zoom,
 									   { description = "Magnifier" })
 hl.bind(mainMod .. " + ESCAPE",		   hl.dsp.window.close(),
 									   { description = "Kill active window" })
 hl.bind(mainMod .. " + SHIFT + Q", 	   hl.dsp.exec_cmd("hyprctl activewindow | grep pid | tr -d 'pid:' | xargs kill"),
 									   { description = "Quit active window and all instances" })
-hl.bind(mainMod .. " + SHIFT + S",	   hl.dsp.workspace.toggle_special("minimized"),
-									   { description = "Toggle minimized workspace" })
+hl.bind(mainMod .. " + SHIFT + S",	   hl.dsp.workspace.toggle_special("magic"),
+									   { description = "Toggle magic workspace" })
 hl.bind(mainMod .. " + SHIFT + left",  hl.dsp.window.move({ workspace = "r-1" }),
 									   { description = "Move window to previous workspace" })
 hl.bind(mainMod .. " + SHIFT + right", hl.dsp.window.move({ workspace = "r+1" }),
@@ -136,7 +136,7 @@ hl.bind(mainMod .. " + mouse:272", hl.dsp.window.float({ action = "toggle" }),
 								   { mouse = true, click = true, description = "Click toggle window float state" })
 
 -- Toggle magic with mainMod + RMB and clicking
-hl.bind(mainMod .. " + mouse:273", function ()
+hl.bind(mainMod .. " + mouse:274", function ()
     if hl.get_workspace("special:magic") then
         hl.dispatch(hl.dsp.window.move({ workspace = hl.get_active_workspace(), window = "tag:magic" }))
         hl.dispatch(hl.dsp.window.clear_tags({ window = "tag:magic" }))
@@ -147,7 +147,7 @@ hl.bind(mainMod .. " + mouse:273", function ()
 end, { mouse = true, click = true, description = "Click toggle window magic state" })
 
 -- Toggle minimized with mainMod + MMB and clicking
-hl.bind(mainMod .. " + mouse:274", function ()
+hl.bind(mainMod .. " + mouse:273", function ()
     if hl.get_workspace("special:minimized") then
         hl.dispatch(hl.dsp.window.move({ workspace = hl.get_active_workspace(), window = "tag:minimized" }))
         hl.dispatch(hl.dsp.window.clear_tags({ window = "tag:minimized" }))
