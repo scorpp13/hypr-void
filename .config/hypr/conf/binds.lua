@@ -63,11 +63,11 @@ hl.bind(mainMod .. " + W",		  hl.dsp.exec_cmd("waypaper"),
 
 -- Windows
 hl.bind(mainMod .. " + F",			   hl.dsp.window.fullscreen({ mode = "fullscreen", action = "toggle" }),
-									   { description = "Toggle fullscreen" })
+									   { description = "Toggle window fullscreen state" })
 hl.bind(mainMod .. " + M",			   hl.dsp.window.fullscreen({ mode = "maximized", action = "toggle" }),
-									   { description = "Toggle maximize" })
+									   { description = "Toggle window maximize state" })
 hl.bind(mainMod .. " + T",			   hl.dsp.window.float({ action = "toggle" }),
-									   { description = "Toggle float" })
+									   { description = "Toggle window float state" })
 hl.bind(mainMod .. " + J",			   hl.dsp.layout("togglesplit"),
 									   { description = "Toggle split" })
 hl.bind(mainMod .. " + K",			   hl.dsp.layout("swapsplit"),
@@ -82,8 +82,8 @@ hl.bind(mainMod .. " + ESCAPE",		   hl.dsp.window.close(),
 									   { description = "Kill active window" })
 hl.bind(mainMod .. " + SHIFT + Q", 	   hl.dsp.exec_cmd("hyprctl activewindow | grep pid | tr -d 'pid:' | xargs kill"),
 									   { description = "Quit active window and all instances" })
-hl.bind(mainMod .. " + SHIFT + S",	   hl.dsp.window.move({ workspace = "special:magic" }),
-									   { description = "Move window to magic workspace" })
+hl.bind(mainMod .. " + SHIFT + S",	   hl.dsp.workspace.toggle_special("minimized"),
+									   { description = "Toggle minimized workspace" })
 hl.bind(mainMod .. " + SHIFT + left",  hl.dsp.window.move({ workspace = "r-1" }),
 									   { description = "Move window to previous workspace" })
 hl.bind(mainMod .. " + SHIFT + right", hl.dsp.window.move({ workspace = "r+1" }),
@@ -133,7 +133,7 @@ end, { description = "Toggle layouts" })
 
 -- Toggle float with mainMod + LMB and clicking
 hl.bind(mainMod .. " + mouse:272", hl.dsp.window.float({ action = "toggle" }),
-								   { mouse = true, click = true, description = "Toggle-click float" })
+								   { mouse = true, click = true, description = "Click toggle window float state" })
 
 -- Toggle magic with mainMod + RMB and clicking
 hl.bind(mainMod .. " + mouse:273", function ()
@@ -144,7 +144,7 @@ hl.bind(mainMod .. " + mouse:273", function ()
         hl.dispatch(hl.dsp.window.tag({ tag = "magic", window = hl.get_active_window() }))
         hl.dispatch(hl.dsp.window.move({ workspace = "special:magic", follow = false }))
     end
-end, { mouse = true, click = true, description = "Toggle-click move to magic workspace" })
+end, { mouse = true, click = true, description = "Click toggle window magic state" })
 
 -- Toggle minimized with mainMod + MMB and clicking
 hl.bind(mainMod .. " + mouse:274", function ()
@@ -155,7 +155,7 @@ hl.bind(mainMod .. " + mouse:274", function ()
         hl.dispatch(hl.dsp.window.tag({ tag = "minimized", window = hl.get_active_window() }))
         hl.dispatch(hl.dsp.window.move({ workspace = "special:minimized", follow = false }))
     end
-end, { mouse = true, click = true, description = "Toggle-click minimized state" })
+end, { mouse = true, click = true, description = "Click toggle window minimized state" })
 
 -- Move/resize windows with mainMod + LMB/RMB and dragging
 hl.bind(mainMod .. " + mouse:272",	hl.dsp.window.drag(),
