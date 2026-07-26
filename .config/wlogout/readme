@@ -1,4 +1,0 @@
-* Change Logout Command in 'layout' depending on your setup
-------------------------------------------------------------
-- for Display Managers (sddm...etc.) 'hyprctl dispatch exit'
-- for text-based login (TTY) 'loginctl terminate-user $USER'
