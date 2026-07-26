@@ -42,7 +42,7 @@
 	"on-click": "sleep 0.1 && cliphist.sh",
 	"on-click-right": "sleep 0.1 && cliphist.sh d",
 	"on-click-middle": "sleep 0.1 && cliphist.sh w",
-	"tooltip-format": "Clipboard"
+	"tooltip-format": "Clipboard Manager\nLM	- copy selected\nRM	- delete selected\nMM	- wipe clipboard"
 },
 //	Updates
 "custom/updates": {
