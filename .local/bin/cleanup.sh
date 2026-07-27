@@ -1,11 +1,8 @@
 #!/usr/bin/bash
 
-RED='\033[0;31m'
 GREEN='\033[0;32m'
 YELLOW='\033[0;33m'
-BLUE='\033[0;34m'
 PURPLE='\033[0;35m'
-CYAN='\033[1;36m'
 NONE='\033[0m'
 
 echo -e "${YELLOW}"
@@ -40,6 +37,7 @@ if [ "$type" == "Orphan Purge" ]; then
 			notify-send "CleanUp interrupted"
 		exit;
 fi
+
 notify-send "CleanUp finished"
 echo -e "${GREEN}"
 read -rp "Press Enter to continue" </dev/tty

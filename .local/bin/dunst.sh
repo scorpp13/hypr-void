@@ -7,11 +7,11 @@ background='"'$background'70"'
 
 config=$HOME/.config/dunst/dunstrc
 
-icon=$(cat ${HOME}/.config/gtk-3.0/settings.ini | \
+icon=$(cat "${HOME}"/.config/gtk-3.0/settings.ini | \
 grep "gtk-icon-theme-name" | \
 sed 's/gtk-icon-theme-name=//')
 
-font=$(cat ${HOME}/.config/gtk-3.0/settings.ini | \
+font=$(cat "${HOME}"/.config/gtk-3.0/settings.ini | \
 grep "gtk-font-name" | \
 sed 's/gtk-font-name=//' | \
 tr -d '0-9') # grep -o '[^0-9]*') .. sed 's/[0-9]//g')

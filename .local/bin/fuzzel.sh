@@ -9,11 +9,11 @@ S=$(echo "$color7"ff | sed 's/#//')
 M=$(echo "$color3"ff | sed 's/#//')
 C=$(echo "$color1"ff | sed 's/#//')
 
-icon=$(cat ${HOME}/.config/gtk-3.0/settings.ini | \
+icon=$(cat "${HOME}"/.config/gtk-3.0/settings.ini | \
 grep "gtk-icon-theme-name" | \
 sed 's/gtk-icon-theme-name=//')
 
-font=$(cat ${HOME}/.config/gtk-3.0/settings.ini | \
+font=$(cat "${HOME}"/.config/gtk-3.0/settings.ini | \
 grep "gtk-font-name" | \
 sed 's/gtk-font-name=//' | \
 tr -d '0-9') # grep -o '[^0-9]*') .. sed 's/[0-9]//g')
