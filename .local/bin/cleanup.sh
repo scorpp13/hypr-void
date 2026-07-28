@@ -18,7 +18,7 @@ if [ "$orphans" -ne 0 ]; then #|| [ "$oldkernel" -ne 0 ]; then
 	echo -e "${NONE}Found ${PURPLE}$orphans ${NONE}orphan packages" #and ${PURPLE}$oldkernel ${NONE}old_kernels"
 		else
 			notify-send "Nothing to clean"
-#		exit;
+		exit;
 fi
 
 type=$(gum choose "Orphan Purge" "Full CleanUp")
