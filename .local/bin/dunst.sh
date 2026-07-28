@@ -24,6 +24,6 @@ if grep -q "top" ~/.cache/.themestyle.sh ; then
 fi
 
 head -n -6 "$config" > dunstrc_
-echo -e "origin = $origin\nfont = "$font" 14\nicon_theme = $icon\nframe_color = $frame_color\nforeground = $foreground\nbackground = $background" >> dunstrc_
+echo -e "origin = $origin\nfont = ""$font""14\nicon_theme = $icon\nframe_color = $frame_color\nforeground = $foreground\nbackground = $background" >> dunstrc_
 mv dunstrc_ "$config"
 dunstctl reload

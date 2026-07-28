@@ -12,7 +12,7 @@ OUTPUT=merge_"$(date '+%d%m%y_%H%M%S')"
 FORMAT=$(gum input --prompt "Merging format: " --placeholder "columns X lines")
 if gum confirm "Merge selected images?"; then
 	cd "$DIR" && gum spin --title "Merging..." -- \
-	montage $INPUT -tile $FORMAT -geometry +0+0 $OUTPUT.$EXTENSION
+	montage ${INPUT} -tile ${FORMAT} -geometry +0+0 ${OUTPUT}.${EXTENSION}
 		elif [ $? -eq 130 ]; then
 			notify-send "Canceled by user"
 		exit 130

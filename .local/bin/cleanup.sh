@@ -18,10 +18,13 @@ if [ "$orphans" -ne 0 ]; then #|| [ "$oldkernel" -ne 0 ]; then
 	echo -e "${NONE}Found ${PURPLE}$orphans ${NONE}orphan packages" #and ${PURPLE}$oldkernel ${NONE}old_kernels"
 		else
 			notify-send "Nothing to clean"
-		exit;
+#		exit;
 fi
 
 type=$(gum choose "Orphan Purge" "Full CleanUp")
+ret=$?
+echo "Command exited with $ret"
+
 if [ "$type" == "Orphan Purge" ]; then
 	gum spin --title "Purging Orphan Packages..." -- sleep 0.5 #and Old Kernels..." -- sleep 0.5
 	#sudo vkpurge rm all &&
@@ -30,7 +33,7 @@ if [ "$type" == "Orphan Purge" ]; then
 			gum spin --title "Starting Full System CleanUp..." -- sleep 0.5
 			#sudo vkpurge rm all &&
 			sudo xbps-remove -o && sudo xbps-remove -OO
-		elif [ $? -eq 130 ]; then
+		elif [ "$ret" -eq 130 ]; then
 			notify-send "Canceled by user"
 		exit 130
 		else
