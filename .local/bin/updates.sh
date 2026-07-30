@@ -6,7 +6,7 @@ threshhold_yellow=20
 threshhold_red=100
 
 # Calculate available updates
-updates=$(xbps-install --memory-sync --dry-run --update | grep -Fe update -e install | wc -l)
+updates=$(xbps-install --memory-sync --dry-run --update | grep -Fe update -e install -c)
 
 # Output .json format for Waybar Module custom-updates
 	css_class="zero"
