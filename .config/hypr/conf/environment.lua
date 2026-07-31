@@ -6,5 +6,5 @@ hl.env("XDG_SESSION_DESKTOP", "Hyprland")
 -- Wayland
 hl.env("ELECTRON_OZONE_PLATFORM_HINT", "auto")
 
--- App's
-hl.env("EDITOR", "vim")
+-- User Defined Apps
+require("/conf/apps")

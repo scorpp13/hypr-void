@@ -15,12 +15,12 @@ for value in $options; do
 		if [ "$(find "$value" -type d | wc -l)" = 1 ]; then
 			result=$(echo "$value" | sed "s#$HOME/.config/waybar/themes/#/#g")
 			IFS='/' read -ra arrThemes <<< "$result"
-			listThemes[${#listThemes[@]}]="/${arrThemes[1]};$result"
+			listThemes[${#listThemes[@]}]="${arrThemes[0]}$result"
 			if [ -f "$themes_path$result"/config.sh ]; then
 				source "$themes_path$result"/config.sh
 				listNames+="$theme_name\n"
 			else
-				listNames+="/${arrThemes[1]};$result\n"
+				listNames+="${arrThemes[0]}$result\n"
 			fi
 		fi
 	fi

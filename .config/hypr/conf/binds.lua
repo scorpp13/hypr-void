@@ -36,23 +36,23 @@ hl.bind(mainMod .. " + CTRL + M", hl.dsp.exec_cmd("fuzzel"),
 								  { description = "Menu" })
 hl.bind(mainMod .. " + CTRL + R", hl.dsp.exec_cmd("~/.config/waybar/launch.sh"),
 								  { description = "Waybar reload" })
-hl.bind(mainMod .. " + CTRL + F", hl.dsp.exec_cmd("thunar"),
-								  { description = "FileManager" })
+hl.bind(mainMod .. " + CTRL + F", hl.dsp.exec_cmd("$GUI_FM"),
+								  { description = "GUI FileManager" })
 hl.bind(mainMod .. " + CTRL + C", hl.dsp.exec_cmd("cliphist.sh"),
 								  { description = "Clipboard" })
 hl.bind(mainMod .. " + CTRL + T", hl.dsp.exec_cmd("themeswitcher.sh"),
 								  { description = "Waybar theme" })
-hl.bind(mainMod .. " + RETURN",	  hl.dsp.exec_cmd("kitty -e fish"),
+hl.bind(mainMod .. " + RETURN",	  hl.dsp.exec_cmd("$TERMINAL"),
 								  { description = "Terminal" })
 hl.bind(mainMod .. " + PRINT",	  hl.dsp.exec_cmd("screenshot.sh"),
 								  { description = "ScreenShoter" })
-hl.bind(mainMod .. " + B",		  hl.dsp.exec_cmd("vivaldi"),
+hl.bind(mainMod .. " + B",		  hl.dsp.exec_cmd("$BROWSER"),
 								  { description = "Browser" })
 hl.bind(mainMod .. " + A",		  hl.dsp.exec_cmd("sol"),
 								  { description = "Aisleriot" })
 hl.bind(mainMod .. " + C",		  hl.dsp.exec_cmd("galculator"),
 								  { description = "Calculator" })
-hl.bind(mainMod .. " + H",		  hl.dsp.exec_cmd("kitty --class floating -e top"),
+hl.bind(mainMod .. " + H",		  hl.dsp.exec_cmd("$TERMINAL --class floating -e top"),
 								  { description = "TopApp" })
 hl.bind(mainMod .. " + Q",		  hl.dsp.exec_cmd("wlogout"),
 								  { description = "WLogout" })

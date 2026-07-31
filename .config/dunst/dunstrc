@@ -51,8 +51,8 @@ mouse_middle_click = do_action, close_current
 mouse_right_click = close_all
 # dunst.sh
 origin = bottom-right
-font = Adwaita Sans  14
+font = Adwaita Sans 14
 icon_theme = Tela
-frame_color = "#d2dae0"
+frame_color = "#f0ecc3"
 foreground = "#ffffff"
-background = "#09080770"
+background = "#030A1370"

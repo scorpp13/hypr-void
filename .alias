@@ -1,4 +1,4 @@
-alias update='sudo xbps-install -Su'
+alias upd='sudo xbps-install -u'
 alias ins='sudo xbps-install -S'
 alias del='sudo xbps-remove'
 alias query='sudo xbps-query'

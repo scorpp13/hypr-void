@@ -1,25 +1,10 @@
 # ~/.bash_profile
 
+# Include user variables from .bashrc
 if [[ -f ~/.bashrc ]] ; then
 	. ~/.bashrc
 fi
 
-# Set user_executable PATH
-if [ -d "$HOME/.local/bin" ] ; then
-	export PATH="$HOME/.local/bin:$PATH"
-fi
-
-## This lines not needed if elogind service is present and run
-# Check if XDG_RUNTIME_DIR is set
-#if test -z "$XDG_RUNTIME_DIR"; then
-#	if test ! -d "$XDG_RUNTIME_DIR" ; then
-#		mkdir $XDG_RUNTIME_DIR
-#		chown $USER:$USER $XDG_RUNTIME_DIR
-#	fi
-#	export XDG_RUNTIME_DIR="/run/user/$(id -u $USER)"
-#fi
-
-## Use for TTY-login
 # If login is nonroot start gui-session, else use console
 if shopt -q login_shell; then
     [[ -f ~/.bashrc ]] && source ~/.bashrc

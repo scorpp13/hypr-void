@@ -1,0 +1,6 @@
+hl.env("BROWSER", "vivaldi-stable")
+hl.env("GUI_FM", "thunar")
+hl.env("TERMINAL", "kitty")
+hl.env("CLI_FM", "vifm")
+hl.env("MEDIAPLAYER", "mpv --player-operation-mode=pseudo-gui --idle")
+hl.env("VOLUME", "wiremix")

@@ -52,9 +52,9 @@
 	"return-type": "json",
 	"exec": "updates.sh",
 	"restart-interval": 3600,
-	"on-click": "kitty --class floating -e installupdates.sh && ~/.config/waybar/launch.sh",
-	"on-click-middle": "kitty --class floating -e cleanup.sh",
-	"on-click-right": "kitty --class floating -e mirrorlist.sh"
+	"on-click": "$TERMINAL --class floating -e installupdates.sh && ~/.config/waybar/launch.sh",
+	"on-click-middle": "$TERMINAL --class floating -e cleanup.sh",
+	"on-click-right": "$TERMINAL --class floating -e mirrorlist.sh"
 },
 //	Themes 
 "custom/themes": {
@@ -65,33 +65,33 @@
 //	File Manager
 "custom/filemanager": {
 	"format": "",
-	"on-click": "kitty -e vifm",
-	"tooltip-format": "VIFM filemanager"
+	"on-click": "$TERMINAL -e $CLI_FM",
+	"tooltip-format": "File Manager"
 },
 //	Web Browser
 "custom/browser": {
 	"format": "",
 	//"on-click": "vivaldi-stable --proxy-server='http://127.0.0.1:8080'",
-	"on-click": "vivaldi-stable",
-	"tooltip-format": "Vivaldi browser"
+	"on-click": "$BROWSER",
+	"tooltip-format": "Internet Browser"
 },    
 //	Media Player
 "custom/player": {
 	"format": "󱜅",
-	"on-click": "mpv --player-operation-mode=pseudo-gui --idle",
-	"tooltip-format": "MPV Player"
+	"on-click": "$MEDIAPLAYER",
+	"tooltip-format": "Media Player"
 },
 //	Scripts
 "custom/script": {
 	"format": "",
 	"on-click": "script.sh",
-	"tooltip-format": "Custom scripts"
+	"tooltip-format": "Custom Scripts"
 },
 //	System
 "custom/system": {
 	"format": "",
 	"on-click": "system.sh",
-	"tooltip-format": "System manager"
+	"tooltip-format": "System Manager"
 },
 //	App Menu
 "custom/appmenu": {
@@ -141,7 +141,7 @@
 	"exec": "weather.sh 'Псков' 2> /dev/null",
 	"interval": 3600,
 	"tooltip": true,
-	"on-click": "kitty --class wttr.sh -e wttr.sh"
+	"on-click": "$TERMINAL --class wttr.sh -e wttr.sh"
 },	
 //	CPU_temp
 "temperature": {
@@ -149,7 +149,7 @@
 	"critical-threshold": 80,
 	"format-critical": "{temperatureC}°C",
 	"format": "",
-	"on-click": "kitty --class floating -e top -i",
+	"on-click": "$TERMINAL --class floating -e top -i",
 	"tooltip": false
 },
 //	Language
@@ -173,7 +173,7 @@
 	"format-icons": {
 		"default": [" ", " ", "󰕾 ", " "]
 	},
-	"on-click": "kitty --class floating -e wiremix",
+	"on-click": "$TERMINAL --class floating -e $VOLUME",
 	"on-click-middle": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
 },
  // Battery
