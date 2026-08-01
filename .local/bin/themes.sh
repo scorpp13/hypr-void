@@ -2,7 +2,7 @@
 
 option1="	Waybar Theme"
 option2="	GTK Theme"
-option3=" 	QT Theme"
+option3="	QT Theme"
 option4="	Wallpaper"
 
 options="$option1\n$option2\n$option3\n$option4"
