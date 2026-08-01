@@ -4,8 +4,8 @@ option1="	Font search"
 option2="	Convert to jpg"
 option3="󰙴	Merge images"
 option4="	Archive extractor"
-option5="	ColorPicker"
-option6="	UserApps"
+option5="	Color picker"
+option6="	User apps"
 
 options="$option1\n$option2\n$option3\n$option4\n$option5\n$option6"
 
