@@ -7,4 +7,4 @@ hl.env("XDG_SESSION_DESKTOP", "Hyprland")
 hl.env("ELECTRON_OZONE_PLATFORM_HINT", "auto")
 
 -- User Defined Apps
-require("/conf/apps")
+require("/conf/userapps")

@@ -53,6 +53,7 @@ python3-imageio
 python3-pipx
 python3-platformdirs
 python3-pkgconfig
+pwvucontrol
 pywal
 qt5-wayland
 qt6-wayland
@@ -70,7 +71,6 @@ vim
 vivaldi
 vsv
 Waybar
-wiremix
 wlogout
 wlr-randr
 udiskie

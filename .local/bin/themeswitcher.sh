@@ -36,7 +36,7 @@ choice=$(echo -e "$listNames" | fuzzel -d --index \
 if [ "$choice" ]; then
 	echo "Loading waybar theme..."
 	echo "${listThemes[$choice+1]}" > ~/.cache/.themestyle.sh
-	~/.config/waybar/launch.sh
+	hyprctl dispatch "hl.dsp.exec_cmd('~/.config/waybar/launch.sh')"
 fi
 
 # PostInstall scripts

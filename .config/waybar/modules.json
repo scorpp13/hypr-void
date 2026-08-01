@@ -173,7 +173,7 @@
 	"format-icons": {
 		"default": [" ", " ", "󰕾 ", " "]
 	},
-	"on-click": "$TERMINAL --class floating -e $VOLUME",
+	"on-click": "$VOLUME_CONTROL",
 	"on-click-middle": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
 },
  // Battery

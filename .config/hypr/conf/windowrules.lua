@@ -25,6 +25,13 @@ hl.window_rule({
 	name = "nm-connection-editor",
 	match = { class = "nm-connection-editor" },
 	float = true,
+})
+
+-- $VOLUME_CONTROL rule
+hl.window_rule({
+	name = "$VOLUME_CONTROL",
+	match = { title = ".*pipewire.*" },
+	float = true,
 	persistent_size = true,
 })
 
@@ -33,7 +40,6 @@ hl.window_rule({
 	name = "waypaper",
 	match = { class = "waypaper" },
 	float = true,
-	persistent_size = true,
 })
 
 -- nwg-look window rule
@@ -41,7 +47,6 @@ hl.window_rule({
 	name = "nwg-look",
 	match = { class = "nwg-look" },
 	float = true,
-	persistent_size = true,
 })
 
 -- qt6ct window rule
@@ -49,7 +54,6 @@ hl.window_rule({
 	name = "qt6ct",
 	match = { class = "qt6ct" },
 	float = true,
-	persistent_size = true,
 })
 
 -- Galculator window rule

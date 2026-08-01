@@ -3,10 +3,11 @@
 option1="	Font search"
 option2="	Convert to jpg"
 option3="󰙴	Merge images"
-option4="	 Archive extractor"
+option4="	Archive extractor"
 option5="	ColorPicker"
+option6="	UserApps"
 
-options="$option1\n$option2\n$option3\n$option4\n$option5"
+options="$option1\n$option2\n$option3\n$option4\n$option5\n$option6"
 
 choice=$(echo -e "$options" | fuzzel -d) 
 
@@ -21,4 +22,6 @@ case $choice in
 		kitty --class floating -e extract.sh ;;
 	"$option5")
 		kitty --class colorpicker.sh -e colorpicker.sh ;;
+	"$option6")
+		kitty --class floating -e userapps.sh ;;
 esac
