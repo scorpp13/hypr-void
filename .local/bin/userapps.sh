@@ -13,7 +13,7 @@ my_cli_fm=$CLI_FM
 my_mediaplayer=$MEDIAPLAYER
 my_volume_control=$VOLUME_CONTROL
 
-if $(gum confirm "choose your Browser"); then
+if gum confirm "choose your Browser"; then
 browser="$(gum input --value="" --placeholder="Default is $BROWSER")"
 	if [[ ! $browser ]]; then
 		my_browser=$BROWSER
@@ -25,7 +25,7 @@ sb=$(gum style --foreground 2 --faint "Your selected browser is ")
 mb=$(gum style --foreground 10 --bold "$my_browser")
 gum join --horizontal "$sb" "$mb"
 
-if $(gum confirm "choose your gui-FileManager"); then
+if gum confirm "choose your gui-FileManager"; then
 gui_fm="$(gum input --value="" --placeholder="Default is $GUI_FM")"
 	if [[ ! $gui_fm ]]; then
 		my_gui_fm=$GUI_FM
@@ -37,7 +37,7 @@ sgf=$(gum style --foreground 2 --faint "Your selected gui-FileManager is ")
 mgf=$(gum style --foreground 10 --bold "$my_gui_fm")
 gum join --horizontal "$sgf" "$mgf"
 
-if $(gum confirm "choose your Terminal"); then
+if gum confirm "choose your Terminal"; then
 terminal="$(gum input --value="" --placeholder="Default is $TERMINAL")"
 	if [[ ! $terminal ]]; then
 		my_terminal=$TERMINAL
@@ -49,7 +49,7 @@ st=$(gum style --foreground 2 --faint "Your selected Terminal is ")
 mt=$(gum style --foreground 10 --bold "$my_terminal")
 gum join --horizontal "$st" "$mt"
 
-if $(gum confirm "choose your cli-FileManager"); then
+if gum confirm "choose your cli-FileManager"; then
 cli_fm="$(gum input --value="" --placeholder="Default is $CLI_FM")"
 	if [[ ! $cli_fm ]]; then
 		my_cli_fm=$CLI_FM
@@ -61,7 +61,7 @@ scf=$(gum style --foreground 2 --faint "Your selected cli-FileManager is ")
 mcf=$(gum style --foreground 10 --bold "$my_cli_fm")
 gum join --horizontal "$scf" "$mcf"
 
-if $(gum confirm "choose your MediaPlayer"); then
+if gum confirm "choose your MediaPlayer"; then
 mediaplayer="$(gum input --value="" --placeholder="Default is $MEDIAPLAYER")"
 	if [[ ! $mediaplayer ]]; then
 		my_mediaplayer=$MEDIAPLAYER
@@ -73,7 +73,7 @@ sm=$(gum style --foreground 2 --faint "Your selected MediaPlayer is ")
 mm=$(gum style --foreground 10 --bold "$my_mediaplayer")
 gum join --horizontal "$sm" "$mm"
 
-if $(gum confirm "choose your Volume Control"); then
+if gum confirm "choose your Volume Control"; then
 volume_control="$(gum input --value="" --placeholder="Default is $VOLUME_CONTROL")"
 	if [[ ! $volume_control ]]; then
 		my_volume_control=$VOLUME_CONTROL
@@ -86,7 +86,7 @@ mvc=$(gum style --foreground 10 --bold "$my_volume_control")
 gum join --horizontal "$svc" "$mvc"
 
 gum spin -- sleep 0.5 --
-cat > $HOME/.config/hypr/conf/userapps.lua<< EOF
+cat > "$HOME"/.config/hypr/conf/userapps.lua<< EOF
 hl.env("BROWSER", "$my_browser")
 hl.env("GUI_FM", "$my_gui_fm")
 hl.env("TERMINAL", "$my_terminal")
