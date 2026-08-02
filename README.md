@@ -41,7 +41,8 @@ For systems with sound card sof-essx8336 copy preconfig file:
 After first start of hyprland desktop:
 - Run waypaper, choose wallpapers folder and change to wallpaper you preffer
 - Reload Hyprland instance (press SUPER+R) to dismiss warnings (no wal colors in cache)
-- Choose some of your preffered apps (run custom script userapps.sh) to integrate them into config
+- Install your preffered apps and then run userapps.sh to integrate them into config
+Default apps: browser=vivaldi-stable, terminal=kitty, gui-filemanager=thunar, cli-filemanager=vifm, mediaplayer=mpv, volume-control=pwvucontrol
 
 #### Enjoy
 #### `^;^`
