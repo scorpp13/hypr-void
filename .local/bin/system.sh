@@ -10,9 +10,9 @@ choice=$(echo -e "$options" | fuzzel -d)
 
 case $choice in
 	"$option1")
-		kitty --class floating -e fuzzypkg ;;
+		$TERMINAL --class floating -e fuzzypkg ;;
 	"$option2")
-		kitty --class floating -e service.sh ;;
+		$TERMINAL --class floating -e service.sh ;;
 	"$option3")
-		kitty --class floating -e xbps-hist.sh -l -c -f ;;
+		$TERMINAL --class floating -e xbps-hist.sh -l -c -f ;;
 esac

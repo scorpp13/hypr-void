@@ -13,15 +13,15 @@ choice=$(echo -e "$options" | fuzzel -d)
 
 case $choice in
 	"$option1")
-		kitty --class floating -e fontsearch.sh ;;
+		$TERMINAL --class floating -e fontsearch.sh ;;
 	"$option2")
-		kitty --class floating -e convert-to-jpg.sh ;;
+		$TERMINAL --class floating -e convert-to-jpg.sh ;;
 	"$option3")
-		kitty --class floating -e merge_img.sh ;;
+		$TERMINAL --class floating -e merge_img.sh ;;
 	"$option4")
-		kitty --class floating -e extract.sh ;;
+		$TERMINAL --class floating -e extract.sh ;;
 	"$option5")
-		kitty --class colorpicker.sh -e colorpicker.sh ;;
+		$TERMINAL --class colorpicker.sh -e colorpicker.sh ;;
 	"$option6")
-		kitty --class floating -e userapps.sh ;;
+		$TERMINAL --class floating -e userapps.sh ;;
 esac
