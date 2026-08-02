@@ -3,7 +3,6 @@ set -euo pipefail
 
 timeout=10
 start_time=$(date +%s)
-
 client_pids=$(hyprctl clients -j | jq -r '.[].pid')
 
 # If no clients, nothing to do

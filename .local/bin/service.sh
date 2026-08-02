@@ -2,6 +2,7 @@
 
 sudo vsv
 echo ""
+
 if gum confirm "Show Help?"; then
 	vsv --help
 		elif [ $? -eq 130 ]; then
@@ -9,8 +10,10 @@ if gum confirm "Show Help?"; then
 		else
 			exit;
 fi
+
 echo ""
 echo ""
+
 if gum confirm "Stayin' Shell?"; then
 	check_and_start() {
 		if ! pgrep -x "$1" >/dev/null; then

@@ -10,6 +10,7 @@ BASENAME=$(basename "$INPUT")
 EXTENSION="${BASENAME##*.}"
 OUTPUT=merge_"$(date '+%d%m%y_%H%M%S')"
 FORMAT=$(gum input --prompt "Merging format: " --placeholder "columns X lines")
+
 if gum confirm "Merge selected images?"; then
 	cd "$DIR" && gum spin --title "Merging..." -- \
 	montage ${INPUT} -tile ${FORMAT} -geometry +0+0 ${OUTPUT}.${EXTENSION}
