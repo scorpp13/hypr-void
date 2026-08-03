@@ -7,13 +7,6 @@ gum style \
 
 echo ""
 
-my_browser=$BROWSER
-my_gui_fm=$GUI_FM
-my_terminal=$TERMINAL
-my_cli_fm=$CLI_FM
-my_mediaplayer=$MEDIAPLAYER
-my_volume_control=$VOLUME_CONTROL
-
 if gum confirm "Choose your Browser"; then
 browser="$(gum input --value="" --placeholder="Default is $BROWSER" \
 --placeholder.foreground="8")"
