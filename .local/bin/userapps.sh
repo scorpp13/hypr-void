@@ -4,15 +4,8 @@ gum style \
 	--foreground 7 --border-foreground 7 --border rounded --bold \
 	--align center --width 35 --margin "0 2" --padding "1 0" \
 	'U S E R   D E F I N E D   A P P S'
-echo ""
 
-if gum confirm --prompt.foreground="10" \
-"Start declaring apps that'll be used as environment variables?"; then
-	echo ""
-	elif [ $? -eq 130 ]; then
-		exit 130
-	else exit;
-fi
+echo ""
 
 my_browser=$BROWSER
 my_gui_fm=$GUI_FM
@@ -99,7 +92,12 @@ svc=$(gum style --foreground 2 --faint "Your selected Volume Control is ")
 mvc=$(gum style --foreground 10 --bold "$my_volume_control")
 gum join --horizontal "$svc" "$mvc"
 
-gum spin -- sleep 0.5 --
+echo ""
+
+if gum confirm --prompt.foreground="11" \
+	"Confirm assigning the choosed apps as environment variables"; then
+	gum spin -- sleep 0.5 --
+
 cat > "$HOME"/.config/hypr/conf/userapps.lua<< EOF
 hl.env("BROWSER", "$my_browser")
 hl.env("GUI_FM", "$my_gui_fm")
@@ -109,7 +107,11 @@ hl.env("MEDIAPLAYER", "$my_mediaplayer")
 hl.env("VOLUME_CONTROL", "$my_volume_control")
 EOF
 
+	elif [ $? -eq 130 ]; then
+		exit 130
+	else exit;
+fi
+
 hyprctl reload
 hyprctl dispatch "hl.dsp.exec_cmd('~/.config/waybar/launch.sh')"
-notify-send "Your preffered apps was set as environment variables"
-read -rp "Press Enter to continue" </dev/tty
+notify-send "Your preffered apps assigned as environment variables"
