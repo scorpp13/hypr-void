@@ -7,7 +7,7 @@ hl.exec_cmd("pipewire.sh")
 hl.exec_cmd("xdg.sh")
 
 -- Load environment for hyprland
-hl.exec_cmd("dbus-update-activation-environment --systemd --all")
+hl.exec_cmd("dbus-update-activation-environment --all")
 
 -- Start Polkit Agent
 hl.exec_cmd("/usr/libexec/hyprpolkitagent")
