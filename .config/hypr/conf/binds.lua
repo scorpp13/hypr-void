@@ -129,6 +129,7 @@ hl.bind(mainMod .. " + tab", function ()
 	else
 		hl.workspace_rule({ workspace = tostring(workspace.id), layout = next_layout })
 	end
+	hl.notification.create({ text = next_layout, timeout = 3000, icon = 1, color, font_size = 20 })
 end, { description = "Toggle layouts" })
 
 -- Toggle float with mainMod + LMB and clicking
