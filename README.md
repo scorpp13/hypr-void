@@ -1,7 +1,7 @@
 <details><summary>Click to preview</summary>
 <img src="preview/merge_120826_202638.jpg" width="800"/>
 <img src="preview/merge_120326_194954.jpg" width="800"/>
-<img src="preview/merge_030426_194948.jpg" width="800"/>
+<img src="preview/merge_140826_184927.jpg" width="800"/>
 </details>
 
 # My config files for Hyprland
