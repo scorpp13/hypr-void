@@ -12,33 +12,33 @@ cat <<"EOF"
 ┗┛┗┛┗┛┛┗┛┗
 EOF
 
-orphans=$(xbps-remove -on | wc -l)
-#oldkernel=$(vkpurge list | wc -l)
-if [ "$orphans" -ne 0 ]; then #|| [ "$oldkernel" -ne 0 ]; then
-	echo -e "${NONE}Found ${PURPLE}$orphans ${NONE}orphan packages" #and ${PURPLE}$oldkernel ${NONE}old_kernels"
-		else
-			notify-send "Nothing to clean"
-		exit;
+orphans="$(xbps-remove -on | wc -l | tr -d ' ')"
+
+if [ "$orphans" -ne 0 ]; then
+	echo -e "${NONE}Found ${PURPLE}$orphans ${NONE}orphan packages"
+  else
+	notify-send "Nothing to clean"
+	exit 0
 fi
 
 type=$(gum choose "Orphan Purge" "Full CleanUp")
 ret=$?
-echo "Command exited with $ret"
 
-if [ "$type" == "Orphan Purge" ]; then
-	gum spin --title "Purging Orphan Packages..." -- sleep 0.5 #and Old Kernels..." -- sleep 0.5
-	#sudo vkpurge rm all &&
+if [ "$ret" -eq 130 ] || [ -z "$type" ]; then
+	notify-send "Canceled by user"
+	exit 130
+fi
+
+if [ "$type" = "Orphan Purge" ]; then
+	gum spin --title "Purging Orphan Packages..." -- sleep 0.5
 	sudo xbps-remove -o
-		elif [ "$type" == "Full CleanUp" ]; then
-			gum spin --title "Starting Full System CleanUp..." -- sleep 0.5
-			#sudo vkpurge rm all &&
-			sudo xbps-remove -o && sudo xbps-remove -OO
-		elif [ "$ret" -eq 130 ]; then
-			notify-send "Canceled by user"
-		exit 130
-		else
-			notify-send "CleanUp interrupted"
-		exit;
+  elif [ "$type" = "Full CleanUp" ]; then
+	gum spin --title "Starting Full System CleanUp..." -- sleep 0.5
+	sudo xbps-remove -o
+	sudo xbps-remove -OO
+  else
+	notify-send "CleanUp interrupted"
+	exit 0
 fi
 
 notify-send "CleanUp finished"

@@ -1,6 +1,7 @@
 #!/usr/bin/bash
+set -euo pipefail
 
-cp ~/.cache/wal/hyprcolors.lua ~/.config/hypr/hyprcolors.lua
+cp "$HOME/.cache/wal/hyprcolors.lua" "$HOME/.config/hypr/hyprcolors.lua"
 fuzzel.sh
 dunst.sh
-~/.config/waybar/launch.sh
+"$HOME/.config/waybar/launch.sh"

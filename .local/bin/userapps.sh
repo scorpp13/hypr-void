@@ -10,7 +10,7 @@ echo ""
 if gum confirm "Choose your Browser"; then
 browser="$(gum input --value="" --placeholder="Default is $BROWSER" \
 --placeholder.foreground="8")"
-	if [[ ! $browser ]]; then
+	if [[ -z "$browser" ]]; then
 		my_browser=$BROWSER
 		else my_browser=$browser
 	fi
@@ -23,7 +23,7 @@ gum join --horizontal "$sb" "$mb"
 if gum confirm "Choose your gui-FileManager"; then
 gui_fm="$(gum input --value="" --placeholder="Default is $GUI_FM" \
 --placeholder.foreground="8")"
-	if [[ ! $gui_fm ]]; then
+	if [[ -z "$gui_fm" ]]; then
 		my_gui_fm=$GUI_FM
 		else my_gui_fm=$gui_fm
 	fi
@@ -36,7 +36,7 @@ gum join --horizontal "$sgf" "$mgf"
 if gum confirm "Choose your Terminal"; then
 terminal="$(gum input --value="" --placeholder="Default is $TERMINAL" \
 --placeholder.foreground="8")"
-	if [[ ! $terminal ]]; then
+	if [[ -z "$terminal" ]]; then
 		my_terminal=$TERMINAL
 		else my_terminal=$terminal
 	fi
@@ -49,7 +49,7 @@ gum join --horizontal "$st" "$mt"
 if gum confirm "Choose your cli-FileManager"; then
 cli_fm="$(gum input --value="" --placeholder="Default is $CLI_FM" \
 --placeholder.foreground="8")"
-	if [[ ! $cli_fm ]]; then
+	if [[ -z "$cli_fm" ]]; then
 		my_cli_fm=$CLI_FM
 		else my_cli_fm=$cli_fm
 	fi
@@ -62,7 +62,7 @@ gum join --horizontal "$scf" "$mcf"
 if gum confirm "Choose your MediaPlayer"; then
 mediaplayer="$(gum input --value="" --placeholder="Default is $MEDIAPLAYER" \
 --placeholder.foreground="8")"
-	if [[ ! $mediaplayer ]]; then
+	if [[ -z "$mediaplayer" ]]; then
 		my_mediaplayer=$MEDIAPLAYER
 		else my_mediaplayer=$mediaplayer
 	fi
@@ -75,7 +75,7 @@ gum join --horizontal "$sm" "$mm"
 if gum confirm "Choose your Volume Control"; then
 volume_control="$(gum input --value="" --placeholder="Default is $VOLUME_CONTROL" \
 --placeholder.foreground="8")"
-	if [[ ! $volume_control ]]; then
+	if [[ -z "$volume_control" ]]; then
 		my_volume_control=$VOLUME_CONTROL
 		else my_volume_control=$volume_control
 	fi
@@ -89,7 +89,7 @@ echo ""
 
 if gum confirm --prompt.foreground="11" \
 	"Confirm assigning the choosed apps as environment variables"; then
-	gum spin -- sleep 0.5 --
+	gum spin -- sleep 0.5
 
 cat > "$HOME"/.config/hypr/conf/userapps.lua<< EOF
 hl.env("BROWSER", "$my_browser")
@@ -100,9 +100,10 @@ hl.env("MEDIAPLAYER", "$my_mediaplayer")
 hl.env("VOLUME_CONTROL", "$my_volume_control")
 EOF
 
-	elif [ $? -eq 130 ]; then
-		exit 130
-	else exit;
+else
+	code=$?
+	if [[ $code -eq 130 ]]; then exit 130; fi
+	exit 0
 fi
 
 hyprctl reload

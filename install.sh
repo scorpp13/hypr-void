@@ -1,31 +1,62 @@
-#!/bin/bash   
+#!/bin/bash
+set -u
+
 GREEN='\033[0;32m'
-# Postinstall update and repository config
-sudo xbps-install -u xbps
-echo "repository=https://mirror.black-hole.dev/$(xbps-uhelper arch)" | sudo tee /etc/xbps.d/20-repository-extra.conf
-#echo "repository=https://raw.githubusercontent.com/Makrennel/hyprland-void/repository-x86_64-glibc" | sudo tee /etc/xbps.d/20-repository-extra.conf
+
+TARGET_USER="${SUDO_USER:-$USER}"
+
+# Update xbps + repo config
+sudo xbps-install -Syu xbps
+
+ARCH="$(xbps-uhelper arch)"
+echo "repository=https://mirror.black-hole.dev/${ARCH}" | sudo tee /etc/xbps.d/20-repository-extra.conf >/dev/null
+
 sudo xbps-install -S void-repo-multilib void-repo-multilib-nonfree void-repo-nonfree
-# Clone preconfigure from dotfiles
-cp -r .config/ .local/ .vim/ .Xresources .bash_profile .bashrc .gtkrc-2.0 .alias .vimrc $HOME/
-sudo cp issue /etc/
-# Install necessary software
-sudo xbps-install -S $(cat necessary-packages)
+
+# Copy dotfiles (require the script run from the dotfiles directory)
+cp -a .config "$HOME/"
+cp -a .local "$HOME/"
+cp -a .vim "$HOME/"
+cp -a .Xresources .bash_profile .bashrc .gtkrc-2.0 .alias .vimrc "$HOME/"
+
+sudo cp -f issue /etc/
+
+# Install necessary packages
+mapfile -t PKGS < <(sed -e 's/[[:space:]]*#.*$//' -e '/^[[:space:]]*$/d' necessary-packages)
+sudo xbps-install -S "${PKGS[@]}"
+
+# pipx install
 pipx install waypaper
-# Update alsa config files
+
+# ALSA config symlinks
 sudo mkdir -p /etc/alsa/conf.d/
-sudo ln -s /usr/share/alsa/alsa.conf.d/50-pipewire.conf /etc/alsa/conf.d/
-sudo ln -s /usr/share/alsa/alsa.conf.d/99-pipewire-default.conf /etc/alsa/conf.d/
-# Update pipewire config files
+sudo ln -sf /usr/share/alsa/alsa.conf.d/50-pipewire.conf /etc/alsa/conf.d/50-pipewire.conf
+sudo ln -sf /usr/share/alsa/alsa.conf.d/99-pipewire-default.conf /etc/alsa/conf.d/99-pipewire-default.conf
+
+# PipeWire config symlinks
 sudo mkdir -p /etc/pipewire/pipewire.conf.d/
-sudo ln -s /usr/share/examples/wireplumber/10-wireplumber.conf /etc/pipewire/pipewire.conf.d/
-sudo ln -s /usr/share/examples/pipewire/20-pipewire-pulse.conf /etc/pipewire/pipewire.conf.d/
-# Configure system services
-for i in dbus socklog-unix nanoklogd NetworkManager elogind; do sudo ln -s /etc/sv/$i /var/service/; done
-for i in wpa_supplicant dhcpcd; do sudo rm /var/service/$i; done
-sudo gpasswd -a $USER socklog
+sudo ln -sf /usr/share/examples/wireplumber/10-wireplumber.conf /etc/pipewire/pipewire.conf.d/10-wireplumber.conf
+sudo ln -sf /usr/share/examples/pipewire/20-pipewire-pulse.conf /etc/pipewire/pipewire.conf.d/20-pipewire-pulse.conf
+
+# System service links
+for i in dbus socklog-unix nanoklogd NetworkManager elogind; do
+  if [ -e "/etc/sv/$i" ]; then
+    sudo ln -sf "/etc/sv/$i" "/var/service/$i"
+  fi
+done
+
+# Remove conflicting services (if present)
+for i in wpa_supplicant dhcpcd; do
+  sudo rm -f "/var/service/$i"
+done
+
+# Add user to socklog group
+sudo gpasswd -a "$TARGET_USER" socklog
+
 # Postinstall reconfigure
 sudo xbps-reconfigure -fa
-# Finish installation and reboot
+
+# Reboot
 echo -e "${GREEN}"
 echo "Installation completed, press Enter to reboot"
 read

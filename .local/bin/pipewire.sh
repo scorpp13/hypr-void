@@ -1,12 +1,15 @@
 #!/bin/sh
-
 check_and_start() {
-	if ! pgrep -x "$1" >/dev/null; then
-		echo "Starting $1..."
-		sleep 1 && $2 &
-	else
-		echo "$1 is already running"
-	fi
+  name=$1
+  bin=$2
+
+  if ! pgrep -x "$name" >/dev/null 2>&1; then
+    echo "Starting $name..."
+    sleep 1
+    "$bin" &
+  else
+    echo "$name is already running"
+  fi
 }
 
 check_and_start "pipewire" "/usr/bin/pipewire"

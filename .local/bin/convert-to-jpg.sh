@@ -2,19 +2,23 @@
 
 GREEN='\033[0;32m'
 
-# This script convert *.png images to *.jpg
-DIR=$(gum file --directory "$HOME")
-INPUT=$(find "$DIR" | gum choose --no-limit)
+DIR="$(gum file --directory "$HOME")"
 
-if gum confirm "Convert selected images?"; then
-	cd "$DIR" && gum spin --title "Converting..." -- mogrify -format jpg "${INPUT}"
-	elif [ $? -eq 130 ]; then
-		notify-send "Canceled by user"
-		exit 130
-	else
-		notify-send "Converting interrupted"
-	exit;
+mapfile -t INPUT < <(find "$DIR" -type f -name '*.png' | gum choose --no-limit) || exit 1
+
+if [[ ${#INPUT[@]} -eq 0 ]]; then
+	notify-send "Nothing selected"
+	exit 0
 fi
+
+gum confirm "Convert selected images?" || {
+	notify-send "Canceled by user"
+	exit 130
+}
+
+cd "$DIR" || exit 1
+
+gum spin --title "Converting..." -- mogrify -format jpg "${INPUT[@]}"
 
 notify-send "Converting finished"
 echo -e "${GREEN}"
