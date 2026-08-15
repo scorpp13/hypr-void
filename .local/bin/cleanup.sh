@@ -1,4 +1,5 @@
 #!/usr/bin/bash
+set -euo pipefail
 
 GREEN='\033[0;32m'
 YELLOW='\033[0;33m'
@@ -12,6 +13,9 @@ cat <<"EOF"
 ┗┛┗┛┗┛┛┗┛┗
 EOF
 
+cleanup() { :; }
+trap 'notify-send "CleanUp interrupted"; exit 0' INT TERM
+
 orphans="$(xbps-remove -on | wc -l | tr -d ' ')"
 
 if [ "$orphans" -ne 0 ]; then
@@ -22,12 +26,6 @@ if [ "$orphans" -ne 0 ]; then
 fi
 
 type=$(gum choose "Orphan Purge" "Full CleanUp")
-ret=$?
-
-if [ "$ret" -eq 130 ] || [ -z "$type" ]; then
-	notify-send "Canceled by user"
-	exit 130
-fi
 
 if [ "$type" = "Orphan Purge" ]; then
 	gum spin --title "Purging Orphan Packages..." -- sleep 0.5
@@ -37,8 +35,8 @@ if [ "$type" = "Orphan Purge" ]; then
 	sudo xbps-remove -o
 	sudo xbps-remove -OO
   else
-	notify-send "CleanUp interrupted"
-	exit 0
+	notify-send "Canceled by user"
+	exit 130
 fi
 
 notify-send "CleanUp finished"
