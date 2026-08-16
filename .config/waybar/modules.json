@@ -42,12 +42,12 @@
 	"on-click": "sleep 0.1 && cliphist.sh",
 	"on-click-right": "sleep 0.1 && cliphist.sh d",
 	"on-click-middle": "sleep 0.1 && cliphist.sh w",
-	"tooltip-format": "Clipboard Manager\nLM	- copy selected\nRM	- delete selected\nMM	- wipe clipboard"
+	"tooltip-format": "<b>Clipboard Manager</b>\n<tt><span color='#ffcc66'>LM</span> - copy selected\n<span color='#ffcc66'>MM</span> - wipe clipboard\n<span color='#ffcc66'>RM</span> - delete selected</tt>"
 },
 //	Updates
 "custom/updates": {
 	"format": "󰶡  {}",
-	"tooltip-format": "{} updates available",
+	"tooltip-format": "<b>Update Manager</b>\n<tt><span color='#ffcc66'>LM</span> - install updates\n<span color='#ffcc66'>MM</span> - clean orphans\n<span color='#ffcc66'>RM</span> - mirror change</tt>",
 	"escape": true,
 	"return-type": "json",
 	"exec": "updates.sh",
@@ -98,7 +98,7 @@
 	"format": "",
 	"on-click": "fuzzel",
 	"on-click-right": "keybindings.sh",
-	"tooltip-format": "Right click for keybinds"
+	"tooltip-format": "<b>Main Menu</b>\n<tt><span color='#ffcc66'>LM</span> - Applications\n<span color='#ffcc66'>RM</span> - Keybinds</tt>"
 },
 //	Power Menu
 "custom/exit": {
@@ -113,7 +113,7 @@
 },
 //	Clock
 "clock": {
-	"tooltip-format": "<big><b>{:%a %d %B}</b></big>\n\n<tt>{calendar}</tt>",
+	"tooltip-format": "<span color='#dfff00'><big><b>{:%a %d %B}</b></big></span>\n\n<tt>{calendar}</tt>",
 	//"format-alt": "{:%d-%m-%Y}",
 	"calendar": {
 		"mode"          : "year",
@@ -125,7 +125,7 @@
 				"days"		: "<span color='#ffeedd'>{}</span>",
 				//"weeks"		: "<span color='#ffffff'><b>{}</b></span>",
 				"weekdays"	: "<span color='#ffcc66'><b>{}</b></span>",
-				"today"		: "<span color='#99ff66'><b>{}</b></span>"
+				"today"		: "<span color='#bfff00'><b>{}</b></span>"
 			}
 		},
 	"actions": {
@@ -168,7 +168,7 @@
 	"format-muted": "",
 	"format-source": " {volume}%",
 	"format-source-muted": "",
-	"tooltip-format": "middle-click to (un)mute",
+	"tooltip-format": "LM	- volume control\nMM	- mute (unmute)\nSCR	- vol_up (down)",
 	"tooltip": true,
 	"format-icons": {
 		"default": [" ", " ", "󰕾 ", " "]

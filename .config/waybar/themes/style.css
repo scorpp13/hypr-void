@@ -51,12 +51,12 @@ window#waybar {
 
 /*	TOOLTIPS	*/
 tooltip {
-	border-radius: 15px;
+	border-radius: 6px;
 	background: @background;
 	border: 1px double @backgroundlight;
 }
 tooltip label {
-	color: @iconcolor;
+	color: #fff1dd;
 }
 
 /*	WINDOW	*/

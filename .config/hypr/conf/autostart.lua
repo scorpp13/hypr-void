@@ -32,6 +32,6 @@ hl.exec_cmd("cursor.sh")
 
 -- Autostart apps
 hl.exec_cmd("sleep 5 && udiskie -As")
-hl.exec_cmd("sleep 10 && nm-applet")
+hl.exec_cmd("sleep 10 && nm-applet --indicator")
 
 end)
