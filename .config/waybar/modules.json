@@ -168,7 +168,7 @@
 	"format-muted": "",
 	"format-source": " {volume}%",
 	"format-source-muted": "",
-	"tooltip-format": "LM	- volume control\nMM	- mute (unmute)\nSCR	- vol_up (down)",
+	"tooltip-format": "LM	- volume control\nMM	- mute (unmute)\nSCR - vol_up (down)",
 	"tooltip": true,
 	"format-icons": {
 		"default": [" ", " ", "󰕾 ", " "]
