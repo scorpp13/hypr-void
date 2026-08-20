@@ -54,6 +54,7 @@ hl.window_rule({
 	name = "qt6ct",
 	match = { class = "qt6ct" },
 	float = true,
+	persistent_size = true,
 })
 
 -- Galculator window rule
@@ -85,7 +86,7 @@ hl.window_rule({
 	name = "floating",
 	match = { initial_class = "floating" },
 	float = true,
-	size = { 850, 600 },
+	size = { 950, 600 },
 })
 
 -- Browser tile
