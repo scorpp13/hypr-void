@@ -78,7 +78,7 @@ hl.window_rule({
 	name = "wttr.sh",
 	match = { class = "wttr.sh" },
 	float = true,
-	size = { 1300, 950 },
+	size = { 1500, 1000 },
 })
 
 -- Default size of floating windows
