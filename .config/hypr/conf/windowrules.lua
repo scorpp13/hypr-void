@@ -65,6 +65,14 @@ hl.window_rule({
 	persistent_size = true,
 })
 
+-- OBS Studio
+hl.window_rule({
+	name = "obs_studio",
+	match = { class = "com.obsproject.Studio" },
+	float = true,
+	persistent_size = true,
+})
+
 -- ColorPicker window rule
 hl.window_rule({
 	name = "colorpicker.sh",
