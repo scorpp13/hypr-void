@@ -2061,7 +2061,7 @@ menu,
 .context-menu {
   margin: 6px;
   padding: 6px;
-  background-color: #fffcf0;
+  background-color: #fff8dd;
   background-clip: border-box;
   border-radius: 12px;
   border: 2px solid @color1;
@@ -2163,7 +2163,7 @@ menu > arrow,
   min-height: 16px;
   min-width: 16px;
   padding: 4px;
-  background-color: #fffcf0;
+  background-color: #fff8dd;
   color: rgba(0, 0, 0, 0.6);
 }
 
