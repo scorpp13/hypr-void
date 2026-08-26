@@ -1,4 +1,4 @@
-active_border = "rgba(CE735A77)"
-inactive_border = "rgba(0c0d1533)"
-background_color = "rgba(0c0d15FF)"
-border_color = "rgba(CB9578AA) rgba(CB957877)"
+active_border = "rgba(5F5C5D77)"
+inactive_border = "rgba(0a070633)"
+background_color = "rgba(0a0706FF)"
+border_color = "rgba(925428AA) rgba(92542877)"
