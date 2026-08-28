@@ -1,0 +1,14 @@
+gtk-color-scheme = "text_color:#fffbef\nbase_color:#2C2C2C"
+gtk-color-scheme = "fg_color:#fffbef\nbg_color:#2C2C2C"
+gtk-color-scheme = "selected_fg_color:#333333\nselected_bg_color:{color6}"
+gtk-color-scheme = "titlebar_fg_color:#fffbef\ntitlebar_bg_color:#2C2C2C"
+gtk-color-scheme = "menu_color:#2C2C2C"
+gtk-color-scheme = "tooltip_fg_color:#fffbef\ntooltip_bg_color:#464646"
+gtk-color-scheme = "link_color:#8AB4F8\nvisited_link_color:#CE93D8"
+
+gtk-auto-mnemonics              = 1
+gtk-primary-button-warps-slider = 1
+
+include "main.rc"
+include "apps.rc"
+include "hacks.rc"

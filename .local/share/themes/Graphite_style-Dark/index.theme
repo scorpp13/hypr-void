@@ -1,4 +1,12 @@
 [Desktop Entry]
+Type=X-GNOME-Metatheme
 Name=Graphite_style-Dark
 Comment=Gtk+ theme based on Graphite-style with pywal accent colors
 Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Graphite_style-Dark
+MetacityTheme=Graphite_style-Dark
+IconTheme=Tela
+CursorTheme=Remus-Dark
+ButtonLayout=close,minimize,maximize:menu
