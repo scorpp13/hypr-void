@@ -9,7 +9,7 @@
 A working configuration of Hyprland for Void Linux
 - A new config based on lua script language.
 - Old version based on hyprlang is also available.
-- Dynamic themes (light GTK & QT) with pywal accent colors.
+- Dynamic desktop themes with pywal accent colors.
 
 ## Installation
 
