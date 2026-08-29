@@ -18,7 +18,7 @@ A working configuration of Hyprland for Void Linux
 void-installer 
 ```
 
-#### After system restart Install git package and clone hypr-void dotfiles
+#### After system restart install git package and clone hypr-void dotfiles
 ```
 sudo xbps-install -S git
 git clone https://github.com/scorpp13/hypr-void.git $HOME/hypr-void/
