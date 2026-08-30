@@ -14,7 +14,7 @@ A working configuration of Hyprland for Void Linux
 > [!CAUTION]
 > Gum v2 have a lot of bags, so my scripts don't work correctly with it.<br>
 > To make all work download binary v1.7 from [official GitHub page](https://github.com/charmbracelet/gum/releases/download/v0.17.0/gum_0.17.0_Linux_x86_64.tar.gz).<br>
-> Unpack archive and change binary v2 vs binary v1.7 [/usr/bin/gum](/usr/bin/gum).
+> Unpack archive and change binary v2 vs binary v1.7 (/usr/bin/gum).
 
 ## Installation
 
