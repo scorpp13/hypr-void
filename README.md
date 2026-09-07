@@ -31,8 +31,11 @@ git clone https://github.com/scorpp13/hypr-void.git $HOME/hypr-void/
 <details>
 <summary>Also it may be cloned from one of those mirrors</summary>
 → https://gitlab.com/scorpp13/hypr-void.git
+<hr>
 → https://codeberg.org/scorpp13/hypr-void.git
+<hr>
 → https://git@git.sourcecraft.dev/scorpp13/hypr-void.git
+<hr>
 → https://gitea.com/scorpp13/hypr-void.git
 </details>
 
