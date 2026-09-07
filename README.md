@@ -19,7 +19,7 @@ A working configuration of Hyprland for Void Linux
 > You must remember, that there is no official support of Hyprland in Void Linux. The necessary binaries is used from 3-d party repository.<br>
 > Some of them may be unnabled or making conflicts with system libraries. In such a case you may wish to delete them from necessary-packages.<br>
 > I don't suggest to go this way. Otherwise the Hypr-Void environment will not work as designed.<br>
-> Changable without affecting is user defined apps: browser, terminal, gui-filemanager, cli-filemanager, mediaplayer, volume-control.<br>
+> Changable apps without affecting on Hypr-Void environment is user defined apps: browser, terminal, gui-filemanager, cli-filemanager, mediaplayer, volume-control.<br>
 
 ## Installation
 
@@ -51,7 +51,7 @@ cd $HOME/hypr-void/
 ```
 For systems with sound card sof-essx8336 copy preconfig file:
 - `sudo cp alsa-base.conf /etc/modprobe.d/`
-
+<br>
 > [!CAUTION]
 > Gum v2 have a lot of bags, so my scripts don't work correctly with it.<br>
 > To make all work download binary v1.7 from [official GitHub page](https://github.com/charmbracelet/gum/releases/download/v0.17.0/gum_0.17.0_Linux_x86_64.tar.gz).<br>
