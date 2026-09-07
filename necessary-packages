@@ -37,6 +37,7 @@ hyprsunset
 hyprsysteminfo
 inxi
 kitty
+jq
 mesa
 mesa-dri
 meson
@@ -44,6 +45,7 @@ mpv
 nerd-fonts-symbols-ttf
 NetworkManager
 network-manager-applet
+noto-fonts-ttf
 nwg-look
 pipewire
 polkit

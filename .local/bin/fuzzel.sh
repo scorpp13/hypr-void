@@ -9,20 +9,17 @@ S=$(echo "$color7"ff | sed 's/#//')
 M=$(echo "$color3"ff | sed 's/#//')
 C=$(echo "$color1"ff | sed 's/#//')
 
-icon=$(cat "${HOME}"/.config/gtk-3.0/settings.ini | \
-grep "gtk-icon-theme-name" | \
-sed 's/gtk-icon-theme-name=//')
-
-font=$(cat "${HOME}"/.config/gtk-3.0/settings.ini | \
-grep "gtk-font-name" | \
-sed 's/gtk-font-name=//' | \
-tr -d '0-9') # grep -o '[^0-9]*') .. sed 's/[0-9]//g')
+settings="$HOME/.config/gtk-3.0/settings.ini"
+icon=$(sed -n 's/^gtk-icon-theme-name=//p' "$settings")
+gtk_font=$(sed -n 's/^gtk-font-name=//p' "$settings")
+size="${gtk_font##* }"
+font="${gtk_font% "$size"}"
 
 if grep -q "top" ~/.cache/.themestyle.sh ; then
 		 anchor="top-left"
 	elif grep -q "bottom" ~/.cache/.themestyle.sh ; then
 		 anchor="bottom-left"
-	else anchor="top-left"
+	else anchor="bottom-left"
 fi
 
 cat > ~/.config/fuzzel/_fuzzel.ini<< EOF
@@ -36,7 +33,7 @@ selection-match=$M
 border=$C
 [main]
 icon-theme=$icon
-font=$font:size=14
+font=$font:size=$size
 anchor=$anchor
 EOF
 

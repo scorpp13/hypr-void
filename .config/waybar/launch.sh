@@ -5,7 +5,7 @@ flock -n 200 || exit 0
 pkill waybar || true
 sleep 0.5
 
-themestyle="/colour-top"
+themestyle="/colour-bottom"
 if [ -f ~/.cache/.themestyle.sh ]; then
   themestyle="$(cat ~/.cache/.themestyle.sh)"
 else
@@ -21,7 +21,7 @@ theme="${arrThemes[0]}"
 theme="${theme#/}"
 
 if [ ! -f "$HOME/.config/waybar/themes/$theme/style.css" ]; then
-  theme="colour-top"
+  theme="colour-bottom"
 fi
 
 cfg_file="config"

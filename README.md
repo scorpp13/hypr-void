@@ -28,11 +28,13 @@ void-installer
 sudo xbps-install -S git
 git clone https://github.com/scorpp13/hypr-void.git $HOME/hypr-void/
 ```
-Also it may be cloned from one of those mirrors:
+<details>
+<summary>Also it may be cloned from one of those mirrors</summary>
 - `https://gitlab.com/scorpp13/hypr-void.git`
 - `https://codeberg.org/scorpp13/hypr-void.git`
 - `https://git@git.sourcecraft.dev/scorpp13/hypr-void.git`
 - `https://gitea.com/scorpp13/hypr-void.git`
+</details>
 
 #### Change to dotfiles folder and start installation script
 ```
