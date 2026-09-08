@@ -19,7 +19,7 @@ A working configuration of Hyprland for Void Linux
 > Please note that Hypr-Void is not officially supported in Void Linux.<br>
 > The necessary binaries are used from a third-party repository. Some of these may be disabled or conflict with system libraries.<br>
 > In this case, you can remove them from necessary-packages. I don't recommend doing this. Otherwise, the Hypr-Void environment will not function properly.<br>
-> <span style="text-decoration: underline;">Modifiable applications that do not affect the Hypr-Void environment are user-defined applications:</span><br>
+> <ins>Modifiable applications that do not affect the Hypr-Void environment are user-defined applications:</ins><br>
 > browser, terminal, gui editor, gui file manager, cli file manager, media player, and volume control.
 
 ## Installation
