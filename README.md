@@ -12,14 +12,14 @@ A working configuration of Hyprland for Void Linux
 - Dynamic desktop themes with pywal accent colors.
 
 > [!NOTE]
-> The Hypr-Void environment is designed for use with a clean installation of the Void Linux base system.<br>
-> It can also be used on an existing system. A new installation script will create a backup of your configuration files.<br>
-> During installation, the script will check your system before making any changes.<br>
-> If anything goes wrong, the script will exit. You can later check for errors before making changes.<br>
-> Please note that Hypr-Void is not officially supported in Void Linux.<br>
-> The necessary binaries are used from a third-party repository. Some of these may be disabled or conflict with system libraries.<br>
-> In this case, you can remove them from necessary-packages. I don't recommend doing this. Otherwise, the Hypr-Void environment will not function properly.<br>
-> <br><ins>Modifiable applications that do not affect the Hypr-Void environment are user-defined applications:</ins><br>
+> - The Hypr-Void environment is designed for use with a clean installation of the Void Linux base system.
+> - It can also be used on an existing system. A new installation script will create a backup of your configuration files.
+> - During installation, the script will check your system before making any changes.
+> - If anything goes wrong, the script will exit. You can later check for errors before making changes.
+> - Please note that Hypr-Void is not officially supported in Void Linux.
+> - The necessary binaries are used from a third-party repository. Some of these may be disabled or conflict with system libraries.
+> - In this case, you can remove them from necessary-packages. I don't recommend doing this. Otherwise, the Hypr-Void environment will not function properly.
+> <ins>Modifiable applications that do not affect the Hypr-Void environment are user-defined applications:</ins><br>
 > <b>browser, terminal, gui editor, gui file manager, cli file manager, media player, and volume control.</b>
 
 ## Installation
