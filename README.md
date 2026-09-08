@@ -4,7 +4,7 @@
 <img src="preview/merge_140826_185810.jpg" width="800"/>
 </details>
 
-# My config files for Hyprland
+# Hypr-Void environment
 
 A working configuration of Hyprland for Void Linux
 - A new config based on lua script language.
@@ -18,7 +18,7 @@ A working configuration of Hyprland for Void Linux
 > If anything goes wrong, the script will exit. You can later check for errors before making changes.<br>
 > Please note that Hypr-Void is not officially supported in Void Linux.<br>
 > The necessary binaries are used from a third-party repository. Some of these may be disabled or conflict with system libraries.<br>
-> In this case, you can remove them from necessary-packages.I don't recommend doing this. Otherwise, the Hypr-Void environment will not function properly.<br>
+> In this case, you can remove them from necessary-packages. I don't recommend doing this. Otherwise, the Hypr-Void environment will not function properly.<br>
 > Modifiable applications that do not affect the Hypr-Void environment are user-defined applications:<br>
 > browser, terminal, gui editor, gui file manager, cli file manager, media player, and volume control.
 
@@ -59,22 +59,21 @@ For systems with sound card sof-essx8336 copy preconfig file:
 > To make all work download binary v1.7 from [official GitHub page](https://github.com/charmbracelet/gum/releases/download/v0.17.0/gum_0.17.0_Linux_x86_64.tar.gz).<br>
 > Unpack archive and change binary v2 vs binary v1.7 (/usr/bin/gum).
 
-#### Final steps
+## Final steps
 
 > [!WARNING]
 > After first start of hyprland desktop:<br>
-> - Run waypaper, choose wallpapers folder and change to wallpaper you preffer.<br>
-> - Reload Hyprland instance (press SUPER+R) to dismiss warnings (no wal colors in cache).<br>
-> - Install your preffered apps and then run userapps.sh to integrate them into config.<br>
-<hr>
-> <u>Default applications:</u><br>
-> browser = vivaldi-stable<br>
-> terminal = kitty<br>
-> gui filemanager = thunar<br>
-> gui editor = geany<br>
-> cli filemanager = vifm<br>
-> mediaplayer = mpv<br>
-> volume control = pwvucontrol<br>
+> -- Run waypaper, choose wallpapers folder and change to wallpaper you preffer.<br>
+> -- Reload Hyprland instance (press SUPER+R) to dismiss warnings (no wal colors in cache).<br>
+> -- Install your preffered apps and then run userapps.sh to integrate them into config.<br>
+> <b>Default applications:</b><br>
+> - browser = vivaldi-stable<br>
+> - terminal = kitty<br>
+> - gui filemanager = thunar<br>
+> - gui editor = geany<br>
+> - cli filemanager = vifm<br>
+> - mediaplayer = mpv<br>
+> - volume control = pwvucontrol<br>
 
-#### Enjoy
+### Enjoy
 #### `^;^`
