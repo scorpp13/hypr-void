@@ -24,12 +24,12 @@ A working configuration of Hyprland for Void Linux
 
 ## Installation
 
-#### Install void-base system from latest live cd
+### Install void-base system from latest live cd
 ```
 void-installer 
 ```
 
-#### After system restart install git package and clone hypr-void dotfiles
+### After system restart install git package and clone hypr-void dotfiles
 ```
 sudo xbps-install -S git
 git clone https://github.com/scorpp13/hypr-void.git $HOME/hypr-void/
@@ -45,7 +45,7 @@ git clone https://github.com/scorpp13/hypr-void.git $HOME/hypr-void/
 → https://gitea.com/scorpp13/hypr-void.git
 </details>
 
-#### Change to dotfiles folder and start installation script
+### Change to dotfiles folder and start installation script
 ```
 cd $HOME/hypr-void/
 ./install.sh
@@ -55,9 +55,10 @@ For systems with sound card sof-essx8336 copy preconfig file:
 <br>
 
 > [!CAUTION]
-> Gum v2 have a lot of bags, so my scripts don't work correctly with it.<br>
-> To make all work download binary v1.7 from [official GitHub page](https://github.com/charmbracelet/gum/releases/download/v0.17.0/gum_0.17.0_Linux_x86_64.tar.gz).<br>
-> Unpack archive and change binary v2 vs binary v1.7 (/usr/bin/gum).
+> Gum v2 have a lot of bags, so my scripts don't work correctly with it<br>
+> To make all work download binary v1.7 from [official GitHub page](https://github.com/charmbracelet/gum/releases/download/v0.17.0/gum_0.17.0_Linux_x86_64.tar.gz)<br>
+> Unpack archive and change binary v2 vs binary v1.7 (/usr/bin/gum)<br>
+> You can also use included gum v1.7 binary, that was downloaded from official release page
 
 ## Final steps
 
@@ -66,6 +67,7 @@ For systems with sound card sof-essx8336 copy preconfig file:
 > -- Run waypaper, choose wallpapers folder and change to wallpaper you preffer.<br>
 > -- Reload Hyprland instance (press SUPER+R) to dismiss warnings (no wal colors in cache).<br>
 > -- Install your preffered apps and then run userapps.sh to integrate them into config.<br>
+> <br>
 > <b>Default applications:</b><br>
 > - browser = vivaldi-stable<br>
 > - terminal = kitty<br>
