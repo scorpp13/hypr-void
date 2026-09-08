@@ -4,7 +4,7 @@
 <img src="preview/merge_140826_185810.jpg" width="800"/>
 </details>
 
-# Hypr-Void environment
+# <color=blue>Hypr-Void environment</color>
 
 A working configuration of Hyprland for Void Linux
 - A new config based on lua script language.
@@ -55,10 +55,10 @@ For systems with sound card sof-essx8336 copy preconfig file:
 <br>
 
 > [!CAUTION]
-> Gum v2 have a lot of bugs, so my scripts don't work correctly with it<br>
-> To make all work download binary v1.7 from [official GitHub page](https://github.com/charmbracelet/gum/releases/download/v0.17.0/gum_0.17.0_Linux_x86_64.tar.gz)<br>
-> Unpack archive and change binary v2 vs binary v1.7 (/usr/bin/gum)<br>
-> You can also use included gum v1.7 binary, that was downloaded from official release page
+> Gum v2 have a lot of bugs, so my scripts don't work correctly with it.<br>
+> To make all work download binary v1.7 from [official GitHub page](https://github.com/charmbracelet/gum/releases/download/v0.17.0/gum_0.17.0_Linux_x86_64.tar.gz).<br>
+> Unpack archive and change binary v2 vs binary v1.7 (/usr/bin/gum).<br>
+> You can also use included gum v1.7 binary, that was downloaded from official release page.
 
 ### Final steps
 
