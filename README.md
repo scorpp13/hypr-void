@@ -12,15 +12,12 @@ A working configuration of Hyprland for Void Linux.
 - Dynamic desktop themes with pywal accent colors.
 
 > [!NOTE]
-> - The Hypr-Void environment is designed for use with a clean installation of the Void Linux base system.
-> - It can also be used on an existing system. A new installation script will create a backup of your configuration files.
-> - During installation, the script will check your system before making any changes.
-> - If anything goes wrong, the script will exit. You can later check for errors before making changes.
-> - Please note that Hyprland is not officially supported in Void Linux.
-> - Necessary binaries from a third-party repository are used. Some of them may be disabled or conflict with system libraries.
+> - The Hypr-Void environment is designed for use with a clean installation of the Void Linux base system. It can also be used on an existing system.
+> - A new installation script will create a backup of your configuration files. During installation, the script will check your system before making any changes. If anything goes wrong, the script will exit. You can later check for errors before making changes.
+> - Please note that Hyprland is not officially supported in Void Linux. Necessary binaries from a third-party repository are used. Some of them may be disabled or conflict with system libraries.
 > - In this case, you can remove them from necessary-packages. I don't recommend doing this. Otherwise, the Hypr-Void environment will not function properly until you make the necessary changes to the environment configuration files.<br>
-> <br><ins>Replaceable applications that don't affect the Hypr-Void environment are user-defined app's:</ins><br>
-> browser, terminal, gui editor, gui file manager, cli file manager, media player, and volume control.
+> <br><ins>Replaceable app's that don't affect the Hypr-Void environment are user-defined app's:</ins><br>
+> browser, terminal, gui file manager, cli file manager, media player, and volume control.
 
 ## Installation
 
@@ -70,10 +67,9 @@ For systems with sound card sof-essx8336 copy preconfig file:
 > -- Install your preffered apps and then run userapps.sh to integrate them into config.<br>
 > <br>
 > <b>Default applications:</b><br>
-> - browser = vivaldi-stable<br>
+> - browser = vivaldi<br>
 > - terminal = kitty<br>
 > - gui filemanager = thunar<br>
-> - gui editor = geany<br>
 > - cli filemanager = vifm<br>
 > - mediaplayer = mpv<br>
 > - volume control = pwvucontrol<br>
