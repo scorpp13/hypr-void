@@ -65,7 +65,7 @@ For systems with sound card sof-essx8336 copy preconfig file:
 > -- Run waypaper, choose wallpapers folder and change to wallpaper you preffer.<br>
 > -- Reload Hyprland instance (press SUPER+R) to dismiss warnings (no wal colors in cache).<br>
 > -- Install your preffered apps and then run userapps.sh to integrate them into config.<br>
-> -- Uninstall unnecessary user-defined app's and then remove their config's.
+> -- Uninstall unnecessary user-defined app's and then remove their config's (if you really don't need them).<br>
 > <br>
 > <b>Default applications:</b><br>
 > - browser = vivaldi<br>
