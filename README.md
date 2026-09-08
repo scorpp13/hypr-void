@@ -1,4 +1,4 @@
-<details><summary>Click here to preview</summary>
+<details><summary><b>Click here to preview</b></summary>
 <img src="preview/merge_120826_202638.jpg" width="800"/>
 <img src="preview/merge_120326_194954.jpg" width="800"/>
 <img src="preview/merge_140826_185810.jpg" width="800"/>
@@ -35,7 +35,7 @@ sudo xbps-install -S git
 git clone https://github.com/scorpp13/hypr-void.git $HOME/hypr-void/
 ```
 <details>
-<summary>Click here to view mirrors</summary>
+<summary><b>Click here to view mirrors</b></summary>
 → https://gitlab.com/scorpp13/hypr-void.git
 <br>
 → https://codeberg.org/scorpp13/hypr-void.git
