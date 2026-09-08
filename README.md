@@ -60,6 +60,7 @@ For systems with sound card sof-essx8336 copy preconfig file:
 > Unpack archive and change binary v2 vs binary v1.7 (/usr/bin/gum).<br>
 > You can also use included gum v1.7 binary, that was downloaded from official release page.
 <hr>
+
 ### Final steps
 
 > [!IMPORTANT]
