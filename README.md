@@ -1,4 +1,4 @@
-<details><summary><i>Click here to preview</i></summary>
+<details><summary><b>`Click here to preview`</b></summary>
 <img src="preview/merge_120826_202638.jpg" width="800"/>
 <img src="preview/merge_120326_194954.jpg" width="800"/>
 <img src="preview/merge_140826_185810.jpg" width="800"/>
