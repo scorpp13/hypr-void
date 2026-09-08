@@ -4,7 +4,7 @@
 <img src="preview/merge_140826_185810.jpg" width="800"/>
 </details>
 
-# <color blue>Hypr-Void environment</color>
+# Hypr-Void environment
 
 A working configuration of Hyprland for Void Linux
 - A new config based on lua script language.
@@ -19,7 +19,7 @@ A working configuration of Hyprland for Void Linux
 > Please note that Hypr-Void is not officially supported in Void Linux.<br>
 > The necessary binaries are used from a third-party repository. Some of these may be disabled or conflict with system libraries.<br>
 > In this case, you can remove them from necessary-packages. I don't recommend doing this. Otherwise, the Hypr-Void environment will not function properly.<br>
-> Modifiable applications that do not affect the Hypr-Void environment are user-defined applications:<br>
+> <b>Modifiable applications that do not affect the Hypr-Void environment are user-defined applications:</b><br>
 > browser, terminal, gui editor, gui file manager, cli file manager, media player, and volume control.
 
 ## Installation
