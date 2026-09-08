@@ -52,10 +52,10 @@ For systems with sound card sof-essx8336 copy preconfig file:
 <br>
 
 > [!WARNING]
-> Gum v2 have a lot of bugs, so my scripts don't work correctly with it.<br>
-> To make all work download binary v1.7 from [official GitHub page](https://github.com/charmbracelet/gum/releases/download/v0.17.0/gum_0.17.0_Linux_x86_64.tar.gz).<br>
-> Unpack archive and change binary v2 vs binary v1.7 (/usr/bin/gum).<br>
-> You can also use included gum v1.7 binary, that was downloaded from official release page.
+> Gum v2 have a lot of bugs, that cause my scripts to malfunction.<br>
+> To ensure everything works correctly, download gum binary v1.7 from [official GitHub page](https://github.com/charmbracelet/gum/releases/download/v0.17.0/gum_0.17.0_Linux_x86_64.tar.gz).<br>
+> Extract the archive and replace the v2 binary with v1.7 (/usr/bin/gum).<br>
+> You can also use included gum binary v1.7, that was downloaded from official release page.
 <hr>
 
 ### Final steps
