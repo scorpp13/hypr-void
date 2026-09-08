@@ -4,7 +4,7 @@
 <img src="preview/merge_140826_185810.jpg" width="800"/>
 </details>
 
-# <color=blue>Hypr-Void environment</color>
+# <color blue>Hypr-Void environment</color>
 
 A working configuration of Hyprland for Void Linux
 - A new config based on lua script language.
