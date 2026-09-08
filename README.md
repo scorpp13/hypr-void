@@ -12,14 +12,15 @@ A working configuration of Hyprland for Void Linux
 - Dynamic desktop themes with pywal accent colors.
 
 > [!NOTE]
-> Hypr-Void environment is designed to use with a fresh Void Linux base system installation.<br>
-> Also it may be used on existing system. The new installation script will make backup of your config files.<br>
-> During installation the script will check your system before making any changes on it.<br>
-> If something goes wrong, the script will terminate. Later you can check for errors in order to make changes.<br>
-> You must remember, that there is no official support of Hyprland in Void Linux. The necessary binaries is used from 3-d party repository.<br>
-> Some of them may be unnabled or making conflicts with system libraries. In such a case you may wish to delete them from necessary-packages.<br>
-> I don't suggest to go this way. Otherwise the Hypr-Void environment will not work as designed.<br>
-> Changable apps without affecting on Hypr-Void environment is user defined apps: browser, terminal, gui-filemanager, cli-filemanager, mediaplayer, volume-control.<br>
+> The Hypr-Void environment is designed for use with a clean installation of the Void Linux base system.<br>
+> It can also be used on an existing system. A new installation script will create a backup of your configuration files.<br>
+> During installation, the script will check your system before making any changes.<br>
+> If anything goes wrong, the script will exit. You can later check for errors before making changes.<br>
+> Please note that Hypr-Void is not officially supported in Void Linux.<br>
+> The necessary binaries are used from a third-party repository. Some of these may be disabled or conflict with system libraries.<br>
+> In this case, you can remove them from necessary-packages.I don't recommend doing this. Otherwise, the Hypr-Void environment will not function properly.<br>
+> Modifiable applications that do not affect the Hypr-Void environment are user-defined applications:<br>
+> browser, terminal, gui editor, gui file manager, cli file manager, media player, and volume control.
 
 ## Installation
 
@@ -60,11 +61,20 @@ For systems with sound card sof-essx8336 copy preconfig file:
 
 #### Final steps
 
-After first start of hyprland desktop:
-- Run waypaper, choose wallpapers folder and change to wallpaper you preffer.
-- Reload Hyprland instance (press SUPER+R) to dismiss warnings (no wal colors in cache).
-- Install your preffered apps and then run userapps.sh to integrate them into config.
-Default apps: browser=vivaldi-stable, terminal=kitty, gui-filemanager=thunar, cli-filemanager=vifm, mediaplayer=mpv, volume-control=pwvucontrol.
+> [!WARNING]
+> After first start of hyprland desktop:<br>
+> - Run waypaper, choose wallpapers folder and change to wallpaper you preffer.<br>
+> - Reload Hyprland instance (press SUPER+R) to dismiss warnings (no wal colors in cache).<br>
+> - Install your preffered apps and then run userapps.sh to integrate them into config.<br>
+<hr>
+> <u>Default applications:</u><br>
+> browser = vivaldi-stable<br>
+> terminal = kitty<br>
+> gui filemanager = thunar<br>
+> gui editor = geany<br>
+> cli filemanager = vifm<br>
+> mediaplayer = mpv<br>
+> volume control = pwvucontrol<br>
 
 #### Enjoy
 #### `^;^`
