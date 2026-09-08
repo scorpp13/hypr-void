@@ -61,10 +61,11 @@ For systems with sound card sof-essx8336 copy preconfig file:
 ### Final steps
 
 > [!IMPORTANT]
-> After first start of hyprland desktop:<br>
+> After launching the Hypr-Void environment for the first time:<br>
 > -- Run waypaper, choose wallpapers folder and change to wallpaper you preffer.<br>
 > -- Reload Hyprland instance (press SUPER+R) to dismiss warnings (no wal colors in cache).<br>
 > -- Install your preffered apps and then run userapps.sh to integrate them into config.<br>
+> -- Uninstall unnecessary user-defined app's and then remove their config's.
 > <br>
 > <b>Default applications:</b><br>
 > - browser = vivaldi<br>
