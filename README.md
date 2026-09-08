@@ -62,7 +62,7 @@ For systems with sound card sof-essx8336 copy preconfig file:
 
 ### Final steps
 
-> [!WARNING]
+> [!IMPORTANT]
 > After first start of hyprland desktop:<br>
 > -- Run waypaper, choose wallpapers folder and change to wallpaper you preffer.<br>
 > -- Reload Hyprland instance (press SUPER+R) to dismiss warnings (no wal colors in cache).<br>
