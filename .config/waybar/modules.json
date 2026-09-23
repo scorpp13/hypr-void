@@ -113,7 +113,7 @@
 },
 //	Clock
 "clock": {
-	"tooltip-format": "<span color='#dfff00'><big><b>{:%a %d %B}</b></big></span>\n\n<tt>{calendar}</tt>",
+	"tooltip-format": "<span color='#dfff00'><big><b>{:L%a %d %B}</b></big></span>\n\n<tt>{calendar}</tt>",
 	//"format-alt": "{:%d-%m-%Y}",
 	"calendar": {
 		"mode"          : "year",
