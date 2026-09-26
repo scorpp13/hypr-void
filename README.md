@@ -50,7 +50,7 @@ cd $HOME/hypr-void/
 For systems with sound card sof-essx8336 copy preconfig file:
 - `sudo cp alsa-base.conf /etc/modprobe.d/`
 <br>
-<details>
+<details><summary> </summary>
 > [!WARNING]
 > Gum v2 have a lot of bugs, that cause my scripts to malfunction.<br>
 > To ensure everything works correctly, download gum binary v1.7 from [official GitHub page](https://github.com/charmbracelet/gum/releases/download/v0.17.0/gum_0.17.0_Linux_x86_64.tar.gz).<br>
