@@ -49,6 +49,7 @@ cd $HOME/hypr-void/
 ```
 For systems with sound card sof-essx8336 copy preconfig file:
 - `sudo cp alsa-base.conf /etc/modprobe.d/`
+<hr>
 
 ### Final steps
 
