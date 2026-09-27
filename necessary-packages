@@ -49,6 +49,7 @@ noto-fonts-ttf
 nwg-look
 pipewire
 polkit
+polkit-kde-agent
 python3-cairo-devel
 python3-gobject-devel
 python3-imageio

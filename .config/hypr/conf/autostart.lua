@@ -10,7 +10,8 @@ hl.exec_cmd("xdg.sh")
 hl.exec_cmd("dbus-update-activation-environment --all")
 
 -- Start Polkit Agent
-hl.exec_cmd("/usr/libexec/hyprpolkitagent")
+--hl.exec_cmd("/usr/libexec/hyprpolkitagent")
+hl.exec_cmd("/usr/libexec/polkit-kde-authentication-agent-1")
 
 -- Start Notification Manager
 hl.exec_cmd("dunst")
