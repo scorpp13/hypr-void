@@ -57,9 +57,9 @@ sudo cp -f alsa-base.conf /etc/modprobe.d/
 > Extract the archive and replace the v2 binary with v1.7 (/usr/bin/gum).<br>
 > You can also use included gum binary v1.7, that was downloaded from official release page.
 >
-> - Hyprpolkitagent is not particularly stable, so kde-polkit-agent was chosen instead, as a more reliable option.<br>
-> If you want to use hyprpolkitagent a small change need to be proceeded on the hyprland autostart configuration file.<br>
-> Just edit the file ```~./config/hypr/conf/autostart.lua```, find string containing ```polkit-kde-authentication-agent-1``` and change it to ```hyprpolkitagent```
+> - Hyprpolkitagent is not particularly stable, so kde-polkit-agent was chosen instead.<br>
+> If you want to use hyprpolkitagent, you need to make a small change to the Hyprland autostart configuration file.<br>
+> Edit the file ```~./config/hypr/conf/autostart.lua```, find the line containing ```polkit-kde-authentication-agent-1``` and replace it with ```hyprpolkitagent```
 <hr>
 
 ### Final steps
