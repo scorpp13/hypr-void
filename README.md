@@ -59,9 +59,9 @@ sudo cp -f alsa-base.conf /etc/modprobe.d/
 >
 > - Hyprpolkitagent is not particularly stable, so kde-polkit-agent was chosen instead.<br>
 > <ins>If you want to use hyprpolkitagent, you need to make a small change to the Hyprland autostart configuration file:</ins><br>
-> -- edit the file		```~./config/hypr/conf/autostart.lua```<br>
-> -- find the line containing	```polkit-kde-authentication-agent-1```<br>
-> -- replace with		```hyprpolkitagent```
+> -- edit the file      ```~./config/hypr/conf/autostart.lua```<br>
+> -- find the line inc. ```polkit-kde-authentication-agent-1```<br>
+> -- replace it with    ```hyprpolkitagent```
 <hr>
 
 ### Final steps
