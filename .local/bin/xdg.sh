@@ -1,8 +1,5 @@
 #!/bin/sh
-
-sleep 1
-killall -e xdg-desktop-portal-hyprland
-killall xdg-desktop-portal
+dbus-update-activation-environment --all
 /usr/libexec/xdg-desktop-portal-hyprland &
-sleep 2
+sleep 1
 /usr/libexec/xdg-desktop-portal &

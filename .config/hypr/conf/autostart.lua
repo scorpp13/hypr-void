@@ -6,9 +6,6 @@ hl.exec_cmd("pipewire.sh")
 -- Setup XDG
 hl.exec_cmd("xdg.sh")
 
--- Load environment for hyprland
-hl.exec_cmd("dbus-update-activation-environment --all")
-
 -- Start Polkit Agent
 hl.exec_cmd("/usr/libexec/polkit-kde-authentication-agent-1")
 
