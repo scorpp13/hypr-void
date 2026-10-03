@@ -29,17 +29,17 @@ void-installer
 #### After system restart install git package and clone hypr-void dotfiles
 ```
 sudo xbps-install -S git
-git clone https://github.com/scorpp13/hypr-void.git $HOME/hypr-void/
+git clone https://github.com/scorpp13/hypr-void.git $HOME
 ```
 <details>
 <summary><i>Click here to view mirrors</i></summary>
-→ https://gitlab.com/scorpp13/hypr-void.git
+→ https://gitlab.com/scorpp13/hypr-void
 <br>
-→ https://codeberg.org/scorpp13/hypr-void.git
+→ https://codeberg.org/scorpp13/hypr-void
 <br>
-→ `https://git@git.sourcecraft.dev/scorpp13/hypr-void.git`
+→ https://sourcecraft.dev/scorpp13/hypr-void
 <br>
-→ https://gitea.com/scorpp13/hypr-void.git
+→ https://gitea.com/scorpp13/hypr-void
 </details>
 
 #### Change to dotfiles folder and start installation script
