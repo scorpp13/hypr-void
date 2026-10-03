@@ -37,7 +37,7 @@ git clone https://github.com/scorpp13/hypr-void.git $HOME/hypr-void/
 <br>
 → https://codeberg.org/scorpp13/hypr-void.git
 <br>
-→ https://sourcecraft.dev/scorpp13/hypr-void
+→ `https://git@git.sourcecraft.dev/scorpp13/hypr-void.git`
 <br>
 → https://gitea.com/scorpp13/hypr-void.git
 </details>
