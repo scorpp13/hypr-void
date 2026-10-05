@@ -1,5 +1,5 @@
 <details><summary><i>Click here to preview</i></summary>
-<img src="preview/merge_d1026_205712" width="800"/>
+<img src="preview/merge_d1026_205712.jpg" width="800"/>
 <img src="preview/merge_120326_194954.jpg" width="800"/>
 <img src="preview/merge_d1026_170150.jpg" width="800"/>
 </details>
