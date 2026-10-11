@@ -52,7 +52,7 @@ set showmode			" Show the mode you are on the last line
 set showmatch			" Show matching words during a search
 set t_Co=256			" 256-colors terminal
 set background=dark
-"colorscheme PaperColor
+colorscheme gruvbox
 
 filetype on				" Enable type file detection
 filetype plugin on		" Enable plugins for the detected file type
