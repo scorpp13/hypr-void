@@ -9,6 +9,9 @@ hl.exec_cmd("xdg.sh")
 -- Start Polkit Agent
 hl.exec_cmd("/usr/libexec/polkit-kde-authentication-agent-1")
 
+-- Start syncthing
+hl.exec_cmd("syncthing serve --no-browser --logfile=default")
+
 -- Start Notification Manager
 hl.exec_cmd("dunst")
 
@@ -30,5 +33,6 @@ hl.exec_cmd("cursor.sh")
 -- Autostart apps
 hl.exec_cmd("sleep 5 && udiskie -As")
 hl.exec_cmd("sleep 10 && nm-applet --indicator")
+hl.exec_cmd("sleep 15 && keepassxc")
 
 end)
