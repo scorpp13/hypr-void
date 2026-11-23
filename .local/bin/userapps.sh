@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 
 gum style \
 	--foreground 7 --border-foreground 7 --border rounded --bold \
@@ -88,7 +88,7 @@ gum join --horizontal "$svc" "$mvc"
 echo ""
 
 if gum confirm --prompt.foreground="11" \
-	"Confirm assigning the choosed apps as environment variables"; then
+	"Confirm assigning the chosen apps as environment variables"; then
 	gum spin -- sleep 0.5
 
 cat > "$HOME"/.config/hypr/conf/userapps.lua<< EOF
@@ -108,4 +108,4 @@ fi
 
 hyprctl reload
 hyprctl dispatch "hl.dsp.exec_cmd('~/.config/waybar/launch.sh')"
-notify-send "Your preffered apps assigned as environment variables"
+notify-send "Your prefered apps assigned as environment variables"

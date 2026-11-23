@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 
 . "${HOME}/.cache/wal/colors.sh"
 b=$(echo "$color7"ff | sed 's/#//')
@@ -33,7 +33,7 @@ selection-match=$M
 border=$C
 [main]
 icon-theme=$icon
-font=$font:size=$size
+font=$font:size=14
 anchor=$anchor
 EOF
 

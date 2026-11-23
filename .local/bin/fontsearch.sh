@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 
 NONE='\033[0m'
 

@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 
 case "${1:-}" in
   d)

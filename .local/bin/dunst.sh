@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 set -e
 
 . "${HOME}/.cache/wal/colors.sh"
@@ -26,7 +26,7 @@ if grep -q "top" "${HOME}/.cache/.themestyle.sh" 2>/dev/null; then
 elif grep -q "bottom" "${HOME}/.cache/.themestyle.sh" 2>/dev/null; then
   origin="bottom-right"
 else
-  origin="top-right"
+  origin="bottom-right"
 fi
 
 frame_color="#${foreground#\#}"   # ensures exactly "#rrggbb"

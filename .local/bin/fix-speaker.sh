@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 
 CARD_INFO=$(pactl list cards | awk '
 /^Card #/ { if (++c > 1) exit }

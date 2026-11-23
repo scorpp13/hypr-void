@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 exec 200>/tmp/waybar.lock
 flock -n 200 || exit 0
 

@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 
 if [[ -z $(hyprctl workspaces | grep special:magic) ]]; then
     hyprctl dispatch movetoworkspacesilent special:magic

@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 
 option1="	Font search"
 option2="	Convert to jpg"

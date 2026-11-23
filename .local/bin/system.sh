@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 
 option1="	Package manager"
 option2="	Runit service manager"

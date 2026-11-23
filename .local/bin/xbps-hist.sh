@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 
 YELLOW='\033[0;33m'
 
