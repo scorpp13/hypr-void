@@ -72,6 +72,7 @@ vim
 vivaldi
 vsv
 Waybar
+wl-clipboard
 wlogout
 wlr-randr
 udiskie
@@ -79,7 +80,6 @@ xarchiver
 xdg-desktop-portal
 xdg-desktop-portal-gtk
 xdg-desktop-portal-hyprland
-xdg-desktop-portal-wlr
 xdg-user-dirs
 xdg-utils
 xorg-minimal
