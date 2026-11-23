@@ -15,22 +15,23 @@ A working configuration of Hyprland for Void Linux.
 > - The Hypr-Void environment is designed for use with a clean installation of the Void Linux base system. It can also be used on an existing system.
 > - A new installation script will create a backup of your configuration files. During installation, the script will check your system before making any changes. If anything goes wrong, the script will exit. You can later check for errors before making changes.
 > - Please note that Hyprland is not officially supported in Void Linux. Necessary binaries from a third-party repository are used. Some of them may be disabled or conflict with system libraries.
-> - In this case, you can remove them from necessary-packages. I don't recommend doing this. Otherwise, the Hypr-Void environment will not function properly until you make the necessary changes to the environment configuration files.<br>
-> <br><ins>Replaceable app's that don't affect the Hypr-Void environment are user-defined app's:</ins><br>
-> browser, terminal emulator, gui file manager, cli file manager, media player, volume control.
+> - In this case, you can remove them from `necessary-packages`. I don't recommend doing this. Otherwise, the Hypr-Void environment will not function properly until you make the necessary changes to the environment configuration files.<br>
+> <br><ins>Replaceable apps that don't affect the Hypr-Void environment are user-defined apps:</ins><br>
+> browser, terminal emulator, GUI file manager, CLI file manager, media player, volume control.
 
 ## Installation
 
-#### Install void-base system from latest live cd
-```
-void-installer 
+#### Install void-base system from latest live CD
+```bash
+void-installer
 ```
 
-#### After system restart install git package and clone hypr-void dotfiles
-```
+#### After system restart, install git package and clone hypr-void dotfiles
+```bash
 sudo xbps-install -S git
-git clone https://github.com/scorpp13/hypr-void.git $HOME
+git clone https://github.com/scorpp13/hypr-void.git ~/hypr-void
 ```
+
 <details>
 <summary><i>Click here to view mirrors</i></summary>
 → https://gitlab.com/scorpp13/hypr-void
@@ -43,24 +44,26 @@ git clone https://github.com/scorpp13/hypr-void.git $HOME
 </details>
 
 #### Change to dotfiles folder and start installation script
-```
-cd $HOME/hypr-void/
+```bash
+cd ~/hypr-void/
 ./install.sh
 ```
-For systems with sound card sof-essx8336 copy preconfig file:
-```
+
+For systems with sound card `sof-essx8336`, copy the preconfig file:
+```bash
 sudo cp -f alsa-base.conf /etc/modprobe.d/
 ```
+
 > [!WARNING]
-> - Gum v2 have a lot of bugs, that cause my scripts to malfunction.<br>
-> To ensure everything works correctly, download gum binary v1.7 from [official GitHub page](https://github.com/charmbracelet/gum/releases/download/v0.17.0/gum_0.17.0_Linux_x86_64.tar.gz).<br>
-> Extract the archive and replace the v2 binary with v1.7 (/usr/bin/gum).<br>
-> You can also use included gum binary v1.7, that was downloaded from official release page.
+> - Gum v2 has a lot of bugs, that cause my scripts to malfunction.<br>
+> To ensure everything works correctly, download the gum v1.7 binary from [official GitHub page](https://github.com/charmbracelet/gum/releases/download/v0.17.0/gum_0.17.0_Linux_x86_64.tar.gz).<br>
+> Extract the archive and replace the installed binary with v1.7 (`/usr/bin/gum`).<br>
+> You can also use included `gum` binary v1.7, which was downloaded from official release page.
 >
-> - Hyprpolkitagent is not particularly stable, so kde-polkit-agent was chosen instead.<br>
+> - Hyprpolkitagent is not particularly stable, so `kde-polkit-agent` was chosen instead.<br>
 > <ins>If you want to use hyprpolkitagent, you need to make a small change to the Hyprland autostart configuration file:</ins><br>
-> -- edit the file `~./config/hypr/conf/autostart.lua`<br>
-> -- find the line inc. `polkit-kde-authentication-agent-1`<br>
+> -- edit the file `~/.config/hypr/conf/autostart.lua`<br>
+> -- find the line including `polkit-kde-authentication-agent-1`<br>
 > -- replace it with `hyprpolkitagent`
 <hr>
 
@@ -68,10 +71,10 @@ sudo cp -f alsa-base.conf /etc/modprobe.d/
 
 > [!IMPORTANT]
 > <ins>After launching the Hypr-Void environment for the first time:</ins><br>
-> -- Run waypaper, choose wallpapers folder and change to wallpaper you preffer.<br>
-> -- Reload Hyprland instance (press SUPER+R) to dismiss warnings (no wal colors in cache).<br>
-> -- Install your preffered apps and then run userapps.sh to integrate them into config.<br>
-> -- Uninstall unnecessary user-defined app's and then remove their config's (if you really don't need them).<br>
+> -- Run `waypaper`, choose your wallpapers folder, and select the wallpaper you prefer.<br>
+> -- Reload Hyprland instance (press `SUPER+R`) to dismiss warnings (no wal colors in cache).<br>
+> -- Install your preferred apps and then run `userapps.sh` to integrate them into the config.<br>
+> -- Uninstall unnecessary user-defined apps and then remove their configs (if you really don't need them).<br>
 > <br>
 > <b>Default applications:</b><br>
 > - browser = vivaldi<br>
