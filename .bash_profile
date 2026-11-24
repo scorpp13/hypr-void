@@ -1,14 +1,12 @@
 # ~/.bash_profile
 
-# Include user variables from .bashrc
-if [[ -f ~/.bashrc ]] ; then
-	. ~/.bashrc
-fi
+# Exit safely if not a login shell
+shopt -q login_shell || return
 
-# If login is nonroot start gui-session, else use console
-if shopt -q login_shell; then
-    [[ -f ~/.bashrc ]] && source ~/.bashrc
-    [[ -t 0 && $(tty) == /dev/tty1 && ! $DISPLAY ]] && dbus-run-session start-hyprland
-else
-    exit 1 # Somehow this is a non-bash or non-login shell
+# Load interactive settings from .bashrc
+[[ -f ~/.bashrc ]] && . ~/.bashrc
+
+# Start Hyprland automatically on tty1 for non-root user
+if [[ $EUID -ne 0 && -t 0 && $(tty) == /dev/tty1 && -z $DISPLAY && -z $WAYLAND_DISPLAY ]]; then
+    exec dbus-run-session start-hyprland
 fi
