@@ -1,19 +1,27 @@
-alias upd='sudo xbps-install -u'
+# Void Linux (XBPS)
+alias upd='sudo xbps-install -Su'
 alias ins='sudo xbps-install -S'
-alias del='sudo xbps-remove'
-alias query='sudo xbps-query'
+alias del='sudo xbps-remove -R'
+alias clean='sudo xbps-remove -Oo'
+alias query='xbps-query'
 alias reconf='sudo xbps-reconfigure'
 alias pkgdb='sudo xbps-pkgdb'
 alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
+
+# Flatpak
 alias uflat='flatpak update'
 alias cflat='flatpak uninstall --unused --delete-data'
 alias rflat='flatpak repair'
+
+# Navigation & System
 alias c='clear'
+alias e='exit'
 alias ls='ls -a --color=auto'
-alias grep='grep --colour=auto'
+alias grep='grep --color=auto'
 alias cp='cp -i'
+alias mv='mv -i'
+alias rm='rm -I'
 alias df='df -h'
 alias free='free -h'
-alias e='exit'
 alias VIFM='sudo vifm'
 alias out='loginctl terminate-user $USER'
