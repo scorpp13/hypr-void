@@ -18,16 +18,29 @@ if [ -f ~/.alias ]; then
     . ~/.alias
 fi
 
-# Show fastfetch if run gui-session
-echo ""
-if [[ $(tty) == *"pts"* ]]; then
-    fastfetch -c examples/27.jsonc
-fi
+# Bash_prompt
+PROMPT_DIRTRIM=3
 
-# Bash prompt
-PS1='
-\e[1;35m\u\e[0;37m@\e[2;37m\h\e[0;37m: \e[0;36m\w
-\e[1;34m=> \e[m'
+build_prompt() {
+    local EXIT="$?"
+    local RST='\[\e[0m\]'
+    local DIM='\[\e[38;2;108;112;134m\]'       # Catppuccin Overlay
+    local C_USER='\[\e[1;38;2;203;166;247m\]'  # Soft Mauve
+    local C_DIR='\[\e[1;38;2;137;180;250m\]'   # Crisp Blue
+    local C_OK='\[\e[1;38;2;166;227;161m\]'    # Mint Green
+    local C_ERR='\[\e[1;38;2;243;139;168m\]'   # Coral Red
+
+    local ARROW="${C_OK}❯${RST}"
+    local ERR_CODE=""
+    if [ "$EXIT" != "0" ]; then
+        ARROW="${C_ERR}❯${RST}"
+        ERR_CODE=" ${C_ERR}✘ ${EXIT}${RST}"
+    fi
+
+    PS1="\n${DIM}[bash] ${C_USER}\u${DIM}@\h ${C_DIR}\w${ERR_CODE}\n${ARROW} "
+}
+
+PROMPT_COMMAND=build_prompt
 
 shopt -s checkwinsize
 shopt -s no_empty_cmd_completion
