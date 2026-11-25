@@ -62,7 +62,7 @@ if has('termguicolors')
 endif
 
 set background=dark
-colorscheme gruvbox
+colorscheme tender
 
 filetype plugin indent on
 syntax on
